@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: Essencia-life/Website
+  branch: main
+  base_url: https://symmetrical-train-vgr77rr9q5c56r-5173.app.github.dev/admin
+
+site_url: https://www.essencia.life
+publish_mode: editorial_workflow
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: pages
+    label: Pages
+    folder: src/content/pages
+    icon: draft
+    create: true
+    format: json
+    fields:
+      - { name: title, label: Title }
+      - { name: content, label: Content, widget: markdown }
+
+
+singletons:
+  - name: home
+    label: Homepage
+    file: src/content/home.json
+    icon: home
+    format: json
+    fields:
+      - { name: title, label: Title }
+  - name: events
+    label: Events
+    file: src/content/events.json
+    icon: calendar_today
+    format: json
+    fields:
+      - { name: title, label: Title }
