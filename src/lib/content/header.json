@@ -1,0 +1,60 @@
+{
+	"navigation": [
+		{
+			"label": "Eco Village",
+			"link": "/eco-village",
+			"children": [
+				{
+					"label": "People of Essência",
+					"link": "/eco-village/people"
+				},
+				{
+					"label": "Kids Temple",
+					"link": "/eco-village/kids-temple"
+				},
+				{
+					"label": "Open roles",
+					"link": "/eco-village/open-roles"
+				},
+				{
+					"label": "Join us",
+					"link": "/eco-village/join"
+				}
+			]
+		},
+		{
+			"label": "Stay",
+			"link": "/stay"
+		},
+		{
+			"label": "Heal",
+			"link": "/healing-center"
+		},
+		{
+			"label": "Events",
+			"link": "/events"
+		},
+		{
+			"label": "Retreats",
+			"link": "/retreats"
+		},
+		{
+			"label": "Support us",
+			"link": "/support-us",
+			"children": [
+				{
+					"label": "Become an investor",
+					"link": "/support-us/invest"
+				},
+				{
+					"label": "Become a volunteer",
+					"link": "/support-us/volunteer"
+				},
+				{
+					"label": "Project crowdfunding",
+					"link": "/support-us/projects"
+				}
+			]
+		}
+	]
+}

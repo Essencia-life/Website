@@ -1,0 +1,95 @@
+{
+  "accommodations": [
+    {
+      "name": "farmhouse",
+      "headline": "Farmhouse stay",
+      "short_description": "Come back to yourself, nestled in nature, amongst the peace and beauty. Embrace slow conscious life. Min. 5 nights.",
+      "photo": "media/accommodations/farmhouse/1.jpg",
+      "detail": {
+        "description": "Come back to yourself, nestled in nature, amongst the peace and beauty. Embrace slow conscious life. Min. 5 nights.",
+        "photos": [
+          {
+            "photo": "media/accommodations/farmhouse/1.jpg",
+            "caption": "Farmhouse from outside"
+          },
+          {
+            "photo": "media/accommodations/farmhouse/2.jpg",
+            "caption": "Room 1"
+          },
+          {
+            "photo": "media/accommodations/farmhouse/3.jpg",
+            "caption": "Room 2"
+          },
+          {
+            "photo": "media/accommodations/farmhouse/4.jpg",
+            "caption": "Shared living room"
+          }
+        ]
+      },
+      "button": "Book a room"
+    },
+    {
+      "name": "yurt",
+      "headline": "Yurt",
+      "short_description": "Reconnect with yourself in our cozy, handcrafted yurts. Surrounded by forest, birds, and peace, they are your sanctuary for slow, mindful living.",
+      "photo": "media/accommodations/yurts/1.jpg",
+      "detail": {
+        "description": "Reconnect with yourself in our cozy, handcrafted yurts. Surrounded by forest, birds, and peace, they are your sanctuary for slow, mindful living.",
+        "photos": [
+          {
+            "photo": "media/accommodations/yurts/1.jpg",
+            "caption": "Yurt Sara"
+          },
+          {
+            "photo": "media/accommodations/yurts/2.jpg",
+            "caption": "Yurt Sara"
+          }
+        ]
+      },
+      "button": "Book a yurt"
+    },
+    {
+      "name": "tent",
+      "headline": "Glamping Tent",
+      "short_description": "The new luxury. Organic cotton tents, kingsize bed, feather duvet, your temple in the forest with the birds.",
+      "photo": "media/accommodations/tents/1.jpg",
+      "detail": {
+        "description": "The new luxury. Organic cotton tents, kingsize bed, feather duvet, your temple in the forest with the birds.",
+        "photos": [
+          {
+            "photo": "media/accommodations/tents/1.jpg",
+            "caption": "Glamping tent"
+          },
+          {
+            "photo": "media/accommodations/tents/2.jpg",
+            "caption": "Glamping tent"
+          },
+          {
+            "photo": "media/accommodations/tents/3.jpg",
+            "caption": "Glamping tent"
+          },
+          {
+            "photo": "media/accommodations/tents/4.jpg",
+            "caption": "Glamping tent"
+          }
+        ]
+      },
+      "button": "Book a tent"
+    },
+    {
+      "name": "van",
+      "headline": "Camping cars & Vans",
+      "short_description": "We have a few spots for you !",
+      "photo": "media/accommodations/camper.png",
+      "detail": {
+        "description": "We have a few spots for you !",
+        "photos": [
+          {
+            "photo": "media/accommodations/camper.png"
+          }
+        ]
+      },
+      "button": "Book a spot"
+    }
+  ]
+}
