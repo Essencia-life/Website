@@ -1,0 +1,77 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Events",
+	"type": "object",
+	"required": ["events"],
+	"properties": {
+		"events": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"title": "Event",
+				"additionalProperties": false,
+				"properties": {
+					"slug": {
+						"title": "Slug",
+						"type": "string"
+					},
+					"title": {
+						"title": "Title",
+						"type": "string"
+					},
+					"cover_image": {
+						"title": "Cover Image",
+						"type": "string",
+						"format": "uri"
+					},
+					"short_description": {
+						"title": "Short Description",
+						"type": "string"
+					},
+					"description": {
+						"title": "Description",
+						"type": "string",
+						"widget": "markdown"
+					},
+					"start": {
+						"title": "Start time",
+						"type": "string",
+						"format": "datetime"
+					},
+					"end": {
+						"title": "End time",
+						"type": "string",
+						"format": "datetime"
+					},
+					"type": {
+						"title": "Type",
+						"type": "string",
+						"enum": ["event", "retreat"]
+					},
+					"tickets": {
+						"title": "Tickets",
+						"type": "array",
+						"items": {
+							"title": "Ticket",
+							"type": "object",
+							"properties": {
+								"label": {
+									"title": "Label",
+									"type": "string"
+								},
+								"price": {
+									"title": "Price",
+									"type": "number"
+								},
+								"available": {
+									"title": "Available tickets",
+									"type": "number"
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

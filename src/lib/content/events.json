@@ -1,0 +1,104 @@
+{
+	"$schema": "./events.schema.json",
+	"events": [
+		{
+			"slug": "2025-10-26-fundaments",
+			"title": "FUNDAMENTS",
+			"cover_image": "media/events/photo_2025-10-21_15-14-30.jpg",
+			"description": "Contemplating the Yamas in the spiritual and physical practice",
+			"start": "2025-10-26T15:00:00.000+00:00",
+			"end": "2025-10-26T18:30:00.000+00:00",
+			"tickets": [
+				{
+					"label": "Normal",
+					"price": 20,
+					"available": null
+				}
+			],
+			"type": "event"
+		},
+		{
+			"slug": "2025-10-25-essencia-4-years-anniversary",
+			"title": "Essência 4 Years Anniversary",
+			"cover_image": "media/events/photo_2025-10-11_00-24-06.jpg",
+			"description": "Celebration of our Magic EcoVillage",
+			"start": "2025-10-25T15:00:00.000+00:00",
+			"end": "2025-10-25T22:00:00.000+00:00",
+			"tickets": [
+				{
+					"label": "Online",
+					"price": 55,
+					"available": 15
+				},
+				{
+					"label": "Door",
+					"price": 66,
+					"available": 15
+				}
+			],
+			"type": "event"
+		},
+		{
+			"slug": "2025-09-27-estatic-ways",
+			"title": "Estatic Ways",
+			"cover_image": "media/events/photo_2025-09-08_16-16-36.jpg",
+			"description": "Live music / Ecstatic dance / kundalini cacao activation",
+			"start": "2025-09-27T19:00:00.000+00:00",
+			"end": "2025-08-28T00:00:00.000+00:00",
+			"tickets": [
+				{
+					"label": "Online",
+					"price": 55,
+					"available": 0
+				},
+				{
+					"label": "Door",
+					"price": 66,
+					"available": 5
+				}
+			],
+			"type": "event"
+		},
+		{
+			"slug": "2025-08-30-cacao-dance",
+			"title": "Cacao dance",
+			"cover_image": "media/events/photo_2025-08-17_20-14-51.jpg",
+			"description": "Ecstatic dance - Yoga meditation",
+			"start": "2025-08-30T18:00:00.000+00:00",
+			"end": "2025-08-30T21:00:00.000+00:00",
+			"tickets": [
+				{
+					"label": "Early Bird",
+					"price": 15,
+					"available": 10
+				},
+				{
+					"label": "Normal",
+					"price": 20,
+					"available": 30
+				}
+			],
+			"type": "event"
+		},
+		{
+			"slug": "2025-10-27-cacao-dance",
+			"title": "The Art of Touch",
+			"cover_image": "media/events/photo_2025-10-21_21-15-29.jpg",
+			"description": "Massage practicioner course",
+			"start": "2025-10-27T09:00:00.000+00:00",
+			"end": "2025-10-30T18:00:00.000+00:00",
+			"tickets": null,
+			"type": "event"
+		},
+		{
+			"slug": "2025-10-31-autum-yoga-retreat",
+			"title": "Autum Yoga Retreat",
+			"cover_image": "media/events/photo_2025-10-27_19-48-11.jpg",
+			"description": "...",
+			"start": "2025-10-31T09:00:00.000+00:00",
+			"end": "2025-11-05T18:00:00.000+00:00",
+			"tickets": null,
+			"type": "retreat"
+		}
+	]
+}

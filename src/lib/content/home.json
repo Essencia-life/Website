@@ -1,0 +1,110 @@
+{
+	"hero": {
+		"video": {
+			"landscape": "media/hero.webm",
+			"portrait": "media/hero.webm"
+		},
+		"fallback_image": {
+			"landscape": "",
+			"portrait": ""
+		},
+		"slogan": "Bem Vindo a Essência",
+		"watch_button": "Watch full video"
+	},
+	"sections": [
+		{
+			"id": "about",
+			"type": "text",
+			"headline": "About Essência",
+			"content": "We felt the call  \nTo co-create a new safe and sacred space\n\nWe flowed south to the magnificent coasts of Portugal  \nWhere the Earth is rich and peaceful\n\nThe Ocean heart-opening and cleansing  \nThe Sun steady and embracing\n\nThe Air clean and rejuvenating  \nThe People slow and sweet\n\nWhere conscious folks are gathering  \nAnd new paradigm communities blooming\n\nOur steps were to a land called Essencia",
+			"photo": "media/151345_ed6c17640c6e4cfaadc3235c12864446~mv2.jpg",
+			"button": {
+				"label": "More about life at Essência",
+				"link": "/eco-village"
+			}
+		},
+		{
+			"id": "events",
+			"type": "events",
+			"headline": "Upcomming",
+			"buttons": [
+				{
+					"label": "Show all events",
+					"link": "/events"
+				},
+				{
+					"label": "Show all retreats",
+					"link": "/retreats"
+				}
+			]
+		},
+		{
+			"id": "healing-center",
+			"type": "text",
+			"headline": "Healing Center",
+			"content": "At Essência Healing Center, you are invited to embark on a journey of self-discovery — to detox, regenerate, heal, and grow, so you can shine your unique light into the world. Nestled in the heart of pristine nature, our serene environment offers the perfect space for deep rest and transformation.\n\nChoose from a variety of guided healing sessions with dedicated practitioners, each offering their own unique approach to support your personal journey toward balance, clarity, and renewal.",
+			"photo": "media/151345_e6a25dbd04ec4903bebb0b4326a3c446~mv2.jpg",
+			"button": {
+				"label": "Begin your healing journey",
+				"link": "/healing-center"
+			}
+		},
+		{
+			"id": "community-day",
+			"type": "community-day",
+			"headline": "Community Day",
+			"content": "Join us **Thursdays** for our Community Day!  \nEveryone is warmly invited to spend the day together — helping out in the morning with a shared project (often in the garden), enjoying a nourishing and delicious lunch, and in the evening relaxing at our SPArkling Night, with sauna, hot tub, and — if the weather allows — a soup cooked over the fire at a cozy campfire atmospehre.\n\nCome connect, contribute  \nand unwind together.",
+			"photos": ["media/photo_2025-10-21_21-15-23.jpg", "media/photo_2025-10-21_21-15-29.jpg"],
+			"button": {
+				"label": "Sign up",
+				"link": "/contact?to=events&subject=Community Day"
+			}
+		},
+		{
+			"id": "kids-temple",
+			"type": "text",
+			"headline": "Kids Temple",
+			"content": "A safe, nature-based space where children can explore, play, and grow. Inspired by the forest-school ethos, the Kids Temple invites little ones to follow their curiosity, develop self-awareness, and connect deeply with nature.\n\nParents are encouraged to take part, observe, or contribute, nurturing a shared sense of community and care.",
+			"photo": "media/photo_2025-10-30_22-59-44.jpg",
+			"button": {
+				"label": "More about the Kids Temple",
+				"link": "/eco-village/kids-temple"
+			}
+		},
+		{
+			"id": "visit",
+			"type": "accommodations",
+			"headline": "Visit Essência",
+			"content": "We invite you to unwind and reconnect with nature.  \nStay with us in our serene accommodations and experience the slow rhythm of Essência."
+		},
+		{
+			"id": "map",
+			"type": "map"
+		},
+		{
+			"id": "follow-us",
+			"type": "social-media",
+			"headline": "Connect with Essência",
+			"content": "Stay in the loop with Essência — follow us for inspiration,  \ncommunity moments and updates on events and retreats."
+		},
+		{
+			"id": "testimonials",
+			"type": "testimonials",
+			"headline": "Testimonials",
+			"items": [
+				{
+					"quote": "Amazing! It’s the community which makes the difference. Join the activities early morning, meditation and movement. No must but recommended. You can engage in other activities or keep your own space to retreat yourself. It’s a place with very good energy!",
+					"cite": "Eddie",
+					"link": "https://www.airbnb.de/rooms/1045514226673531489/reviews?source_impression_id=p3_1762593961_P3-CO2SSLYy0m59l&scroll_to_review=1526025283475649040",
+					"platform": "Airbnb"
+				},
+				{
+					"quote": "Amazing place with which I fell in love!!  \nA beautiful nature getaway to find peace. The yoga Shalla was my personal highlight! It should be mentioned that it is a strictly vegan + free of any substances (alcohol-, tabaco- free) place and it is a little bit off grid which is all worthy if you are looking for a peaceful silence place to rest and enjoy! Wifi in the main house and the rooms wasn’t working well but therefore they have a common working space with fast starlink connection.",
+					"cite": "Antonia",
+					"link": "https://www.airbnb.de/rooms/1045514226673531489/reviews?source_impression_id=p3_1762593961_P3-CO2SSLYy0m59l&scroll_to_review=1094886228019224079",
+					"platform": "Airbnb"
+				}
+			]
+		}
+	]
+}

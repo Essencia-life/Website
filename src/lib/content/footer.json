@@ -1,0 +1,30 @@
+{
+	"cta": {
+		"label": "Join Essência",
+		"page": "/eco-village/join"
+	},
+	"links": [
+		[
+			{
+				"label": "Become an investor",
+				"page": "/support-us/invest"
+			}
+		],
+		[
+			{
+				"label": "Contact us",
+				"page": "/contact"
+			}
+		],
+		[
+			{
+				"label": "Legal notice",
+				"page": "/legal-notice"
+			},
+			{
+				"label": "Privacy",
+				"page": "/privacy"
+			}
+		]
+	]
+}
