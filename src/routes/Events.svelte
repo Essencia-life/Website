@@ -122,6 +122,7 @@
 		.event {
 			flex-direction: column;
 			scroll-snap-align: center;
+			scroll-snap-stop: always;
 		}
 		.event enhanced\:img {
 			height: 300px;
