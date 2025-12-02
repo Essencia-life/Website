@@ -1,3 +1,4 @@
+import devtoolsJson from 'vite-plugin-devtools-json';
 import { defineConfig } from 'vitest/config';
 //import tailwindcss from '@tailwindcss/vite';
 import { sveltekit } from '@sveltejs/kit/vite';
@@ -7,7 +8,8 @@ export default defineConfig({
 	plugins: [
 		// tailwindcss(),
 		enhancedImages(),
-		sveltekit()
+		sveltekit(),
+		devtoolsJson()
 	],
 	test: {
 		expect: { requireAssertions: true },
