@@ -1,5 +1,8 @@
 <script lang="ts">
-	import { SiFacebook, SiInstagram, SiTelegram, SiYoutube } from '@icons-pack/svelte-simple-icons';
+	import SiFacebook from '@icons-pack/svelte-simple-icons/icons/SiFacebook';
+	import SiInstagram from '@icons-pack/svelte-simple-icons/icons/SiInstagram';
+	import SiTelegram from '@icons-pack/svelte-simple-icons/icons/SiTelegram';
+	import SiYoutube from '@icons-pack/svelte-simple-icons/icons/SiYoutube';
 </script>
 
 <!-- TODO: add hover animation https://dribbble.com/shots/26280182-Interactive-Social-Media-Section-Website-UI-Design -->
