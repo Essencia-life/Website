@@ -3,6 +3,10 @@ name: Set Decap Preview for PR
 on:
   deployment_status:
 
+permissions:
+  statuses: write
+  deployments: read
+
 jobs:
   set-preview-status:
     runs-on: ubuntu-latest
@@ -11,16 +15,20 @@ jobs:
     steps:
       - name: Set Commit Status for Decap
         uses: actions/github-script@v7
+        env:
+          SHA: ${{ github.event.deployment.sha }}
+          URL: ${{ github.event.deployment_status.target_url }}
         with:
           script: |
-            const sha = github.event.deployment.sha;
-            const url = github.event.deployment_status.target_url;
-            await github.repos.createCommitStatus({
+            const sha = process.env.SHA;
+            const target_url = process.env.URL;
+
+            await github.rest.repos.createCommitStatus({
               owner: context.repo.owner,
               repo: context.repo.repo,
               sha,
               state: 'success',
               context: 'preview-deploy',
-              target_url: url,
+              target_url,
               description: 'PR Preview deployed successfully'
             });
