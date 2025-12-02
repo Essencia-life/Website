@@ -12,7 +12,7 @@ const mediaFiles = new Map(
 
 export class Media {
 	public static getFile(file: string) {
-		const mediaFile = mediaFiles.get(file);
+		const mediaFile = mediaFiles.get(file) ?? mediaFiles.get(file.substring(1));
 
 		if (mediaFile) {
 			return mediaFile;

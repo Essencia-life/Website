@@ -9,6 +9,7 @@
 	import { placeholderSyntax } from '$lib/utils/placeholder-syntax';
 	import { placeholderFromMarkdown } from '$lib/utils/placeholder-from-markdown';
 	import type { Snippet } from 'svelte';
+	import { Media } from '$lib/services/Media';
 
 	interface Props {
 		content: string | Parent;
@@ -69,6 +70,13 @@
 			<code>{entry.value}</code>
 		{:else if entry.type === 'code'}
 			<pre>{entry.value}</pre>
+		{:else if entry.type === 'image'}
+			<figure>
+				<enhanced:img src={Media.getFile(entry.url)} alt={entry.alt} loading="lazy" />
+				{#if entry.title}
+					<figcaption>{entry.title}</figcaption>
+				{/if}
+			</figure>
 		{:else if entry.type === 'placeholder'}
 			{#if placeholder}
 				{@render placeholder(entry.value)}
