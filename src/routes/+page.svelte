@@ -132,15 +132,12 @@
 	}
 
 	@media screen and (width < 800px) {
-		.parallax {
-			overflow-x: hidden;
-		}
-
 		section {
 			position: relative;
 			display: flex;
 			flex-direction: column;
 			min-height: 80vh;
+			overflow-x: hidden;
 		}
 
 		.parallax__layer--base {
