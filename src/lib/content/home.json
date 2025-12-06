@@ -85,7 +85,8 @@
 			"id": "follow-us",
 			"type": "social-media",
 			"headline": "Connect with Essência",
-			"content": "Stay in the loop with Essência — follow us for inspiration,  \ncommunity moments and updates on events and retreats."
+			"content": "Stay in the loop with Essência — follow us for inspiration,  \ncommunity moments and updates on events and retreats.",
+			"platforms": ["instagram", "telegram", "youtube", "facebook"]
 		},
 		{
 			"id": "testimonials",

@@ -102,7 +102,9 @@
 						<Markdown content={section.content} />
 					{/if}
 
-					<SocialMedia />
+					{#if section.platforms}
+						<SocialMedia platforms={section.platforms} />
+					{/if}
 
 					<h3 id="newsletter">Newsletter</h3>
 

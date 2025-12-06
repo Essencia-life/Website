@@ -3,6 +3,7 @@
 		"label": "Join Essência",
 		"page": "/eco-village/join"
 	},
+	"platforms": ["instagram", "telegram", "facebook"],
 	"links": [
 		[
 			{

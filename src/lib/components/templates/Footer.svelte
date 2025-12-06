@@ -1,8 +1,23 @@
-<script>
-	import { asset } from '$app/paths';
+<script lang="ts">
 	import footerData from '$lib/content/footer.json';
+	import socialMediaData from '$lib/content/social-media.json';
 
-	import { Facebook, Instagram, Mail, Send as Telegram } from '@lucide/svelte';
+	import SiInstagram from '@icons-pack/svelte-simple-icons/icons/SiInstagram';
+	import SiTelegram from '@icons-pack/svelte-simple-icons/icons/SiTelegram';
+	import SiYoutube from '@icons-pack/svelte-simple-icons/icons/SiYoutube';
+	import SiFacebook from '@icons-pack/svelte-simple-icons/icons/SiFacebook';
+	import { Mail } from '@lucide/svelte';
+
+	const platforms = $derived(
+		footerData.platforms.map((name) => socialMediaData.platforms.find((it) => it.name === name)!)
+	);
+
+	const iconMap = new Map([
+		['instagram', SiInstagram],
+		['telegram', SiTelegram],
+		['youtube', SiYoutube],
+		['facebook', SiFacebook]
+	]);
 </script>
 
 <footer>
@@ -17,32 +32,26 @@
 				</div>
 
 				<div class="social-media">
-					<a
-						href="https://www.instagram.com/essencia_natureretreat"
-						target="_blank"
-						aria-label="Instagram"
-						class="hint--top hint--rounded no-link"><Instagram /></a
-					>
-					<a
-						href="https://www.facebook.com/pg/essencianatureretreat"
-						target="_blank"
-						aria-label="Facebook"
-						class="hint--top hint--rounded no-link"><Facebook /></a
-					>
-					<a
-						href="https://t.me/essencia_natureretreat"
-						target="_blank"
-						aria-label="Telegram"
-						class="hint--top hint--rounded no-link"><Telegram /></a
-					>
+					{#each platforms as platform, index (platform.name)}
+						{@const Icon = iconMap.get(platform.name)}
+						<a
+							href={platform.link}
+							target="_blank"
+							aria-label={platform.label}
+							class="hint--rounded no-link"
+							class:hint--top-right={index === 0}
+							class:hint--top={index > 0}><Icon title="" /></a
+						>
+					{/each}
+					<!-- TODO: Add Newsletter to social media platforms ? -->
 					<a href="/#newsletter" aria-label="Newsletter" class="hint--top hint--rounded no-link"
 						><Mail /></a
 					>
 				</div>
 			</div>
-			{#each footerData.links as group}
+			{#each footerData.links as group (group)}
 				<div class="link-group">
-					{#each group as link}
+					{#each group as link (link.page)}
 						<a href={link.page}>{link.label}</a>
 					{/each}
 				</div>
@@ -51,7 +60,8 @@
 
 		<div class="content">
 			<small class="copyright"
-				>&copy; 2025 &middot; Essência Nature Retreat &middot; Aljezur &middot; Portugal</small
+				>&copy; {new Date().getFullYear()} &middot; Essência Nature Retreat &middot; Aljezur &middot;
+				Portugal</small
 			>
 		</div>
 	</div>
