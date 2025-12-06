@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Markdown from '$lib/components/molecules/Markdown.svelte';
-	import { SiAirbnb } from '@icons-pack/svelte-simple-icons';
+	import SiAirbnb from '@icons-pack/svelte-simple-icons/icons/SiAirbnb';
 
 	interface Testimonial {
 		quote: string;
