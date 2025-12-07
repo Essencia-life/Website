@@ -7,7 +7,7 @@ title: Retreats
 This page is under construction
 
 ### Upcoming Retreats
-{{upcoming_retreats}}
+<EventCalendar type="retreat" filter="upcoming" />
 
 ### Past Retreats
-{{past_retreats}}
+<EventCalendar type="retreat" filter="past" />

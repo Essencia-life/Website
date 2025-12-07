@@ -7,7 +7,7 @@ title: Events
 This page is under construction
 
 ### Upcoming Events
-{{upcoming_events}}
+<EventCalendar type="event" filter="upcoming" />
 
 ### Past Events
-{{past_events}}
+<EventCalendar type="event" filter="past" />

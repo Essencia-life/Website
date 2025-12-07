@@ -1,14 +1,72 @@
-<script>
+<script lang="ts">
+	import type { Snippet } from 'svelte';
+	import { page } from '$app/state';
+	import { titleSuffix } from '$lib/config';
+
 	import Header from '$lib/components/templates/Header.svelte';
 	import Footer from '$lib/components/templates/Footer.svelte';
 
-	let { children } = $props();
+	import type { Metadata } from './+layout.server';
+
+	interface Props {
+		data: {
+			metadata: Metadata;
+		};
+		children: Snippet;
+	}
+
+	let { data, children }: Props = $props();
+	const meta = $derived(data?.metadata ?? {});
+
+	const {
+		title,
+		description = 'Nature Retreat & Eco-Village',
+		cover = '/media/meta/default-og-image.jpg' // TODO: add default image
+	} = $derived(meta);
+
+	const ldJson = $derived({
+		'@context': 'https://schema.org',
+		'@type': 'BlogPosting', // TODO: set proper type
+		headline: title,
+		description,
+		// author: {  // TODO: set proper author
+		// 	"@type": "Person",
+		// 	name: author
+		// },
+		// datePublished: date, // TODO: do we need a date?
+		image: cover,
+		mainEntityOfPage: page.url
+	});
 </script>
+
+<svelte:head>
+	<title>{title} {titleSuffix}</title>
+	<meta name="description" content={description} />
+
+	<!-- OG Tags -->
+	<meta property="og:title" content={title} />
+	<meta property="og:description" content={description} />
+	<meta property="og:type" content="article" />
+	<meta property="og:url" content={page.url.toString()} />
+	<meta property="og:image" content={cover} />
+
+	<!-- Twitter -->
+	<!-- TODO: other card size? -->
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content={title} />
+	<meta name="twitter:description" content={description} />
+	<meta name="twitter:image" content={cover} />
+
+	<!-- JSON-LD -->
+	{@html `<script type="application/ld+json">${JSON.stringify(ldJson)}</script>`}
+</svelte:head>
 
 <div class="page">
 	<Header />
 
-	{@render children()}
+	<div class="content">
+		{@render children()}
+	</div>
 
 	<Footer />
 </div>

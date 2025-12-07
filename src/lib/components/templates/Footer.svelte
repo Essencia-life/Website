@@ -7,6 +7,7 @@
 	import SiYoutube from '@icons-pack/svelte-simple-icons/icons/SiYoutube';
 	import SiFacebook from '@icons-pack/svelte-simple-icons/icons/SiFacebook';
 	import { Mail } from '@lucide/svelte';
+	import { titleSuffix } from '$lib/config';
 
 	const platforms = $derived(
 		footerData.platforms.map((name) => socialMediaData.platforms.find((it) => it.name === name)!)
@@ -59,10 +60,7 @@
 		</div>
 
 		<div class="content">
-			<small class="copyright"
-				>&copy; {new Date().getFullYear()} &middot; Essência Nature Retreat &middot; Aljezur &middot;
-				Portugal</small
-			>
+			<small class="copyright">&copy; {new Date().getFullYear()} {titleSuffix}</small>
 		</div>
 	</div>
 </footer>

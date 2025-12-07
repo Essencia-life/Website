@@ -74,8 +74,6 @@ Friday late afternoons we are heading to the beach at 17:00. Where we do our **h
 
 ### How we are organized
 
-{{flower}}
-
 #### Core Team
 
 Describe the core team

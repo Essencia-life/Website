@@ -11,12 +11,15 @@
 	import NewsletterForm from '$lib/components/organisms/NewsletterForm.svelte';
 	import Testimonials from './Testimonials.svelte';
 	import { Media } from '$lib/services/Media.js';
+	import { baseTitle } from '$lib/config';
 
 	let heroIsVisible = $state(true);
 </script>
 
 <svelte:head>
-	<title>Essência Nature Retreat &middot; Aljezur &middot; Portugal</title>
+	<title>{baseTitle}</title>
+	<!-- TODO: SEO -->
+	<!-- TODO: JSON-LD -->
 </svelte:head>
 
 <div class="parallax" id="parallax">

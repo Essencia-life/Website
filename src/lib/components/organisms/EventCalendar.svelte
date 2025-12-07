@@ -1,13 +1,21 @@
 <script lang="ts">
 	import { SvelteMap } from 'svelte/reactivity';
-
+	import { events } from '$lib/content/events.json';
 	interface Props {
-		events: any[];
+		type: 'event' | 'retreat';
+		filter: 'upcoming' | 'past';
 	}
 
-	const { events }: Props = $props();
+	const { type = 'event', filter = 'upcoming' }: Props = $props();
+
+	const filterFn: Record<'upcoming' | 'past', (event: any) => boolean> = {
+		upcoming: (event) => event.type === type && Date.parse(event.start) > Date.now(),
+		past: (event) => event.type === type && Date.parse(event.start) < Date.now()
+	};
+
+	const eventsFiltered = $derived(events.filter(filterFn[filter]));
 	const eventsByMonth = $derived(
-		events.reduce((map, event) => {
+		eventsFiltered.reduce((map, event) => {
 			const month = new Date(event.start).toLocaleDateString('en', {
 				month: 'long',
 				year: 'numeric'
