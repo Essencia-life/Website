@@ -2,6 +2,7 @@
 	import type { Snippet } from 'svelte';
 	import { page } from '$app/state';
 	import { titleSuffix } from '$lib/config';
+	import fallbackImage from '$lib/assets/logo.avif';
 
 	import Header from '$lib/components/templates/Header.svelte';
 	import Footer from '$lib/components/templates/Footer.svelte';
@@ -21,7 +22,7 @@
 	const {
 		title,
 		description = 'Nature Retreat & Eco-Village',
-		cover = '/media/meta/default-og-image.jpg' // TODO: add default image
+		cover = fallbackImage // TODO: add default image
 	} = $derived(meta);
 
 	const ldJson = $derived({
@@ -40,6 +41,7 @@
 </script>
 
 <svelte:head>
+	<!-- TODO: create SEO component to re-use it in root page -->
 	<title>{title} {titleSuffix}</title>
 	<meta name="description" content={description} />
 
