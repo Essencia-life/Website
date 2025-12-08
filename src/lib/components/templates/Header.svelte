@@ -22,11 +22,11 @@
 <header>
 	<div class="content">
 		<a href={resolve('/')} class="home" aria-hidden="true">
-			<enhanced:img class="logo" src="/static/media/logo_tree.png" alt="" />
+			<enhanced:img class="logo" src="$lib/assets/logo_tree.png" alt="" />
 		</a>
 
 		<a href={resolve('/')} class="home">
-			<enhanced:img class="title" src="/static/media/logo_title.png" alt="" />
+			<enhanced:img class="title" src="$lib/assets/logo_title.png" alt="" />
 			<h1>Essência</h1>
 		</a>
 

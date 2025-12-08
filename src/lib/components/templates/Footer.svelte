@@ -23,7 +23,7 @@
 
 <footer>
 	<div class="background">
-		<enhanced:img src="/static/media/footer.png" alt="Essência forest skyline" loading="lazy" />
+		<enhanced:img src="$lib/assets/media/footer.png" alt="Essência forest skyline" loading="lazy" />
 	</div>
 	<div style="background-color: var(--brand-mossgreen-color)">
 		<div class="content grid">

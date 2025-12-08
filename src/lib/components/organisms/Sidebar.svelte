@@ -17,7 +17,7 @@
 	<button class="icon-button" onclick={() => overlayRef.close()}>
 		<X />
 	</button>
-	<enhanced:img src="/static/media/logo.avif" alt="" />
+	<enhanced:img src="$lib/assets/logo.avif" alt="" />
 	<Navigation sidebar />
 </aside>
 

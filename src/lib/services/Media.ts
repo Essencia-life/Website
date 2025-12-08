@@ -1,9 +1,9 @@
 import type { Picture } from 'vite-imagetools';
 
-const pageRegExp = new RegExp('/static/(?<file>media/.+)');
+const pageRegExp = new RegExp('/src/lib/assets/(?<file>media/.+)');
 const mediaFiles = new Map(
 	Object.entries(
-		import.meta.glob<{ default: Picture }>('/static/media/**/*', {
+		import.meta.glob<{ default: Picture }>('$lib/assets/media/**/*', {
 			eager: true,
 			query: { enhanced: true }
 		})
