@@ -49,6 +49,7 @@
 	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description} />
 	<meta property="og:type" content="article" />
+	<!-- FIXME: page.url is http://sveltekit-prerender/ during prerender -->
 	<meta property="og:url" content={page.url.toString()} />
 	<meta property="og:image" content={cover} />
 

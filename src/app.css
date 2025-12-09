@@ -57,7 +57,7 @@ main {
 }
 
 .content {
-	width: 100vw;
+	width: calc(100vw - 8rem);
 	max-width: 1200px;
 	margin-inline: auto;
 	padding: 0 4rem;

@@ -1,17 +1,16 @@
 <script lang="ts">
-	import { events as eventsData } from '$lib/content/events.json';
 	import type { Action } from 'svelte/action';
+	import { Events } from '$lib/services/Events';
 	import { Media } from '$lib/services/Media.js';
 	import { resolve } from '$app/paths';
 
-	const events = eventsData.sort((a, b) => {
-		return Date.parse(a.start) - Date.parse(b.start);
-	});
+	const events = Events.getAllPast(); // TODO: change to upcoming
 
 	// TODO: store scroll position in snapshot
 	// TODO: add arrow buttons to scroll
 
 	const connectScrolling: Action = (node) => {
+		// TODO: refactor to attachment
 		const root = document.getElementById('parallax');
 		let rootStartPos = 0;
 		let nodeStartPos = 0;
