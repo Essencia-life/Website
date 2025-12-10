@@ -25,7 +25,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={schema.url} />
 	<meta property="og:image" content={schema.image} />
-	<meta property="og:site_name" content="Essência" />
+	<meta property="og:site_name" content="Essência Nature Retreat" />
 
 	<!-- Twitter -->
 	<meta name="twitter:card" content="summary_large_image" />
