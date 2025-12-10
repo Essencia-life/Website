@@ -1,68 +1,61 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
-	import { page } from '$app/state';
-	import { titleSuffix } from '$lib/config';
-	import fallbackImage from '$lib/assets/logo.avif';
 
+	import SEO from '$lib/components/atoms/SEO.svelte';
 	import Header from '$lib/components/templates/Header.svelte';
 	import Footer from '$lib/components/templates/Footer.svelte';
 
 	import type { Metadata } from './+layout.server';
+	import { page } from '$app/state';
+	import { Media } from '$lib/services/Media';
 
 	interface Props {
 		data: {
-			metadata: Metadata;
+			metadata?: Metadata;
+			VERCEL_URL: string;
 		};
 		children: Snippet;
 	}
 
 	let { data, children }: Props = $props();
-	const meta = $derived(data?.metadata ?? {});
-
-	const {
-		title,
-		description = 'Nature Retreat & Eco-Village',
-		cover = fallbackImage // TODO: add default image
-	} = $derived(meta);
-
-	const ldJson = $derived({
-		'@context': 'https://schema.org',
-		'@type': 'BlogPosting', // TODO: set proper type
-		headline: title,
-		description,
-		// author: {  // TODO: set proper author
-		// 	"@type": "Person",
-		// 	name: author
-		// },
-		// datePublished: date, // TODO: do we need a date?
-		image: cover,
-		mainEntityOfPage: page.url
-	});
 </script>
 
-<svelte:head>
-	<!-- TODO: create SEO component to re-use it in root page -->
-	<title>{title} {titleSuffix}</title>
-	<meta name="description" content={description} />
-
-	<!-- OG Tags -->
-	<meta property="og:title" content={title} />
-	<meta property="og:description" content={description} />
-	<meta property="og:type" content="article" />
-	<!-- FIXME: page.url is http://sveltekit-prerender/ during prerender -->
-	<meta property="og:url" content={page.url.toString()} />
-	<meta property="og:image" content={cover} />
-
-	<!-- Twitter -->
-	<!-- TODO: other card size? -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={title} />
-	<meta name="twitter:description" content={description} />
-	<meta name="twitter:image" content={cover} />
-
-	<!-- JSON-LD -->
-	{@html `<script type="application/ld+json">${JSON.stringify(ldJson)}</script>`}
-</svelte:head>
+{#if data.metadata}
+	<SEO
+		schema={{
+			'@context': 'https://schema.org',
+			'@type': 'WebPage',
+			name: data.metadata.title,
+			description: data.metadata.description,
+			image: data.metadata.cover && Media.getFile(data.metadata.cover).img.src,
+			url: `https://${data.VERCEL_URL}${page.url.pathname}`
+		}}
+	/>
+{:else if page.data.event}
+	<SEO
+		schema={{
+			'@context': 'https://schema.org',
+			'@type': 'Event',
+			name: page.data.event.title,
+			description: page.data.event.short_description,
+			image: Media.getFile(page.data.event.cover_image).img.src,
+			startDate: page.data.event.start.toISOString(),
+			endDate: page.data.event.end.toISOString(),
+			eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+			url: `https://${data.VERCEL_URL}${page.url.pathname}`,
+			location: {
+				'@type': 'Place',
+				name: 'Essência Nature Retreat',
+				address: '66V7+GM, 8670-130, Portugal'
+			},
+			organizer: {
+				'@type': 'Organization',
+				name: 'Essência Nature Retreat',
+				url: 'https://essencia.life'
+			}
+		}}
+	/>
+{/if}
 
 <div class="page">
 	<Header />

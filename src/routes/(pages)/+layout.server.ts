@@ -1,4 +1,5 @@
 import { Pages } from '$lib/services/Pages';
+import { VERCEL_URL } from '$env/static/private';
 
 export interface Metadata {
 	title: string;
@@ -7,5 +8,5 @@ export interface Metadata {
 }
 
 export async function load({ url }) {
-	return { metadata: Pages.getPageMetadata(url.pathname) };
+	return { VERCEL_URL, metadata: Pages.getPageMetadata(url.pathname) };
 }

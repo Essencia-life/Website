@@ -1,26 +1,34 @@
 <script lang="ts">
 	import homeData from '$lib/content/home.json';
-	import Hero from './Hero.svelte';
+
+	import { Media } from '$lib/services/Media.js';
+
+	import SEO from '$lib/components/atoms/SEO.svelte';
 	import Header from '$lib/components/templates/Header.svelte';
+	import Footer from '$lib/components/templates/Footer.svelte';
+	import Markdown from '$lib/components/molecules/Markdown.svelte';
+	import NewsletterForm from '$lib/components/organisms/NewsletterForm.svelte';
+
+	import Hero from './Hero.svelte';
 	import Events from './Events.svelte';
 	import Accommodations from './Accommodations.svelte';
 	import Map from './Map.svelte';
-	import Footer from '$lib/components/templates/Footer.svelte';
-	import Markdown from '$lib/components/molecules/Markdown.svelte';
 	import SocialMedia from './SocialMedia.svelte';
-	import NewsletterForm from '$lib/components/organisms/NewsletterForm.svelte';
 	import Testimonials from './Testimonials.svelte';
-	import { Media } from '$lib/services/Media.js';
-	import { baseTitle } from '$lib/config';
 
 	let heroIsVisible = $state(true);
 </script>
 
-<svelte:head>
-	<title>{baseTitle}</title>
-	<!-- TODO: SEO -->
-	<!-- TODO: JSON-LD -->
-</svelte:head>
+<SEO
+	schema={{
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: homeData.seo.title,
+		description: homeData.seo.description,
+		image: Media.getFile(homeData.seo.cover).img.src,
+		url: 'https://essencia.life'
+	}}
+/>
 
 <div class="parallax" id="parallax">
 	<Hero visibilityChange={(visible) => (heroIsVisible = visible)} />
