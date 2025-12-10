@@ -25,7 +25,7 @@
 		'@type': 'WebSite',
 		name: homeData.seo.title,
 		description: homeData.seo.description,
-		image: Media.getFile(homeData.seo.cover).img.src,
+		image: Media.getFile(homeData.seo.cover_image).img.src,
 		url: 'https://essencia.life'
 	}}
 />

@@ -5,6 +5,7 @@
 	import type { Overlays } from '$lib/overlays.svelte';
 	import FullVideoDialog from '$lib/components/organisms/FullVideoDialog.svelte';
 	import { page } from '$app/state';
+	import { Media } from '$lib/services/Media.js';
 
 	interface Props {
 		visibilityChange(visible: boolean): void;
@@ -62,11 +63,10 @@
 		loop
 		playsinline
 		src={homeData.hero.video.landscape}
-		poster={homeData.hero.fallback_image.landscape}
+		poster={Media.getFile(homeData.hero.fallback_image.landscape).img.src}
 	>
-		<!-- TODO: differnt video sources? -->
-		<!-- TODO: enhanced:img -->
-		<img src={homeData.hero.fallback_image.landscape} alt="" />
+		<!-- TODO: different video sources? -->
+		<enhanced:img src={Media.getFile(homeData.hero.fallback_image.landscape)} />
 	</video>
 	<div class="overlay">
 		<div class="content" style="margin-block: auto">

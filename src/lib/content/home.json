@@ -2,7 +2,7 @@
   "seo": {
     "title": "Essência Nature Retreat & Eco-Village · Aljezur · Portugal",
     "description": "Essência is an intentional EcoVillage and nature retreat in Aljezur, Portugal with the aim of hosting and promoting holistic, educational retreats and courses.",
-    "cover": "media/232574233.jpeg"
+    "cover_image": "media/232574233.jpeg"
   },
   "hero": {
     "video": {
@@ -14,8 +14,7 @@
       "portrait": "media/151345_ed6c17640c6e4cfaadc3235c12864446~mv2.jpg"
     },
     "slogan": "Bem Vindo a Essência",
-    "watch_button": "Watch full video",
-    "watchButton": "Watch full video"
+    "watch_button": "Watch full video"
   },
   "sections": [
     {
