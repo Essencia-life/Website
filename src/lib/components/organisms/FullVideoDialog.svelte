@@ -8,9 +8,8 @@
 </script>
 
 <iframe
-	src="https://www.youtube-nocookie.com/embed/PCSEub0i7Gk?si=qN9N1YUR3gkeW2Eg"
+	src="https://www.youtube-nocookie.com/embed/Ow-X1jZLZ64?si=3li6pUdTWw57wFWr"
 	title="Full video about Essência on Youtube"
-	frameborder="0"
 	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; web-share"
 	referrerpolicy="strict-origin-when-cross-origin"
 	allowfullscreen
@@ -26,6 +25,7 @@
 		transform: translate(-50%, -50%);
 		width: 80vw;
 		aspect-ratio: 16 / 9;
+		border: 0;
 	}
 
 	button {
