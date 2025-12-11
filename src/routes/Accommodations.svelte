@@ -16,6 +16,8 @@
 			backdrop: true
 		});
 	}
+
+	// TODO: store scroll position in snapshot
 </script>
 
 <div class="accommodations">
@@ -37,7 +39,6 @@
 			>
 		</div>
 	{/each}
-	<!-- TODO: items indicator -->
 </div>
 
 <style>
@@ -72,6 +73,7 @@
 		align-items: center;
 		gap: 3rem;
 		scroll-snap-align: center;
+		scroll-snap-stop: always;
 	}
 
 	.accommodations enhanced\:img {

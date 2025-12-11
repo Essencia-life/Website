@@ -18,13 +18,54 @@
 	import type { OverlayRef } from '$lib/overlays.svelte';
 	import { ChevronLeft, ChevronRight } from '@lucide/svelte';
 	import Dialog from '../atoms/Dialog.svelte';
-	import { MediaQuery } from 'svelte/reactivity';
+	import { MediaQuery, SvelteMap } from 'svelte/reactivity';
 	import { Media } from '$lib/services/Media.js';
+	import type { Attachment } from 'svelte/attachments';
+	import { resolve } from '$app/paths';
 
-	let { accommodation, overlayRef }: { accommodation: Accommodation; overlayRef: OverlayRef<any> } =
-		$props();
+	interface Props {
+		accommodation: Accommodation;
+		overlayRef: OverlayRef<any>;
+	}
 
+	let photosRef: HTMLDivElement | undefined = $state();
+	let currentPhoto: HTMLElement | undefined = $state();
+	let intersectionRatioMap = new SvelteMap<Element, number>();
+
+	const { accommodation, overlayRef }: Props = $props();
 	const { current: isMobile } = new MediaQuery('(width < 800px)');
+
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				intersectionRatioMap.set(entry.target, entry.intersectionRatio);
+
+				if (entry.isIntersecting) {
+					currentPhoto = entry.target as HTMLElement;
+				}
+			});
+		},
+		{
+			root: photosRef,
+			threshold: Array.from({ length: 11 }, (_, i) => i / 10)
+		}
+	);
+
+	const observe: Attachment = (element) => {
+		observer.observe(element);
+
+		return () => {
+			observer.unobserve(element);
+		};
+	};
+
+	function prev() {
+		currentPhoto?.previousElementSibling?.scrollIntoView({ behavior: 'smooth' });
+	}
+
+	function next() {
+		currentPhoto?.nextElementSibling?.scrollIntoView({ behavior: 'smooth' });
+	}
 </script>
 
 <Dialog bottomSheet={isMobile}>
@@ -34,9 +75,9 @@
 	{#snippet main()}
 		<div class="accommodation-detail">
 			<div class="gallery">
-				<div class="photos">
+				<div class="photos" bind:this={photosRef}>
 					{#each accommodation.detail.photos as photo, index (index)}
-						<figure>
+						<figure {@attach observe}>
 							<enhanced:img src={Media.getFile(photo.photo)} alt={photo.caption ?? ''} />
 							{#if photo.caption}
 								<figcaption>{photo.caption}</figcaption>
@@ -44,13 +85,15 @@
 						</figure>
 					{/each}
 				</div>
-				<!-- TODO: add items indicator -->
-				<button>
-					<!-- TODO: goto prev photo -->
+				<div class="indicators">
+					{#each intersectionRatioMap as [target, ratio] (target)}
+						<div style:--ratio={ratio}></div>
+					{/each}
+				</div>
+				<button onclick={prev} disabled={photosRef && photosRef.firstElementChild === currentPhoto}>
 					<ChevronLeft size={48} />
 				</button>
-				<button>
-					<!-- TODO: goto next photo -->
+				<button onclick={next} disabled={photosRef && photosRef.lastElementChild === currentPhoto}>
 					<ChevronRight size={48} />
 				</button>
 			</div>
@@ -59,7 +102,10 @@
 	{/snippet}
 	{#snippet footer()}
 		<button class="button" onclick={() => overlayRef.close()}>Close</button>
-		<a href="/stay?accommodation={accommodation.name}" class="button button-primary">Book</a>
+		<a
+			href={resolve('/stay') + '?accommodation=' + accommodation.name}
+			class="button button-primary">Book</a
+		>
 	{/snippet}
 </Dialog>
 
@@ -67,6 +113,31 @@
 	h3 {
 		margin: 0 0 3rem;
 	}
+
+	.indicators {
+		display: flex;
+		justify-content: center;
+		gap: 2rem;
+		padding: 2rem;
+	}
+
+	.indicators > div {
+		width: 2rem;
+		height: 2rem;
+		border-radius: 100%;
+		background: var(--brand-sandbeige-color);
+	}
+
+	.indicators > div::after {
+		content: '';
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		border-radius: 100%;
+		background: var(--brand-terracotta-color);
+		opacity: var(--ratio);
+	}
+
 	figure {
 		position: relative;
 		margin: 0;
@@ -102,6 +173,11 @@
 		margin: 0;
 		color: #fff;
 		cursor: pointer;
+		filter: drop-shadow(var(--brand-darkbrown-color) 0 0 1rem);
+	}
+
+	.gallery button:disabled {
+		opacity: 0.3;
 	}
 
 	.gallery:not(:hover) button,
