@@ -18,6 +18,11 @@
 
 	const { header, sidebar, menuAbove }: Props = $props();
 	const navigation = $state<NavigationItem[]>(headerData.navigation);
+
+	function scrollIntoView(event: CustomEvent) {
+		const element = event.target as HTMLDivElement;
+		element.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+	}
 </script>
 
 <nav class:header class:sidebar class:menuAbove>
@@ -28,18 +33,20 @@
 					<a href={item.link}>{item.label}</a>
 
 					{#if item.children}
-						<button class="icon-button toggle" onclick={() => (item.open = !item.open)}>
-							{#if !item.open}
-								<ChevronDown />
-							{:else}
-								<ChevronUp />
-							{/if}
-						</button>
+						<div class="toggle">
+							<button class="icon-button" onclick={() => (item.open = !item.open)}>
+								{#if !item.open}
+									<ChevronDown />
+								{:else}
+									<ChevronUp />
+								{/if}
+							</button>
+						</div>
 					{/if}
 				</div>
 
 				{#if item.children && (item.open || header)}
-					<div class="children" transition:slide>
+					<div class="children" transition:slide onintroend={scrollIntoView}>
 						<ul>
 							{#each item.children as child (child)}
 								<li>
@@ -154,12 +161,16 @@
 		}
 
 		.toggle {
+			border-left: 1px solid var(--brand-sagegrey-color);
+			padding-left: 2rem;
+		}
+
+		.toggle .icon-button {
 			color: var(--brand-mossgreen-color);
 		}
 
 		.children {
 			margin-inline: -4rem;
-			padding-bottom: 4rem;
 		}
 
 		.children ul {
