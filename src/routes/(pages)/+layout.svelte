@@ -36,12 +36,12 @@
 		schema={{
 			'@context': 'https://schema.org',
 			'@type': 'Event',
-			name: page.data.event.title,
+			name: `${page.data.event.start.toLocaleDateString()} · ${page.data.event.title}`,
 			description: page.data.event.short_description,
 			image: Media.getFile(page.data.event.cover_image).img.src,
 			startDate: page.data.event.start.toISOString(),
 			endDate: page.data.event.end.toISOString(),
-			eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+			eventAttendanceMode: 'OfflineEventAttendanceMode',
 			url: `https://${data.VERCEL_URL}${page.url.pathname}`,
 			location: {
 				'@type': 'Place',
