@@ -70,9 +70,12 @@
 </section>
 
 <style>
+	section {
+		margin-bottom: 20rem;
+	}
+
 	article {
 		display: grid;
-		grid-template-columns: 100px 200px auto;
 		gap: 10rem;
 	}
 
@@ -144,5 +147,22 @@
 	.description time {
 		font-weight: 500;
 		opacity: 0.9;
+	}
+
+	@media screen and (width < 800px) {
+		article {
+			grid-template-columns: 100px 200px;
+			grid-template-rows: auto auto;
+		}
+
+		.info {
+			grid-column: 1 / -1;
+		}
+	}
+
+	@media screen and (width >= 800px) {
+		article {
+			grid-template-columns: 100px 200px auto;
+		}
 	}
 </style>
