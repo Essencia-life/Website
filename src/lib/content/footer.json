@@ -17,6 +17,10 @@
 			{
 				"label": "Privacy",
 				"page": "/privacy"
+			},
+			{
+				"label": "Contact",
+				"page": "/contact"
 			}
 		]
 	]

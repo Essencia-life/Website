@@ -19,6 +19,7 @@
 	</button>
 	<enhanced:img src="$lib/assets/logo.avif" alt="" />
 	<Navigation sidebar />
+	<!-- TODO show also footer links -->
 </aside>
 
 <style>
