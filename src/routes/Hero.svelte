@@ -82,8 +82,20 @@
 <style>
 	.hero {
 		position: relative;
-		height: 85vh;
-		max-height: 818px;
+		height: calc(100vh - 18rem);
+	}
+
+	@supports (height: 100svh) {
+		.hero {
+			height: calc(100svh - 18rem);
+		}
+	}
+
+	@media screen and (width > 800px) {
+		.hero {
+			/* Max video height */
+			max-height: 818px;
+		}
 	}
 
 	.hero .overlay {
