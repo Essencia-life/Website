@@ -85,17 +85,25 @@
 						</figure>
 					{/each}
 				</div>
-				<div class="indicators">
-					{#each intersectionRatioMap as [target, ratio] (target)}
-						<div style:--ratio={ratio}></div>
-					{/each}
-				</div>
-				<button onclick={prev} disabled={photosRef && photosRef.firstElementChild === currentPhoto}>
-					<ChevronLeft size={48} />
-				</button>
-				<button onclick={next} disabled={photosRef && photosRef.lastElementChild === currentPhoto}>
-					<ChevronRight size={48} />
-				</button>
+				{#if intersectionRatioMap.size > 1}
+					<div class="indicators">
+						{#each intersectionRatioMap as [target, ratio] (target)}
+							<div style:--ratio={ratio}></div>
+						{/each}
+					</div>
+					<button
+						onclick={prev}
+						disabled={photosRef && photosRef.firstElementChild === currentPhoto}
+					>
+						<ChevronLeft size={48} />
+					</button>
+					<button
+						onclick={next}
+						disabled={photosRef && photosRef.lastElementChild === currentPhoto}
+					>
+						<ChevronRight size={48} />
+					</button>
+				{/if}
 			</div>
 			{accommodation.detail.description}
 		</div>
