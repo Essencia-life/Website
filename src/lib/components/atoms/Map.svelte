@@ -29,15 +29,12 @@
 				observer.unobserve(entry.target);
 				observer.disconnect();
 
-				const { MapTypeId } = await importLibrary('maps');
 				await importLibrary('marker');
 				await importLibrary('places');
 
 				mapRef.innerMap.setOptions({
 					backgroundColor: 'var(--brand-parchment-color)',
-					mapTypeId: MapTypeId.TERRAIN,
-					disableDefaultUI: true,
-					scrollwheel: false
+					disableDefaultUI: true
 				});
 
 				loading = false;
@@ -57,23 +54,19 @@
 	map-id="4f26b6a2d5047a295c2a62b8"
 	center={new LatLng(37.241162694069175, -8.788955256741307)}
 	zoom={10}
+	class="absolute inset-0"
 >
 	{#if loading}
-		<div class="loading">
+		<div class="absolute inset-0 flex items-stretch">
 			<div style="margin: auto">Loading Google Maps</div>
 		</div>
 	{/if}
 
-	<div class="widget-container" slot="control-inline-start-block-start">
-		<gmp-place-details>
-			<gmp-place-details-place-request place="ChIJiSJsYkY_Gw0R7xII6XgQPU0"
-			></gmp-place-details-place-request>
-			<gmp-place-all-content></gmp-place-all-content>
-		</gmp-place-details>
-	</div>
-
 	<div class="widget-container" slot="control-block-end-inline-center">
-		<gmp-place-details-compact orientation="HORIZONTAL">
+		<gmp-place-details-compact
+			orientation="HORIZONTAL"
+			class="max-w-[calc(100vw - 4rem)] mb-8 w-112 scheme-light"
+		>
 			<gmp-place-details-place-request place="ChIJiSJsYkY_Gw0R7xII6XgQPU0"
 			></gmp-place-details-place-request>
 			<gmp-place-all-content></gmp-place-all-content>
@@ -85,41 +78,6 @@
 
 <style>
 	gmp-map {
-		position: absolute;
-		inset: 0;
 		background: var(--brand-parchment-color);
-	}
-
-	.loading {
-		position: absolute;
-		inset: 0;
-		display: flex;
-		align-items: stretch;
-	}
-
-	gmp-place-details {
-		color-scheme: light;
-		width: 400px;
-		margin: 1rem;
-		max-height: calc(100vh - 2rem - 4.5rem);
-		overflow: auto;
-	}
-
-	gmp-place-details-compact {
-		color-scheme: light;
-		width: calc(100vw - 2rem);
-		margin-bottom: 2rem;
-	}
-
-	@media screen and (width >= 800px) {
-		gmp-place-details-compact {
-			display: none;
-		}
-	}
-
-	@media screen and (width < 800px) {
-		gmp-place-details {
-			display: none;
-		}
 	}
 </style>
