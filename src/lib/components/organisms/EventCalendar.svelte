@@ -43,9 +43,9 @@
 				<div class="month">{month}</div>
 				<div class="day">{day}</div>
 			</div>
-			<div class="cover">
+			<a class="cover" href={resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}>
 				<enhanced:img src={Media.getFile(event.cover_image)} loading="lazy" />
-			</div>
+			</a>
 			<div class="info">
 				<div class="description">
 					<h4>{event.title}</h4>
