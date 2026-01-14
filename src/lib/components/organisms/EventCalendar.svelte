@@ -58,7 +58,7 @@
 					</time>
 					<p>{event.short_description}</p>
 				</div>
-				<a class="details" href={resolve('/events/[slug]', { slug: event.slug })}>
+				<a class="details" href={resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}>
 					View event details
 					<ArrowRight />
 				</a>
