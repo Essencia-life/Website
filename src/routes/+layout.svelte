@@ -11,7 +11,7 @@
 	interface Props {
 		data: {
 			metadata?: Metadata;
-			VERCEL_URL: string;
+			VERCEL_PROJECT_PRODUCTION_URL: string;
 			VERCEL_ENV: string;
 		};
 		children: Snippet;
@@ -37,7 +37,7 @@
 			name: data.metadata.title,
 			description: data.metadata.description,
 			image: data.metadata.cover && Media.getFile(data.metadata.cover).img.src,
-			url: `https://${data.VERCEL_URL}${page.url.pathname}`
+			url: `https://${data.VERCEL_PROJECT_PRODUCTION_URL}${page.url.pathname}`
 		}}
 	/>
 {:else if page.data.event}
@@ -51,7 +51,7 @@
 			startDate: page.data.event.start.toISOString(),
 			endDate: page.data.event.end.toISOString(),
 			eventAttendanceMode: 'OfflineEventAttendanceMode',
-			url: `https://${data.VERCEL_URL}${page.url.pathname}`,
+			url: `https://${data.VERCEL_PROJECT_PRODUCTION_URL}${page.url.pathname}`,
 			location: {
 				'@type': 'Place',
 				name: 'Essência Nature Retreat',
