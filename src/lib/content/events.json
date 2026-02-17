@@ -1,108 +1,128 @@
 {
-	"$schema": "./events.schema.json",
-	"events": [
-		{
-			"slug": "2025-10-26-fundaments",
-			"title": "FUNDAMENTS",
-			"cover_image": "media/events/photo_2025-10-21_15-14-30.jpg",
-			"short_description": "Contemplating the Yamas in the spiritual and physical practice",
-			"description": "Contemplating the Yamas in the spiritual and physical practice",
-			"start": "2025-10-26T15:00:00.000+00:00",
-			"end": "2025-10-26T18:30:00.000+00:00",
-			"tickets": [
-				{
-					"label": "Normal",
-					"price": 20,
-					"available": 0
-				}
-			],
-			"type": "event"
-		},
-		{
-			"slug": "2025-10-25-essencia-4-years-anniversary",
-			"title": "Essência 4 Years Anniversary",
-			"cover_image": "media/events/photo_2025-10-11_00-24-06.jpg",
-			"short_description": "Celebration of our Magic EcoVillage",
-			"description": "Celebration of our Magic EcoVillage",
-			"start": "2025-10-25T15:00:00.000+00:00",
-			"end": "2025-10-25T22:00:00.000+00:00",
-			"tickets": [
-				{
-					"label": "Online",
-					"price": 55,
-					"available": 15
-				},
-				{
-					"label": "Door",
-					"price": 66,
-					"available": 15
-				}
-			],
-			"type": "event"
-		},
-		{
-			"slug": "2025-09-27-estatic-ways",
-			"title": "Estatic Ways",
-			"cover_image": "media/events/photo_2025-09-08_16-16-36.jpg",
-			"short_description": "Live music / Ecstatic dance / kundalini cacao activation",
-			"description": "Live music / Ecstatic dance / kundalini cacao activation",
-			"start": "2025-09-27T19:00:00.000+00:00",
-			"end": "2025-08-28T00:00:00.000+00:00",
-			"tickets": [
-				{
-					"label": "Online",
-					"price": 55,
-					"available": 0
-				},
-				{
-					"label": "Door",
-					"price": 66,
-					"available": 5
-				}
-			],
-			"type": "event"
-		},
-		{
-			"slug": "2025-08-30-cacao-dance",
-			"title": "Cacao dance",
-			"cover_image": "media/events/photo_2025-08-17_20-14-51.jpg",
-			"short_description": "Ecstatic dance - Yoga meditation",
-			"description": "Ecstatic dance - Yoga meditation",
-			"start": "2025-08-30T18:00:00.000+00:00",
-			"end": "2025-08-30T21:00:00.000+00:00",
-			"tickets": [
-				{
-					"label": "Early Bird",
-					"price": 15,
-					"available": 10
-				},
-				{
-					"label": "Normal",
-					"price": 20,
-					"available": 30
-				}
-			],
-			"type": "event"
-		},
-		{
-			"slug": "2025-10-27-the-art-of-touch",
-			"title": "The Art of Touch",
-			"cover_image": "media/events/photo_2025-10-21_21-15-29.jpg",
-			"short_description": "Massage practicioner course",
-			"description": "Massage practicioner course",
-			"start": "2025-10-27T09:00:00.000+00:00",
-			"end": "2025-10-30T18:00:00.000+00:00",
-			"type": "event"
-		},
-		{
-			"slug": "2025-10-31-autum-yoga-retreat",
-			"title": "Autum Yoga Retreat",
-			"cover_image": "media/events/photo_2025-10-27_19-48-11.jpg",
-			"short_description": "...",
-			"description": "...",
-			"start": "2025-10-31T09:00:00.000+00:00",
-			"end": "2025-11-05T18:00:00.000+00:00",
-			"type": "retreat"
-		}
-	]
+  "$schema": "./events.schema.json",
+  "events": [
+    {
+      "start": "2025-10-26T15:00:00.000+00:00",
+      "tickets": [
+        {
+          "label": "Normal",
+          "price": 20,
+          "available": 0
+        }
+      ],
+      "slug": "2025-10-26-fundaments",
+      "cover_image": "media/events/photo_2025-10-21_15-14-30.jpg",
+      "title": "FUNDAMENTS",
+      "short_description": "Contemplating the Yamas in the spiritual and physical practice",
+      "type": "event",
+      "end": "2025-10-26T18:30:00.000+00:00",
+      "description": "Contemplating the Yamas in the spiritual and physical practice"
+    },
+    {
+      "start": "2025-10-25T15:00:00.000+00:00",
+      "tickets": [
+        {
+          "label": "Online",
+          "price": 55,
+          "available": 15
+        },
+        {
+          "label": "Door",
+          "price": 66,
+          "available": 15
+        }
+      ],
+      "slug": "2025-10-25-essencia-4-years-anniversary",
+      "cover_image": "media/events/photo_2025-10-11_00-24-06.jpg",
+      "title": "Essência 4 Years Anniversary",
+      "short_description": "Celebration of our Magic EcoVillage",
+      "type": "event",
+      "end": "2025-10-25T22:00:00.000+00:00",
+      "description": "Celebration of our Magic EcoVillage"
+    },
+    {
+      "start": "2025-09-27T19:00:00.000+00:00",
+      "tickets": [
+        {
+          "label": "Online",
+          "price": 55,
+          "available": 0
+        },
+        {
+          "label": "Door",
+          "price": 66,
+          "available": 5
+        }
+      ],
+      "slug": "2025-09-27-estatic-ways",
+      "cover_image": "media/events/photo_2025-09-08_16-16-36.jpg",
+      "title": "Estatic Ways",
+      "short_description": "Live music / Ecstatic dance / kundalini cacao activation",
+      "type": "event",
+      "end": "2025-08-28T00:00:00.000+00:00",
+      "description": "Live music / Ecstatic dance / kundalini cacao activation"
+    },
+    {
+      "start": "2025-08-30T18:00:00.000+00:00",
+      "tickets": [
+        {
+          "label": "Early Bird",
+          "price": 15,
+          "available": 10
+        },
+        {
+          "label": "Normal",
+          "price": 20,
+          "available": 30
+        }
+      ],
+      "slug": "2025-08-30-cacao-dance",
+      "cover_image": "media/events/photo_2025-08-17_20-14-51.jpg",
+      "title": "Cacao dance",
+      "short_description": "Ecstatic dance - Yoga meditation",
+      "type": "event",
+      "end": "2025-08-30T21:00:00.000+00:00",
+      "description": "Ecstatic dance - Yoga meditation"
+    },
+    {
+      "slug": "2025-10-27-the-art-of-touch",
+      "title": "The Art of Touch",
+      "cover_image": "media/events/photo_2025-10-21_21-15-29.jpg",
+      "short_description": "Massage practicioner course",
+      "description": "Massage practicioner course",
+      "start": "2025-10-27T09:00:00.000+00:00",
+      "end": "2025-10-30T18:00:00.000+00:00",
+      "type": "event"
+    },
+    {
+      "slug": "2025-10-31-autum-yoga-retreat",
+      "title": "Autum Yoga Retreat",
+      "cover_image": "media/events/photo_2025-10-27_19-48-11.jpg",
+      "short_description": "...",
+      "description": "...",
+      "start": "2025-10-31T09:00:00.000+00:00",
+      "end": "2025-11-05T18:00:00.000+00:00",
+      "type": "retreat"
+    },
+    {
+      "title": "The Course of Transformation",
+      "type": "retreat",
+      "short_description": "The Course of Transformation is a retreat that combines yoga, meditation, pranayama, kriya yoga, tantra, and conscious living practices. The course offers a structured program of daily practices, teachings, and group processes. Its focus is on personal growth, self-awareness, and inner transformation, with the intention of supporting participants in bringing these practices into their everyday lives.",
+      "description": "The Course of Transformation is a retreat that combines yoga, meditation, pranayama, kriya yoga, tantra, and conscious living practices. The course offers a structured program of daily practices, teachings, and group processes. Its focus is on personal growth, self-awareness, and inner transformation, with the intention of supporting participants in bringing these practices into their everyday lives.\n\n[More Information](https://www.thecourseoftransformation.com/)",
+      "slug": "2026-06-10-the-course-of-transformation",
+      "cover_image": "media/events/e5268e_884b65ab0a8244968ebe284a772755a0~mv2.jpg",
+      "start": "2026-06-10T00:00:00.000+01:00",
+      "end": "2026-06-20T00:00:00.000+01:00"
+    },
+    {
+      "title": "The Embodied Voice",
+      "type": "retreat",
+      "short_description": "The Embodied Voice is a practice for living more joyfully in mind and body by bringing together voice, movement, mindful awareness, and improvisation. Balancing science and technique with play and creativity, The Embodied Voice helps us tap into a voice and body that is free, expressive, vital, and present.",
+      "description": "The Embodied Voice is a practice for living more joyfully in mind and body by bringing together voice, movement, mindful awareness, and improvisation. Balancing science and technique with play and creativity, The Embodied Voice helps us tap into a voice and body that is free, expressive, vital, and present.\n\n[More Information](https://theembodiedvoice.net/offerings/singingintopresence2026)",
+      "slug": "2026-03-05-the-embodied-voice",
+      "cover_image": "media/events/151345_7f1b31960eaf4c6dba160c9157eb3471~mv2.jpg",
+      "start": "2026-05-03T00:00:00.000+01:00",
+      "end": "2026-05-09T00:00:00.000+01:00"
+    }
+  ]
 }
