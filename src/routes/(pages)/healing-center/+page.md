@@ -1,7 +1,120 @@
 ---
-title: Healing Center
+title: Self Discovery Journeys
 ---
 
-## 🚧️ Healing Center
+## Self Discovery Journeys
+#### Explore, Learn, Heal, Grow, Blossom…
+…Evolve with us
 
-This page is under construction
+1. Choose your Intentional Package
+2. Choose your Accommodation
+
+### All our programs include
+- Morning Meditation, Breathwork, QiGong & Yoga
+- Regular chanting and dancing
+- Your personal Human Design reading
+- Enjoy our wild beaches
+- Borrow our kayak, paddle, surf and bodyboards
+- Regular sauna at sunset
+- Swim in our natural pond and melt in a warm jacuzzi at night under the stars
+- Possibility to contribute to the community life with permaculture gardening and eco construction activities
+
+For more information and to book your journey: contact Simona (+351 914 448 188) on WhatsApp or Telegram
+
+### Intentional packages
+
+#### Rest, Detox & Regenerate
+A body cleanse & nutrition upgrade  
+A rejuvenating multi-dimensional cure for body, mind and spirit
+
+- 1 cure preparation phone session
+- 1 session of nutrition coaching
+- 1 polarity therapy 2h session
+- 1 bodywork or massage (various choice)
+
+444€ per week
+
+#### Pranic Lifestyle Initiation
+Experiment the bliss of living on light  
+Daily pranic lifestyle tools and breathwork initiations
+
+- 3 sessions per week of polarity bodywork or sacred sexuality coaching or massage
+
+€1777 for 4 weeks
+
+#### Tantric Couple
+Deep connection on all levels with your partner  
+A fresh start for your old or new couple for a nourishing and multi-orgasmic life
+
+- 2 individual sessions each of polarity bodywork
+- 5 private tantra workshops as a couple
+- 2 sessions on communication tools
+- Healing rituals
+
+1444€ for two for two weeks (LGBT friendly)
+
+#### Free from Addictions
+Let go of unnecessary harming habits with a loving supportive team and activities in nature  
+Feel great, feel free
+
+18 sessions over 4 weeks
+- Life coaching
+- Sport or nutritional coaching
+- Breathwork
+- Energy healing or bodywork
+- Massage per day specifically adapted to your needs
+
+€1888
+
+#### Women Healing Temple
+Open your wings and heart to be the authentic and powerful woman that you are
+
+- 3 sessions of polarity bodywork
+- 2 private tantra sessions
+- 1 Art of Self-Love session
+- 2 personal project coaching
+
+€888 for 2 weeks
+
+#### Conscious Entrepreneur
+An inspiring place to give birth to your idea, book, website, business plan or positive impact project
+
+- Daily morning practices
+- 3 individual project coaching
+- 1 nutrition coaching for optimal performance
+- 1 bodywork for energy alignment
+
+€555 per week
+
+#### Fun Permaculture HolyDays
+Spend holidays in a meaningful way  
+Deepen your connection with nature, yourself and your family through permaculture gardening, eco-constructions, fun outdoor sports and practices such as meditation, yoga, singing, dance and art
+
+- 2 sessions of applied permaculture (perfect in family)
+- 2 sessions of inner ecology
+
+€444 per week
+
+### Accommodation (per night)
+
+#### Cosy Farmhouse (room with private bathroom)
+Low season (Nov–April): solo €55, duo €77, trio €99  
+High season (May–October): solo €88, duo €99, trio €122
+
+#### Glamping Tent (April to September)
+1 person €44 per night  
+2 person €77 per night  
+Wifi, garden kitchen, dry toilets, shower and practice hall included
+
+#### Personal Van or Tent
+15€ per night per person
+
+#### Lightworkers Glamping Forest
+Live in the forest in a luxurious glamping tent with king size bed  
+555 euros/month and 20h community service work per month  
+Open mid April to September, one month minimum
+
+#### Sacred Artists Residency
+Live in the forest in a luxurious glamping tent with king size bed  
+555 euros/month and one art piece or concert or workshop offered to the community per month  
+Open April to September, one month minimum

@@ -1,123 +1,76 @@
 ---
 title: Eco Village
 ---
-## 🚧️ Eco Village
 
-This page is still under construction
+## Our Intentions
+We felt the call to co-create a new safe and sacred space
 
-### Our Intention
+We flowed south to the magnificent coasts of Portugal where the Earth is rich and peaceful  
+The Ocean heart-opening and cleansing  
+The Sun steady and embracing  
+The Air clean and rejuvenating  
+The People slow and sweet
 
-We felt the call to co-create a new safe and sacred space.
+Where conscious folks are gathering and new paradigm communities blooming  
+Our steps were to a land called Essencia
 
-We flowed south to the magnificent coasts of Portugal where the Earth is rich and peaceful. 
+## Our Purpose
+is why we show up
 
-The Ocean heart-opening and cleansing. The Sun steady and embracing.
-The Air clean and rejuvenating. The People slow and sweet
-
-Where conscious folks are gathering and new paradigm communities blooming.
-
-Our steps were to a land called *Essência*
-
-### Our Purpose
-
-is why we show up!
-
-We believe in slow conscious life in nature 
-
-For us and our children to blossom
-
+We believe in slow conscious life in nature  
+For us and our children to blossom  
 To restore peace, live in harmony, natural bliss and loving kindness
 
-### Our Vision
+### Our vision
+is where we want to be
 
-is where we want to be!
-
-A world of unity
-
-Remembrance and reliance 
-
-A holy nest where people share, sing,
-dance and laugh
-
-Where we live our optimal health, experience our full potential and
-paradise on earth
+A world of unity  
+Remembrance and reliance  
+A holy nest where people share, sing, dance and laugh  
+Where we live our optimal health, experience our full potential and paradise on earth
 
 ### Our Mission
+is what we do about it
 
-is what we do about it!
+Create a safe, heart-aligned and sacred spaces in nature where we can purify, regenerate and grow joyfully
 
-Create a safe, heart-aligned and
-sacred spaces in nature where we can purify, regenerate and grow joyfully.
+An experience designed to enable integrity and consciousness expansion  
+From self-responsibility and mastery to freedom
 
-An experience designed to enable integrity and consciousness expansion. From self-responsibility and mastery to freedom.​
-
-A place with activities and a supportive environment to discover and become who I am.
-
-Come in my power and fulfill of my
-personal mission on Earth for my highest good and the highest good of all.
+A place with activities and a supportive environment to discover and become who I am  
+Come in my power and fulfil of my personal mission on Earth for my highest good and the highest good of all
 
 We develop an eco community with 22 residents plus guests who come to rest, heal, learn and love
 
 ### Golden Agreements
+for harmony & peace is how we cultivate a healing environment
 
-...
+#### HONESTY
+fluid sincere communication between people is encouraged as an essential part of the healing and self realisation process, everything can be said
 
-### A Day at Essência
+#### AHIMSA
+for peace and harmony within and without we celebrate consciously no harming  
+pro-life behaviours and materials
+We grow, support and eat organic plant based foods as medicine
 
-Life at Essência follows a calm, steady flow. Weekdays we start early but gently. At 7:00, we meet for morning meditation, a quiet or guided moment to settle into the day. At 8:00, the morning practice begins — can be movement, breathwork, sometimes less, something more energizing. After a short break, the community meets again at 9:45 for the morning circle. This is where people check in and share their inner truth, we talk about what needs to be worked on and align for the day. Once the circle wraps up, the space shifts naturally into focused work time.
+#### BENEVOLENT COMMUNICATION
+in the right manner
 
-At 14:00 the whole community gathers for lunch. It’s prepared by one or two community beings and eaten together in the circle. After lunch, the afternoon is open. People rest, work on personal projects, explore the land, or spend time on whatever they need.
+#### GLORIFY YOUR SPACE
+You are here and now
+make it sacred, beautiful and cosy
 
-Thursdays is our **Community Day**, which means everyone is invited to work with us together usually in the garden. In the evening, the day winds down with **SPAkling Night** at 18:00, a warm, light-hearted moment to relax and enjoy the sauna, hot-tub, the pond and singing, jamming around the fire.
+#### HIGH ON LIFE
+Zero substance, good practices, ecstatic life  
+with gratitude we aim for our optimal health and full potential
 
-Friday late afternoons we are heading to the beach at 17:00. Where we do our **harvest of the week** — a shared reflection on what the week brought and what moved forward. After that, the beach evening offers a slow landing into the weekend: salt water, sunset and dance and sing around a bonfire.
+#### SELF EXPRESSION
+We encourage each other in being what we are, authentic, vulnerable and great
 
-### How we are organized
+#### THE HEART PATH
+I choose LOVE at every breath
 
-#### Core Team
-
-Describe the core team
-
-#### Part time
-
-Describe part time
-
-#### Volunteers
-
-Describe volunteers
-
-#### Petals
-
-Describe what we call petals.
-
-##### Marketing
-
-...
-
-##### Events
-
-...
-
-##### Hospitality
-
-...
-
-##### Kids Temple
-
-...
-
-##### Healing Center
-
-...
-
-##### Farm
-
-...
-
-##### Resources
-
-...
-
-##### Orga
-
-...
+#### RADICAL OWNERSHIP
+I take responsibility for my talking, acting, emotions, thoughts, commitment  
+I know I co-create my reality
+I am doing the work on all levels
