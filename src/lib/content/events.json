@@ -2,15 +2,15 @@
   "$schema": "./events.schema.json",
   "events": [
     {
-      "slug": "sparkling-night",
-      "title": "SPArkling Night",
-      "short_description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire",
-      "description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire.  \nSubstance free, plantbased and kids friendly.\n\nBring: 2 towels, instruments and good vibes.\n\n**Contribution 20€**",
-      "cover_image": "media/events/sparkling-night.jpg",
       "weekly": "Thursdays",
       "start": "2100-01-01T18:00:00.000+00:00",
+      "slug": "sparkling-night",
+      "cover_image": "media/events/sparkling-night.jpg",
+      "title": "SPArkling Night",
+      "short_description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire",
+      "type": "event",
       "end": "2100-01-01T22:00:00.000+00:00",
-      "type": "event"
+      "description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire.  \nSubstance free, plantbased and kids friendly.\n\nBring: 2 towels, instruments and good vibes.\n\n**Contribution 20€**"
     },
     {
       "start": "2025-10-26T15:00:00.000+00:00",
@@ -91,6 +91,26 @@
       "cover_image": "media/events/151345_7f1b31960eaf4c6dba160c9157eb3471~mv2.jpg",
       "start": "2026-05-03T00:00:00.000+01:00",
       "end": "2026-05-09T00:00:00.000+01:00"
+    },
+    {
+      "slug": "2025-10-07-the-embodied-woman-retreat",
+      "title": "The Embodied Woman",
+      "description": "## The Embodied Woman\nAn AUTHENTIC SHAPES RETREAT  \nALGARVE, PORTUGAL  \nOCTOBER 7th – 11th 2025\n\nEmbodied wisdom begins when a woman listens to her body\n\nFive days to reconnect with your body, return to your inner truth and embody your natural feminine strength\n\nYou crave deeper intimacy and a more embodied connection with yourself and with others  \nBut the daily hustle pulls you out of your flow  \nWhen we give ourselves space to feel, we notice what’s truly going on inside  \nEmotions may surface  \nForgotten parts of ourselves may begin to speak  \nAnd in that quiet awareness, something powerful is revealed\n\nYour body holds wisdom  \nWhen we learn to truly listen, our body guides us  \nIt tells us when to rest, when to move, when to say yes and when to say no  \nThis is what it means to live in alignment — to trust the voice within instead of seeking validation from the outside  \nYou don’t need to become more or do more  \nYour strength is already within you — ready to be felt, expressed and shared\n\n### The Facilitator\nCindy de Vogel  \nMentor, trauma-informed breathwork facilitator, 1:1 coach, sacred space holder, somatic yoga teacher",
+      "type": "retreat",
+      "short_description": "Five days to reconnect with your body, return to your inner truth and embody your natural feminine strength",
+      "start": "2025-10-07T00:00:00.000+01:00",
+      "end": "2025-10-11T00:00:00.000+01:00",
+      "cover_image": "media/events/151345_37c52bf2d86a4ed1871b1aa975cea9bb~mv2.png"
+    },
+    {
+      "description": "## Harvest of the Heart\nA 5RHYTHMS HEARTBEAT RETREAT  \nALGARVE, PORTUGAL  \nSEPTEMBER 6–11, 2025\n\nStep away from the noise and into the rhythm of integration\n\nA 6-day, 5-night 5Rhythms retreat in the raw beauty of nature — where land, sea and sky invite you to dance through the change of the season, release what’s ready to go and harvest what’s truly yours\n\nThis retreat offers a chance to step away from daily routines and into a rhythm that reflects the shifting season  \nThrough 5Rhythms Waves & Heartbeat, move with cycles of fullness, release and deep integration — allowing the body to unwind, the heart to open and the mind to soften  \nMovement as a way to reclaim presence, emotional clarity and embodied freedom\n\nSet in Essencia’s secluded retreat center between rolling hills and the vast ocean  \nEnjoy sauna session, refreshing dips in the wild lake, nourishing vegan meals and time to breathe in the raw beauty of the land  \nBetween sessions: walk the coastline, rest under the open sky and let nature guide you back to center\n\n### The Facilitators\nVehllia Tranne & Alessandro Moruzzi  \nCertified 5Rhythms® Teachers and founders of The City Waves 5Rhythms® (San Francisco)",
+      "slug": "2025-09-06-harvest-of-the-heart",
+      "title": "Harvest of the Heart",
+      "type": "retreat",
+      "short_description": "Step away from the noise and into the rhythm of integration",
+      "start": "2025-09-06T00:00:00.000+01:00",
+      "end": "2025-09-11T00:00:00.000+01:00",
+      "cover_image": "media/events/151345_cf173b17e2ef462fb65a741b1b8a135b~mv2.png"
     }
   ]
 }
