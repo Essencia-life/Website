@@ -59,7 +59,7 @@ Positive impact entrepreneur motivated by creating sacred spaces for everyone to
 Life+business coach and experience architect consultant  
 Connector of the vegan concept store and restaurant ALIVE in Geneva  
 Co-founded and designed Namaka Float Space  
-Co-founded NomadShala and Healing Heart Festival and now Essencia Nature Retreat
+Co-founded NomadShala and Healing Heart Festival and now Essência Nature Retreat
 
 Co-ownership opportunities: contact Antoine (+351 911 035 201)  
 Volunteer with us: free stay on site, 20h of community service work per week, two months minimum (unless already skilled and autonomous in permaculture or eco construction)

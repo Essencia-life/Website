@@ -12,7 +12,7 @@ The Air clean and rejuvenating
 The People slow and sweet
 
 Where conscious folks are gathering and new paradigm communities blooming  
-Our steps were to a land called Essencia
+Our steps were to a land called Essência
 
 ## Our Purpose
 is why we show up

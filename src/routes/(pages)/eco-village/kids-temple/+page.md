@@ -13,7 +13,7 @@ Essência is a regenerative project of inner ecology from self awareness, healin
 We embrace the Forest School ethos that chooses nature as the ideal classroom for our children  
 Holistic development is stimulated through games and activities proposed every day to awaken the child to their social, physical, intellectual and emotional intelligences and realities as well as spiritual connection and communication
 
-Forest School resonates with Essencia’s mission to create a New Earth Eco-Village and grow peaceful loving humans  
+Forest School resonates with Essência’s mission to create a New Earth Eco-Village and grow peaceful loving humans  
 Other educational wisdoms are weaved in
 
 Activities aim to develop 5 main axes
