@@ -2,14 +2,18 @@
   "$schema": "./events.schema.json",
   "events": [
     {
+      "slug": "sparkling-night",
+      "title": "SPArkling Night",
+      "short_description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire",
+      "description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire.  \nSubstance free, plantbased and kids friendly.\n\nBring: 2 towels, instruments and good vibes.\n\n**Contribution 20€**",
+      "cover_image": "media/events/sparkling-night.jpg",
+      "weekly": "Thursdays",
+      "start": "2100-01-01T18:00:00.000+00:00",
+      "end": "2100-01-01T22:00:00.000+00:00",
+      "type": "event"
+    },
+    {
       "start": "2025-10-26T15:00:00.000+00:00",
-      "tickets": [
-        {
-          "label": "Normal",
-          "price": 20,
-          "available": 0
-        }
-      ],
       "slug": "2025-10-26-fundaments",
       "cover_image": "media/events/photo_2025-10-21_15-14-30.jpg",
       "title": "FUNDAMENTS",
@@ -20,18 +24,6 @@
     },
     {
       "start": "2025-10-25T15:00:00.000+00:00",
-      "tickets": [
-        {
-          "label": "Online",
-          "price": 55,
-          "available": 15
-        },
-        {
-          "label": "Door",
-          "price": 66,
-          "available": 15
-        }
-      ],
       "slug": "2025-10-25-essencia-4-years-anniversary",
       "cover_image": "media/events/photo_2025-10-11_00-24-06.jpg",
       "title": "Essência 4 Years Anniversary",
@@ -42,21 +34,9 @@
     },
     {
       "start": "2025-09-27T19:00:00.000+00:00",
-      "tickets": [
-        {
-          "label": "Online",
-          "price": 55,
-          "available": 0
-        },
-        {
-          "label": "Door",
-          "price": 66,
-          "available": 5
-        }
-      ],
-      "slug": "2025-09-27-estatic-ways",
+      "slug": "2025-09-27-ecstatic-ways",
       "cover_image": "media/events/photo_2025-09-08_16-16-36.jpg",
-      "title": "Estatic Ways",
+      "title": "Ecstatic Ways",
       "short_description": "Live music / Ecstatic dance / kundalini cacao activation",
       "type": "event",
       "end": "2025-08-28T00:00:00.000+00:00",
@@ -64,18 +44,6 @@
     },
     {
       "start": "2025-08-30T18:00:00.000+00:00",
-      "tickets": [
-        {
-          "label": "Early Bird",
-          "price": 15,
-          "available": 10
-        },
-        {
-          "label": "Normal",
-          "price": 20,
-          "available": 30
-        }
-      ],
       "slug": "2025-08-30-cacao-dance",
       "cover_image": "media/events/photo_2025-08-17_20-14-51.jpg",
       "title": "Cacao dance",

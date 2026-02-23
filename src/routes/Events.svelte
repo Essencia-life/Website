@@ -1,16 +1,15 @@
 <script lang="ts">
-	import type { Action } from 'svelte/action';
 	import { Events } from '$lib/services/Events';
 	import { Media } from '$lib/services/Media.js';
 	import { resolve } from '$app/paths';
+	import type { Attachment } from 'svelte/attachments';
 
-	const events = Events.getAllPast(); // TODO: change to upcoming
+	const events = Events.getAllUpcoming();
 
 	// TODO: store scroll position in snapshot
 	// TODO: add arrow buttons to scroll
 
-	const connectScrolling: Action = (node) => {
-		// TODO: refactor to attachment
+	const connectScrolling: Attachment = (node) => {
 		const root = document.getElementById('parallax');
 		let rootStartPos = 0;
 		let nodeStartPos = 0;
@@ -20,15 +19,6 @@
 			const diff = root!.scrollTop - rootStartPos;
 			node.scrollLeft = nodeStartPos + diff;
 		}
-
-		/* TODO: set nodeStartPos for manual scrolling (hover or touched)
-        node.addEventListener(
-            "scroll",
-            () => {
-                console.log(node.scrollLeft);
-            },
-            { passive: true },
-        );*/
 
 		const observer = new IntersectionObserver(
 			([entry]) => {
@@ -46,36 +36,53 @@
 		);
 		observer.observe(node);
 
-		$effect(() => {
-			// setup goes here
-
-			return () => {
-				// teardown goes here
-				observer.disconnect();
-			};
-		});
+		return () => {
+			observer.disconnect();
+		};
 	};
 </script>
 
-<div class="events" use:connectScrolling>
+<div class="events" {@attach connectScrolling}>
 	{#each events as event (event.slug)}
+		{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > 24 * 60 * 60 * 1000}
 		<a
 			href={resolve(
 				event.type === 'retreat' ? '/(pages)/retreats/[slug]' : '/(pages)/events/[slug]',
 				{ slug: event.slug }
 			)}
-			class="event"
+			class="event no-link"
 		>
 			<enhanced:img src={Media.getFile(event.cover_image)} alt="" loading="lazy" />
 			<div style="display: flex; flex-direction: column; gap: 2rem; flex: 1;">
 				<div style="display: flex; justify-content: space-between">
 					<small>{event.type}</small>
-					<time datetime={event.start} style="font-weight: 500"
-						>{new Date(event.start).toLocaleDateString()}</time
-					>
+					{#if event.weekly}
+						<time style="font-weight: 500">{event.weekly}</time>
+					{:else}
+						<time datetime={event.start.toISOString()} style="font-weight: 500">
+							{#if isMoreThanOneDay}
+								{@const startDate = event.start.toLocaleDateString('de', {
+									day: 'numeric',
+									month: 'numeric'
+								})}
+								{@const endDate = event.end.toLocaleDateString('de', {
+									day: 'numeric',
+									month: 'numeric',
+									year: '2-digit'
+								})}
+								{startDate} &mdash; {endDate}
+							{:else}
+								{event.start.toLocaleDateString('de', {
+									day: 'numeric',
+									month: 'numeric',
+									year: '2-digit'
+								})}
+							{/if}
+						</time>
+					{/if}
 				</div>
 				<h3>{event.title}</h3>
-				{event.description}
+				{event.short_description}
 			</div>
 		</a>
 	{/each}

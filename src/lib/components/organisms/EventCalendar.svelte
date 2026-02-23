@@ -40,8 +40,12 @@
 
 		<article>
 			<div class="date">
-				<div class="month">{month}</div>
-				<div class="day">{day}</div>
+				{#if event.weekly}
+					<b>{event.weekly}</b>
+				{:else}
+					<div class="month">{month}</div>
+					<div class="day">{day}</div>
+				{/if}
 			</div>
 			<a class="cover" href={resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}>
 				<enhanced:img src={Media.getFile(event.cover_image)} loading="lazy" />
@@ -59,7 +63,7 @@
 					<p>{event.short_description}</p>
 				</div>
 				<a class="details" href={resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}>
-					View event details
+					View {type} details
 					<ArrowRight />
 				</a>
 			</div>

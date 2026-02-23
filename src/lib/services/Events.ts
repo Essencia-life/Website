@@ -9,6 +9,7 @@ interface EventRaw {
 	short_description: string;
 	description: string;
 	cover_image: string;
+	weekly?: string;
 	tickets?: {
 		label: string;
 		price: number;

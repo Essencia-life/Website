@@ -36,7 +36,7 @@
 			{#if isMoreThanOneDay}
 				<b>{startDate} &mdash; {endDate}</b>
 			{:else}
-				<b>{startDate}</b>,&ensp;{startTime} &ndash; {endTime}
+				<b>{event.weekly ?? startDate}</b>,&ensp;{startTime} &ndash; {endTime}
 			{/if}
 		</time>
 
@@ -76,7 +76,8 @@
 
 	@media screen and (width > 800px) {
 		.event {
-			display: flex;
+			display: grid;
+			grid-template-columns: 30% auto;
 			gap: 8rem;
 			width: calc(100vw - (100vw - 100%));
 			max-width: 1200px;
@@ -86,10 +87,6 @@
 
 		.event .title {
 			margin-top: 0;
-		}
-
-		.event .cover {
-			width: 30%;
 		}
 
 		.event enhanced\:img {
