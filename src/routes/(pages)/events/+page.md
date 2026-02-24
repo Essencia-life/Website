@@ -2,7 +2,7 @@
 title: Events
 ---
 
-## 🚧️ Events
+## Events
 
 Our events center around dance as a form of expression, connection, and presence. Alongside dance gatherings, we host hands-on workshops such as permaculture, massage, and inner work.
 
