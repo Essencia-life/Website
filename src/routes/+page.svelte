@@ -15,8 +15,48 @@
 	import Map from './Map.svelte';
 	import SocialMedia from './SocialMedia.svelte';
 	import Testimonials from './Testimonials.svelte';
+	import type { Snapshot } from '@sveltejs/kit';
+	import type { Attachment } from 'svelte/attachments';
 
 	let heroIsVisible = $state(true);
+	let lastScrollPositions = $state({
+		parallax: 0,
+		events: 0,
+		accommodations: 0
+	});
+
+	function lastScrollPositionFactory(
+		get: () => number,
+		set: (value: number) => void,
+		field: 'scrollTop' | 'scrollLeft' = 'scrollTop'
+	): Attachment<HTMLElement> {
+		return (node) => {
+			const update = () => set(node[field]);
+
+			node[field] = get();
+			node.addEventListener('scrollend', update);
+
+			return () => {
+				node.removeEventListener('scrollend', update);
+			};
+		};
+	}
+
+	const lastEventsScrollPosition = lastScrollPositionFactory(
+		() => lastScrollPositions.events,
+		(value) => (lastScrollPositions.events = value),
+		'scrollLeft'
+	);
+
+	const lastParallaxScrollPosition = lastScrollPositionFactory(
+		() => lastScrollPositions.parallax,
+		(value) => (lastScrollPositions.parallax = value)
+	);
+
+	export const snapshot: Snapshot<typeof lastScrollPositions> = {
+		capture: () => lastScrollPositions,
+		restore: (value) => (lastScrollPositions = value)
+	};
 </script>
 
 <SEO
@@ -30,7 +70,7 @@
 	}}
 />
 
-<div class="parallax" id="parallax">
+<div class="parallax" id="parallax" {@attach lastParallaxScrollPosition}>
 	<Hero visibilityChange={(visible) => (heroIsVisible = visible)} />
 
 	<Header menuAbove={heroIsVisible} />
@@ -61,7 +101,7 @@
 				<div class="parallax__layer parallax__layer--base">
 					<h2>{section.headline}</h2>
 
-					<Events />
+					<Events {lastEventsScrollPosition} />
 
 					<div class="buttons">
 						{#each section.buttons as button (button)}
@@ -229,7 +269,6 @@
 			overflow-y: auto;
 			perspective: 300px;
 			scroll-padding: 18rem;
-			scroll-behavior: smooth;
 		}
 
 		.parallax section {

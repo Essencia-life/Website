@@ -25,7 +25,6 @@ body {
 	height: 100%;
 	box-sizing: border-box;
 	scroll-padding: 18rem;
-	scroll-behavior: smooth;
 	padding: 0;
 	margin: 0;
 }

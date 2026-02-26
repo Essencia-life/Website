@@ -4,9 +4,14 @@
 	import { resolve } from '$app/paths';
 	import type { Attachment } from 'svelte/attachments';
 
+	interface Props {
+		lastEventsScrollPosition: Attachment<HTMLElement>;
+	}
+
+	let { lastEventsScrollPosition }: Props = $props();
+
 	const events = Events.getAllUpcoming();
 
-	// TODO: store scroll position in snapshot
 	// TODO: add arrow buttons to scroll
 
 	const connectScrolling: Attachment = (node) => {
@@ -42,7 +47,7 @@
 	};
 </script>
 
-<div class="events" {@attach connectScrolling}>
+<div class="events" {@attach connectScrolling} {@attach lastEventsScrollPosition}>
 	{#each events as event (event.slug)}
 		{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > 24 * 60 * 60 * 1000}
 		<a
