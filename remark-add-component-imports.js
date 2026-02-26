@@ -5,6 +5,7 @@ export default function remarkAddComponentImports() {
 			value: `
 			<script>
 				import EventCalendar from '$lib/components/organisms/EventCalendar.svelte';
+				import ImageAndContent from '$lib/components/organisms/ImageAndContent.svelte';
 			</script>`
 		};
 
