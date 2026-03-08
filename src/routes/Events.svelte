@@ -3,6 +3,10 @@
 	import { Media } from '$lib/services/Media.js';
 	import { resolve } from '$app/paths';
 	import type { Attachment } from 'svelte/attachments';
+	import {
+		eventCoverTransitionName,
+		storeLinkUrlInPageState
+	} from '$lib/utils/eventCoverTransition.svelte';
 
 	interface Props {
 		lastEventsScrollPosition: Attachment<HTMLElement>;
@@ -50,14 +54,17 @@
 <div class="events" {@attach connectScrolling} {@attach lastEventsScrollPosition}>
 	{#each events as event (event.slug)}
 		{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > 24 * 60 * 60 * 1000}
-		<a
-			href={resolve(
-				event.type === 'retreat' ? '/(pages)/retreats/[slug]' : '/(pages)/events/[slug]',
-				{ slug: event.slug }
-			)}
-			class="event no-link"
-		>
-			<enhanced:img src={Media.getFile(event.cover_image)} alt="" loading="lazy" />
+		{@const linkUrl = resolve(
+			event.type === 'retreat' ? '/(pages)/retreats/[slug]' : '/(pages)/events/[slug]',
+			{ slug: event.slug }
+		)}
+		<a href={linkUrl} class="event no-link" onclick={storeLinkUrlInPageState}>
+			<enhanced:img
+				src={Media.getFile(event.cover_image)}
+				alt=""
+				loading="lazy"
+				style:view-transition-name={eventCoverTransitionName(linkUrl)}
+			/>
 			<div style="display: flex; flex-direction: column; gap: 2rem; flex: 1;">
 				<div style="display: flex; justify-content: space-between">
 					<small>{event.type}</small>

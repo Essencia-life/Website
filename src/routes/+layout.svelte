@@ -7,6 +7,7 @@
 	import { Media } from '$lib/services/Media.js';
 	import type { Snippet } from 'svelte';
 	import type { Metadata } from './+layout.server';
+	import { onNavigate } from '$app/navigation';
 
 	interface Props {
 		data: {
@@ -18,6 +19,17 @@
 	}
 
 	let { children, data }: Props = $props();
+
+	onNavigate((navigation) => {
+		if (!document.startViewTransition) return;
+
+		return new Promise((resolve) => {
+			document.startViewTransition(async () => {
+				resolve();
+				await navigation.complete;
+			});
+		});
+	});
 </script>
 
 <svelte:head>

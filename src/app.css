@@ -18,6 +18,11 @@
 	--brand-darkbrown-color: rgb(var(--brand-darkbrown-rgb));
 }
 
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation: none;
+}
+
 html,
 body {
 	font-size: 4px;

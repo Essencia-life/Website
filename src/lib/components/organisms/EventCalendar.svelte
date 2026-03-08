@@ -3,6 +3,10 @@
 	import { Media } from '$lib/services/Media';
 	import { resolve } from '$app/paths';
 	import { ArrowRight } from '@lucide/svelte';
+	import {
+		eventCoverTransitionName,
+		storeLinkUrlInPageState
+	} from '$lib/utils/eventCoverTransition.svelte';
 
 	interface Props {
 		type: 'event' | 'retreat';
@@ -37,6 +41,7 @@
 			minute: '2-digit'
 		})}
 		{@const endTime = event.end.toLocaleTimeString('en', { hour: 'numeric', minute: '2-digit' })}
+		{@const linkUrl = resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}
 
 		<article>
 			<div class="date">
@@ -47,8 +52,12 @@
 					<div class="day">{day}</div>
 				{/if}
 			</div>
-			<a class="cover" href={resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}>
-				<enhanced:img src={Media.getFile(event.cover_image)} loading="lazy" />
+			<a class="cover" href={linkUrl} onclick={storeLinkUrlInPageState}>
+				<enhanced:img
+					src={Media.getFile(event.cover_image)}
+					loading="lazy"
+					style:view-transition-name={eventCoverTransitionName(linkUrl)}
+				/>
 			</a>
 			<div class="info">
 				<div class="description">
@@ -62,7 +71,7 @@
 					</time>
 					<p>{event.short_description}</p>
 				</div>
-				<a class="details" href={resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}>
+				<a class="details" href={linkUrl} onclick={storeLinkUrlInPageState}>
 					View {type} details
 					<ArrowRight />
 				</a>

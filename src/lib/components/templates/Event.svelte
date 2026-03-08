@@ -63,6 +63,7 @@
 		max-width: 100vw;
 		height: auto;
 		box-shadow: 0 3px 8px rgba(var(--brand-darkbrown-rgb) / 50%);
+		view-transition-name: event-cover;
 	}
 
 	@media screen and (width <= 800px) {
