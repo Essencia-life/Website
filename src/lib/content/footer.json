@@ -6,16 +6,8 @@
 	"platforms": ["instagram", "telegram", "facebook"],
 	"links": [
 		[
-			{
-				"label": "Become an investor",
-				"page": "/support-us/invest"
-			}
 		],
 		[
-			{
-				"label": "Contact us",
-				"page": "/contact"
-			}
 		],
 		[
 			{
