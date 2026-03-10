@@ -157,9 +157,9 @@
 						<SocialMedia platforms={section.platforms} />
 					{/if}
 
-					<h3 id="newsletter">Newsletter</h3>
+					<!--					<h3 id="newsletter">Newsletter</h3>-->
 
-					<NewsletterForm />
+					<!--					<NewsletterForm />-->
 				</div>
 			{:else if section.type === 'testimonials'}
 				<div class="parallax__layer parallax__layer--base">
