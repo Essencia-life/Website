@@ -11,6 +11,7 @@
 				caption?: string;
 			}[];
 		};
+		button: string;
 	}
 </script>
 
@@ -110,10 +111,9 @@
 	{/snippet}
 	{#snippet footer()}
 		<button class="button" onclick={() => overlayRef.close()}>Close</button>
-		<a
-			href={resolve('/stay') + '?accommodation=' + accommodation.name}
-			class="button button-primary">Book</a
-		>
+		<a href="mailto:ola@esencia.life?subject={accommodation.button}" class="button button-primary">
+			Book
+		</a>
 	{/snippet}
 </Dialog>
 
