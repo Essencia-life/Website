@@ -7,8 +7,6 @@ export interface Metadata {
 	cover?: string;
 }
 
-export const prerender = true;
-
 export async function load({ url }) {
 	return {
 		VERCEL_PROJECT_PRODUCTION_URL,
