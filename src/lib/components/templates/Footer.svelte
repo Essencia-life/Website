@@ -6,7 +6,6 @@
 	import SiTelegram from '@icons-pack/svelte-simple-icons/icons/SiTelegram';
 	import SiYoutube from '@icons-pack/svelte-simple-icons/icons/SiYoutube';
 	import SiFacebook from '@icons-pack/svelte-simple-icons/icons/SiFacebook';
-	import { Mail } from '@lucide/svelte';
 	import { titleSuffix } from '$lib/config';
 
 	const platforms = $derived(
@@ -45,9 +44,9 @@
 						>
 					{/each}
 					<!-- TODO: Add Newsletter to social media platforms ? -->
-					<a href="/#newsletter" aria-label="Newsletter" class="hint--top hint--rounded no-link"
-						><Mail /></a
-					>
+					<!--					<a href="/#newsletter" aria-label="Newsletter" class="hint&#45;&#45;top hint&#45;&#45;rounded no-link"-->
+					<!--						><Mail /></a-->
+					<!--					>-->
 				</div>
 			</div>
 			{#each footerData.links as group (group)}
