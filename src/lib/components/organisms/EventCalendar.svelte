@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Events } from '$lib/services/Events';
+	import { type Event, Events } from '$lib/services/Events';
 	import { Media } from '$lib/services/Media';
 	import { resolve } from '$app/paths';
 	import { ArrowRight } from '@lucide/svelte';
@@ -26,57 +26,75 @@
 		}
 	};
 
-	const events = $derived(getEventBy[filter][type]());
+	const today = new Date();
+	const eventSource = $derived(getEventBy[filter][type]());
+	const eventsByYear = $derived(
+		eventSource.reduce((byYear, event) => {
+			const year = event.start.getFullYear();
+			if (byYear.has(year)) {
+				byYear.get(year)!.push(event);
+			} else {
+				byYear.set(year, [event]);
+			}
+
+			return byYear;
+		}, new Map<number, Event[]>())
+	);
 </script>
 
 <section>
-	{#each events as event (event.slug)}
-		{@const month = event.start.toLocaleDateString('en', { month: 'short' })}
-		{@const day = event.start.toLocaleDateString('en', { day: '2-digit' })}
-		{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > 24 * 60 * 60 * 1000}
-		{@const startDate = event.start.toLocaleDateString('de', { dateStyle: 'short' })}
-		{@const endDate = event.end.toLocaleDateString('de', { dateStyle: 'short' })}
-		{@const startTime = event.start.toLocaleTimeString('en', {
-			hour: 'numeric',
-			minute: '2-digit'
-		})}
-		{@const endTime = event.end.toLocaleTimeString('en', { hour: 'numeric', minute: '2-digit' })}
-		{@const linkUrl = resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}
+	{#each eventsByYear as [year, events] (year)}
+		{#if year !== today.getFullYear() && year !== 2100}
+			<h3 class="year">{year}</h3>
+		{/if}
+		{#each events as event (event.slug)}
+			{@const month = event.start.toLocaleDateString('en', { month: 'short' })}
+			{@const day = event.start.toLocaleDateString('en', { day: '2-digit' })}
+			{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > 24 * 60 * 60 * 1000}
+			{@const startDate = event.start.toLocaleDateString('de', { dateStyle: 'short' })}
+			{@const endDate = event.end.toLocaleDateString('de', { dateStyle: 'short' })}
+			{@const startTime = event.start.toLocaleTimeString('en', {
+				hour: 'numeric',
+				minute: '2-digit'
+			})}
+			{@const endTime = event.end.toLocaleTimeString('en', { hour: 'numeric', minute: '2-digit' })}
+			{@const linkUrl = resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}
 
-		<article>
-			<div class="date">
-				{#if event.weekly}
-					<b>{event.weekly}</b>
-				{:else}
-					<div class="month">{month}</div>
-					<div class="day">{day}</div>
-				{/if}
-			</div>
-			<a class="cover" href={linkUrl} onclick={storeLinkUrlInPageState}>
-				<enhanced:img
-					src={Media.getFile(event.cover_image)}
-					loading="lazy"
-					style:view-transition-name={eventCoverTransitionName(linkUrl)}
-				/>
-			</a>
-			<div class="info">
-				<div class="description">
-					<h4>{event.title}</h4>
-					<time>
-						{#if isMoreThanOneDay}
-							{startDate} &mdash; {endDate}
-						{:else}
-							{startTime} &mdash; {endTime}
-						{/if}
-					</time>
-					<p>{event.short_description}</p>
+			<article>
+				<div class="date">
+					{#if event.weekly}
+						<b>{event.weekly}</b>
+					{:else}
+						<div class="month">{month}</div>
+						<div class="day">{day}</div>
+					{/if}
 				</div>
-				<a class="details" href={linkUrl} onclick={storeLinkUrlInPageState}>
-					View {type} details
-					<ArrowRight />
+				<a class="cover" href={linkUrl} onclick={storeLinkUrlInPageState}>
+					<enhanced:img
+						src={Media.getFile(event.cover_image)}
+						loading="lazy"
+						style:view-transition-name={eventCoverTransitionName(linkUrl)}
+					/>
 				</a>
-			</div>
-		</article>
+				<div class="info">
+					<div class="description">
+						<h4>{event.title}</h4>
+						<time>
+							{#if isMoreThanOneDay}
+								{startDate} &mdash; {endDate}
+							{:else}
+								{startTime} &mdash; {endTime}
+							{/if}
+						</time>
+						<p>{event.short_description}</p>
+					</div>
+					<a class="details" href={linkUrl} onclick={storeLinkUrlInPageState}>
+						View {type} details
+						<ArrowRight />
+					</a>
+				</div>
+			</article>
+		{/each}
 	{:else}
 		<i>No {type === 'retreat' ? 'Retreats' : 'Events'}</i>
 	{/each}
@@ -85,6 +103,12 @@
 <style>
 	section {
 		margin-bottom: 20rem;
+	}
+
+	.year {
+		text-align: center;
+		font-size: 8rem;
+		margin-block: 2rem 12rem;
 	}
 
 	article {
