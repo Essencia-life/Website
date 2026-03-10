@@ -23,5 +23,7 @@ Discount on accommodation
 - 50% off a room price for the night before and after the event for the organisers
 - 30% off for the participants
 
+[Contact us](mailto:events@essencia.life)
+
 ### Past Events
 <EventCalendar type="event" filter="past" />

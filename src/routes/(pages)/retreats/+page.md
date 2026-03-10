@@ -5,7 +5,7 @@ title: Retreats
 ## Retreats
 
 Ready to book a retreat?  
-[Contact us](/contact)
+[Contact us](mailto:ola@essencia.life?subject=Book%20a%20retreat)
 
 ### Upcoming Retreats
 <EventCalendar type="retreat" filter="upcoming" />
