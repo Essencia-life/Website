@@ -1,7 +1,4 @@
 @import 'hint.css';
-/* @import 'tailwindcss';
-@plugin '@tailwindcss/forms';
-@plugin '@tailwindcss/typography'; */
 
 :root {
 	--brand-mossgreen-rgb: 82 107 79;

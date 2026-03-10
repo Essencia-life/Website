@@ -8,7 +8,9 @@ const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
 	preprocess: [
-		vitePreprocess(),
+		vitePreprocess({
+			postcss: true
+		}),
 		mdsvex({
 			extensions: ['.md'],
 			remarkPlugins: [remarkAddComponentImports]
