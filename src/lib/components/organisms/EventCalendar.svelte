@@ -164,7 +164,7 @@
 
 	@media screen and (width < 800px) {
 		article {
-			grid-template-columns: 100px 200px;
+			grid-template-columns: 100px auto;
 			grid-template-rows: auto auto;
 		}
 
