@@ -151,6 +151,26 @@
       "type": "event",
       "title": "Holi - celebration of colors",
       "slug": "2026-03-04-holi-celebration-of-colors"
+    },
+    {
+      "description": "Join us in the beautiful south of Portugal for a Spring Yoga retreat. Over the course of a few days, you’ll immerse yourself in the peaceful environment and the practice of Yoga, with focus on connecting to your own experience and by that, deepening your understanding of your own unique anatomy. This retreat is an opportunity to slow down, cultivate awareness, and explore the subtleties of your practice.\n\n[More information](https://yoga.ehudneuhaus.com)",
+      "short_description": "Join us in the beautiful south of Portugal for a Spring Yoga retreat. Over a few days, immerse yourself in a peaceful environment and the practice of Yoga, connecting to your own experience and deepening the understanding of your unique anatomy. A chance to slow down and cultivate awareness.",
+      "cover_image": "media/events/photo_2026-03-08_22-31-10.jpg",
+      "start": "2026-03-20T15:00:00.000+00:00",
+      "end": "2026-03-25T12:00:00.000+00:00",
+      "type": "retreat",
+      "title": "Spring Yoga Retreat",
+      "slug": "2026-03-20-spring-yoga-retreat"
+    },
+    {
+      "title": "Flow State Retreat",
+      "type": "retreat",
+      "short_description": "A 5-Day Yoga & Somatics Reset for Your Body, Nervous System & Energy",
+      "description": "Picture yourself waking up with the first rays of autumn sun filtering through linen curtains and warming your skin.\n\nThe room is quiet. Outside, you hear birds singing, the kind of sound that settles your whole system before you even open your eyes.\n\nYou walk barefoot to the terrace with a warm cup of coffee or herbal tea, observing the trees and the birds in the forest that surrounds you. The morning is slow. There’s no one asking for you. No notifications. Nowhere else to be.\n\nYou begin your day with conscious movement that feels good in your body, not another task on your to-do list, but something you actually want to do.\n\nYou’ll laugh with women you met just days ago, yet somehow feel like you’ve known for years.\n\nYou’ll enjoy the warmth of Portugal’s south coast. You’ll surf, rest, journal, move, and stargaze under clear October skies.\n\nYou’ll remember what it feels like to live from presence — instead of rush or pressure.\n\nThis is Flow State Retreat.\n\nAn experience designed to help your nervous system recalibrate.\nWhere movement, rest, play and connection bring you back into regulation.\n\nWhere your body feels safe enough to slow down, and strong enough to expand.\n\n[More information & booking](https://www.catarinaamaralyoga.com/flowstateretreat)",
+      "slug": "2026-10-14-flow-state-retreat",
+      "cover_image": "media/events/0f847d_61ecfe8a479d4344991a25aa0728f5c3~mv2.jpg",
+      "start": "2026-10-14T16:00:00.000+01:00",
+      "end": "2026-10-18T12:00:00.000+01:00"
     }
   ]
 }
