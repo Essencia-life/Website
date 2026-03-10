@@ -62,9 +62,11 @@
 		autoplay
 		loop
 		playsinline
-		src={homeData.hero.video.landscape}
 		poster={Media.getFile(homeData.hero.fallback_image.landscape).img.src}
+		{onloadedmetadata}
 	>
+		<source src={homeData.hero.video.portrait} media="(width < 460px)" />
+		<source src={homeData.hero.video.landscape} />
 		<!-- TODO: different video sources? -->
 		<enhanced:img src={Media.getFile(homeData.hero.fallback_image.landscape)} />
 	</video>
