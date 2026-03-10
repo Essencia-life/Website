@@ -12,6 +12,9 @@ These spaces are practical, embodied, and grounded. They invite movement, learni
 <EventCalendar type="event" filter="upcoming" />
 
 ### Host your event at Essência
+
+<ImageAndContent image="media/shala.jpg" alt="Essência Shala">
+
 We open our space to your events and workshops.  
 If your concept resonates with what we do, feel free to reach out.
 
@@ -24,6 +27,8 @@ Discount on accommodation
 - 30% off for the participants
 
 [Contact us](mailto:events@essencia.life)
+
+</ImageAndContent>
 
 ### Past Events
 <EventCalendar type="event" filter="past" />
