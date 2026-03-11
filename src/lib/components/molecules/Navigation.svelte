@@ -74,6 +74,10 @@
 		padding: 0;
 	}
 
+	nav li {
+		margin: 0;
+	}
+
 	nav.sidebar ul {
 		flex-direction: column;
 	}

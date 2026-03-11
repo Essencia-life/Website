@@ -17,6 +17,7 @@ export class Media {
 		if (mediaFile) {
 			return mediaFile;
 		} else {
+			// console.log(mediaFiles.keys());
 			throw new MediaFileNotFound(file);
 		}
 	}

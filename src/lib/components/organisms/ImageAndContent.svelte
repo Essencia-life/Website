@@ -27,6 +27,7 @@
 	.image-and-content {
 		display: flex;
 		gap: 4rem;
+		margin-bottom: 8rem;
 	}
 
 	@media screen and (width >= 800px) {

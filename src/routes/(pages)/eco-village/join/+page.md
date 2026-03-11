@@ -45,6 +45,9 @@ Another service in the making is Essência TV
 A platform to share wisdom, practices, community life, workshops and insights with the world
 
 #### Simona & Antoine
+
+<ImageAndContent image="media/c97792_0c8564774b0940e89e54048aa1e0b985~mv2.jpeg" alt="Simona & Antoine" lgRight>
+
 Simona is a well traveled social educator, institutional clown and holistic therapist  
 She offers polarity therapy sessions, nutrition coaching, conscious pregnancy doula, Tao Tantric Arts coaching, workshops and retreats  
 Strong experience in women’s work and trauma healing  
@@ -64,4 +67,8 @@ Co-founded NomadShala and Healing Heart Festival and now Essência Nature Retrea
 Co-ownership opportunities: contact Antoine (+351 911 035 201)  
 Volunteer with us: free stay on site, 20h of community service work per week, two months minimum (unless already skilled and autonomous in permaculture or eco construction)
 
-Become a Donator: help develop eco-friendly spaces, expand sustainable food production, implement renewable energy and water management solutions and support educational and retreat programs
+</ImageAndContent>
+
+#### Become a Donator
+
+Help develop eco-friendly spaces, expand sustainable food production, implement renewable energy and water management solutions and support educational and retreat programs
