@@ -111,7 +111,7 @@
 	{/snippet}
 	{#snippet footer()}
 		<button class="button" onclick={() => overlayRef.close()}>Close</button>
-		<a href="mailto:ola@esencia.life?subject={accommodation.button}" class="button button-primary">
+		<a href="mailto:ola@essencia.life?subject={accommodation.button}" class="button button-primary">
 			Book
 		</a>
 	{/snippet}
