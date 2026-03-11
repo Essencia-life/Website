@@ -109,6 +109,7 @@
 		text-align: center;
 		font-size: 8rem;
 		margin-block: 2rem 12rem;
+		color: var(--brand-sagegrey-color);
 	}
 
 	article {
@@ -119,7 +120,7 @@
 	article:not(:last-of-type) {
 		padding-bottom: 10rem;
 		margin-bottom: 10rem;
-		border-bottom: 1px solid var(--brand-sandbeige-color);
+		border-bottom: 2rem solid rgba(var(--brand-sandbeige-rgb) / 50%);
 	}
 
 	.date {
@@ -163,13 +164,14 @@
 	.info {
 		display: flex;
 		flex-direction: column;
-		gap: 8rem;
+		gap: 4rem;
 		padding: 0.5rem 0;
 	}
 
 	.info a.details {
 		display: flex;
 		align-items: center;
+		align-self: flex-end;
 		gap: 2rem;
 		text-decoration: none;
 	}
