@@ -3,11 +3,8 @@ title: KidsTemple
 ---
 
 ## The Awakened Kids TEMPLE
-by Essência Nature Retreat
 
 Registrations are open
-
-Essência is a regenerative project of inner ecology from self awareness, healing & self love to outer ecology loving others & the Earth
 
 ### Forest Kids Temple
 We embrace the Forest School ethos that chooses nature as the ideal classroom for our children  
@@ -108,3 +105,5 @@ COMMUNICATE: develop social skills & values, compassion, empathy, learn to share
 BLOSSOM: meditate, confidence, concentrate, motricity, senses, belonging, arts, painting, handicrafts  
 MOVING: dancing, singing, kids yoga, acro yoga, aerial yoga, acrobatics, qigong, nature hike, beach play & swim  
 BE ALIVE: be free, explore life, celebrate, wonder, awaken curiosity, be present, listen, be grateful
+
+<Instagram link="https://www.instagram.com/kidstemple_essencia" />
