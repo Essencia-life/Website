@@ -57,7 +57,7 @@ main {
 	box-sizing: inherit;
 }
 
-.content {
+.page-content {
 	width: calc(100vw - (100vw - 100%));
 	max-width: 1200px;
 	margin-inline: auto;

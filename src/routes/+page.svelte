@@ -133,7 +133,7 @@
 				</div>
 			{:else if section.type === 'accommodations'}
 				<div class="parallax__layer parallax__layer--base">
-					<div class="content" style="padding-top: 4rem">
+					<div class="page-content" style="padding-top: 4rem">
 						<h2>{section.headline}</h2>
 						{#if section.content}
 							<Markdown content={section.content} />

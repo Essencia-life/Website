@@ -71,7 +71,7 @@
 		<enhanced:img src={Media.getFile(homeData.hero.fallback_image.landscape)} />
 	</video>
 	<div class="overlay">
-		<div class="content" style="margin-block: auto">
+		<div class="page-content" style="margin-block: auto">
 			<h2 class="slogan">{homeData.hero.slogan}</h2>
 			<button class="button button-overlay" onclick={showFullVideo}>
 				<CirclePlay />

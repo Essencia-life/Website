@@ -13,7 +13,7 @@
 <div class="page">
 	<Header />
 
-	<div class="content">
+	<div class="page-content">
 		{@render children()}
 	</div>
 

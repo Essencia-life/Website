@@ -25,7 +25,7 @@
 		<enhanced:img src="$lib/assets/media/footer.png" alt="Essência forest skyline" loading="lazy" />
 	</div>
 	<div style="background-color: var(--brand-mossgreen-color)">
-		<div class="content grid">
+		<div class="page-content grid">
 			<div class="first-column">
 				<div>
 					<a href={footerData.cta.page} class="button button-overlay">{footerData.cta.label}</a>
@@ -58,7 +58,7 @@
 			{/each}
 		</div>
 
-		<div class="content">
+		<div class="page-content">
 			<small class="copyright">&copy; {new Date().getFullYear()} {titleSuffix}</small>
 		</div>
 	</div>
@@ -95,7 +95,7 @@
 		);
 	}
 
-	.content {
+	.page-content {
 		color: var(--brand-sandbeige-color);
 	}
 

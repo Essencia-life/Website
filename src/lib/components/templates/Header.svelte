@@ -20,7 +20,7 @@
 </script>
 
 <header>
-	<div class="content">
+	<div class="page-content">
 		<a href={resolve('/')} class="home" aria-hidden="true">
 			<enhanced:img class="logo" src="$lib/assets/logo_tree.png" alt="" />
 		</a>
@@ -52,7 +52,7 @@
 		display: contents;
 	}
 
-	header .content {
+	header .page-content {
 		display: flex;
 		height: 18rem;
 		padding-block: 2rem;
@@ -87,7 +87,7 @@
 	}
 
 	@media screen and (width < 800px) {
-		header .content {
+		header .page-content {
 			justify-content: space-between;
 		}
 	}
@@ -99,7 +99,7 @@
 	}
 
 	@media screen and (width >= 800px) {
-		header .content {
+		header .page-content {
 			column-gap: 4rem;
 		}
 

@@ -16,6 +16,6 @@
 	</title>
 </svelte:head>
 
-<div class="content">
+<div class="page-content">
 	{@render children()}
 </div>
