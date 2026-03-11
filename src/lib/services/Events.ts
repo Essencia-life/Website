@@ -68,6 +68,14 @@ export class Events {
 			throw new EventNotFound(slug);
 		}
 	}
+
+	public static getAllEventSlugs() {
+		return events.filter((it) => it.type === 'event').map(({ slug }) => ({ slug }));
+	}
+
+	public static getAllRetreatSlugs() {
+		return events.filter((it) => it.type === 'retreat').map(({ slug }) => ({ slug }));
+	}
 }
 
 export class EventNotFound extends Error {
