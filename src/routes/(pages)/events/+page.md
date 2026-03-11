@@ -22,15 +22,15 @@ These spaces are practical, embodied, and grounded. They invite movement, learni
 We open our space to your events and workshops.  
 If your concept resonates with what we do, feel free to reach out.
 
-Easy friendly low risk conditions
+#### Easy friendly low risk conditions
 - 50€ to book the date
 - 30% share of your income
 
-Discount on accommodation
+#### Discount on accommodation
 - 50% off a room price for the night before and after the event for the organisers
 - 30% off for the participants
 
-[Contact us](mailto:events@essencia.life)
+<Button primary href="mailto:events@essencia.life?subject=My%20event%20at%20Ess%C3%AAncia">Contact us</Button>
 
 </ImageAndContent>
 
