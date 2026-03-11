@@ -143,7 +143,7 @@
 			scroll-snap-stop: always;
 		}
 		.event enhanced\:img {
-			height: 300px;
+			height: auto;
 			width: 100%;
 		}
 	}
@@ -158,7 +158,6 @@
 		.event enhanced\:img {
 			height: 40vh;
 			width: auto;
-			aspect-ratio: 3 / 4;
 		}
 	}
 
@@ -177,5 +176,6 @@
 
 	.event enhanced\:img {
 		object-fit: cover;
+		aspect-ratio: 1 / 1.41;
 	}
 </style>
