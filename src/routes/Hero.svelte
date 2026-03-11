@@ -57,12 +57,12 @@
 	<!-- TODO: animated avif if supported -->
 	<!-- TODO: check for data saving flag  -->
 	<video
+		fetchpriority="high"
 		bind:this={heroVideoRef}
 		muted
 		autoplay
 		loop
 		playsinline
-		poster={Media.getFile(homeData.hero.fallback_image.landscape).img.src}
 		{onloadedmetadata}
 	>
 		<source src={homeData.hero.video.portrait} media="(width < 460px)" />
