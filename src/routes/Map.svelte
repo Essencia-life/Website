@@ -12,46 +12,70 @@
 </script>
 
 <script lang="ts">
-	import { mount, onDestroy, onMount } from 'svelte';
+	import { onDestroy, onMount } from 'svelte';
 	import { importLibrary } from '@googlemaps/js-api-loader';
-	import MapPanel from '$lib/components/atoms/MapPanel.svelte';
 
 	let mapRef: HTMLDivElement;
 	let observer: IntersectionObserver;
 
 	onMount(() => {
 		observer = new IntersectionObserver(async ([entry]) => {
-			console.log(entry.isIntersecting);
 			if (entry.isIntersecting) {
-				const { Map, MapTypeId, KmlLayer } = await importLibrary('maps');
+				observer.unobserve(entry.target);
+				observer.disconnect();
+
+				const { Map, MapTypeId, InfoWindow } = await importLibrary('maps');
+				const { AdvancedMarkerElement } = await importLibrary('marker');
+				const { Place } = await importLibrary('places');
+
 				const map = new Map(mapRef, {
+					mapId: '4f26b6a2d5047a295c2a62b8',
 					backgroundColor: 'var(--brand-sagegrey-color)',
-					mapTypeId: MapTypeId.SATELLITE,
+					mapTypeId: MapTypeId.TERRAIN,
 					center: {
-						// TODO use fit to bounds with padding instead
 						lat: 37.241162694069175,
 						lng: -8.788955256741307
 					},
-					zoom: 20,
+					zoom: 10,
 					scrollwheel: false,
-					streetViewControl: false,
-					cameraControl: false,
-					fullscreenControl: false,
-					mapTypeControlOptions: {
-						position: google.maps.ControlPosition.RIGHT_TOP
-					}
+					disableDefaultUI: true
 				});
 
-				const container = document.createElement('div');
-				map.controls[google.maps.ControlPosition.TOP_LEFT].push(container);
-				mount(MapPanel, { target: container, props: { panel } });
-
-				new KmlLayer({
-					url: 'https://www.google.com/maps/d/kml?mid=1mPab28Iyxh1lhm7a9Iq29E4TdVKbYb0',
-					map
+				const place = new Place({
+					id: 'ChIJiSJsYkY_Gw0R7xII6XgQPU0'
 				});
 
-				observer.disconnect();
+				await place.fetchFields({
+					fields: ['displayName', 'formattedAddress', 'location', 'googleMapsURI']
+				});
+
+				if (place.location) {
+					const marker = new AdvancedMarkerElement({
+						map,
+						position: place.location,
+						title: place.displayName
+					});
+
+					const infoWindow = new InfoWindow({
+						headerDisabled: true,
+						content: `
+            <div style="max-width:240px">
+              <strong>${place.displayName ?? 'Ort'}</strong><br>
+              ${place.formattedAddress ?? ''}<br><br>
+              <a href="${place.googleMapsURI}" target="_blank" rel="noopener">
+                Open in Google Maps
+              </a>
+            </div>
+          `
+					});
+
+					infoWindow.open({
+						map,
+						anchor: marker
+					});
+
+					map.setCenter(place.location);
+				}
 			}
 		});
 
@@ -63,19 +87,8 @@
 	});
 </script>
 
-{#snippet panel()}
-	<div class="side-panel" style="--map-height: {mapRef?.clientHeight ?? 0}px">
-		<h4>🚧️ Side Panel</h4>
-		<p>
-			Will have a toggle button group to switch between map marker, directions and property
-			boundaries view.
-		</p>
-	</div>
-{/snippet}
-
 <div class="map" bind:this={mapRef}>
 	<div class="loading">
-		{@render panel()}
 		<div style="margin: auto">Loading Google Maps</div>
 	</div>
 </div>
@@ -92,16 +105,5 @@
 		inset: 0;
 		display: flex;
 		align-items: stretch;
-	}
-
-	.side-panel {
-		background: var(--brand-stonewhite-color);
-		border-radius: 4rem;
-		box-shadow: rgba(0 0 0 / 50%) 3px 3px 6px;
-		width: 400px;
-		height: calc(var(--map-height, 100px) - 18rem);
-		padding: 4rem;
-		margin: 4rem 3rem;
-		font-size: 4rem;
 	}
 </style>
