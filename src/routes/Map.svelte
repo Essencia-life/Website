@@ -1,70 +1,59 @@
 <script lang="ts" module>
-	import { importLibrary, setOptions } from '@googlemaps/js-api-loader';
+	import { browser } from '$app/environment';
+	import { setOptions } from '@googlemaps/js-api-loader';
 
-	let mapsLibrary: google.maps.MapsLibrary;
-
-	async function getMapsLibrary() {
-		if (!mapsLibrary) {
-			console.log('getMapsLibrary called');
-			setOptions({
-				key: 'AIzaSyDGHnHScGXo1BsjYXxfvpHOvTij4VKROHY',
-				v: 'weekly',
-				language: 'en'
-			});
-
-			mapsLibrary = await importLibrary('maps');
-		}
-
-		return mapsLibrary;
+	if (browser) {
+		setOptions({
+			key: 'AIzaSyDGHnHScGXo1BsjYXxfvpHOvTij4VKROHY',
+			v: 'weekly',
+			language: 'en'
+		});
 	}
 </script>
 
 <script lang="ts">
 	import { mount, onDestroy, onMount } from 'svelte';
+	import { importLibrary } from '@googlemaps/js-api-loader';
 	import MapPanel from '$lib/components/atoms/MapPanel.svelte';
 
 	let mapRef: HTMLDivElement;
 	let observer: IntersectionObserver;
 
 	onMount(() => {
-		observer = new IntersectionObserver(
-			async ([entry]) => {
-				if (entry.isIntersecting) {
-					const { Map, MapTypeId, KmlLayer } = await getMapsLibrary();
-					const map = new Map(mapRef, {
-						backgroundColor: 'var(--brand-sagegrey-color)',
-						mapTypeId: MapTypeId.SATELLITE,
-						center: {
-							// TODO use fit to bounds with padding instead
-							lat: 37.241162694069175,
-							lng: -8.788955256741307
-						},
-						zoom: 20,
-						scrollwheel: false,
-						streetViewControl: false,
-						cameraControl: false,
-						fullscreenControl: false,
-						mapTypeControlOptions: {
-							position: google.maps.ControlPosition.RIGHT_TOP
-						}
-					});
+		observer = new IntersectionObserver(async ([entry]) => {
+			console.log(entry.isIntersecting);
+			if (entry.isIntersecting) {
+				const { Map, MapTypeId, KmlLayer } = await importLibrary('maps');
+				const map = new Map(mapRef, {
+					backgroundColor: 'var(--brand-sagegrey-color)',
+					mapTypeId: MapTypeId.SATELLITE,
+					center: {
+						// TODO use fit to bounds with padding instead
+						lat: 37.241162694069175,
+						lng: -8.788955256741307
+					},
+					zoom: 20,
+					scrollwheel: false,
+					streetViewControl: false,
+					cameraControl: false,
+					fullscreenControl: false,
+					mapTypeControlOptions: {
+						position: google.maps.ControlPosition.RIGHT_TOP
+					}
+				});
 
-					const container = document.createElement('div');
-					map.controls[google.maps.ControlPosition.TOP_LEFT].push(container);
-					mount(MapPanel, { target: container, props: { panel } });
+				const container = document.createElement('div');
+				map.controls[google.maps.ControlPosition.TOP_LEFT].push(container);
+				mount(MapPanel, { target: container, props: { panel } });
 
-					new KmlLayer({
-						url: 'https://www.google.com/maps/d/kml?mid=1mPab28Iyxh1lhm7a9Iq29E4TdVKbYb0',
-						map
-					});
+				new KmlLayer({
+					url: 'https://www.google.com/maps/d/kml?mid=1mPab28Iyxh1lhm7a9Iq29E4TdVKbYb0',
+					map
+				});
 
-					observer.disconnect();
-				}
-			},
-			{
-				root: document.getElementById('parallax') // TODO use body for mobile
+				observer.disconnect();
 			}
-		);
+		});
 
 		observer.observe(mapRef);
 	});
