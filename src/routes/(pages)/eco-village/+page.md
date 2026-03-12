@@ -1,5 +1,10 @@
 ---
 title: Eco Village
+description: Essência is a conscious eco-community on the peaceful coast of
+  Portugal, offering a sacred space in nature for healing, personal growth, and
+  mindful living. Through community, plant-based living, and heart-centered
+  practices, we create an environment where people can reconnect with
+  themselves, expand their consciousness, and live in harmony with life.
 ---
 
 ## Our Intentions
@@ -21,7 +26,7 @@ We believe in slow conscious life in nature
 For us and our children to blossom  
 To restore peace, live in harmony, natural bliss and loving kindness
 
-### Our vision
+## Our vision
 is where we want to be
 
 A world of unity  
@@ -29,7 +34,7 @@ Remembrance and reliance
 A holy nest where people share, sing, dance and laugh  
 Where we live our optimal health, experience our full potential and paradise on earth
 
-### Our Mission
+## Our Mission
 is what we do about it
 
 Create a safe, heart-aligned and sacred spaces in nature where we can purify, regenerate and grow joyfully
@@ -42,26 +47,26 @@ Come in my power and fulfil of my personal mission on Earth for my highest good 
 
 We develop an eco community with 22 residents plus guests who come to rest, heal, learn and love
 
-### Golden Agreements
+## Golden Agreements
 for harmony & peace is how we cultivate a healing environment
 
 #### HONESTY
 fluid sincere communication between people is encouraged as an essential part of the healing and self realisation process, everything can be said
 
 #### AHIMSA
-for peace and harmony within and without we celebrate consciously no harming  
-pro-life behaviours and materials
+for peace and harmony within and without we celebrate consciously no harming    
+pro-life behaviours and materials  
 We grow, support and eat organic plant based foods as medicine
 
 #### BENEVOLENT COMMUNICATION
 in the right manner
 
 #### GLORIFY YOUR SPACE
-You are here and now
+You are here and now  
 make it sacred, beautiful and cosy
 
 #### HIGH ON LIFE
-Zero substance, good practices, ecstatic life  
+Zero substance, good practices, ecstatic life    
 with gratitude we aim for our optimal health and full potential
 
 #### SELF EXPRESSION
@@ -71,6 +76,6 @@ We encourage each other in being what we are, authentic, vulnerable and great
 I choose LOVE at every breath
 
 #### RADICAL OWNERSHIP
-I take responsibility for my talking, acting, emotions, thoughts, commitment  
-I know I co-create my reality
+I take responsibility for my talking, acting, emotions, thoughts, commitment    
+I know I co-create my reality  
 I am doing the work on all levels
