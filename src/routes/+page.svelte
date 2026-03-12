@@ -471,4 +471,10 @@
 			object-fit: cover;
 		}
 	}
+
+	@media screen and (width < 550px) {
+		#about :global(br) {
+			display: none;
+		}
+	}
 </style>
