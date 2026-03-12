@@ -68,7 +68,7 @@
 		<source src={homeData.hero.video.portrait} media="(width < 460px)" />
 		<source src={homeData.hero.video.landscape} />
 		<!-- TODO: different video sources? -->
-		<enhanced:img src={Media.getFile(homeData.hero.fallback_image.landscape)} />
+		<enhanced:img src={Media.getFile(homeData.hero.fallback_image.landscape)} alt="" />
 	</video>
 	<div class="overlay">
 		<div class="page-content" style="margin-block: auto">
