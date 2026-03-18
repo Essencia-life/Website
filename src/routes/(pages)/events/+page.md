@@ -6,9 +6,9 @@ title: Events
 
 <ImageAndContent image="media/photo_2026-03-11_10-51-20.jpg" alt="Dance event in our Shala" lgRight smBottom>
 
-Our events center around dance as a form of expression, connection, and presence. Alongside dance gatherings, we host hands-on workshops such as permaculture, massage, and inner work.
+Our events center around dance as a form of expression, connection and presence. Alongside dance gatherings, we host hands-on workshops such as permaculture, massage and inner work.
 
-These spaces are practical, embodied, and grounded. They invite movement, learning, and self-exploration—individually and together. Some events are energetic and social, others quiet and introspective. All are intentional.
+These spaces are practical, embodied and grounded. They invite movement, learning and self-exploration—individually and together. Some events are energetic and social, others quiet and introspective. All are intentional.
 
 </ImageAndContent>
 

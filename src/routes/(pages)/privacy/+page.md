@@ -16,7 +16,7 @@ Email: [ola@essencia.life](mailto:ola@essencia.life)
 ### 1. Introduction
 
 Essência Life Lda (“we”, “our”, “us”) respects your privacy and is committed to protecting your personal data.  
-This Privacy Policy explains how we collect, use, and safeguard your information when you visit [https://www.essencia.life](https://www.essencia.life) or communicate with us.
+This Privacy Policy explains how we collect, use and safeguard your information when you visit [https://www.essencia.life](https://www.essencia.life) or communicate with us.
 
 This website and our services are intended for adults only.
 

@@ -2,9 +2,9 @@
 title: Eco Village
 description: Essência is a conscious eco-community on the peaceful coast of
   Portugal, offering a sacred space in nature for healing, personal growth, and
-  mindful living. Through community, plant-based living, and heart-centered
+  mindful living. Through community, plant-based living and heart-centered
   practices, we create an environment where people can reconnect with
-  themselves, expand their consciousness, and live in harmony with life.
+  themselves, expand their consciousness and live in harmony with life.
 ---
 
 ## Our Intentions

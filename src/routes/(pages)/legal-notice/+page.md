@@ -22,9 +22,9 @@ Website: [https://www.essencia.life](https://www.essencia.life)
 Benjamin-Pascal Buhler
 
 **Business Activity:**  
-Essência Life Lda operates a retreat and community center focused on holistic well-being, sustainable living, and personal development.  
-The company offers immersive retreat experiences, workshops, and programs that integrate mindfulness, nature connection, and community living practices  
-to support physical, emotional, and spiritual growth.
+Essência Life Lda operates a retreat and community center focused on holistic well-being, sustainable living and personal development.  
+The company offers immersive retreat experiences, workshops and programs that integrate mindfulness, nature connection and community living practices  
+to support physical, emotional and spiritual growth.
 
 **Hosting Provider:**  
 Vercel Inc.  
@@ -39,4 +39,4 @@ United States
 
 Despite careful control of the content, Essência Life Lda assumes no liability for the content of external links.  
 The operators of the linked pages are solely responsible for their content.  
-Essência Life Lda also does not guarantee the accuracy, completeness, or timeliness of the information provided on this website.
+Essência Life Lda also does not guarantee the accuracy, completeness or timeliness of the information provided on this website.
