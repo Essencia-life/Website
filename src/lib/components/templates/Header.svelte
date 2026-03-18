@@ -34,7 +34,7 @@
 
 		<Navigation header {menuAbove} />
 
-		<button id="menu-button" onclick={openSidebar}>
+		<button id="menu-button" onclick={openSidebar} aria-label="Menu">
 			<Menu />
 		</button>
 	</div>
