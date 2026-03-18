@@ -5,7 +5,10 @@ const mediaFiles = new Map(
 	Object.entries(
 		import.meta.glob<{ default: Picture }>('$lib/assets/media/**/*', {
 			eager: true,
-			query: { enhanced: true }
+			query: {
+				enhanced: true,
+				w: '360;540;720;900;1280;1920'
+			}
 		})
 	).map(([path, module]) => [path.match(pageRegExp)?.groups?.file, module.default])
 );

@@ -1,11 +1,11 @@
 <script lang="ts">
-	import homeData from '$lib/content/home.json';
-	import { CirclePlay } from '@lucide/svelte';
 	import { getContext, onMount } from 'svelte';
-	import type { Overlays } from '$lib/overlays.svelte';
-	import FullVideoDialog from '$lib/components/organisms/FullVideoDialog.svelte';
 	import { page } from '$app/state';
-	import { Media } from '$lib/services/Media.js';
+	import { CirclePlay } from '@lucide/svelte';
+	import FullVideoDialog from '$lib/components/organisms/FullVideoDialog.svelte';
+	import type { Overlays } from '$lib/overlays.svelte';
+	import homeData from '$lib/content/home.json';
+	import heroVideoPoster from '$lib/assets/media/hero_fallback_inline.jpg?inline';
 
 	interface Props {
 		visibilityChange(visible: boolean): void;
@@ -54,21 +54,19 @@
 </script>
 
 <div class="hero" bind:this={heroRef}>
-	<!-- TODO: animated avif if supported -->
-	<!-- TODO: check for data saving flag  -->
 	<video
-		fetchpriority="high"
 		bind:this={heroVideoRef}
 		muted
-		autoplay
 		loop
 		playsinline
-		{onloadedmetadata}
+		autoplay={!page.data.saveData}
+		poster={heroVideoPoster}
+		fetchpriority="high"
 	>
-		<source src={homeData.hero.video.portrait} media="(width < 460px)" />
-		<source src={homeData.hero.video.landscape} />
-		<!-- TODO: different video sources? -->
-		<enhanced:img src={Media.getFile(homeData.hero.fallback_image.landscape)} alt="" />
+		<source src="media/hero_m.webm" type="video/webm" media="(width < 460px)" />
+		<source src="media/hero.webm" type="video/webm" />
+		<source src="media/hero_m.mp4" type="video/mp4" media="(width < 460px)" />
+		<source src="media/hero.mp4" type="video/mp4" />
 	</video>
 	<div class="overlay">
 		<div class="page-content" style="margin-block: auto">

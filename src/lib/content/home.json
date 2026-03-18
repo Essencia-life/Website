@@ -6,14 +6,6 @@
     "cover": "media/232574233.jpeg"
   },
   "hero": {
-    "video": {
-      "landscape": "media/hero.webm",
-      "portrait": "media/hero_m.webm"
-    },
-    "fallback_image": {
-      "landscape": "media/hero_fallback.jpg",
-      "portrait": "media/hero_m_fallback.jpg"
-    },
     "slogan": "Bem Vindo a Essência",
     "watch_button": "Watch full video"
   },

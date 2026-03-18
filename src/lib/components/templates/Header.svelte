@@ -5,6 +5,8 @@
 	import Navigation from '../molecules/Navigation.svelte';
 	import type { Overlays } from '$lib/overlays.svelte';
 	import { resolve } from '$app/paths';
+	import logoTree from '$lib/assets/logo_tree.png?enhanced&h=56;112&w=';
+	import logoTitle from '$lib/assets/logo_title.png?enhanced&h=24;48&w=';
 
 	const overlays = getContext<Overlays<any>>('overlays');
 
@@ -22,11 +24,11 @@
 <header>
 	<div class="page-content">
 		<a href={resolve('/')} class="home" aria-hidden="true">
-			<enhanced:img class="logo" src="$lib/assets/logo_tree.png" alt="" />
+			<enhanced:img class="logo" src={logoTree} alt="" />
 		</a>
 
 		<a href={resolve('/')} class="home">
-			<enhanced:img class="title" src="$lib/assets/logo_title.png" alt="" />
+			<enhanced:img class="title" src={logoTitle} alt="" />
 			<h1>Essência</h1>
 		</a>
 
@@ -74,6 +76,11 @@
 
 	.logo {
 		max-height: 100%;
+		width: auto;
+	}
+
+	.title {
+		height: 24px;
 		width: auto;
 	}
 
