@@ -73,6 +73,7 @@
 					<enhanced:img
 						src={Media.getFile(event.cover_image)}
 						loading="lazy"
+						alt=""
 						style:view-transition-name={eventCoverTransitionName(linkUrl)}
 					/>
 				</a>

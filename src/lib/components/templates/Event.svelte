@@ -26,7 +26,7 @@
 
 <div class="event">
 	<div class="cover">
-		<enhanced:img src={Media.getFile(event.cover_image)} />
+		<enhanced:img src={Media.getFile(event.cover_image)} alt="" />
 	</div>
 
 	<div class="details">
