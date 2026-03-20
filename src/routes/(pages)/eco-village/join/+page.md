@@ -84,19 +84,19 @@ He is also described as the connector of the acclaimed vegan concept store and r
 
 - Simona speaks German, French, English and Spanish.
 - Antoine speaks French, English, some Spanish and German.
-- Together they are learning Portuguese.
+- Together we are learning Portuguese.
 
 </ImageAndContent>
 
 #### Shared projects
 
-Since meeting, they say their ideas “made love”. Together they co-founded:
+Since meeting, we say our ideas “made love”. Together we co-founded:
 
 - the nomadic glamping eco-retreat center **NomadShala**
 - the conscious **Healing Heart Festival**
-- **Essencia Nature Retreat**
+- **Essência Nature Retreat**
 
-As humble and devoted gatekeepers, they warmly welcome visitors and thank them for their interest and calling to connect.
+As humble and devoted gatekeepers, we warmly welcome visitors and thank them for their interest and calling to connect.
 
 ### Co-ownership opportunities
 
@@ -105,8 +105,6 @@ We are open for more like-hearted individuals and families to join.
 Contact Antoine for more information about the project and options to join:
 
 - **WhatsApp / Telegram:** `+351 911 035 201`
-
-The page also invites people to write by email and share who they are, their intentions, needs and dreams.
 
 ### Volunteer with us
 
@@ -134,18 +132,3 @@ Your partnership as a crowdfunder will play a vital role in:
 - expanding our capacity for sustainable food production
 - implementing innovative renewable energy and water management solutions
 - supporting educational and retreat programs that empower individuals to live more consciously
-
-The page frames Essência as an opportunity to invest in a project with both personal healing and wider social and environmental impact.
-
-### Ready to host your retreat?
-
-Feel free to reach out with questions. The page says they are there to provide all details needed to plan a retreat.
-
-### Location
-
-They describe themselves as being on the **Costa Vicentina**, “the last wild coast of Europe”:
-
-- 700 km of natural hiking trails on cliffs and dunes
-- 30 minutes from dozens of wild beaches on the west coast
-- close to some of the best surf spots in the world
-- also near kids-friendly beaches on the south coast
