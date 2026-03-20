@@ -176,6 +176,6 @@
 
 	.event enhanced\:img {
 		object-fit: cover;
-		aspect-ratio: 1 / 1.41;
+		aspect-ratio: 4 / 5;
 	}
 </style>
