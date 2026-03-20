@@ -211,7 +211,7 @@ button {
 
 a:not(.no-link, .button) {
 	color: var(--brand-mossgreen-color);
-	font-weight: 600;
+	font-weight: 500;
 }
 
 a[target='_blank']:not(.no-link, .button, .icon)::after {
