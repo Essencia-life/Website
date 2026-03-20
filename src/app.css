@@ -23,6 +23,8 @@
 	--brand-stonewhite-color: rgb(var(--brand-stonewhite-rgb));
 	--brand-darkbrown-rgb: 49 39 25;
 	--brand-darkbrown-color: rgb(var(--brand-darkbrown-rgb));
+	--brand-rosewood-rgb: 191 144 134;
+	--brand-rosewood-color: rgb(var(--brand-rosewood-rgb));
 }
 
 ::view-transition-old(root),
