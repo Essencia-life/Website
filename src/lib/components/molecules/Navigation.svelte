@@ -84,7 +84,7 @@
 
 	nav a {
 		color: var(--brand-mossgreen-color);
-		font-weight: 600;
+		font-weight: 500;
 		text-decoration: none;
 	}
 

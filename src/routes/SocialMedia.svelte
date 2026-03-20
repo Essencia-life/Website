@@ -52,7 +52,7 @@
 	}
 
 	h4 {
-		font-weight: 600;
+		font-weight: 500;
 		margin-block: 2rem;
 	}
 
