@@ -67,7 +67,7 @@
 			/>
 			<div style="display: flex; flex-direction: column; gap: 2rem; flex: 1;">
 				<div style="display: flex; justify-content: space-between">
-					<small>{event.type}</small>
+					<small class={event.type}>{event.type}</small>
 					{#if event.weekly}
 						<time style="font-weight: 500">{event.weekly}</time>
 					{:else}
@@ -172,6 +172,11 @@
 		letter-spacing: 1px;
 		text-shadow: 1px 1px var(--brand-mossgreen-color);
 		line-height: 1.5;
+	}
+
+	.event small.retreat {
+		background-color: var(--brand-rosewood-color);
+		text-shadow: 1px 1px var(--brand-darkbrown-color);
 	}
 
 	.event enhanced\:img {
