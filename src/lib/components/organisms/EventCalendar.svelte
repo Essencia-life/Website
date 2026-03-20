@@ -157,7 +157,7 @@
 	enhanced\:img {
 		width: 100%;
 		height: auto;
-		aspect-ratio: 1 / 1.41;
+		aspect-ratio: 4 / 5;
 		object-fit: cover;
 		box-shadow: 0 0 3rem rgba(var(--brand-darkbrown-rgb) / 40%);
 	}
