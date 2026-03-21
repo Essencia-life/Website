@@ -115,7 +115,7 @@ Come and join us to work on eco projects.
 #### Conditions
 
 - free stay on site
-- **20h of community service work per week**
+- **24h of community service work per week**
 - **two months minimum**
 
 Exception noted on the page: shorter stays may be possible if you are already skilled and autonomous in permaculture or eco construction.
