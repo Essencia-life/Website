@@ -15,12 +15,17 @@
 	const endDate = $derived(event.end.toLocaleDateString('en', { dateStyle: 'long' }));
 	const startTime = $derived(
 		event.start.toLocaleTimeString('en', {
+			timeZone: 'Europe/Lisbon',
 			hour: 'numeric',
 			minute: '2-digit'
 		})
 	);
 	const endTime = $derived(
-		event.end.toLocaleTimeString('en', { hour: 'numeric', minute: '2-digit' })
+		event.end.toLocaleTimeString('en', {
+			timeZone: 'Europe/Lisbon',
+			hour: 'numeric',
+			minute: '2-digit'
+		})
 	);
 </script>
 
