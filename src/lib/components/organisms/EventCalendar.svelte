@@ -54,10 +54,15 @@
 			{@const startDate = event.start.toLocaleDateString('de', { dateStyle: 'short' })}
 			{@const endDate = event.end.toLocaleDateString('de', { dateStyle: 'short' })}
 			{@const startTime = event.start.toLocaleTimeString('en', {
+				timeZone: 'Europe/Lisbon',
 				hour: 'numeric',
 				minute: '2-digit'
 			})}
-			{@const endTime = event.end.toLocaleTimeString('en', { hour: 'numeric', minute: '2-digit' })}
+			{@const endTime = event.end.toLocaleTimeString('en', {
+				timeZone: 'Europe/Lisbon',
+				hour: 'numeric',
+				minute: '2-digit'
+			})}
 			{@const linkUrl = resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}
 
 			<article>
