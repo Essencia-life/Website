@@ -17,6 +17,7 @@
 	{:else}
 		<title>{schema.name} {titleSuffix}</title>
 	{/if}
+	<link rel="canonical" href={schema.url} />
 	<meta name="description" content={schema.description} />
 
 	<!-- OG Tags (https://ogp.me/) -->
