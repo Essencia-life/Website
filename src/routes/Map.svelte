@@ -15,7 +15,7 @@
 	import { onDestroy, onMount } from 'svelte';
 	import { importLibrary } from '@googlemaps/js-api-loader';
 
-	let mapRef: HTMLDivElement;
+	let mapRef: google.maps.MapElement;
 	let observer: IntersectionObserver;
 
 	onMount(() => {
@@ -24,58 +24,16 @@
 				observer.unobserve(entry.target);
 				observer.disconnect();
 
-				const { Map, MapTypeId, InfoWindow } = await importLibrary('maps');
-				const { AdvancedMarkerElement } = await importLibrary('marker');
-				const { Place } = await importLibrary('places');
+				const { MapTypeId } = await importLibrary('maps');
+				await importLibrary('marker');
+				await importLibrary('places');
 
-				const map = new Map(mapRef, {
-					mapId: '4f26b6a2d5047a295c2a62b8',
+				mapRef.innerMap.setOptions({
 					backgroundColor: 'var(--brand-sagegrey-color)',
 					mapTypeId: MapTypeId.TERRAIN,
-					center: {
-						lat: 37.241162694069175,
-						lng: -8.788955256741307
-					},
-					zoom: 10,
-					scrollwheel: false,
-					disableDefaultUI: true
+					disableDefaultUI: true,
+					scrollwheel: false
 				});
-
-				const place = new Place({
-					id: 'ChIJiSJsYkY_Gw0R7xII6XgQPU0'
-				});
-
-				await place.fetchFields({
-					fields: ['displayName', 'formattedAddress', 'location', 'googleMapsURI']
-				});
-
-				if (place.location) {
-					const marker = new AdvancedMarkerElement({
-						map,
-						position: place.location,
-						title: place.displayName
-					});
-
-					const infoWindow = new InfoWindow({
-						headerDisabled: true,
-						content: `
-            <div style="max-width:240px">
-              <strong>${place.displayName ?? 'Ort'}</strong><br>
-              ${place.formattedAddress ?? ''}<br><br>
-              <a href="${place.googleMapsURI}" target="_blank" rel="noopener">
-                Open in Google Maps
-              </a>
-            </div>
-          `
-					});
-
-					infoWindow.open({
-						map,
-						anchor: marker
-					});
-
-					map.setCenter(place.location);
-				}
 			}
 		});
 
@@ -87,14 +45,37 @@
 	});
 </script>
 
-<div class="map" bind:this={mapRef}>
+<gmp-map
+	bind:this={mapRef}
+	map-id="4f26b6a2d5047a295c2a62b8"
+	center="37.241162694069175, -8.788955256741307"
+	zoom="10"
+>
 	<div class="loading">
 		<div style="margin: auto">Loading Google Maps</div>
 	</div>
-</div>
+
+	<div class="widget-container" slot="control-inline-start-block-start">
+		<gmp-place-details>
+			<gmp-place-details-place-request place="ChIJiSJsYkY_Gw0R7xII6XgQPU0"
+			></gmp-place-details-place-request>
+			<gmp-place-all-content></gmp-place-all-content>
+		</gmp-place-details>
+	</div>
+
+	<div class="widget-container" slot="control-block-end-inline-center">
+		<gmp-place-details-compact orientation="horizontal">
+			<gmp-place-details-place-request place="ChIJiSJsYkY_Gw0R7xII6XgQPU0"
+			></gmp-place-details-place-request>
+			<gmp-place-all-content></gmp-place-all-content>
+		</gmp-place-details-compact>
+	</div>
+
+	<gmp-advanced-marker position="37.244036099999995, -8.7859634"></gmp-advanced-marker>
+</gmp-map>
 
 <style>
-	.map {
+	gmp-map {
 		position: absolute;
 		inset: 0;
 		background: var(--brand-dark-section-color);
@@ -105,5 +86,31 @@
 		inset: 0;
 		display: flex;
 		align-items: stretch;
+	}
+
+	gmp-place-details {
+		color-scheme: light;
+		width: 400px;
+		margin: 4rem;
+		max-height: calc(100vh - 8rem - 18rem);
+		overflow: auto;
+	}
+
+	gmp-place-details-compact {
+		color-scheme: light;
+		width: calc(100vw - 8rem);
+		margin-bottom: 8rem;
+	}
+
+	@media screen and (width >= 800px) {
+		gmp-place-details-compact {
+			display: none;
+		}
+	}
+
+	@media screen and (width < 800px) {
+		gmp-place-details {
+			display: none;
+		}
 	}
 </style>
