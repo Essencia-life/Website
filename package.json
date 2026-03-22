@@ -23,7 +23,7 @@
 		"@icons-pack/svelte-simple-icons": "^6.5.0",
 		"@lucide/svelte": "^0.545.0",
 		"@playwright/test": "^1.55.1",
-		"@sveltejs/adapter-vercel": "^5.10.2",
+		"@sveltejs/adapter-vercel": "^6.3.3",
 		"@sveltejs/enhanced-img": "^0.8.4",
 		"@sveltejs/kit": "^2.43.2",
 		"@sveltejs/vite-plugin-svelte": "^6.2.0",
@@ -57,5 +57,10 @@
 	},
 	"dependencies": {
 		"@vercel/speed-insights": "^2.0.0"
+	},
+	"overrides": {
+		"@sveltejs/kit": {
+			"cookie": "^0.7.2"
+		}
 	}
 }
