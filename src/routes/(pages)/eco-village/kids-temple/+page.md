@@ -10,7 +10,7 @@ Registrations are open
 We embrace the Forest School ethos that chooses nature as the ideal classroom for our children  
 Holistic development is stimulated through games and activities proposed every day to awaken the child to their social, physical, intellectual and emotional intelligences and realities as well as spiritual connection and communication
 
-Forest School resonates with Essência’s mission to create a New Earth Eco-Village and grow peaceful loving humans  
+Forest School resonates with our mission to create a New Earth Eco-Village and grow peaceful loving humans  
 Other educational wisdoms are weaved in
 
 Activities aim to develop 5 main axes
@@ -54,7 +54,7 @@ Contribution per child
 - 111€ per week
 - 333€ per month
 
-Includes organic vegan lunch at 1am (as written on the page) for the child  
+Includes organic vegan lunch at 1am for the child  
 Parent can join meals for 8€ per meal  
 Parents can stay on the land during Kidstemple
 
@@ -67,14 +67,15 @@ Workshop schedule (may change)
 - Thursday: Gardening
 - Friday: Portuguese Class
 
-Every Thursday: Community Day (gardening, connecting and late afternoon Forest Spa, contribution 15€)  
+Every Thursday: Community Day (gardening, connecting and late afternoon Forest Spa, contribution 20€)  
 Parents invited to join while child is in the Kidstemple and stay the whole day
 
 Registration via
-- Fox: +49 176 47005666 (SMS & Telegram) and +351 915 562405 (WhatsApp)
-- Chaitya: +351 918 833 991 (WhatsApp)
+- Fox: [+49 176 47005666](tel:+4917647005666) (SMS & Telegram)  
+and [+351 915 562405](tel:+351915562405) (WhatsApp)
+- Chaitya: [+351 918 833 991](tel:+351918833991) (WhatsApp)
 
-Closing: With Love & Joy, The Essência Family
+With Love & Joy, The Essência Family
 
 ### Parents are welcome to join
 1 day per month or more  
@@ -97,13 +98,23 @@ Forest tea room chill space for parents
 Outdoor shoes, outdoor clothes, hat, organic sun screen, swimming costume & tools, rain coat, jacket for the cold, water bottle, fruits for snacks
 
 ### Our ethics
-Themes listed on the page
 
-NATURE: being, seeding, planting, growing & caring, reforestation, gardening, animal observation, eco constructions, exploration, landart  
-PLAY: games, ropes, swings, balls, circus  
-COMMUNICATE: develop social skills & values, compassion, empathy, learn to share, be together, express needs & boundaries, storytelling  
-BLOSSOM: meditate, confidence, concentrate, motricity, senses, belonging, arts, painting, handicrafts  
-MOVING: dancing, singing, kids yoga, acro yoga, aerial yoga, acrobatics, qigong, nature hike, beach play & swim  
-BE ALIVE: be free, explore life, celebrate, wonder, awaken curiosity, be present, listen, be grateful
+#### NATURE
+being, seeding, planting, growing & caring, reforestation, gardening, animal observation, eco constructions, exploration, landart
+
+#### PLAY
+games, ropes, swings, balls, circus  
+
+#### COMMUNICATE
+develop social skills & values, compassion, empathy, learn to share, be together, express needs & boundaries, storytelling  
+
+#### BLOSSOM
+meditate, confidence, concentrate, motricity, senses, belonging, arts, painting, handicrafts  
+
+#### MOVING
+dancing, singing, kids yoga, acro yoga, aerial yoga, acrobatics, qigong, nature hike, beach play & swim  
+
+#### BE ALIVE
+be free, explore life, celebrate, wonder, awaken curiosity, be present, listen, be grateful
 
 <Instagram link="https://www.instagram.com/kidstemple_essencia" />
