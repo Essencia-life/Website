@@ -10,10 +10,10 @@ Registrations are open
 
 ### Forest Kids Temple
 
-We embrace the Forest School ethos that chooses nature as the ideal classroom for our children\
+We embrace the Forest School ethos that chooses nature as the ideal classroom for our children  
 Holistic development is stimulated through games and activities proposed every day to awaken the child to their social, physical, intellectual and emotional intelligence and realities as well as spiritual connection and communication
 
-Forest School resonates with our mission to create a New Earth Eco-Village and grow peaceful loving humans\
+Forest School resonates with our mission to create a New Earth Eco-Village and grow peaceful loving humans  
 Other educational wisdoms are weaved in
 
 Activities aim to develop 5 main axes
@@ -24,32 +24,32 @@ Activities aim to develop 5 main axes
 * Social skills
 * Empathy
 
-Besides safety rules, kids are not obliged to follow activities at a given time\
+Besides safety rules, kids are not obliged to follow activities at a given time  
 They can follow their bliss and curiosity until ready to engage
 
-One day per month is dedicated to parents to share about holistic education and their kids’ specific growth\
+One day per month is dedicated to parents to share about holistic education and their kids’ specific growth  
 A chill space forest tea room is planned for parents who wish to stay around during school, read, chat, connect and work
 
 ### Our Purpose
 
 Create and facilitate an inspiring kids space to awaken our children to their full potential
 
-For residents, neighbors and our larger community’s children\
-A solution for guests’ children so more guests can come for retreats, healing and self discovery journeys\
+For residents, neighbors and our larger community’s children  
+A solution for guests’ children so more guests can come for retreats, healing and self discovery journeys  
 A nourishing solution for lightworkers too
 
 ### Our Vision
 
 Welcome children in nature for an holistic playful education in life using modern and ancient alternative education wisdoms
 
-Parents are grateful and relaxed, enjoy free time and share some time and skills for the kids space\
+Parents are grateful and relaxed, enjoy free time and share some time and skills for the kids space  
 Kids play and laugh and blossom freely in a supportive conscious environment
 
 ### Our Mission
 
 Open and curate an accessible, safe and inspiring space for children and parents growth in nature
 
-Offer a wide variety of awakening activities developing social, physical, intellectual, communication, emotional and spiritual skills\
+Offer a wide variety of awakening activities developing social, physical, intellectual, communication, emotional and spiritual skills  
 Focus on self-awareness, self regulation, self-motivation, social skills and empathy with strong connection to nature
 
 ### Practical Info
@@ -62,8 +62,8 @@ Focus on self-awareness, self regulation, self-motivation, social skills and emp
 
 #### 🌹 Contribution per child:
 
-30€ per day\
-120€ per week\
+30€ per day  
+120€ per week  
 333€ for 4 weeks
 
 ##### 🪷 Registration:
@@ -104,26 +104,26 @@ English, German, Dutch
 
 We are looking forward to welcome you in our KidsTemple 🙏
 
-With Joy\
+With Joy  
 Zoe, Silke, Meike, Fox & Chaitya 🌳
 
 ### Parents are welcome to join
 
-1 day per month or more\
-Parents encouraged to spend a day in service of the temple and the children\
-Assist the facilitator, observe, share knowledge, organize a workshop or help build something\
+1 day per month or more  
+Parents encouraged to spend a day in service of the temple and the children  
+Assist the facilitator, observe, share knowledge, organize a workshop or help build something  
 Contributions help keep prices lower and make it more interesting for everyone
 
 ### Facilities
 
-Most activities are in nature\
-1 dome (inside)\
-1 temple tent (outside shade)\
-1 shower and several toilets\
-1 natural pond\
-1 juice bar\
-1 kitchen\
-1 playground with trampoline and swings\
+Most activities are in nature  
+1 dome (inside)  
+1 temple tent (outside shade)  
+1 shower and several toilets  
+1 natural pond  
+1 juice bar  
+1 kitchen  
+1 playground with trampoline and swings  
 Forest tea room chill space for parents
 
 ### Lots of things to bring
