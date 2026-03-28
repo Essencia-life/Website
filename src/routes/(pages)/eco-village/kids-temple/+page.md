@@ -11,7 +11,7 @@ Registrations are open
 ### Forest Kids Temple
 
 We embrace the Forest School ethos that chooses nature as the ideal classroom for our children\
-Holistic development is stimulated through games and activities proposed every day to awaken the child to their social, physical, intellectual and emotional intelligences and realities as well as spiritual connection and communication
+Holistic development is stimulated through games and activities proposed every day to awaken the child to their social, physical, intellectual and emotional intelligence and realities as well as spiritual connection and communication
 
 Forest School resonates with our mission to create a New Earth Eco-Village and grow peaceful loving humans\
 Other educational wisdoms are weaved in
@@ -34,7 +34,7 @@ A chill space forest tea room is planned for parents who wish to stay around dur
 
 Create and facilitate an inspiring kids space to awaken our children to their full potential
 
-For residents, neighbours and our larger community’s children\
+For residents, neighbors and our larger community’s children\
 A solution for guests’ children so more guests can come for retreats, healing and self discovery journeys\
 A nourishing solution for lightworkers too
 
@@ -54,25 +54,21 @@ Focus on self-awareness, self regulation, self-motivation, social skills and emp
 
 ### Practical Info
 
-⏳ Monday - Friday ~ 10:30am-3pm
+⏳ Monday - Friday ~ **10:30am - 3pm**
 
 📍 Location: Essência Nature Retreat (between Lagos and Aljezur)
 
 🐬 Age: 2 - 10 years 
 
-
-
-#### 🌹 Contribution per child: 
+#### 🌹 Contribution per child:
 
 30€ per day\
 120€ per week\
 333€ for 4 weeks
 
-##### 🪷 Registration: 
+##### 🪷 Registration:
 
 DM, Whatsapp or Telegram via [+351 915 562 405](tel:+351915562405) (Fox)
-
-
 
 Hello Dear Children, Parents and single Mothers & Fathers,
 
@@ -86,11 +82,11 @@ Hello Dear Children, Parents and single Mothers & Fathers,
 
 As the parents you can join for 8€ the Community Lunch at 2pm with the Essência tribe. 
 
-#### 🌿 Languages: 
+#### 🌿 Languages:
 
 English, German, Dutch 
 
-#### Our offerings for the kids and partens include:
+#### Our offerings for the kids and parents include:
 
 💃 Music & Movement 
 
@@ -113,7 +109,7 @@ Zoe, Silke, Meike, Fox & Chaitya 🌳
 
 1 day per month or more\
 Parents encouraged to spend a day in service of the temple and the children\
-Assist the facilitator, observe, share knowledge, organise a workshop or help build something\
+Assist the facilitator, observe, share knowledge, organize a workshop or help build something\
 Contributions help keep prices lower and make it more interesting for everyone
 
 ### Facilities
