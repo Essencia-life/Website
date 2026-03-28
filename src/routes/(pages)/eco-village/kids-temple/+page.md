@@ -70,7 +70,9 @@ Focus on self-awareness, self regulation, self-motivation, social skills and emp
 
 DM, Whatsapp or Telegram via [+351 915 562 405](tel:+351915562405) (Fox)
 
-Hello Dear Children, Parents and single Mothers & Fathers,
+
+
+##### Hello Dear Children, Parents and single Mothers & Fathers,
 
 🌳 The KidsTemple Essência welcomes you on the sacred land of Essência. There are forests, gardens, natural ponds, a playground and a wooden play temple, where we meet every day for our opening circle.
 
