@@ -72,13 +72,13 @@ DM, Whatsapp or Telegram via [+351 915 562 405](tel:+351915562405) (Fox)
 
 Hello Dear Children, Parents and single Mothers & Fathers,
 
-🌳 The Kidstemple Essência welcomes you on the sacred land of Essência. There are forests, gardens, natural ponds, a playground and a wooden play temple, where we meet every day for our opening circle.
+🌳 The KidsTemple Essência welcomes you on the sacred land of Essência. There are forests, gardens, natural ponds, a playground and a wooden play temple, where we meet every day for our opening circle.
 
 🦋 Together we will explore the magical nature, craft, paint, play, sing and connect from heart to heart.
 
-🌳 It is also a place we create for You, the Parents. You can join our kidstemple program, become a part of our community, take your own time to work in our Co-Working space or relax in nature. Of course you can also drop your child after it feels safe with us and pick it up at 3pm.
+🌳 It is also a place we create for You, the Parents. You can join our KidsTemple program, become a part of our community, take your own time to work in our Co-Working space or relax in nature. Of course you can also drop your child after it feels safe with us and pick it up at 3pm.
 
-🍅 The contribution includes organic chia pudding or smoothie at 12am and vegan organic lunch at 2pm for the children.
+🍅 The contribution includes organic Chia pudding or smoothie at 12am and vegan organic lunch at 2pm for the children.
 
 As the parents you can join for 8€ the Community Lunch at 2pm with the Essência tribe. 
 
@@ -98,7 +98,7 @@ English, German, Dutch
 
 🇵🇹 Portuguese class 
 
-🔥 Every Thursday we have a Community Day. We are gardening, connecting and in the late afternoon we are opening our Forest Spa (20€ per person, Kids for free). You are invited to be a part while you child is in the Kidstemple and stay the whole day 🙏
+🔥 Every Thursday we have a Community Day. We are gardening, connecting and in the late afternoon we are opening our Forest Spa (20€ per person, Kids for free). You are invited to be a part while you child is in the KidsTemple and stay the whole day 🙏
 
 We are looking forward to welcome you in our KidsTemple 🙏
 
