@@ -24,11 +24,11 @@
 	<div class="background">
 		<enhanced:img src="$lib/assets/media/footer.png" alt="Essência forest skyline" loading="lazy" />
 	</div>
-	<div style="background-color: var(--brand-mossgreen-color)">
+	<div class="footer-content">
 		<div class="page-content grid">
 			<div class="first-column">
 				<div>
-					<a href={footerData.cta.page} class="button button-overlay">{footerData.cta.label}</a>
+					<a href={footerData.cta.page} class="button button-primary">{footerData.cta.label}</a>
 				</div>
 
 				<div class="social-media">
@@ -90,13 +90,17 @@
 		display: block;
 		background: linear-gradient(
 			to top,
-			var(--brand-mossgreen-color) 5%,
-			rgba(var(--brand-mossgreen-rgb) / 0) 60%
+			var(--brand-dark-section-color) 5%,
+			rgba(var(--brand-dark-section-rgb) / 0) 60%
 		);
 	}
 
+	.footer-content {
+		background: var(--brand-dark-section-color);
+	}
+
 	.page-content {
-		color: var(--brand-sandbeige-color);
+		color: var(--brand-parchment-color);
 	}
 
 	.grid {
@@ -142,10 +146,10 @@
 
 	.copyright {
 		display: block;
-		border-top: 1px solid var(--brand-sagegrey-color);
+		border-top: 1px solid var(--brand-parchment-color);
 		text-align: center;
 		margin-top: 4rem;
 		padding-block: 2rem;
-		color: var(--brand-sagegrey-color);
+		color: var(--brand-parchment-color);
 	}
 </style>

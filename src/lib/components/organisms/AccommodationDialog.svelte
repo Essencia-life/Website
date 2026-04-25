@@ -137,7 +137,7 @@
 		width: 2rem;
 		height: 2rem;
 		border-radius: 100%;
-		background: var(--brand-sandbeige-color);
+		background: var(--brand-parchment-color);
 	}
 
 	.indicators > div::after {
@@ -146,7 +146,7 @@
 		width: 2rem;
 		height: 2rem;
 		border-radius: 100%;
-		background: var(--brand-terracotta-color);
+		background: var(--brand-earthterracotta-color);
 		opacity: var(--ratio);
 	}
 
@@ -159,7 +159,7 @@
 		position: absolute;
 		inset: auto 0 0 0;
 		padding: 2rem;
-		background: rgba(var(--brand-darkbrown-rgb) / 80%);
+		background: rgba(var(--brand-earthbrown-rgb) / 80%);
 		color: var(--brand-stonewhite-color);
 		font-size: 3.5rem;
 	}
@@ -185,7 +185,7 @@
 		margin: 0;
 		color: #fff;
 		cursor: pointer;
-		filter: drop-shadow(var(--brand-darkbrown-color) 0 0 1rem);
+		filter: drop-shadow(var(--brand-earthbrown-color) 0 0 1rem);
 	}
 
 	.gallery button:disabled {
@@ -210,7 +210,7 @@
 		overflow-y: hidden;
 		overflow-x: auto;
 		align-items: center;
-		background: var(--brand-darkbrown-color);
+		background: var(--brand-earthbrown-color);
 		scroll-snap-type: x mandatory;
 	}
 

@@ -335,7 +335,7 @@
 		}
 
 		#events .parallax__layer--base {
-			box-shadow: 0 0 8px rgba(var(--brand-darkbrown-rgb) / 50%);
+			box-shadow: 0 0 8px rgba(var(--brand-earthbrown-rgb) / 50%);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -392,7 +392,7 @@
 
 		#visit .parallax__layer--base,
 		#follow-us .parallax__layer--base {
-			box-shadow: 0 0 8px rgba(var(--brand-darkbrown-rgb) / 50%);
+			box-shadow: 0 0 8px rgba(var(--brand-earthbrown-rgb) / 50%);
 		}
 
 		#follow-us .parallax__layer--base,
@@ -412,7 +412,7 @@
 			height: 90%;
 			padding: 0 15% 12%;
 			aspect-ratio: 1;
-			background: var(--brand-sandbeige-color);
+			background: var(--brand-parchment-color);
 			/* FIXME: not working Firefox */
 			clip-path: shape(from 50% 91%, line to 90% 50%, arc to 50% 9% of 1%, arc to 10% 50% of 1%);
 		}
@@ -426,7 +426,7 @@
 			align-items: flex-end;
 			justify-content: center;
 			text-align: center;
-			box-shadow: 0 0 8px rgba(var(--brand-darkbrown-rgb) / 50%);
+			box-shadow: 0 0 8px rgba(var(--brand-earthbrown-rgb) / 50%);
 		}
 
 		.community-background :global(picture) {
@@ -441,7 +441,7 @@
 			display: flex;
 			align-items: flex-end;
 			height: 90%;
-			filter: drop-shadow(0 0 10px var(--brand-terracotta-color));
+			filter: drop-shadow(0 0 10px var(--brand-earthterracotta-color));
 		}
 
 		.community-background {

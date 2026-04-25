@@ -36,7 +36,7 @@
 		gap: 2rem;
 		background-color: var(--brand-stonewhite-color);
 		border-radius: 8rem;
-		box-shadow: 0 0 16rem var(--brand-darkbrown-color);
+		box-shadow: 0 0 16rem var(--brand-earthbrown-color);
 	}
 
 	@media screen and (width < 800px) {

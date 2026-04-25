@@ -46,7 +46,7 @@
 	.social-media-button {
 		padding: 4rem;
 		border-radius: 4rem;
-		background: rgba(var(--brand-sandbeige-rgb) / 80%);
+		background: rgba(var(--brand-parchment-rgb) / 80%);
 		color: inherit;
 		text-decoration: none;
 	}

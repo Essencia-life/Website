@@ -121,10 +121,10 @@
 		gap: 4rem;
 		text-decoration: none;
 		color: inherit;
-		background: rgba(var(--brand-sandbeige-rgb) / 40%);
+		background: rgba(var(--brand-parchment-rgb) / 40%);
 		padding: 4rem;
 		border-radius: 2rem;
-		box-shadow: 0 1px 4px rgba(var(--brand-darkbrown-rgb) / 30%);
+		box-shadow: 0 1px 4px rgba(var(--brand-earthbrown-rgb) / 30%);
 		scroll-snap-align: center;
 	}
 
@@ -163,7 +163,7 @@
 
 	.event small {
 		text-transform: uppercase;
-		background-color: var(--brand-sagegrey-color);
+		background-color: var(--brand-primary-color);
 		color: var(--brand-stonewhite-color);
 		font-weight: 700;
 		padding: 1rem 2rem;
@@ -175,8 +175,7 @@
 	}
 
 	.event small.retreat {
-		background-color: var(--brand-rosewood-color);
-		text-shadow: 1px 1px var(--brand-darkbrown-color);
+		background-color: var(--brand-healing-color);
 	}
 
 	.event enhanced\:img {
