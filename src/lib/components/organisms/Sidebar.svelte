@@ -34,8 +34,8 @@
 		width: 80vw;
 		max-width: 400px;
 		min-width: 320px;
-		background: var(--brand-sandbeige-color);
-		box-shadow: -3px 0 9px rgba(var(--brand-darkbrown-rgb) / 60%);
+		background: var(--brand-parchment-color);
+		box-shadow: -3px 0 9px rgba(var(--brand-earthbrown-rgb) / 60%);
 		overflow-y: auto;
 	}
 
@@ -43,7 +43,7 @@
 		position: fixed;
 		top: 3rem;
 		right: 3rem;
-		background: var(--brand-sandbeige-color);
+		background: var(--brand-parchment-color);
 	}
 
 	aside :global(> picture) {

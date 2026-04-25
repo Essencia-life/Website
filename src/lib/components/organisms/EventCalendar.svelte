@@ -115,7 +115,7 @@
 		text-align: center;
 		font-size: 8rem;
 		margin-block: 2rem 12rem;
-		color: var(--brand-sagegrey-color);
+		color: rgba(var(--brand-accent-rgb) / 70%);
 	}
 
 	article {
@@ -126,7 +126,7 @@
 	article:not(:last-of-type) {
 		padding-bottom: 10rem;
 		margin-bottom: 10rem;
-		border-bottom: 2rem solid rgba(var(--brand-sandbeige-rgb) / 50%);
+		border-bottom: 2rem solid rgba(var(--brand-parchment-rgb) / 50%);
 	}
 
 	.date {
@@ -134,6 +134,7 @@
 		flex-direction: column;
 		line-height: 1;
 		padding-top: 0.5rem;
+		font-family: Alegreya, serif;
 	}
 
 	.date .month {
@@ -149,8 +150,8 @@
 		display: block;
 		height: 1rem;
 		width: 8rem;
-		margin: 6rem 0 2rem;
-		background: var(--brand-sagegrey-color);
+		margin-top: 4rem;
+		background: var(--brand-ambergold-color);
 	}
 
 	.date .day {
@@ -164,7 +165,7 @@
 		height: auto;
 		aspect-ratio: 4 / 5;
 		object-fit: cover;
-		box-shadow: 0 0 3rem rgba(var(--brand-darkbrown-rgb) / 40%);
+		box-shadow: 0 0 3rem rgba(var(--brand-earthbrown-rgb) / 40%);
 	}
 
 	.info {
@@ -184,7 +185,7 @@
 
 	.description {
 		flex: 1;
-		border-bottom: 1px solid var(--brand-sandbeige-color);
+		border-bottom: 1px solid var(--brand-parchment-color);
 	}
 
 	.description h4 {
@@ -192,8 +193,10 @@
 	}
 
 	.description time {
+		display: block;
 		font-weight: 500;
 		opacity: 0.9;
+		margin-bottom: 2rem;
 	}
 
 	@media screen and (width < 800px) {

@@ -68,7 +68,7 @@
 		position: relative;
 		padding: 4rem;
 		border-radius: 4rem;
-		background: rgba(var(--brand-sandbeige-rgb) / 80%);
+		background: rgba(var(--brand-parchment-rgb) / 80%);
 		text-align: justify;
 	}
 
@@ -93,17 +93,17 @@
 		position: absolute;
 		top: 100%;
 		border: 6rem solid transparent;
-		border-top-color: rgba(var(--brand-sandbeige-rgb) / 80%);
+		border-top-color: rgba(var(--brand-parchment-rgb) / 80%);
 	}
 
 	.testimonials > div:first-of-type .bubble::after {
 		right: 0;
-		border-right-color: rgba(var(--brand-sandbeige-rgb) / 80%);
+		border-right-color: rgba(var(--brand-parchment-rgb) / 80%);
 	}
 
 	.testimonials > div:last-of-type .bubble::after {
 		left: 0;
-		border-left-color: rgba(var(--brand-sandbeige-rgb) / 80%);
+		border-left-color: rgba(var(--brand-parchment-rgb) / 80%);
 	}
 
 	blockquote {
@@ -111,7 +111,7 @@
 		padding-top: 6rem;
 		margin: 0;
 		font-size: 3.5rem;
-		font-weight: 500;
+		font-weight: 400;
 		line-height: 5rem;
 		letter-spacing: 0.5px;
 	}
@@ -119,11 +119,11 @@
 	blockquote::before {
 		content: '\201D';
 		position: absolute;
-		top: -15rem;
+		top: -20rem;
 		display: block;
-		/* font-family: "Caveat", cursive; */
+		font-family: Alegreya, serif;
 		font-size: 50rem;
-		color: var(--brand-sagegrey-color);
+		color: var(--brand-highlight-color);
 		line-height: 1;
 	}
 
@@ -137,7 +137,7 @@
 		align-items: center;
 		margin-top: 3rem;
 		padding-top: 3rem;
-		border-top: 1px solid var(--brand-sagegrey-color);
+		border-top: 1px solid var(--brand-border-color);
 		font-style: normal;
 		font-size: 4rem;
 	}

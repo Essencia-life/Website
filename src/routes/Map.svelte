@@ -97,7 +97,7 @@
 	.map {
 		position: absolute;
 		inset: 0;
-		background: var(--brand-sagegrey-color);
+		background: var(--brand-dark-section-color);
 	}
 
 	.loading {

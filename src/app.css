@@ -1,30 +1,54 @@
 @import 'hint.css';
 
 @font-face {
-	font-family: 'Caveat';
+	font-family: 'Alegreya';
 	src:
-			url('/fonts/Caveat-Regular.woff2') format('woff2'),
-			url('/fonts/Caveat-Regular.woff') format('woff');
-	font-weight: 400;
+			url('/fonts/Alegreya.woff2') format('woff2'),
+			url('/fonts/Alegreya.woff') format('woff');
+	font-weight: 400 600;
 	font-style: normal;
 	font-display: swap;
 }
 
 :root {
-	--brand-mossgreen-rgb: 82 107 79;
+	--brand-mossgreen-rgb: 103 118 82;
 	--brand-mossgreen-color: rgb(var(--brand-mossgreen-rgb));
-	--brand-sagegrey-rgb: 169 183 159;
-	--brand-sagegrey-color: rgb(var(--brand-sagegrey-rgb));
-	--brand-terracotta-rgb: 144 112 70;
-	--brand-terracotta-color: rgb(var(--brand-terracotta-rgb));
-	--brand-sandbeige-rgb: 233 228 211;
-	--brand-sandbeige-color: rgb(var(--brand-sandbeige-rgb));
-	--brand-stonewhite-rgb: 248 246 242;
+	--brand-earthterracotta-rgb: 96 72 47;
+	--brand-earthterracotta-color: rgb(var(--brand-earthterracotta-rgb));
+	--brand-parchment-rgb: 233 228 211;
+	--brand-parchment-color: rgb(var(--brand-parchment-rgb));
+	--brand-stonewhite-rgb: 252 250 244;
 	--brand-stonewhite-color: rgb(var(--brand-stonewhite-rgb));
-	--brand-darkbrown-rgb: 49 39 25;
-	--brand-darkbrown-color: rgb(var(--brand-darkbrown-rgb));
-	--brand-rosewood-rgb: 191 144 134;
-	--brand-rosewood-color: rgb(var(--brand-rosewood-rgb));
+	--brand-earthbrown-rgb: 49 39 19;
+	--brand-earthbrown-color: rgb(var(--brand-earthbrown-rgb));
+	--brand-forestdeep-rgb: 58 75 57;
+	--brand-forestdeep-color: rgb(var(--brand-forestdeep-rgb));
+	--brand-ambergold-rgb: 196 146 42;
+	--brand-ambergold-color: rgb(var(--brand-ambergold-rgb));
+	--brand-oceanteal-rgb: 74 123 138;
+	--brand-oceanteal-color: rgb(var(--brand-oceanteal-rgb));
+	--brand-crimsonred-rgb: 192 57 43;
+	--brand-crimsonred-color: rgb(var(--brand-crimsonred-rgb));
+
+	/* purpose */
+	--brand-primary-rgb: var(--brand-mossgreen-rgb);
+	--brand-primary-color: var(--brand-mossgreen-color);
+	--brand-accent-rgb: var(--brand-earthterracotta-rgb);
+	--brand-accent-color: var(--brand-earthterracotta-color);
+	--brand-backround-rgb: var(--brand-stonewhite-rgb);
+	--brand-background-color: var(--brand-stonewhite-color);
+	--brand-text-rgb: var(--brand-earthbrown-rgb);
+	--brand-text-color: var(--brand-earthbrown-color);
+	--brand-border-rgb: var(--brand-parchment-rgb);
+	--brand-border-color: var(--brand-parchment-color);
+	--brand-dark-section-rgb: var(--brand-forestdeep-rgb);
+	--brand-dark-section-color: var(--brand-forestdeep-color);
+	--brand-highlight-rgb: var(--brand-ambergold-rgb);
+	--brand-highlight-color: var(--brand-ambergold-color);
+	--brand-healing-rgb: var(--brand-oceanteal-rgb);
+	--brand-healing-color: var(--brand-oceanteal-color);
+	--brand-danger-rgb: var(--brand-crimsonred-rgb);
+	--brand-danger-color: var(--brand-crimsonred-color);
 }
 
 ::view-transition-old(root),
@@ -35,7 +59,7 @@
 html,
 body {
 	font-size: 4px;
-	background: var(--brand-stonewhite-color);
+	background: var(--brand-background-color);
 	height: 100%;
 	box-sizing: border-box;
 	scroll-padding: 18rem;
@@ -59,8 +83,11 @@ body.no-scroll {
 
 main {
 	font-family: system-ui, sans-serif;
-	font-size: 4.5rem;
-	color: var(--brand-darkbrown-color);
+	font-size: 4rem;
+	font-weight: 300;
+	letter-spacing: 0.2px;
+	word-spacing: 2px;
+	color: var(--brand-text-color);
 }
 
 *,
@@ -78,21 +105,29 @@ main {
 }
 
 h1,
-h2 {
-	font-family: 'Caveat', cursive;
-	font-weight: normal;
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: Alegreya, serif;
+	font-weight: 500;
+	color: var(--brand-accent-color);
 }
 
 h2 {
-	margin-block: 6rem 4rem;
+	margin-block: 10rem 4rem;
 	font-size: 12rem;
-	color: var(--brand-terracotta-color);
 }
 
 h3 {
-	margin-block: 16rem 6rem;
-	font-weight: 500;
-	color: var(--brand-terracotta-color);
+	margin-block: 20rem 4rem;
+	font-size: 6rem;
+}
+
+h4 {
+	margin-block: 12rem 4rem;
+	font-size: 5rem;
 }
 
 strong {
@@ -101,18 +136,15 @@ strong {
 
 hr {
 	height: 1px;
-	background: var(--brand-sagegrey-color);
+	background: var(--brand-border-color);
 	border: none;
 	margin-block: 10rem;
 }
 
 p {
+	margin-top: 0;
 	margin-bottom: 3rem;
 	line-height: 1.5;
-}
-
-h2 + p {
-	margin-top: 4rem;
 }
 
 ul > li {
@@ -135,24 +167,24 @@ button {
 	cursor: pointer;
 	gap: 2rem;
 	padding: 2.5rem 3rem;
-	border: 2px solid var(--brand-terracotta-color);
-	border-radius: 1.5rem;
-	font-weight: 700;
+	border: 2px solid var(--brand-earthterracotta-color);
+	border-radius: 24px 8px 24px 8px;
+	font-weight: 600;
 	font-size: 4rem;
-	color: var(--brand-terracotta-color);
+	color: var(--brand-earthterracotta-color);
 	background-color: rgba(var(--brand-stonewhite-rgb) / 15%);
 	text-align: center;
 }
 
 .button.button-primary {
 	border-color: transparent;
-	background-color: var(--brand-mossgreen-color);
-	color: rgb(var(--brand-stonewhite-rgb));
+	background-color: var(--brand-primary-color);
+	color: var(--brand-background-color);
 }
 
 .button.button-overlay {
-	border-color: rgba(var(--brand-sandbeige-rgb) / 70%);
-	color: var(--brand-stonewhite-color);
+	border-color: rgba(var(--brand-border-color) / 70%);
+	color: var(--brand-background-color);
 	background-color: rgba(0 0 0 / 30%);
 }
 
@@ -169,7 +201,7 @@ button {
 	padding: 2.5rem 3rem;
 	appearance: none;
 	background: transparent;
-	border: 2px solid rgba(var(--brand-terracotta-rgb) / 80%);
+	border: 2px solid rgba(var(--brand-earthterracotta-rgb) / 80%);
 	border-radius: 1.5rem;
 	font: inherit;
 	font-size: 4rem;
@@ -178,41 +210,41 @@ button {
 }
 
 .input::placeholder {
-	color: var(--brand-sagegrey-color);
+	color: rgba(var(--brand-accent-rgb) / 60%);
 }
 
 .input:hover,
 .input:focus {
 	outline: 0 none;
-	background: rgba(var(--brand-sandbeige-rgb) / 20%);
+	background: rgba(var(--brand-border-rgb) / 20%);
 }
 
 .input:hover {
-	border-color: var(--brand-terracotta-color);
+	border-color: var(--brand-accent-color);
 }
 
 .input:focus {
-	border-color: var(--brand-mossgreen-color);
+	border-color: var(--brand-primary-color);
 }
 
 [class*='hint--']:after {
 	font-size: 4rem;
 	line-height: 4rem;
-	background-color: var(--brand-darkbrown-color);
+	background-color: var(--brand-earthbrown-color);
 	color: var(--brand-stonewhite-color);
 }
 
 [class*='hint--']:before {
-	background-color: var(--brand-darkbrown-color);
+	background-color: var(--brand-earthbrown-color);
 }
 
 ::selection {
-	background: var(--brand-terracotta-color);
-	color: var(--brand-stonewhite-color);
+	background: var(--brand-dark-section-color);
+	color: var(--brand-background-color);
 }
 
 a:not(.no-link, .button) {
-	color: var(--brand-mossgreen-color);
+	color: var(--brand-primary-color);
 	font-weight: 500;
 }
 
@@ -238,5 +270,9 @@ a[href^='mailto:']:not(.no-link, .button, .icon)::before {
 @media screen and (hover: hover) {
 	a:hover {
 		text-decoration: none;
+	}
+
+	a:not(.no-link, .button):hover {
+		opacity: .8;
 	}
 }

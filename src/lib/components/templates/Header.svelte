@@ -45,9 +45,9 @@
 		position: sticky;
 		top: 0;
 		z-index: 10;
-		background: var(--brand-sandbeige-color);
+		background: var(--brand-parchment-color);
 		border-bottom: 1px solid rgba(var(--brand-stonewhite-rgb) / 50%);
-		box-shadow: 0 3px 8px rgba(var(--brand-darkbrown-rgb) / 50%);
+		box-shadow: 0 3px 8px rgba(var(--brand-earthbrown-rgb) / 50%);
 	}
 
 	header :global(picture) {

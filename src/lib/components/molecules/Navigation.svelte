@@ -85,6 +85,7 @@
 	nav a {
 		color: var(--brand-mossgreen-color);
 		font-weight: 500;
+		font-size: 4.5rem;
 		text-decoration: none;
 	}
 
@@ -106,7 +107,7 @@
 		display: flex;
 		justify-content: stretch;
 		margin-left: -6rem;
-		box-shadow: 0 3px 8px rgba(var(--brand-darkbrown-rgb) / 50%);
+		box-shadow: 0 3px 8px rgba(var(--brand-earthbrown-rgb) / 50%);
 		border-radius: 1rem;
 	}
 
@@ -119,11 +120,11 @@
 	}
 
 	.sidebar .children {
-		background: rgba(var(--brand-darkbrown-rgb) / 4%);
+		background: rgba(var(--brand-earthbrown-rgb) / 4%);
 	}
 
 	.header .children {
-		background: var(--brand-sandbeige-color);
+		background: var(--brand-parchment-color);
 	}
 
 	.children ul {
@@ -165,7 +166,7 @@
 		}
 
 		.toggle {
-			border-left: 1px solid var(--brand-sagegrey-color);
+			border-left: 1px solid var(--brand-highlight-color);
 			padding-left: 2rem;
 		}
 
@@ -179,7 +180,7 @@
 
 		.children ul {
 			margin-left: 4rem;
-			background: var(--brand-sandbeige-color);
+			background: var(--brand-parchment-color);
 		}
 	}
 </style>
