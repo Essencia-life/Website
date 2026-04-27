@@ -1,4 +1,5 @@
 <script lang="ts">
+	import ms from 'ms';
 	import { Events } from '$lib/services/Events';
 	import { Media } from '$lib/services/Media.js';
 	import { resolve } from '$app/paths';
@@ -17,47 +18,12 @@
 	const events = Events.getAllUpcoming();
 
 	// TODO: add arrow buttons to scroll
-
-	const connectScrolling: Attachment = (node) => {
-		const root = document.getElementById('parallax');
-		let rootStartPos = 0;
-		let nodeStartPos = 0;
-
-		function sync() {
-			// TODO: apply only if not hovered or touched ?
-			const diff = root!.scrollTop - rootStartPos;
-			node.scrollLeft = nodeStartPos + diff;
-		}
-
-		const observer = new IntersectionObserver(
-			([entry]) => {
-				if (entry.isIntersecting) {
-					nodeStartPos = node.scrollLeft;
-					rootStartPos = root!.scrollTop;
-					root!.addEventListener('scroll', sync, { passive: true });
-				} else {
-					root!.removeEventListener('scroll', sync);
-				}
-			},
-			{
-				root
-			}
-		);
-		observer.observe(node);
-
-		return () => {
-			observer.disconnect();
-		};
-	};
 </script>
 
-<div class="events" {@attach connectScrolling} {@attach lastEventsScrollPosition}>
+<div class="events" {@attach lastEventsScrollPosition}>
 	{#each events as event (event.slug)}
-		{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > 24 * 60 * 60 * 1000}
-		{@const linkUrl = resolve(
-			event.type === 'retreat' ? '/(pages)/retreats/[slug]' : '/(pages)/events/[slug]',
-			{ slug: event.slug }
-		)}
+		{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > ms('1d')}
+		{@const linkUrl = resolve(`/(pages)/${event.type}s/[slug]`, { slug: event.slug })}
 		<a href={linkUrl} class="event no-link" onclick={storeLinkUrlInPageState}>
 			<enhanced:img
 				src={Media.getFile(event.cover_image)}
@@ -94,7 +60,6 @@
 					{/if}
 				</div>
 				<h3>{event.title}</h3>
-				{event.short_description}
 			</div>
 		</a>
 	{/each}
@@ -108,7 +73,8 @@
 	.events {
 		display: grid;
 		grid-auto-flow: column;
-		overflow: auto;
+		overflow-x: auto;
+		overflow-y: hidden;
 		max-width: 100vw;
 	}
 
@@ -126,6 +92,9 @@
 		border-radius: 2rem;
 		box-shadow: 0 1px 4px rgba(var(--brand-earthbrown-rgb) / 30%);
 		scroll-snap-align: center;
+		flex-direction: column;
+		scroll-snap-stop: always;
+		transition: transform 150ms ease-in-out;
 	}
 
 	@media screen and (width < 800px) {
@@ -137,11 +106,7 @@
 			width: 100vw;
 			scroll-snap-type: x mandatory;
 		}
-		.event {
-			flex-direction: column;
-			scroll-snap-align: center;
-			scroll-snap-stop: always;
-		}
+
 		.event enhanced\:img {
 			height: auto;
 			width: 100%;
@@ -150,13 +115,12 @@
 
 	@media screen and (width >= 800px) {
 		.events {
-			grid-auto-columns: max(calc(40vh * (2 / 3) * 3), 480px);
-			grid-gap: 10rem;
-			padding: 16rem 30vw;
+			grid-gap: 12rem;
+			padding: 16rem;
 		}
 
 		.event enhanced\:img {
-			height: 40vh;
+			height: 38vh;
 			width: auto;
 		}
 	}
@@ -181,5 +145,11 @@
 	.event enhanced\:img {
 		object-fit: cover;
 		aspect-ratio: 4 / 5;
+	}
+
+	@media (hover: hover) {
+		.event:hover {
+			transform: scale(1.05);
+		}
 	}
 </style>
