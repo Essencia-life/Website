@@ -182,12 +182,6 @@ button {
 	color: var(--brand-background-color);
 }
 
-.button.button-overlay {
-	border-color: rgba(var(--brand-border-color) / 70%);
-	color: var(--brand-background-color);
-	background-color: rgba(0 0 0 / 30%);
-}
-
 .icon-button {
 	display: flex;
 	align-items: center;
