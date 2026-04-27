@@ -1,9 +1,6 @@
 <script lang="ts">
-	import { getContext, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 	import { page } from '$app/state';
-	import { CirclePlay } from '@lucide/svelte';
-	import FullVideoDialog from '$lib/components/organisms/FullVideoDialog.svelte';
-	import type { Overlays } from '$lib/overlays.svelte';
 	import homeData from '$lib/content/home.json';
 	import heroVideoPoster from '$lib/assets/media/hero_fallback_inline.jpg?inline';
 
@@ -14,18 +11,7 @@
 	let heroRef: HTMLDivElement;
 	let heroVideoRef: HTMLVideoElement;
 
-	const overlays = getContext<Overlays<any>>('overlays');
 	const { visibilityChange }: Props = $props();
-
-	async function showFullVideo() {
-		overlays.add({
-			component: FullVideoDialog,
-			props: {},
-			backdrop: {
-				color: 'rgba(0 0 0 / 80%)'
-			}
-		});
-	}
 
 	onMount(() => {
 		const root = document.getElementById('parallax');
@@ -71,10 +57,6 @@
 	<div class="overlay">
 		<div class="page-content" style="margin-block: auto">
 			<h2 class="slogan">{homeData.hero.slogan}</h2>
-			<button class="button button-overlay" onclick={showFullVideo}>
-				<CirclePlay />
-				{homeData.hero.watch_button}
-			</button>
 		</div>
 	</div>
 </div>
@@ -111,7 +93,9 @@
 	.hero .slogan {
 		color: #f8f6f2;
 		font-size: 16rem;
+		font-weight: 400;
 		margin-bottom: 4rem;
+		white-space: pre-wrap;
 	}
 
 	.hero video {
