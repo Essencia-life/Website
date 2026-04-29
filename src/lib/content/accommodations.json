@@ -22,6 +22,18 @@
           },
           {
             "photo": "media/accommodations/farmhouse-4.jpg",
+            "caption": "Room 3"
+          },
+          {
+            "photo": "media/accommodations/farmhouse-5.jpg",
+            "caption": "Room 4"
+          },
+          {
+            "photo": "media/accommodations/farmhouse-6.jpg",
+            "caption": "Room 5"
+          },
+          {
+            "photo": "media/accommodations/farmhouse-7.jpg",
             "caption": "Shared living room"
           }
         ]
@@ -38,11 +50,11 @@
         "photos": [
           {
             "photo": "media/accommodations/yurt-1.jpg",
-            "caption": "Yurt Sara"
+            "caption": "Yurt"
           },
           {
             "photo": "media/accommodations/yurt-2.jpg",
-            "caption": "Yurt Sara"
+            "caption": "Yurt"
           }
         ]
       },
@@ -51,10 +63,10 @@
     {
       "name": "tent",
       "headline": "Glamping Tent",
-      "short_description": "The new luxury. Organic cotton tents, kingsize bed, feather duvet, your temple in the forest with the birds.",
+      "short_description": "The new luxury. Glamping tents with a kingsize bed and feather duvet, your temple in the forest with the birds.",
       "photo": "media/accommodations/tent-1.jpg",
       "detail": {
-        "description": "The new luxury. Organic cotton tents, kingsize bed, feather duvet, your temple in the forest with the birds.",
+        "description": "The new luxury. Glamping tents with a kingsize bed and feather duvet, your temple in the forest with the birds.",
         "photos": [
           {
             "photo": "media/accommodations/tent-1.jpg",
@@ -70,6 +82,10 @@
           },
           {
             "photo": "media/accommodations/tent-4.jpg",
+            "caption": "Glamping tent"
+          },
+          {
+            "photo": "media/accommodations/tent-5.jpg",
             "caption": "Glamping tent"
           }
         ]
