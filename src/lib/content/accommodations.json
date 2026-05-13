@@ -3,10 +3,10 @@
     {
       "name": "farmhouse",
       "headline": "Farmhouse stay",
-      "short_description": "Come back to yourself, nestled in nature, amongst the peace and beauty. Embrace slow conscious life. Min. 5 nights.",
+      "short_description": "Come back to yourself, nestled in nature, amongst the peace and beauty. Embrace slow conscious life. Min. 4 nights.",
       "photo": "media/accommodations/farmhouse-1.jpg",
       "detail": {
-        "description": "Come back to yourself, nestled in nature, amongst the peace and beauty. Embrace slow conscious life. Min. 5 nights.",
+        "description": "Return to yourself in the quiet beauty of nature. Surrounded by peace, open skies, and a slower rhythm of life, our farmhouse invites you to rest, reconnect, and breathe deeply.\n\nThe accommodation offers lovingly designed rooms with private bathroom and shower, as well as a shared kitchen and cozy living area with fireplace (“Kamin”). Wi-Fi included.\\\nMinimum stay: 4 nights.\n\n#### Summer Season Prices\n\n##### Rooms 1–4\n\n* 4–14 nights: **88€ / night**\n* 14–28 nights: **66€ / night**\n\n##### Rooms 5–6\n\n* 4-14 nights: **99€ / night**\n* 14–28 nights: **77€ / night**",
         "photos": [
           {
             "photo": "media/accommodations/farmhouse-1.jpg",
@@ -46,7 +46,7 @@
       "short_description": "Reconnect with yourself in our cozy, handcrafted yurts. Surrounded by forest, birds and peace, they are your sanctuary for slow, mindful living.",
       "photo": "media/accommodations/yurt-1.jpg",
       "detail": {
-        "description": "Reconnect with yourself in our cozy, handcrafted yurts. Surrounded by forest, birds and peace, they are your sanctuary for slow, mindful living.",
+        "description": "Reconnect with yourself in our cozy, handcrafted yurts. Surrounded by forest, birds and peace, they are your sanctuary for slow, mindful living.\n\n#### Summer Season Prices\n\n*Depending on the yurt*\n\n* 4–14 nights: **44-88€ / night**\n* 14–28 nights: **33-66€ / night**\n* More than 28 nights: **33-44€ / night**",
         "photos": [
           {
             "photo": "media/accommodations/yurt-1.jpg",
@@ -66,7 +66,7 @@
       "short_description": "The new luxury. Glamping tents with a kingsize bed and feather duvet, your temple in the forest with the birds.",
       "photo": "media/accommodations/tent-1.jpg",
       "detail": {
-        "description": "The new luxury. Glamping tents with a kingsize bed and feather duvet, your temple in the forest with the birds.",
+        "description": "The new luxury. Glamping tents with a kingsize bed and feather duvet, your temple in the forest with the birds.\n\n#### Summer Season Rates\n- 4–14 nights: **55€ / night**\n- 14–28 nights: **33€ / night**\n- More than 28 nights: **22€ / night**",
         "photos": [
           {
             "photo": "media/accommodations/tent-1.jpg",
@@ -98,10 +98,11 @@
       "short_description": "We have a few spots for you !",
       "photo": "media/accommodations/camper.png",
       "detail": {
-        "description": "We have a few spots for you !",
+        "description": "Wake up surrounded by nature, birdsong, and wide open skies. Our camper van spots offer a peaceful place to slow down, recharge, and enjoy the simple beauty of countryside living. Whether you stay for a few nights or longer, you’ll find space to rest, connect, and feel at home.\n\nWe offer a small number of carefully placed spots to keep the atmosphere calm and spacious. Guests have access to shared facilities and are invited to enjoy the quiet rhythm of the land and community.\n\n#### Summer Season Rates\n- Up to 28 nights: **22€ / night**\n- More than 28 nights (one person): **333€ / month**\n- More than 28 nights (two person): **444€ / month**",
         "photos": [
           {
-            "photo": "media/accommodations/camper.png"
+            "photo": "media/accommodations/camper.png",
+            "caption": "Illustrative image"
           }
         ]
       },
