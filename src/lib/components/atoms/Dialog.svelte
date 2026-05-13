@@ -52,12 +52,13 @@
 	}
 
 	.dialog.bottomSheet {
+		display: block;
 		inset: 18rem 0 0 0;
 		max-width: 100vw;
 		transform: none;
 		border-bottom-left-radius: 0;
 		border-bottom-right-radius: 0;
-		overflow: hidden;
+		overflow: auto;
 	}
 
 	.main {
