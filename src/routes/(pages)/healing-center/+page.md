@@ -1,23 +1,26 @@
 ---
 title: Self Discovery Journeys
+description: Self Discovery Journeys Explore, Learn, Heal, Grow, Blossom
 ---
-
 ## Self Discovery Journeys
+
 #### Explore, Learn, Heal, Grow, Blossom…
+
 …Evolve with us
 
 1. Choose your Intentional Package
 2. Choose your Accommodation
 
 ### All our programs include
-- Morning Meditation, Breathwork, QiGong & Yoga
-- Regular chanting and dancing
-- Your personal Human Design reading
-- Enjoy our wild beaches
-- Borrow our kayak, paddle, surf and bodyboards
-- Regular sauna at sunset
-- Swim in our natural pond and melt in a warm jacuzzi at night under the stars
-- Possibility to contribute to the community life with permaculture gardening and eco construction activities
+
+* Morning Meditation, Breathwork, QiGong & Yoga
+* Regular chanting and dancing
+* Your personal Human Design reading
+* Enjoy our wild beaches
+* Borrow our kayak, paddle, surf and bodyboards
+* Regular sauna at sunset
+* Swim in our natural pond and melt in a warm jacuzzi at night under the stars
+* Possibility to contribute to the community life with permaculture gardening and eco construction activities
 
 For more information and to book your journey: contact Simona (+351 914 448 188) on WhatsApp or Telegram
 
@@ -125,24 +128,16 @@ Deepen your connection with nature, yourself and your family through permacultur
 
 ### Accommodation (per night)
 
-#### Cosy Farmhouse (room with private bathroom)
-Low season (Nov–April): solo €55, duo €77, trio €99  
-High season (May–October): solo €88, duo €99, trio €122
-
-#### Glamping Tent (April to September)
-1 person €44 per night  
-2 person €77 per night  
-Wifi, garden kitchen, dry toilets, shower and practice hall included
-
-#### Personal Van or Tent
-15€ per night per person
+You find our accommodations on visit us section of the [homepage](https://www.essencia.life/).
 
 #### Lightworkers Glamping Forest
-Live in the forest in a luxurious glamping tent with king size bed  
-555 euros/month and 20h community service work per month  
+
+Live in the forest in a luxurious glamping tent with king size bed\
+555 euros/month and 20h community service work per month\
 Open mid April to September, one month minimum
 
 #### Sacred Artists Residency
-Live in the forest in a luxurious glamping tent with king size bed  
-555 euros/month and one art piece or concert or workshop offered to the community per month  
+
+Live in the forest in a luxurious glamping tent with king size bed\
+555 euros/month and one art piece or concert or workshop offered to the community per month\
 Open April to September, one month minimum
