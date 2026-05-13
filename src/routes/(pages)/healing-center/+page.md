@@ -132,12 +132,12 @@ You find our accommodations on visit us section of the [homepage](https://www.es
 
 #### Lightworkers Glamping Forest
 
-Live in the forest in a luxurious glamping tent with king size bed\
-555 euros/month and 20h community service work per month\
+Live in the forest in a luxurious glamping tent with king size bed  
+555 euros/month and 20h community service work per month  
 Open mid April to September, one month minimum
 
 #### Sacred Artists Residency
 
-Live in the forest in a luxurious glamping tent with king size bed\
-555 euros/month and one art piece or concert or workshop offered to the community per month\
+Live in the forest in a luxurious glamping tent with king size bed  
+555 euros/month and one art piece or concert or workshop offered to the community per month  
 Open April to September, one month minimum
