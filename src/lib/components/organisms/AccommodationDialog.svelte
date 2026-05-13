@@ -23,6 +23,7 @@
 	import { Media } from '$lib/services/Media.js';
 	import type { Attachment } from 'svelte/attachments';
 	import { resolve } from '$app/paths';
+	import Markdown from '$lib/components/molecules/Markdown.svelte';
 
 	interface Props {
 		accommodation: Accommodation;
@@ -106,7 +107,10 @@
 					</button>
 				{/if}
 			</div>
-			{accommodation.detail.description}
+
+			<div>
+				<Markdown content={accommodation.detail.description} />
+			</div>
 		</div>
 	{/snippet}
 	{#snippet footer()}
