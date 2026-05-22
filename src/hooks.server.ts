@@ -4,7 +4,8 @@ import { constants } from 'node:http2';
 const legacyPaths: Record<string, string> = {
 	'/about-3': '/eco-village',
 	'/kidstemple': '/eco-village/kids-temple',
-	'/joinus': '/eco-village/join',
+	'/joinus': '/join-us',
+	'/eco-village/join': '/join-us',
 	'/journeys': '/healing-center',
 	'/workshops': '/events',
 	'/the-art-of-touch': '/events/2025-10-27-the-art-of-touch',
