@@ -182,6 +182,18 @@ button {
 	color: var(--brand-background-color);
 }
 
+.button.button-ambergold {
+	border-color: transparent;
+	background-color: var(--brand-ambergold-color);
+	color: var(--brand-background-color);
+}
+
+.button.button-oceanteal {
+	border-color: transparent;
+	background-color: var(--brand-oceanteal-color);
+	color: var(--brand-background-color);
+}
+
 .icon-button {
 	display: flex;
 	align-items: center;
