@@ -8,6 +8,7 @@
 		eventCoverTransitionName,
 		storeLinkUrlInPageState
 	} from '$lib/utils/eventCoverTransition.svelte';
+	import ScrollContainerArrows from '$lib/components/molecules/ScrollContainerArrows.svelte';
 
 	interface Props {
 		lastEventsScrollPosition: Attachment<HTMLElement>;
@@ -16,54 +17,54 @@
 	let { lastEventsScrollPosition }: Props = $props();
 
 	const events = Events.getAllUpcoming();
-
-	// TODO: add arrow buttons to scroll
 </script>
 
-<div class="events" {@attach lastEventsScrollPosition}>
-	{#each events as event (event.slug)}
-		{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > ms('1d')}
-		{@const linkUrl = resolve(`/(pages)/${event.type}s/[slug]`, { slug: event.slug })}
-		<a href={linkUrl} class="event no-link" onclick={storeLinkUrlInPageState}>
-			<enhanced:img
-				src={Media.getFile(event.cover_image)}
-				alt=""
-				loading="lazy"
-				style:view-transition-name={eventCoverTransitionName(linkUrl)}
-			/>
-			<div style="display: flex; flex-direction: column; gap: 2rem; flex: 1;">
-				<div style="display: flex; justify-content: space-between">
-					<small class={event.type}>{event.type}</small>
-					{#if event.weekly}
-						<time style="font-weight: 500">{event.weekly}</time>
-					{:else}
-						<time datetime={event.start.toISOString()} style="font-weight: 500">
-							{#if isMoreThanOneDay}
-								{@const startDate = event.start.toLocaleDateString('de', {
-									day: 'numeric',
-									month: 'numeric'
-								})}
-								{@const endDate = event.end.toLocaleDateString('de', {
-									day: 'numeric',
-									month: 'numeric',
-									year: '2-digit'
-								})}
-								{startDate} &mdash; {endDate}
+<ScrollContainerArrows>
+	{#snippet children(scrollContainerArrows)}
+		<div class="events" {@attach lastEventsScrollPosition} {@attach scrollContainerArrows}>
+			{#each events as event (event.slug)}
+				{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > ms('1d')}
+				{@const linkUrl = resolve(`/(pages)/${event.type}s/[slug]`, { slug: event.slug })}
+				<a href={linkUrl} class="event no-link" onclick={storeLinkUrlInPageState}>
+					<enhanced:img
+						src={Media.getFile(event.cover_image)}
+						alt=""
+						loading="lazy"
+						style:view-transition-name={eventCoverTransitionName(linkUrl)}
+					/>
+					<div style="display: flex; flex-direction: column; gap: 2rem; flex: 1;">
+						<div style="display: flex; justify-content: space-between">
+							<small class={event.type}>{event.type}</small>
+							{#if event.weekly}
+								<time style="font-weight: 500">{event.weekly}</time>
 							{:else}
-								{event.start.toLocaleDateString('de', {
-									day: 'numeric',
-									month: 'numeric',
-									year: '2-digit'
-								})}
+								<time datetime={event.start.toISOString()} style="font-weight: 500">
+									{#if isMoreThanOneDay}
+										{@const startDate = event.start.toLocaleDateString('en', {
+											day: 'numeric',
+											month: 'short'
+										})}
+										{@const endDate = event.end.toLocaleDateString('en', {
+											day: 'numeric',
+											month: 'short'
+										})}
+										{startDate} &mdash; {endDate}
+									{:else}
+										{event.start.toLocaleDateString('en', {
+											day: 'numeric',
+											month: 'short'
+										})}
+									{/if}
+								</time>
 							{/if}
-						</time>
-					{/if}
-				</div>
-				<h3>{event.title}</h3>
-			</div>
-		</a>
-	{/each}
-</div>
+						</div>
+						<h3>{event.title}</h3>
+					</div>
+				</a>
+			{/each}
+		</div>
+	{/snippet}
+</ScrollContainerArrows>
 
 <style>
 	h3 {
@@ -97,7 +98,7 @@
 		transition: transform 150ms ease-in-out;
 	}
 
-	@media screen and (width < 800px) {
+	@media screen and (width < 600px) {
 		.events {
 			grid-auto-columns: 70vw;
 			grid-gap: 8rem;
@@ -113,10 +114,10 @@
 		}
 	}
 
-	@media screen and (width >= 800px) {
+	@media screen and (width >= 600px) {
 		.events {
 			grid-gap: 12rem;
-			padding: 16rem;
+			padding: 10rem 16rem;
 		}
 
 		.event enhanced\:img {

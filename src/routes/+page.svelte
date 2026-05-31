@@ -103,11 +103,9 @@
 
 					<Events {lastEventsScrollPosition} />
 
-					<div class="buttons">
-						{#each section.buttons as button (button)}
-							<a href={button.link} class="button">{button.label}</a>
-						{/each}
-					</div>
+					{#if section.button}
+						<a href={section.button.link} class="button button-primary">{section.button.label}</a>
+					{/if}
 				</div>
 			{:else if section.type === 'community-day'}
 				<!-- TODO: rethink design to fit better between sections -->
@@ -178,10 +176,7 @@
 <style>
 	h2 {
 		margin-block: 4rem;
-	}
-
-	.buttons {
-		display: flex;
+		text-align: center;
 	}
 
 	@media screen and (width < 800px) {
@@ -264,7 +259,8 @@
 		}
 
 		.parallax {
-			height: 100vh;
+			--parallax-height: 100vh;
+			height: var(--parallax-height);
 			overflow-x: hidden;
 			overflow-y: auto;
 			perspective: 300px;
@@ -273,14 +269,13 @@
 
 		.parallax section {
 			position: relative;
-			height: 100vh;
+			height: var(--parallax-height);
 			transform-style: preserve-3d;
 		}
 
 		@supports (height: 100svh) {
-			.parallax,
-			.parallax section {
-				height: 100svh;
+			.parallax {
+				--parallax-height: 100svh;
 			}
 		}
 
