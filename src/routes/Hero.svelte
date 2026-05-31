@@ -55,7 +55,7 @@
 		<source src="media/hero.mp4" type="video/mp4" />
 	</video>
 	<div class="overlay">
-		<div class="page-content" style="margin-block: auto">
+		<div class="page-content" style="margin-top: auto">
 			<h2 class="slogan">{homeData.hero.slogan}</h2>
 		</div>
 	</div>
@@ -92,10 +92,9 @@
 
 	.hero .slogan {
 		color: #f8f6f2;
-		font-size: 16rem;
+		font-size: 14rem;
 		font-weight: 400;
-		margin-bottom: 4rem;
-		white-space: pre-wrap;
+		margin-block: 0 36rem;
 	}
 
 	.hero video {

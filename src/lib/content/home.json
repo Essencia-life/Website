@@ -23,17 +23,11 @@
     {
       "id": "events",
       "type": "events",
-      "headline": "Upcoming",
-      "buttons": [
-        {
-          "label": "Show all events",
-          "link": "/events"
-        },
-        {
-          "label": "Show all retreats",
-          "link": "/retreats"
-        }
-      ]
+      "headline": "Events & Retreats",
+      "button": {
+        "label": "Find our Events & Retreats",
+        "link": "/events"
+      }
     },
     {
       "id": "healing-center",

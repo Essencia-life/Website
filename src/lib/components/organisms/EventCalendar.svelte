@@ -68,7 +68,7 @@
 			<article>
 				<div class="date">
 					{#if event.weekly}
-						<b>{event.weekly}</b>
+						<b class="weekly">{event.weekly}</b>
 					{:else}
 						<div class="month">{month}</div>
 						<div class="day">{day}</div>
@@ -158,6 +158,13 @@
 		font-weight: 700;
 		font-size: 16rem;
 		opacity: 0.8;
+	}
+
+	.date .weekly {
+		text-transform: uppercase;
+		font-size: 6rem;
+		font-weight: 500;
+		line-height: 1.5;
 	}
 
 	enhanced\:img {
