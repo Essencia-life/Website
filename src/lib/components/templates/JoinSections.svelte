@@ -57,7 +57,7 @@
 		</article>
 	</div>
 	<div class="card">
-		<enhanced:img src={Media.getFile('media/c97792_b4f5e3d471c74bd4a1c402214693a8c2~mv2.jpeg')} />
+		<enhanced:img src={Media.getFile('media/friend.jpg')} />
 		<article>
 			<h3>Become a Friend</h3>
 			<h4 class="oceanteal">Support what grows</h4>
