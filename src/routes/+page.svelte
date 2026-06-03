@@ -237,15 +237,29 @@
 			padding: 0;
 		}
 
+		.community-day {
+			display: flex;
+			flex-direction: column;
+			gap: 3rem;
+		}
+
 		.community-background {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
+			display: contents;
+		}
+
+		.community-background picture:last-of-type {
+			order: 3;
 		}
 
 		.community-background enhanced\:img {
 			object-fit: cover;
-			width: 100%;
+			width: calc(100% + 8rem);
 			height: 100%;
+			margin-inline: -4rem;
+		}
+
+		.community-day .button {
+			margin-inline: auto;
 		}
 	}
 
