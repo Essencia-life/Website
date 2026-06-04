@@ -18,7 +18,11 @@
 	let mapRef: google.maps.MapElement;
 	let observer: IntersectionObserver;
 
+	let loading = $state(true);
+
 	onMount(() => {
+		loading = true;
+
 		observer = new IntersectionObserver(async ([entry]) => {
 			if (entry.isIntersecting) {
 				observer.unobserve(entry.target);
@@ -29,11 +33,13 @@
 				await importLibrary('places');
 
 				mapRef.innerMap.setOptions({
-					backgroundColor: 'var(--brand-sagegrey-color)',
+					backgroundColor: 'var(--brand-parchment-color)',
 					mapTypeId: MapTypeId.TERRAIN,
 					disableDefaultUI: true,
 					scrollwheel: false
 				});
+
+				loading = false;
 			}
 		});
 
@@ -51,9 +57,11 @@
 	center="37.241162694069175, -8.788955256741307"
 	zoom="10"
 >
-	<div class="loading">
-		<div style="margin: auto">Loading Google Maps</div>
-	</div>
+	{#if loading}
+		<div class="loading">
+			<div style="margin: auto">Loading Google Maps</div>
+		</div>
+	{/if}
 
 	<div class="widget-container" slot="control-inline-start-block-start">
 		<gmp-place-details>
@@ -78,7 +86,7 @@
 	gmp-map {
 		position: absolute;
 		inset: 0;
-		background: var(--brand-dark-section-color);
+		background: var(--brand-parchment-color);
 	}
 
 	.loading {
