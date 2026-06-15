@@ -118,6 +118,13 @@
 		<a href="mailto:ola@essencia.life?subject={accommodation.button}" class="button button-primary">
 			Book
 		</a>
+		<a
+			href="https://wa.me/351911514554?text={accommodation.button}"
+			target="_blank"
+			class="button button-primary"
+		>
+			WhatsApp
+		</a>
 	{/snippet}
 </Dialog>
 
