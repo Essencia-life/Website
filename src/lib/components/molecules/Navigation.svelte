@@ -63,8 +63,7 @@
 
 <style>
 	nav.header {
-		display: block;
-		padding-inline: 8rem;
+		margin-left: auto;
 	}
 
 	nav ul {

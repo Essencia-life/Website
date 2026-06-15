@@ -22,7 +22,13 @@
     },
     {
       "label": "Join us",
-      "link": "/eco-village/join"
+      "link": "/join-us",
+      "children": [
+        {
+          "label": "Volunteer with us",
+          "link": "/join-us/as-volunteer"
+        }
+      ]
     }
   ]
 }

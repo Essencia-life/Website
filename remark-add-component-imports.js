@@ -9,6 +9,7 @@ export default function remarkAddComponentImports() {
 				import Button from '$lib/components/atoms/Button.svelte';
 				import Instagram from '$lib/components/organisms/Instagram.svelte';
 				import JoinSections from '$lib/components/templates/JoinSections.svelte';
+				import JoinVolunteer from '$lib/components/templates/JoinVolunteer.svelte';
 			</script>`
 		};
 
