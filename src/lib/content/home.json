@@ -30,6 +30,23 @@
       }
     },
     {
+      "id": "kids-temple",
+      "type": "text",
+      "headline": "Kids Temple",
+      "content": "A safe, nature-based space where children can explore, play and grow. Inspired by the forest-school ethos, the Kids Temple invites little ones to follow their curiosity, develop self-awareness and connect deeply with nature.\n\nParents are encouraged to take part, observe or contribute, nurturing a shared sense of community and care.",
+      "photo": "media/photo_2025-10-30_22-59-44.jpg",
+      "button": {
+        "label": "More about the Kids Temple",
+        "link": "/eco-village/kids-temple"
+      }
+    },
+    {
+      "id": "visit",
+      "type": "accommodations",
+      "headline": "Visit Essência",
+      "content": "We invite you to unwind and reconnect with nature.  \nStay with us in our serene accommodations and experience the slow rhythm of Essência."
+    },
+    {
       "id": "healing-center",
       "type": "text",
       "headline": "Healing Center",
@@ -53,23 +70,6 @@
         "label": "Sign up",
         "link": "mailto:events@essencia.life?subject=Community Day"
       }
-    },
-    {
-      "id": "kids-temple",
-      "type": "text",
-      "headline": "Kids Temple",
-      "content": "A safe, nature-based space where children can explore, play and grow. Inspired by the forest-school ethos, the Kids Temple invites little ones to follow their curiosity, develop self-awareness and connect deeply with nature.\n\nParents are encouraged to take part, observe or contribute, nurturing a shared sense of community and care.",
-      "photo": "media/photo_2025-10-30_22-59-44.jpg",
-      "button": {
-        "label": "More about the Kids Temple",
-        "link": "/eco-village/kids-temple"
-      }
-    },
-    {
-      "id": "visit",
-      "type": "accommodations",
-      "headline": "Visit Essência",
-      "content": "We invite you to unwind and reconnect with nature.  \nStay with us in our serene accommodations and experience the slow rhythm of Essência."
     },
     {
       "id": "map",
