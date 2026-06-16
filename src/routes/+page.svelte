@@ -329,6 +329,7 @@
 			align-items: center;
 			justify-content: space-evenly;
 			text-align: center;
+			padding-inline: 12rem;
 		}
 
 		#about h2 {
