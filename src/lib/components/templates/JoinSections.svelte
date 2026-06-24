@@ -51,7 +51,7 @@
 				<dd>Cooking</dd>
 				<dd>Spaces & accommodations</dd>
 			</dl>
-			<a href="mailto:volunteer@essencia.life" class="button button-ambergold">
+			<a href="https://tally.so/r/jagZEJ" target="_blank" class="button button-ambergold">
 				Bring in your gifts
 			</a>
 		</article>
