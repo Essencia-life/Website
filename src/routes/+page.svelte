@@ -131,7 +131,7 @@
 				</div>
 			{:else if section.type === 'accommodations'}
 				<div class="parallax__layer parallax__layer--base">
-					<div class="page-content" style="padding-top: 4rem">
+					<div class="flex-col items-center pt-8 text-center lg:flex">
 						<h2>{section.headline}</h2>
 						{#if section.content}
 							<Markdown content={section.content} />
@@ -365,7 +365,7 @@
 		}
 
 		#visit {
-			min-height: 960px;
+			min-height: 840px;
 		}
 
 		#map {

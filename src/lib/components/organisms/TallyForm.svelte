@@ -3,29 +3,26 @@
 
 	interface Props {
 		formId: string;
-		formType?: string;
 		title: string;
 	}
 
-	const { formId, formType, title }: Props = $props();
+	const { formId, title }: Props = $props();
 
 	const src = $derived.by(() => {
-		const url = new URL(`https://tally.so/r/${formId}`);
-
-		if (formType) {
-			url.searchParams.set('form_type', formType);
-		}
+		const url = new URL(
+			`https://tally.so/embed/${formId}?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1`
+		);
 
 		return url.toString();
 	});
 
 	onMount(() => {
-		Tally?.loadEmbeds();
+		Tally.loadEmbeds();
 	});
 </script>
 
 <svelte:head>
-	<script async src="https://tally.so/widgets/embed.js"></script>
+	<script src="https://tally.so/widgets/embed.js"></script>
 </svelte:head>
 
 <iframe data-tally-src={src} loading="lazy" {title}></iframe>
@@ -34,7 +31,6 @@
 	iframe {
 		border: 0;
 		width: 100%;
-		height: 2000px;
-		margin-left: -6rem;
+		height: 1000px;
 	}
 </style>

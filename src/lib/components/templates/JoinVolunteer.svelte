@@ -1,6 +1,19 @@
-<script>
+<script lang="ts">
 	import TallyForm from '$lib/components/organisms/TallyForm.svelte';
 	import { Media } from '$lib/services/Media';
+	import Slideshow from '$lib/components/molecules/Slideshow.svelte';
+	import type { Photo } from '$lib/components/molecules/Slideshow.svelte';
+
+	const tentPhotos: Photo[] = [
+		{
+			photo: 'media/accommodations/tent-5.jpg',
+			caption: 'One of our glamping tents'
+		},
+		{
+			photo: 'media/accommodations/tent-3.jpg',
+			caption: 'One of our glamping tents'
+		}
+	];
 </script>
 
 <section class="hero dark">
@@ -14,17 +27,22 @@
 	<div class="page-content">
 		<h3>A genuine exchange — your skills and presence for a place to live, grow, and belong</h3>
 		<p>
-			You bring your hands, your time, and your presence. In return, you receive a home in nature,
-			organic food from the land, and full access to the practices and community that make Essência
-			what it is.
+			We are a community of people who genuinely believe the world can be different — and who are
+			committed to be part of the change. We live by love and abundance. We believe that how we live
+			together is already the change. So we hold each other, and we build, sing, grow, cook, dance…
+			and heal. As a family.
 		</p>
 		<p>
-			Volunteers are active co-creators of daily life here — part of a community built on shared
-			values, ecological care, and inner work.
+			When you come as a volunteer, you are joining our family. We open our hearts to each other,
+			which means you will be part of the family even after you are gone. We honor your
+			contributions, your gifts, your time, and your presence and we are grateful you want to come
+			to Essência.
 		</p>
 		<p>
-			We ask for a minimum stay of 6 weeks, with an ideal commitment of 2 months. This gives enough
-			time to settle in, find your rhythm, and contribute meaningfully.
+			In exchange, you get a home in nature, organic vegan food, and access to everything that makes
+			life here so alive. The ideal commitment for your stay is 2 months — so you have time to land,
+			and to connect deeply to yourself, to the beautiful souls who live here, and the nature of our
+			land.
 		</p>
 	</div>
 </section>
@@ -43,9 +61,9 @@
 			<article class="card">
 				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
 				<div class="card-content">
-					<h4>Morning practices</h4>
+					<h4>Meditation & Morning practices</h4>
 					<p>
-						Start every day with the community — movement, breathwork, meditation. Open to all,
+						Start every day with the community — meditation, movement, breathwork. Open to all,
 						every morning.
 					</p>
 				</div>
@@ -61,7 +79,7 @@
 				</div>
 			</article>
 			<article class="card">
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
+				<enhanced:img src={Media.getFile('media/ceremonie.jpg')} />
 				<div class="card-content">
 					<h4>Workshops & ceremonies</h4>
 					<p>
@@ -105,7 +123,7 @@
 </section>
 
 <section class="dark" style="padding-block: 16rem">
-	<div class="page-content grid grid-cols-2 gap-10">
+	<div class="page-content grid grid-cols-2 gap-10 overflow-visible!">
 		<div
 			style="display: flex; flex-direction: column; justify-content: space-between; padding-block: 8rem"
 		>
@@ -121,9 +139,15 @@
 				<i>Available April to October · Subject to availability</i>
 			</div>
 		</div>
-		<enhanced:img
-			src={Media.getFile('media/accommodations/tent-5.jpg')}
-			style="border-radius: 4rem; box-shadow: 0 2px 6px rgba(0 0 0 / 50%)"
+		<Slideshow
+			photos={tentPhotos}
+			classes={{
+				gallery: 'rounded-[4rem] shadow-md',
+				figure: 'rounded-[4rem]',
+				caption: 'italic',
+				image: 'aspect-3/2',
+				indicators: 'absolute top-full inset-x-0'
+			}}
 		/>
 	</div>
 </section>
@@ -131,7 +155,7 @@
 <section>
 	<div class="page-content">
 		<h3>What your day may look like.</h3>
-		<div class="grid grid-cols-3 gap-4 gallery">
+		<div class="gallery grid grid-cols-3 gap-4">
 			<figure>
 				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
 				<figcaption>Morning practices with the community</figcaption>
@@ -165,7 +189,7 @@
 			Volunteers can focus on one branch of community life or move across several. We'll find the
 			right fit together based on your skills, interests, and what the land needs.
 		</p>
-		<div class="grid grid-cols-3 gap-4">
+		<div class="my-8 grid grid-cols-3 gap-4">
 			<article class="card card-content">
 				<h4>🌱<br />Land & Garden</h4>
 				<p>Permaculture, vegetable gardening, tending the soil and green spaces.</p>
@@ -194,28 +218,30 @@
 	</div>
 </section>
 
-<section class="secondary">
+<section class="secondary pb-12">
 	<div class="page-content">
 		<h3>The exchange — clear, reciprocal, no surprises.</h3>
 		<p>Here is what we ask of you, and what Essência offers in return.</p>
-		<div class="grid grid-cols-2 gap-4">
+		<div class="grid grid-cols-2 gap-8">
 			<article>
 				<h4>What you contribute</h4>
-				<ul>
-					<li>4 hours of community service, Monday to Friday</li>
-					<li>4 additional hours per week (afternoon, evening, or weekend)</li>
+				<ul role="list" class="list-[&quot;–&quot;] pl-3 *:pl-3">
 					<li>Around 24 hours of contribution per week in total</li>
+					<ul class="list-[&quot;–&quot;] pl-6! *:px-3">
+						<li>4 hours of community service, Monday to Friday</li>
+						<li>4 additional hours per week <br />(afternoon, evening, or weekend)</li>
+					</ul>
 					<li>Attendance at 4 morning practices per week (Mon–Fri)</li>
 					<li>Commitment to the shared values and Golden Agreements</li>
-					<li>Minimum stay of 6 weeks (ideal: 2 months)</li>
+					<li>Ideally a commitment of 2 months</li>
 				</ul>
 			</article>
 			<article>
 				<h4>What you receive</h4>
-				<ul>
+				<ul role="list" class="list-[&quot;–&quot;] pl-3 *:pl-3">
 					<li>Private accommodation (glamping tent or equivalent)</li>
 					<li>
-						Full access to the community kitchen — organic, seasonal, plant-based food all day
+						Full access to the community kitchen — organic, seasonal, plant-based food available
 					</li>
 					<li>Morning practices — movement, breathwork, meditation</li>
 					<li>Access to workshops, events, and ceremonies on the land</li>
@@ -230,21 +256,21 @@
 <section id="apply">
 	<div class="page-content">
 		<h3>How to apply.</h3>
-		<ol class="steps">
+		<ol role="list" class="steps mt-10 flex">
 			<li>
 				<div class="number"></div>
 				<h4>Fill in the form</h4>
-				Share a bit about yourself, your skills, and your intentions.
+				<p>Share about yourself, your skills, and your intentions.</p>
 			</li>
 			<li>
 				<div class="number"></div>
 				<h4>We reach out</h4>
-				We'll email you to schedule a short interview and align on dates.
+				<p>We'll email you to schedule a short call and align on dates.</p>
 			</li>
 			<li>
 				<div class="number"></div>
 				<h4>You arrive</h4>
-				Pack light, arrive with an open heart, and settle into your new home.
+				<p>Pack up, arrive with an open heart, and settle into your new home.</p>
 			</li>
 		</ol>
 	</div>
@@ -255,7 +281,9 @@
 		<h3>Ready to apply?</h3>
 		We read every application with care. Take a moment to look through the page before filling in the
 		form.
-		<TallyForm formId="aQzBMy" title="Volunteer Application Form" />
+		<div class="form secondary mt-6 mb-12 rounded-[4rem] p-2">
+			<TallyForm formId="jagZEJ" title="Volunteer Application Form" />
+		</div>
 	</div>
 </section>
 
@@ -290,6 +318,7 @@
 	}
 
 	.dark {
+		color-scheme: dark;
 		background: var(--brand-dark-section-color);
 		color: var(--brand-stonewhite-color);
 	}
@@ -306,26 +335,6 @@
 
 	.secondary {
 		background: var(--brand-parchment-color);
-	}
-
-	.grid {
-		display: grid;
-	}
-
-	.grid-cols-2 {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.grid-cols-3 {
-		grid-template-columns: repeat(3, 1fr);
-	}
-
-	.gap-4 {
-		gap: 4rem;
-	}
-
-	.gap-10 {
-		gap: 10rem;
 	}
 
 	.gallery figure {
@@ -380,12 +389,6 @@
 		margin: 0;
 	}
 
-	.steps {
-		display: flex;
-		margin: 0;
-		padding: 0;
-	}
-
 	.steps li {
 		display: flex;
 		flex-direction: column;
@@ -405,7 +408,7 @@
 		content: '';
 		position: absolute;
 		inset: 50% 0 auto 0;
-		border-bottom: 1px solid var(--brand-border-color);
+		border-bottom: 2px solid var(--brand-border-color);
 	}
 
 	.steps li .number::after {
@@ -415,12 +418,16 @@
 		justify-content: center;
 		height: inherit;
 		aspect-ratio: 1;
-		border: 1px solid var(--brand-border-color);
+		border: 2px solid var(--brand-border-color);
 		border-radius: 100%;
 		background: var(--brand-background-color);
 		font-family: Alegreya;
 		font-weight: 600;
 		color: var(--brand-primary-color);
 		z-index: 1;
+	}
+
+	.steps li p {
+		margin-inline: 16px;
 	}
 </style>

@@ -46,7 +46,7 @@
 		display: grid;
 		grid-template-columns: repeat(4, min(calc(300px - 8rem), 80vw));
 		gap: 8rem;
-		margin: 12rem 0;
+		margin: 12rem auto;
 		overflow-y: hidden;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;

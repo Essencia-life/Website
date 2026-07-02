@@ -1,4 +1,5 @@
 <script lang="ts">
+	import './layout.css';
 	import '../app.css';
 	import logo from '$lib/assets/logo_tree.png';
 	import Overlays from '$lib/components/atoms/Overlays.svelte';
@@ -78,6 +79,4 @@
 	/>
 {/if}
 
-<Overlays>
-	{@render children?.()}
-</Overlays>
+<Overlays>{@render children?.()}</Overlays>
