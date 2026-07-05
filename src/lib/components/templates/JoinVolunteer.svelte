@@ -59,7 +59,7 @@
 
 		<div class="grid grid-cols-3 gap-4">
 			<article class="card">
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
+				<enhanced:img src={Media.getFile('media/morning-practice.jpg')} />
 				<div class="card-content">
 					<h4>Meditation & Morning practices</h4>
 					<p>
@@ -69,9 +69,9 @@
 				</div>
 			</article>
 			<article class="card">
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
+				<enhanced:img src={Media.getFile('media/food.png')} />
 				<div class="card-content">
-					<h4>Organic food, all day</h4>
+					<h4>Organic food available</h4>
 					<p>
 						The community kitchen is at your disposal throughout the day — stocked with seasonal,
 						organic, plant-based food. Gluten-free? We've got you covered.
@@ -89,7 +89,7 @@
 				</div>
 			</article>
 			<article class="card">
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
+				<enhanced:img src={Media.getFile('media/beach.jpg')} />
 				<div class="card-content">
 					<h4>Beach afternoons</h4>
 					<p>
@@ -99,7 +99,7 @@
 				</div>
 			</article>
 			<article class="card">
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
+				<enhanced:img src={Media.getFile('media/spa.jpg')} />
 				<div class="card-content">
 					<h4>SPA nights in nature</h4>
 					<p>
@@ -109,7 +109,7 @@
 				</div>
 			</article>
 			<article class="card">
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
+				<enhanced:img src={Media.getFile('media/real-responsibility.jpg')} />
 				<div class="card-content">
 					<h4>Real responsibility</h4>
 					<p>
@@ -157,7 +157,7 @@
 		<h3>What your day may look like.</h3>
 		<div class="gallery grid grid-cols-3 gap-4">
 			<figure>
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
+				<enhanced:img src={Media.getFile('media/community-morning-practice.jpg')} />
 				<figcaption>Morning practices with the community</figcaption>
 			</figure>
 			<figure>
@@ -175,8 +175,8 @@
 				<figcaption>Beach afternoons with the community</figcaption>
 			</figure>
 			<figure>
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
-				<figcaption>Workshops, ceremonies & inner work</figcaption>
+				<enhanced:img src={Media.getFile('media/inner-work.jpg')} />
+				<figcaption>Workshops & inner work</figcaption>
 			</figure>
 		</div>
 	</div>
