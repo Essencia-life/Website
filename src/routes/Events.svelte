@@ -34,7 +34,7 @@
 					/>
 					<div style="display: flex; flex-direction: column; gap: 2rem; flex: 1;">
 						<div style="display: flex; justify-content: space-between">
-							<small class={event.type}>{event.type}</small>
+							<small class="type-{event.type}">{event.type}</small>
 							{#if event.weekly}
 								<time style="font-weight: 500">{event.weekly}</time>
 							{:else}
@@ -96,6 +96,7 @@
 		flex-direction: column;
 		scroll-snap-stop: always;
 		transition: transform 150ms ease-in-out;
+		min-width: 250px;
 	}
 
 	@media screen and (width < 600px) {
@@ -139,7 +140,7 @@
 		line-height: 1.5;
 	}
 
-	.event small.retreat {
+	.event small.type-retreat {
 		background-color: var(--brand-healing-color);
 	}
 

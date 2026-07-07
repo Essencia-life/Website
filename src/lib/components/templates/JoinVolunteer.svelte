@@ -14,13 +14,24 @@
 			caption: 'One of our glamping tents'
 		}
 	];
+
+	let howToApplySection: HTMLElement;
+
+	function scrollToApply(event: MouseEvent) {
+		if (howToApplySection) {
+			event.preventDefault();
+			howToApplySection.scrollIntoView({ behavior: 'smooth' });
+		}
+	}
 </script>
 
-<section class="hero dark">
-	<h2>Offer your gifts.<br />Receive in kind.</h2>
-	<h3>Volunteer at Essência</h3>
+<section class="dark flex flex-col items-center px-4 py-10 text-center">
+	<h2 class="my-4!">Offer your gifts.<br />Receive in kind.</h2>
+	<h3 class="-order-1 m-0! text-[3rem]! font-bold tracking-widest uppercase opacity-70">
+		Volunteer at Essência
+	</h3>
 	<i>A season of meaningful work, healing, and community — in exchange for your time and skills.</i>
-	<a class="button" href="#apply">Apply now</a>
+	<a class="button mt-10" href="#apply" onclick={scrollToApply}>Apply now</a>
 </section>
 
 <section>
@@ -57,7 +68,7 @@
 			place quietly offers.
 		</p>
 
-		<div class="grid grid-cols-3 gap-4">
+		<div class="grid gap-4 md:grid-cols-3">
 			<article class="card">
 				<enhanced:img src={Media.getFile('media/morning-practice.jpg')} />
 				<div class="card-content">
@@ -122,40 +133,36 @@
 	</div>
 </section>
 
-<section class="dark" style="padding-block: 16rem">
-	<div class="page-content grid grid-cols-2 gap-10 overflow-visible!">
-		<div
-			style="display: flex; flex-direction: column; justify-content: space-between; padding-block: 8rem"
-		>
-			<div>
-				<h3 style="margin-top: 0">Your own private space in nature</h3>
-				<p>
-					Depending on the season, you'll stay in one of our glamping tents — fully equipped,
-					comfortable, and nestled in the land. Private and quiet: somewhere to come back to, rest
-					deeply, and return to yourself.
-				</p>
-			</div>
-			<div>
-				<i>Available April to October · Subject to availability</i>
-			</div>
+<section class="dark py-10 md:py-16">
+	<div
+		class="page-content grid gap-y-6 overflow-visible! md:grid-cols-2 md:grid-rows-[auto_auto_auto] md:gap-x-10"
+	>
+		<h3 class="m-0! md:self-end">Your own private space in nature</h3>
+		<div class="md:row-span-3">
+			<Slideshow
+				photos={tentPhotos}
+				classes={{
+					gallery: 'rounded-[4rem] shadow-md',
+					figure: 'rounded-[4rem]',
+					caption: 'italic',
+					image: 'aspect-3/2',
+					indicators: 'absolute top-full inset-x-0'
+				}}
+			/>
 		</div>
-		<Slideshow
-			photos={tentPhotos}
-			classes={{
-				gallery: 'rounded-[4rem] shadow-md',
-				figure: 'rounded-[4rem]',
-				caption: 'italic',
-				image: 'aspect-3/2',
-				indicators: 'absolute top-full inset-x-0'
-			}}
-		/>
+		<p>
+			Depending on the season, you'll stay in one of our glamping tents — fully equipped,
+			comfortable, and nestled in the land. Private and quiet: somewhere to come back to, rest
+			deeply, and return to yourself.
+		</p>
+		<i>Available April to October · Subject to availability</i>
 	</div>
 </section>
 
 <section>
 	<div class="page-content">
 		<h3>What your day may look like.</h3>
-		<div class="gallery grid grid-cols-3 gap-4">
+		<div class="gallery grid gap-6 md:grid-cols-3 md:gap-4">
 			<figure>
 				<enhanced:img src={Media.getFile('media/community-morning-practice.jpg')} />
 				<figcaption>Morning practices with the community</figcaption>
@@ -189,7 +196,7 @@
 			Volunteers can focus on one branch of community life or move across several. We'll find the
 			right fit together based on your skills, interests, and what the land needs.
 		</p>
-		<div class="my-8 grid grid-cols-3 gap-4">
+		<div class="my-8 grid gap-4 md:grid-cols-3">
 			<article class="card card-content">
 				<h4>🌱<br />Land & Garden</h4>
 				<p>Permaculture, vegetable gardening, tending the soil and green spaces.</p>
@@ -222,12 +229,12 @@
 	<div class="page-content">
 		<h3>The exchange — clear, reciprocal, no surprises.</h3>
 		<p>Here is what we ask of you, and what Essência offers in return.</p>
-		<div class="grid grid-cols-2 gap-8">
+		<div class="grid md:grid-cols-2 md:gap-8">
 			<article>
 				<h4>What you contribute</h4>
-				<ul role="list" class="list-[&quot;–&quot;] pl-3 *:pl-3">
+				<ul role="list" class="list-hyphen pl-3 *:pl-3">
 					<li>Around 24 hours of contribution per week in total</li>
-					<ul class="list-[&quot;–&quot;] pl-6! *:px-3">
+					<ul class="list-hyphen pl-6! *:px-3">
 						<li>4 hours of community service, Monday to Friday</li>
 						<li>4 additional hours per week <br />(afternoon, evening, or weekend)</li>
 					</ul>
@@ -238,7 +245,7 @@
 			</article>
 			<article>
 				<h4>What you receive</h4>
-				<ul role="list" class="list-[&quot;–&quot;] pl-3 *:pl-3">
+				<ul role="list" class="list-hyphen pl-3 *:pl-3">
 					<li>Private accommodation (glamping tent or equivalent)</li>
 					<li>
 						Full access to the community kitchen — organic, seasonal, plant-based food available
@@ -253,10 +260,13 @@
 	</div>
 </section>
 
-<section id="apply">
+<section id="apply" bind:this={howToApplySection}>
 	<div class="page-content">
 		<h3>How to apply.</h3>
-		<ol role="list" class="steps mt-10 flex">
+		<ol
+			role="list"
+			class="steps -m-4 mt-10 flex max-w-svw snap-x snap-mandatory grid-cols-3 overflow-x-auto overflow-y-hidden md:grid"
+		>
 			<li>
 				<div class="number"></div>
 				<h4>Fill in the form</h4>
@@ -289,32 +299,13 @@
 
 <style>
 	section + section {
-		margin-top: 10rem;
+		margin-top: 6rem;
 	}
 
-	.hero {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding-block: 10rem;
-	}
-
-	.hero h3 {
-		order: -1;
-		font-size: 3rem;
-		font-weight: 700;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		margin: 0;
-		opacity: 0.7;
-	}
-
-	.hero h2 {
-		margin-block: 4rem;
-	}
-
-	.hero .button {
-		margin-top: 10rem;
+	@media (width >= 48rem) {
+		section + section {
+			margin-top: 10rem;
+		}
 	}
 
 	.dark {
@@ -389,11 +380,21 @@
 		margin: 0;
 	}
 
+	.list-hyphen {
+		list-style: '–';
+	}
+
 	.steps li {
 		display: flex;
 		flex-direction: column;
 		counter-increment: list;
 		text-align: center;
+	}
+
+	@media (width < 48rem) {
+		.steps li {
+			min-width: min(70vw, 200px);
+		}
 	}
 
 	.steps li .number {

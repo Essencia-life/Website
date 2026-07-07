@@ -183,26 +183,4 @@
 	.gallery::-webkit-scrollbar {
 		display: none;
 	}
-
-	/*@media screen and (width < 800px) {*/
-	/*	.slideshow {*/
-	/*		margin: 0 -4rem;*/
-	/*		width: 100vw;*/
-	/*	}*/
-
-	/*	.photos {*/
-	/*		padding: 0.5rem;*/
-	/*		gap: 0.75rem;*/
-	/*	}*/
-
-	/*	.photos enhanced\:img {*/
-	/*		max-height: 300px;*/
-	/*	}*/
-	/*}*/
-
-	/*@media screen and (width >= 800px) {*/
-	/*	.photos enhanced\:img {*/
-	/*		max-height: 400px;*/
-	/*	}*/
-	/*}*/
 </style>

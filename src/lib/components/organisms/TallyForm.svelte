@@ -1,3 +1,7 @@
+<script lang="ts" module>
+	let scriptLoaded = $state(false);
+</script>
+
 <script lang="ts">
 	import { onMount } from 'svelte';
 
@@ -17,12 +21,19 @@
 	});
 
 	onMount(() => {
-		Tally.loadEmbeds();
+		if (scriptLoaded) {
+			Tally.loadEmbeds();
+		}
 	});
+
+	function onload() {
+		scriptLoaded = true;
+		Tally.loadEmbeds();
+	}
 </script>
 
 <svelte:head>
-	<script src="https://tally.so/widgets/embed.js"></script>
+	<script src="https://tally.so/widgets/embed.js" {onload}></script>
 </svelte:head>
 
 <iframe data-tally-src={src} loading="lazy" {title}></iframe>
