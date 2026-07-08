@@ -98,7 +98,7 @@ main {
 
 .page-content {
 	width: calc(100vw - (100vw - 100%));
-	max-width: 1200px;
+	max-width: 1024px;
 	margin-inline: auto;
 	padding: 0 4rem;
 	overflow: hidden;

@@ -1,5 +1,6 @@
 <script>
 	import { Media } from '$lib/services/Media.js';
+	import { resolve } from '$app/paths';
 </script>
 
 <div class="join-us">
@@ -51,7 +52,7 @@
 				<dd>Cooking</dd>
 				<dd>Spaces & accommodations</dd>
 			</dl>
-			<a href="https://tally.so/r/jagZEJ" target="_blank" class="button button-ambergold">
+			<a href={resolve('/join-us/as-volunteer')} class="button button-ambergold">
 				Bring in your gifts
 			</a>
 		</article>

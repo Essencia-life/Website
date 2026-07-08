@@ -1,14 +1,11 @@
+import tailwindcss from '@tailwindcss/vite';
 import devtoolsJson from 'vite-plugin-devtools-json';
 import { defineConfig } from 'vitest/config';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 
 export default defineConfig({
-	plugins: [
-		enhancedImages(),
-		sveltekit(),
-		devtoolsJson()
-	],
+	plugins: [tailwindcss(), enhancedImages(), sveltekit(), devtoolsJson()],
 	test: {
 		expect: { requireAssertions: true },
 		projects: [
@@ -27,6 +24,7 @@ export default defineConfig({
 					setupFiles: ['./vitest-setup-client.ts']
 				}
 			},
+
 			{
 				extends: './vite.config.ts',
 				test: {

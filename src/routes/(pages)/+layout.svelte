@@ -1,19 +1,16 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
+	import type { LayoutProps } from './$types';
 	import Header from '$lib/components/templates/Header.svelte';
 	import Footer from '$lib/components/templates/Footer.svelte';
+	import { page } from '$app/state';
 
-	interface Props {
-		children: Snippet;
-	}
-
-	let { children }: Props = $props();
+	let { children }: LayoutProps = $props();
 </script>
 
 <div class="page">
 	<Header />
 
-	<div class="page-content">
+	<div class:page-content={!page.data.wideContent}>
 		{@render children()}
 	</div>
 
