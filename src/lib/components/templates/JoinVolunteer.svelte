@@ -161,7 +161,7 @@
 
 <section>
 	<div class="page-content">
-		<h3>What your day may look like.</h3>
+		<h3>What your day may look like</h3>
 		<div class="gallery grid gap-6 md:grid-cols-3 md:gap-4">
 			<figure>
 				<enhanced:img src={Media.getFile('media/community-morning-practice.jpg')} />
@@ -191,7 +191,7 @@
 
 <section>
 	<div class="page-content">
-		<h3>Where you contribute.</h3>
+		<h3>Where you contribute</h3>
 		<p>
 			Volunteers can focus on one branch of community life or move across several. We'll find the
 			right fit together based on your skills, interests, and what the land needs.
@@ -227,7 +227,7 @@
 
 <section class="secondary pb-12">
 	<div class="page-content">
-		<h3>The exchange — clear, reciprocal, no surprises.</h3>
+		<h3>The exchange — clear, reciprocal, no surprises</h3>
 		<p>Here is what we ask of you, and what Essência offers in return.</p>
 		<div class="grid md:grid-cols-2 md:gap-8">
 			<article>
@@ -262,7 +262,7 @@
 
 <section id="apply" bind:this={howToApplySection}>
 	<div class="page-content">
-		<h3>How to apply.</h3>
+		<h3>How to apply</h3>
 		<ol
 			role="list"
 			class="steps -m-4 mt-10 flex max-w-svw snap-x snap-mandatory grid-cols-3 overflow-x-auto overflow-y-hidden md:grid"
