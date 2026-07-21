@@ -41,7 +41,7 @@
 
 <style>
 	.testimonials {
-		gap: 16rem;
+		gap: 4rem;
 		align-items: center;
 	}
 
@@ -49,7 +49,7 @@
 		.testimonials {
 			display: flex;
 			flex-direction: column-reverse;
-			padding-bottom: 16rem;
+			padding-bottom: 4rem;
 		}
 	}
 
@@ -66,8 +66,8 @@
 
 	.bubble {
 		position: relative;
-		padding: 4rem;
-		border-radius: 4rem;
+		padding: 1rem;
+		border-radius: 1rem;
 		background: rgba(var(--brand-parchment-rgb) / 80%);
 		text-align: justify;
 	}
@@ -92,7 +92,7 @@
 		content: '';
 		position: absolute;
 		top: 100%;
-		border: 6rem solid transparent;
+		border: 1.5rem solid transparent;
 		border-top-color: rgba(var(--brand-parchment-rgb) / 80%);
 	}
 
@@ -108,21 +108,21 @@
 
 	blockquote {
 		position: relative;
-		padding-top: 6rem;
+		padding-top: 1.5rem;
 		margin: 0;
-		font-size: 3.5rem;
+		font-size: 0.875rem;
 		font-weight: 400;
-		line-height: 5rem;
+		line-height: 1.25rem;
 		letter-spacing: 0.5px;
 	}
 
 	blockquote::before {
 		content: '\201D';
 		position: absolute;
-		top: -20rem;
+		top: -5rem;
 		display: block;
 		font-family: Alegreya, serif;
-		font-size: 50rem;
+		font-size: 12.5rem;
 		color: var(--brand-highlight-color);
 		line-height: 1;
 	}
@@ -135,11 +135,11 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		margin-top: 3rem;
-		padding-top: 3rem;
+		margin-top: 0.75rem;
+		padding-top: 0.75rem;
 		border-top: 1px solid var(--brand-border-color);
 		font-style: normal;
-		font-size: 4rem;
+		font-size: 1rem;
 	}
 
 	.testimonials > div:first-of-type cite {

@@ -44,8 +44,8 @@
 	}
 
 	.social-media-button {
-		padding: 4rem;
-		border-radius: 4rem;
+		padding: 1rem;
+		border-radius: 1rem;
 		background: rgba(var(--brand-parchment-rgb) / 80%);
 		color: inherit;
 		text-decoration: none;
@@ -53,11 +53,11 @@
 
 	h4 {
 		font-weight: 500;
-		margin-block: 2rem;
+		margin-block: 0.5rem;
 	}
 
 	p {
-		font-size: 3rem;
+		font-size: 0.75rem;
 	}
 
 	.social-media-button:global(.instagram) {
@@ -80,10 +80,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 10rem;
+		width: 2.5rem;
 		aspect-ratio: 1;
 		color: #fff;
-		border-radius: 3rem;
+		border-radius: 0.75rem;
 		background: var(--social-media-brand-color);
 	}
 
@@ -107,14 +107,14 @@
 		.social-media {
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: repeat(2, 1fr);
-			gap: 4rem;
+			gap: 1rem;
 		}
 	}
 
 	@media screen and (width >= 800px) {
 		.social-media {
 			grid-template-columns: repeat(4, 200px);
-			gap: 10rem;
+			gap: 2.5rem;
 		}
 	}
 </style>

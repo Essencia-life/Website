@@ -63,12 +63,12 @@
 
 <style>
 	h3 {
-		margin: 0 0 3rem;
+		margin: 0 0 1.5rem;
 	}
 
 	.accommodation-detail {
 		display: grid;
-		gap: 4rem;
+		gap: 1rem;
 		width: 75vw;
 	}
 

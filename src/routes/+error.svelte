@@ -51,6 +51,6 @@
 	}
 
 	.error p {
-		margin-top: 10rem;
+		margin-top: 2.5rem;
 	}
 </style>

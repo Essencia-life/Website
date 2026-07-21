@@ -44,9 +44,9 @@
 <style>
 	.accommodations {
 		display: grid;
-		grid-template-columns: repeat(4, min(calc(300px - 8rem), 80vw));
-		gap: 8rem;
-		margin: 12rem auto;
+		grid-template-columns: repeat(4, min(calc(300px - 2rem), 80vw));
+		gap: 2rem;
+		margin: 3rem auto;
 		overflow-y: hidden;
 		overflow-x: auto;
 		scroll-snap-type: x mandatory;
@@ -62,8 +62,8 @@
 
 	@media screen and (width < 800px) {
 		.accommodations {
-			padding: 0 calc(10vw + 4rem);
-			margin-inline: -4rem;
+			padding: 0 calc(10vw + 1rem);
+			margin-inline: -1rem;
 		}
 	}
 
@@ -71,7 +71,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		gap: 3rem;
+		gap: 0.75rem;
 		scroll-snap-align: center;
 		scroll-snap-stop: always;
 	}
@@ -85,7 +85,7 @@
 	}
 
 	.accommodations p {
-		padding-inline: 2rem;
+		padding-inline: 0.5rem;
 		text-align: justify;
 	}
 

@@ -133,13 +133,13 @@
 	.indicators {
 		display: flex;
 		justify-content: center;
-		gap: 2rem;
-		padding: 3rem;
+		gap: 0.5rem;
+		padding: 0.75rem;
 	}
 
 	.indicators > button {
-		width: 2rem;
-		height: 2rem;
+		width: 0.5rem;
+		height: 0.5rem;
 		border-radius: 100%;
 		background: light-dark(var(--brand-parchment-color), rgba(0 0 0 / 50%));
 	}
@@ -147,8 +147,8 @@
 	.indicators > button::after {
 		content: '';
 		display: block;
-		width: 2rem;
-		height: 2rem;
+		width: 0.5rem;
+		height: 0.5rem;
 		border-radius: 100%;
 		background: light-dark(rgba(0 0 0 / 50%), var(--brand-parchment-color));
 		opacity: var(--ratio);
@@ -169,7 +169,7 @@
 		margin: 0;
 		color: #fff;
 		cursor: pointer;
-		filter: drop-shadow(var(--brand-earthbrown-color) 0 0 1rem);
+		filter: drop-shadow(var(--brand-earthbrown-color) 0 0 0.25rem);
 	}
 
 	.navigate:disabled {

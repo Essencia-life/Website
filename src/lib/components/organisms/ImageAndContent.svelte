@@ -26,8 +26,8 @@
 <style>
 	.image-and-content {
 		display: flex;
-		gap: 4rem;
-		margin-bottom: 8rem;
+		gap: 1rem;
+		margin-bottom: 2rem;
 	}
 
 	@media screen and (width >= 800px) {
@@ -64,7 +64,7 @@
 		enhanced\:img {
 			max-width: 100vw;
 			height: auto;
-			margin-inline: -4rem;
+			margin-inline: -1rem;
 		}
 	}
 </style>

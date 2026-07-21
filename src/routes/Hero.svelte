@@ -64,12 +64,12 @@
 <style>
 	.hero {
 		position: relative;
-		height: calc(100vh - 18rem);
+		height: calc(100vh - 4.5rem);
 	}
 
 	@supports (height: 100svh) {
 		.hero {
-			height: calc(100svh - 18rem);
+			height: calc(100svh - 4.5rem);
 		}
 	}
 
@@ -92,9 +92,9 @@
 
 	.hero .slogan {
 		color: #f8f6f2;
-		font-size: 14rem;
+		font-size: 3.5rem;
 		font-weight: 400;
-		margin-block: 0 36rem;
+		margin-block: 0 9rem;
 	}
 
 	.hero video {

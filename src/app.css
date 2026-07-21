@@ -58,13 +58,13 @@
 
 html,
 body {
-	font-size: 4px;
 	background: var(--brand-background-color);
 	height: 100%;
 	box-sizing: border-box;
-	scroll-padding: 18rem;
+	scroll-padding: 4.5rem;
 	padding: 0;
 	margin: 0;
+	overflow-x: hidden;
 }
 
 @supports (height: 100dvh) {
@@ -83,7 +83,6 @@ body.no-scroll {
 
 main {
 	font-family: system-ui, sans-serif;
-	font-size: 4rem;
 	font-weight: 300;
 	letter-spacing: 0.2px;
 	word-spacing: 2px;
@@ -100,7 +99,7 @@ main {
 	width: calc(100vw - (100vw - 100%));
 	max-width: 1024px;
 	margin-inline: auto;
-	padding: 0 4rem;
+	padding: 0 1rem;
 	overflow: hidden;
 }
 
@@ -116,18 +115,18 @@ h6 {
 }
 
 h2 {
-	margin-block: 10rem 4rem;
-	font-size: 12rem;
+	margin-block: 2.5rem 1rem;
+	font-size: 3rem;
 }
 
 h3 {
-	margin-block: 20rem 4rem;
-	font-size: 6rem;
+	margin-block: 5rem 1rem;
+	font-size: 1.5rem;
 }
 
 h4 {
-	margin-block: 12rem 4rem;
-	font-size: 5rem;
+	margin-block: 3rem 1rem;
+	font-size: 1.25rem;
 }
 
 strong {
@@ -138,12 +137,12 @@ hr {
 	height: 1px;
 	background: var(--brand-border-color);
 	border: none;
-	margin-block: 10rem;
+	margin-block: 2.5rem;
 }
 
 p {
 	margin-top: 0;
-	margin-bottom: 3rem;
+	margin-bottom: 0.75rem;
 	line-height: 1.5;
 }
 
@@ -165,12 +164,12 @@ button {
 	align-items: center;
 	text-decoration: none;
 	cursor: pointer;
-	gap: 2rem;
-	padding: 2.5rem 3rem;
+	gap: 0.5rem;
+	padding: 0.625rem 0.75rem;
 	border: 2px solid var(--brand-earthterracotta-color);
 	border-radius: 24px 8px 24px 8px;
 	font-weight: 600;
-	font-size: 4rem;
+	font-size: 1rem;
 	color: var(--brand-earthterracotta-color);
 	background-color: rgba(var(--brand-stonewhite-rgb) / 15%);
 	text-align: center;
@@ -198,19 +197,19 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 12rem;
+	height: 3rem;
 	aspect-ratio: 1;
 	border-radius: 100%;
 }
 
 .input {
-	padding: 2.5rem 3rem;
+	padding: 0.625rem 0.75rem;
 	appearance: none;
 	background: transparent;
 	border: 2px solid rgba(var(--brand-earthterracotta-rgb) / 80%);
-	border-radius: 1.5rem;
+	border-radius: 0.375rem;
 	font: inherit;
-	font-size: 4rem;
+	font-size: 1rem;
 	font-weight: 500;
 	letter-spacing: 0.5px;
 }
@@ -234,8 +233,8 @@ button {
 }
 
 [class*='hint--']:after {
-	font-size: 4rem;
-	line-height: 4rem;
+	font-size: 1rem;
+	line-height: 1rem;
 	background-color: var(--brand-earthbrown-color);
 	color: var(--brand-stonewhite-color);
 }

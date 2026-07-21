@@ -32,28 +32,28 @@
 		display: flex;
 		flex-direction: column;
 		min-width: 320px;
-		max-width: calc(100vw - 8rem);
-		gap: 2rem;
+		max-width: calc(100vw - 2rem);
+		gap: 0.5rem;
 		background-color: var(--brand-stonewhite-color);
-		border-radius: 8rem;
-		box-shadow: 0 0 16rem var(--brand-earthbrown-color);
+		border-radius: 2rem;
+		box-shadow: 0 0 4rem var(--brand-earthbrown-color);
 	}
 
 	@media screen and (width < 800px) {
 		.dialog {
-			padding: 6rem 4rem;
+			padding: 1.5rem 1rem;
 		}
 	}
 
 	@media screen and (width >= 800px) {
 		.dialog {
-			padding: 8rem;
+			padding: 2rem;
 		}
 	}
 
 	.dialog.bottomSheet {
 		display: block;
-		inset: 18rem 0 0 0;
+		inset: 4.5rem 0 0 0;
 		max-width: 100vw;
 		transform: none;
 		border-bottom-left-radius: 0;
@@ -69,6 +69,6 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-top: auto;
-		gap: 2rem;
+		gap: 0.5rem;
 	}
 </style>

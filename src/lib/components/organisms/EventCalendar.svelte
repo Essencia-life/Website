@@ -108,61 +108,61 @@
 
 <style>
 	section {
-		margin-bottom: 20rem;
+		margin-bottom: 5rem;
 	}
 
 	.year {
 		text-align: center;
-		font-size: 8rem;
-		margin-block: 2rem 12rem;
+		font-size: 2rem;
+		margin-block: 0.5rem 3rem;
 		color: rgba(var(--brand-accent-rgb) / 70%);
 	}
 
 	article {
 		display: grid;
-		gap: 10rem;
+		gap: 2.5rem;
 	}
 
 	article:not(:last-of-type) {
-		padding-bottom: 10rem;
-		margin-bottom: 10rem;
-		border-bottom: 2rem solid rgba(var(--brand-parchment-rgb) / 50%);
+		padding-bottom: 2.5rem;
+		margin-bottom: 2.5rem;
+		border-bottom: 0.5rem solid rgba(var(--brand-parchment-rgb) / 50%);
 	}
 
 	.date {
 		display: flex;
 		flex-direction: column;
 		line-height: 1;
-		padding-top: 0.5rem;
+		padding-top: 0.125rem;
 		font-family: Alegreya, serif;
 	}
 
 	.date .month {
 		text-transform: uppercase;
 		font-weight: 600;
-		font-size: 6rem;
-		letter-spacing: 1rem;
+		font-size: 1.5rem;
+		letter-spacing: 0.25rem;
 		opacity: 0.8;
 	}
 
 	.date .month::after {
 		content: '';
 		display: block;
-		height: 1rem;
-		width: 8rem;
-		margin-top: 4rem;
+		height: 0.25rem;
+		width: 2rem;
+		margin-top: 1rem;
 		background: var(--brand-ambergold-color);
 	}
 
 	.date .day {
 		font-weight: 700;
-		font-size: 16rem;
+		font-size: 4rem;
 		opacity: 0.8;
 	}
 
 	.date .weekly {
 		text-transform: uppercase;
-		font-size: 6rem;
+		font-size: 1.5rem;
 		font-weight: 500;
 		line-height: 1.5;
 	}
@@ -172,21 +172,21 @@
 		height: auto;
 		aspect-ratio: 4 / 5;
 		object-fit: cover;
-		box-shadow: 0 0 3rem rgba(var(--brand-earthbrown-rgb) / 40%);
+		box-shadow: 0 0 0.75rem rgba(var(--brand-earthbrown-rgb) / 40%);
 	}
 
 	.info {
 		display: flex;
 		flex-direction: column;
-		gap: 4rem;
-		padding: 0.5rem 0;
+		gap: 1rem;
+		padding: 0.125rem 0;
 	}
 
 	.info a.details {
 		display: flex;
 		align-items: center;
 		align-self: flex-end;
-		gap: 2rem;
+		gap: 0.5rem;
 		text-decoration: none;
 	}
 
@@ -203,7 +203,7 @@
 		display: block;
 		font-weight: 500;
 		opacity: 0.9;
-		margin-bottom: 2rem;
+		margin-bottom: 0.5rem;
 	}
 
 	@media screen and (width < 800px) {

@@ -88,8 +88,8 @@
 		section {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-			gap: 8rem;
-			margin-block: 8rem;
+			gap: 2rem;
+			margin-block: 2rem;
 		}
 	}
 
@@ -103,9 +103,9 @@
 		display: flex;
 		flex-direction: column;
 		border: 1px solid var(--brand-border-color);
-		border-radius: 4rem;
+		border-radius: 1rem;
 		overflow: hidden;
-		margin-block: 10rem;
+		margin-block: 2.5rem;
 		transition:
 			border-color 0.3s,
 			transform 0.3s;
@@ -138,13 +138,13 @@
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		margin: 6rem;
-		gap: 3rem;
+		margin: 1.5rem;
+		gap: 0.75rem;
 	}
 
 	h4 {
 		order: -1;
-		font-size: 3rem;
+		font-size: 0.75rem;
 		font-weight: 700;
 		letter-spacing: 2px;
 		text-transform: uppercase;
@@ -161,17 +161,17 @@
 	}
 
 	h3 {
-		margin: 0 0 1rem 0;
+		margin: 0 0 0.25rem 0;
 	}
 
 	p {
-		margin: 0 0 3rem 0;
+		margin: 0 0 0.75rem 0;
 	}
 
 	dl {
 		line-height: 1.8;
-		font-size: 3rem;
-		margin: auto 0 3rem;
+		font-size: 0.75rem;
+		margin: auto 0 0.75rem;
 	}
 
 	dd {

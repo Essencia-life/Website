@@ -27,7 +27,7 @@
 
 <section class="dark flex flex-col items-center px-4 py-10 text-center">
 	<h2 class="my-4!">Offer your gifts.<br />Receive in kind.</h2>
-	<h3 class="-order-1 m-0! text-[3rem]! font-bold tracking-widest uppercase opacity-70">
+	<h3 class="-order-1 m-0! text-xs! font-bold tracking-widest uppercase opacity-70">
 		Volunteer at Essência
 	</h3>
 	<i>A season of meaningful work, healing, and community — in exchange for your time and skills.</i>
@@ -142,8 +142,8 @@
 			<Slideshow
 				photos={tentPhotos}
 				classes={{
-					gallery: 'rounded-[4rem] shadow-md',
-					figure: 'rounded-[4rem]',
+					gallery: 'rounded-2xl shadow-md',
+					figure: 'rounded-2xl',
 					caption: 'italic',
 					image: 'aspect-3/2',
 					indicators: 'absolute top-full inset-x-0'
@@ -291,7 +291,7 @@
 		<h3>Ready to apply?</h3>
 		We read every application with care. Take a moment to look through the page before filling in the
 		form.
-		<div class="form secondary mt-6 mb-12 rounded-[4rem] p-2">
+		<div class="form secondary mt-6 mb-12 rounded-2xl p-2">
 			<TallyForm formId="jagZEJ" title="Volunteer Application Form" />
 		</div>
 	</div>
@@ -299,12 +299,12 @@
 
 <style>
 	section + section {
-		margin-top: 6rem;
+		margin-top: 1.5rem;
 	}
 
 	@media (width >= 48rem) {
 		section + section {
-			margin-top: 10rem;
+			margin-top: 2.5rem;
 		}
 	}
 
@@ -331,7 +331,7 @@
 	.gallery figure {
 		position: relative;
 		margin: 0;
-		border-radius: 4rem;
+		border-radius: 1rem;
 		overflow: hidden;
 	}
 
@@ -339,7 +339,7 @@
 		position: absolute;
 		inset-inline: 0;
 		bottom: 0;
-		padding: 8rem 4rem 4rem;
+		padding: 2rem 1rem 1rem;
 		background: linear-gradient(to top, rgba(0 0 0 / 70%), rgba(0 0 0 / 0));
 		color: var(--brand-stonewhite-color);
 		font-style: italic;
@@ -360,7 +360,7 @@
 		display: flex;
 		flex-direction: column;
 		border: 1px solid var(--brand-border-color);
-		border-radius: 4rem;
+		border-radius: 1rem;
 		overflow: hidden;
 	}
 
@@ -372,7 +372,7 @@
 	}
 
 	.card-content {
-		padding: 4rem;
+		padding: 1rem;
 	}
 
 	.card-content h4,
@@ -398,7 +398,7 @@
 	}
 
 	.steps li .number {
-		height: 10rem;
+		height: 2.5rem;
 		position: relative;
 		display: flex;
 		align-items: center;
