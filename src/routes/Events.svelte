@@ -32,7 +32,7 @@
 						loading="lazy"
 						style:view-transition-name={eventCoverTransitionName(linkUrl)}
 					/>
-					<div style="display: flex; flex-direction: column; gap: 2rem; flex: 1;">
+					<div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
 						<div style="display: flex; justify-content: space-between">
 							<small class="type-{event.type}">{event.type}</small>
 							{#if event.weekly}
@@ -85,12 +85,12 @@
 
 	.event {
 		display: flex;
-		gap: 4rem;
+		gap: 1rem;
 		text-decoration: none;
 		color: inherit;
 		background: rgba(var(--brand-parchment-rgb) / 40%);
-		padding: 4rem;
-		border-radius: 2rem;
+		padding: 1rem;
+		border-radius: 0.5rem;
 		box-shadow: 0 1px 4px rgba(var(--brand-earthbrown-rgb) / 30%);
 		scroll-snap-align: center;
 		flex-direction: column;
@@ -102,9 +102,9 @@
 	@media screen and (width < 600px) {
 		.events {
 			grid-auto-columns: 70vw;
-			grid-gap: 8rem;
-			padding: 8rem 15vw;
-			margin: -4rem;
+			grid-gap: 2rem;
+			padding: 2rem 15vw;
+			margin: -1rem;
 			width: 100vw;
 			scroll-snap-type: x mandatory;
 		}
@@ -117,8 +117,8 @@
 
 	@media screen and (width >= 600px) {
 		.events {
-			grid-gap: 12rem;
-			padding: 10rem 16rem;
+			grid-gap: 3rem;
+			padding: 2.5rem 4rem;
 		}
 
 		.event enhanced\:img {
@@ -132,9 +132,9 @@
 		background-color: var(--brand-primary-color);
 		color: var(--brand-stonewhite-color);
 		font-weight: 700;
-		padding: 1rem 2rem;
-		border-radius: 1rem;
-		font-size: 2.5rem;
+		padding: 0.25rem 0.5rem;
+		border-radius: 0.25rem;
+		font-size: 0.625rem;
 		letter-spacing: 1px;
 		text-shadow: 1px 1px var(--brand-mossgreen-color);
 		line-height: 1.5;

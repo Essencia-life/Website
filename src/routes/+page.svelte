@@ -175,7 +175,7 @@
 
 <style>
 	h2 {
-		margin-block: 4rem;
+		margin-block: 1rem;
 		text-align: center;
 	}
 
@@ -191,7 +191,7 @@
 		.parallax__layer--base {
 			display: flex;
 			flex-direction: column;
-			padding: 4rem;
+			padding: 1rem;
 		}
 
 		.parallax__layer--back {
@@ -216,16 +216,16 @@
 		}
 
 		.button {
-			margin: 6rem auto;
+			margin: 1.5rem auto;
 		}
 
 		#events .button {
-			margin-block: 3rem;
+			margin-block: 0.75rem;
 		}
 
 		.buttons {
 			flex-direction: column;
-			margin-bottom: 6rem;
+			margin-bottom: 1.5rem;
 		}
 
 		#healing-center {
@@ -240,7 +240,7 @@
 		.community-day {
 			display: flex;
 			flex-direction: column;
-			gap: 3rem;
+			gap: 0.75rem;
 		}
 
 		.community-background {
@@ -253,9 +253,9 @@
 
 		.community-background enhanced\:img {
 			object-fit: cover;
-			width: calc(100% + 8rem);
+			width: calc(100% + 2rem);
 			height: 100%;
-			margin-inline: -4rem;
+			margin-inline: -1rem;
 		}
 
 		.community-day .button {
@@ -278,7 +278,7 @@
 			overflow-x: hidden;
 			overflow-y: auto;
 			perspective: 300px;
-			scroll-padding: 18rem;
+			scroll-padding: 4.5rem;
 		}
 
 		.parallax section {
@@ -329,7 +329,7 @@
 			align-items: center;
 			justify-content: space-evenly;
 			text-align: center;
-			padding-inline: 12rem;
+			padding-inline: 3rem;
 		}
 
 		#about h2 {
@@ -341,7 +341,7 @@
 		}
 
 		.buttons {
-			gap: 4rem;
+			gap: 1rem;
 		}
 
 		#events .parallax__layer--base {
@@ -369,7 +369,7 @@
 		}
 
 		#map {
-			height: calc(100vh - 18rem);
+			height: calc(100vh - 4.5rem);
 		}
 
 		#community-day,
@@ -444,7 +444,7 @@
 		}
 
 		.community-day .button {
-			margin-top: 3rem;
+			margin-top: 0.75rem;
 		}
 
 		.heart-shadow {

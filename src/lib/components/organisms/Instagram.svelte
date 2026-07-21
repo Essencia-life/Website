@@ -118,7 +118,7 @@
 
 <style>
 	:global(.instagram-media) {
-		margin-block: 12rem !important;
+		margin-block: 3rem !important;
 		max-width: unset !important;
 	}
 </style>

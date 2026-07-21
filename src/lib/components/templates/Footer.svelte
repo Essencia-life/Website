@@ -66,7 +66,7 @@
 
 <style>
 	footer {
-		font-size: 4rem;
+		font-size: 1rem;
 	}
 
 	footer a {
@@ -105,7 +105,7 @@
 
 	.grid {
 		display: grid;
-		gap: 4rem;
+		gap: 1rem;
 	}
 
 	.first-column {
@@ -116,7 +116,7 @@
 
 	@media screen and (width >= 800px) {
 		.grid {
-			min-height: 32rem;
+			min-height: 8rem;
 			grid-template-columns: repeat(4, 1fr);
 		}
 
@@ -133,7 +133,7 @@
 
 	.social-media {
 		display: flex;
-		gap: 3rem;
+		gap: 0.75rem;
 		align-items: center;
 		opacity: 0.75;
 	}
@@ -141,15 +141,15 @@
 	.link-group {
 		display: flex;
 		flex-direction: column;
-		gap: 3rem;
+		gap: 0.75rem;
 	}
 
 	.copyright {
 		display: block;
 		border-top: 1px solid var(--brand-parchment-color);
 		text-align: center;
-		margin-top: 4rem;
-		padding-block: 2rem;
+		margin-top: 1rem;
+		padding-block: 0.5rem;
 		color: var(--brand-parchment-color);
 	}
 </style>

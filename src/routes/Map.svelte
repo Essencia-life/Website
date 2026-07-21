@@ -99,15 +99,15 @@
 	gmp-place-details {
 		color-scheme: light;
 		width: 400px;
-		margin: 4rem;
-		max-height: calc(100vh - 8rem - 18rem);
+		margin: 1rem;
+		max-height: calc(100vh - 2rem - 4.5rem);
 		overflow: auto;
 	}
 
 	gmp-place-details-compact {
 		color-scheme: light;
-		width: calc(100vw - 8rem);
-		margin-bottom: 8rem;
+		width: calc(100vw - 2rem);
+		margin-bottom: 2rem;
 	}
 
 	@media screen and (width >= 800px) {

@@ -56,7 +56,7 @@
 	}
 
 	.event .title {
-		margin-block: 4rem 8rem;
+		margin-block: 1rem 2rem;
 		line-height: 1;
 	}
 
@@ -76,7 +76,7 @@
 			width: calc(100vw - (100vw - 100%));
 			max-width: 1200px;
 			margin-inline: auto;
-			padding: 0 4rem 20rem;
+			padding: 0 1rem 5rem;
 		}
 	}
 
@@ -84,11 +84,11 @@
 		.event {
 			display: grid;
 			grid-template-columns: 30% auto;
-			gap: 8rem;
+			gap: 2rem;
 			width: calc(100vw - (100vw - 100%));
 			max-width: 1200px;
 			margin-inline: auto;
-			padding: 8rem 4rem;
+			padding: 2rem 1rem;
 		}
 
 		.event .title {

@@ -47,6 +47,6 @@
 		position: fixed;
 		inset: 0;
 		background-color: rgba(var(--brand-earthterracotta-rgb) / 70%);
-		backdrop-filter: blur(1rem);
+		backdrop-filter: blur(0.25rem);
 	}
 </style>

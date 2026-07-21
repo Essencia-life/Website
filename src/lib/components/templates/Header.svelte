@@ -44,7 +44,7 @@
 	header {
 		position: sticky;
 		top: 0;
-		z-index: 10;
+		z-index: 11;
 		background: var(--brand-parchment-color);
 		border-bottom: 1px solid rgba(var(--brand-stonewhite-rgb) / 50%);
 		box-shadow: 0 3px 8px rgba(var(--brand-earthbrown-rgb) / 50%);
@@ -56,8 +56,8 @@
 
 	header .page-content {
 		display: flex;
-		height: 18rem;
-		padding-block: 2rem;
+		height: 4.5rem;
+		padding-block: 0.5rem;
 		align-items: center;
 	}
 
@@ -88,7 +88,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		height: 12rem;
+		height: 3rem;
 		aspect-ratio: 1;
 		color: var(--brand-mossgreen-color);
 	}
@@ -107,7 +107,7 @@
 
 	@media screen and (width >= 800px) {
 		header .page-content {
-			column-gap: 4rem;
+			column-gap: 1rem;
 		}
 
 		#menu-button {

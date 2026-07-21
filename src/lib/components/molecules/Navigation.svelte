@@ -69,7 +69,7 @@
 	nav ul {
 		list-style: none;
 		display: flex;
-		gap: 8rem;
+		gap: 2rem;
 		padding: 0;
 	}
 
@@ -84,7 +84,7 @@
 	nav a {
 		color: var(--brand-mossgreen-color);
 		font-weight: 500;
-		font-size: 4.5rem;
+		font-size: 1.125rem;
 		text-decoration: none;
 	}
 
@@ -92,22 +92,22 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		height: 12rem;
+		height: 3rem;
 	}
 
 	nav.header .root > a {
 		display: flex;
 		align-items: center;
-		height: 18rem;
+		height: 4.5rem;
 	}
 
 	nav.header li .children {
 		position: absolute;
 		display: flex;
 		justify-content: stretch;
-		margin-left: -6rem;
+		margin-left: -1.5rem;
 		box-shadow: 0 3px 8px rgba(var(--brand-earthbrown-rgb) / 50%);
-		border-radius: 1rem;
+		border-radius: 0.25rem;
 	}
 
 	nav.header:not(.menuAbove) li .children {
@@ -129,15 +129,15 @@
 	.children ul {
 		display: flex;
 		flex-direction: column;
-		padding: 4rem 6rem;
+		padding: 1rem 1.5rem;
 	}
 
 	nav.header:not(.menuAbove) .children ul {
-		padding-bottom: 6rem;
+		padding-bottom: 1.5rem;
 	}
 
 	nav.header.menuAbove .children ul {
-		padding-top: 6rem;
+		padding-top: 1.5rem;
 		flex-direction: column-reverse;
 	}
 
@@ -161,12 +161,12 @@
 		}
 
 		nav > ul {
-			gap: 4rem;
+			gap: 1rem;
 		}
 
 		.toggle {
 			border-left: 1px solid var(--brand-highlight-color);
-			padding-left: 2rem;
+			padding-left: 0.5rem;
 		}
 
 		.toggle .icon-button {
@@ -174,11 +174,11 @@
 		}
 
 		.children {
-			margin-inline: -4rem;
+			margin-inline: -1rem;
 		}
 
 		.children ul {
-			margin-left: 4rem;
+			margin-left: 1rem;
 			background: var(--brand-parchment-color);
 		}
 	}
