@@ -7,7 +7,7 @@
 	import {
 		eventCoverTransitionName,
 		storeLinkUrlInPageState
-	} from '$lib/utils/eventCoverTransition.svelte';
+	} from '$lib/utils/eventCoverTransition.svelte.js';
 	import ScrollContainerArrows from '$lib/components/molecules/ScrollContainerArrows.svelte';
 
 	interface Props {
