@@ -45,7 +45,7 @@
 	.accommodations {
 		display: grid;
 		grid-template-columns: repeat(4, min(calc(300px - 2rem), 80vw));
-		gap: 2rem;
+		gap: max(2rem, 5vw);
 		margin: 3rem auto;
 		overflow-y: hidden;
 		overflow-x: auto;
@@ -62,7 +62,7 @@
 
 	@media screen and (width < 800px) {
 		.accommodations {
-			padding: 0 calc(10vw + 1rem);
+			padding: 0 calc(15vw + 1rem);
 			margin-inline: -1rem;
 		}
 	}
