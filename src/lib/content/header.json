@@ -5,6 +5,10 @@
       "link": "/eco-village"
     },
     {
+      "label": "Stay",
+      "link": "/#stay"
+    },
+    {
       "label": "Heal",
       "link": "/healing-center"
     },

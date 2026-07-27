@@ -14,11 +14,22 @@
       "type": "text",
       "headline": "About Essência",
       "content": "Essência is an off-grid eco-village, healing center, and retreat venue by the coast of Portugal.\n\nWe are a community of people who believe life can be lived differently — slower, closer to nature, and more connected to ourselves, each other, and the Earth.\n\nSome people come to rest, heal and reconnect. Some people are called to our retreats, gatherings and regenerative events. Other are called to co-create, learn and share with us. All of you are welcome.\n\nHere we host visitors in nature, grow food, share meals, care for the land, and create spaces for healing, embodiment, music, learning and meaningful connection.",
-      "photo": "media/151345_ed6c17640c6e4cfaadc3235c12864446~mv2.jpg",
+      "photo": "media/dji-farmhouse.jpg",
       "button": {
         "label": "More about life at Essência",
         "link": "/eco-village"
       }
+    },
+    {
+      "id": "stay",
+      "type": "accommodations",
+      "headline": "Visit Essência",
+      "content": "We invite you to unwind and reconnect with nature.  \nStay with us in our serene **accommodations** and experience the slow rhythm of Essência."
+    },
+    {
+      "id": "shala",
+      "type": "picture",
+      "photo": "media/shala2.jpg"
     },
     {
       "id": "events",
@@ -41,12 +52,6 @@
       }
     },
     {
-      "id": "visit",
-      "type": "accommodations",
-      "headline": "Visit Essência",
-      "content": "We invite you to unwind and reconnect with nature.  \nStay with us in our serene accommodations and experience the slow rhythm of Essência."
-    },
-    {
       "id": "healing-center",
       "type": "text",
       "headline": "Healing Center",
@@ -61,19 +66,15 @@
       "id": "community-day",
       "type": "community-day",
       "headline": "Community Day",
-      "content": "Join us **Thursdays** for our Community Day!  \nEveryone is warmly invited to spend the day together — helping out in the morning with a shared project (often in the garden), enjoying a nourishing and delicious lunch and in the evening relaxing at our SPArkling Night, with sauna, hot tub and — if the weather allows — a soup cooked over the fire at a cozy campfire atmospehre.\n\nCome connect, contribute  \nand unwind together.",
+      "content": "Join us **Thursdays** for our Community Day!  \n\nEveryone is warmly invited to spend the day together — helping out in the morning with a shared project (often in the garden), enjoying a nourishing and delicious lunch and in the evening relaxing at our SPArkling Night, with sauna, hot tub and — if the weather allows — a soup cooked over the fire at a cozy campfire atmospehre.  \nThe best opportunity for spontaneous visits.\n\nCome connect, contribute  \nand unwind together.",
       "photos": [
         "media/photo_2025-10-21_21-15-23.jpg",
-        "media/photo_2025-10-21_21-15-29.jpg"
+        "media/IMG_7372.JPG"
       ],
       "button": {
         "label": "Sign up",
         "link": "mailto:events@essencia.life?subject=Community Day"
       }
-    },
-    {
-      "id": "map",
-      "type": "map"
     },
     {
       "id": "follow-us",
@@ -86,6 +87,10 @@
         "youtube",
         "facebook"
       ]
+    },
+    {
+      "id": "map",
+      "type": "map"
     },
     {
       "id": "testimonials",

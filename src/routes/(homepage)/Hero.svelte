@@ -14,14 +14,11 @@
 	const { visibilityChange }: Props = $props();
 
 	onMount(() => {
-		const root = document.getElementById('parallax');
-
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				visibilityChange(entry.isIntersecting);
 			},
 			{
-				root,
 				threshold: 0.7
 			}
 		);
