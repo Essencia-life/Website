@@ -5,7 +5,7 @@
 	import Overlays from '$lib/components/atoms/Overlays.svelte';
 	import { page } from '$app/state';
 	import SEO from '$lib/components/atoms/SEO.svelte';
-	import { Media } from '$lib/services/Media.js';
+	import { Media } from '$lib/services/Media';
 	import type { Snippet } from 'svelte';
 	import type { Metadata } from './+layout.server';
 	import { onNavigate } from '$app/navigation';

@@ -1,5 +1,5 @@
 <script>
-	import { Media } from '$lib/services/Media.js';
+	import { Media } from '$lib/services/Media';
 	import { resolve } from '$app/paths';
 </script>
 
