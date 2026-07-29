@@ -1,7 +1,7 @@
 <script lang="ts">
 	import homeData from '$lib/content/home.json';
 
-	import { Media } from '$lib/services/Media.js';
+	import { Media } from '$lib/services/Media';
 
 	import SEO from '$lib/components/atoms/SEO.svelte';
 	import Header from '$lib/components/templates/Header.svelte';

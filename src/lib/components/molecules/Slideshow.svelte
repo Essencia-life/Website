@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Media } from '$lib/services/Media.js';
+	import { Media } from '$lib/services/Media';
 	import { ChevronLeft, ChevronRight } from '@lucide/svelte';
 	import { SvelteMap } from 'svelte/reactivity';
 	import type { Attachment } from 'svelte/attachments';

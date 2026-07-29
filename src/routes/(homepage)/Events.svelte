@@ -1,13 +1,13 @@
 <script lang="ts">
 	import ms from 'ms';
 	import { Events } from '$lib/services/Events';
-	import { Media } from '$lib/services/Media.js';
+	import { Media } from '$lib/services/Media';
 	import { resolve } from '$app/paths';
 	import type { Attachment } from 'svelte/attachments';
 	import {
 		eventCoverTransitionName,
 		storeLinkUrlInPageState
-	} from '$lib/utils/eventCoverTransition.svelte.js';
+	} from '$lib/utils/eventCoverTransition.svelte';
 	import ScrollContainerArrows from '$lib/components/molecules/ScrollContainerArrows.svelte';
 
 	interface Props {
