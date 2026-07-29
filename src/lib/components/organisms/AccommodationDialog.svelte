@@ -28,16 +28,16 @@
 	}
 
 	const { accommodation, overlayRef }: Props = $props();
-	const { current: isMobile } = new MediaQuery('(width < 800px)');
+	const maxLg = new MediaQuery('(width < 64rem)');
 </script>
 
-<Dialog bottomSheet={isMobile}>
+<Dialog bottomSheet={maxLg.current}>
 	{#snippet header()}
-		<h3>{accommodation.headline}</h3>
+		<h3 class="m-0! mb-3!">{accommodation.headline}</h3>
 	{/snippet}
 	{#snippet main()}
-		<div class="accommodation-detail">
-			<div>
+		<div class="grid gap-4 max-md:mb-12 lg:w-[70vw] lg:grid-cols-2">
+			<div class="max-md:-mx-4">
 				<Slideshow photos={accommodation.detail.photos} classes={{ image: 'aspect-3/2' }} />
 			</div>
 
@@ -60,27 +60,3 @@
 		</a>
 	{/snippet}
 </Dialog>
-
-<style>
-	h3 {
-		margin: 0 0 1.5rem;
-	}
-
-	.accommodation-detail {
-		display: grid;
-		gap: 1rem;
-		width: 75vw;
-	}
-
-	@media screen and (width < 800px) {
-		.accommodation-detail {
-			grid-template-rows: auto auto;
-		}
-	}
-
-	@media screen and (width >= 800px) {
-		.accommodation-detail {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
-</style>
