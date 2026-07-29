@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { accommodations as accommodationsData } from '$lib/content/accommodations.json';
 	import { getContext } from 'svelte';
-	import type { Overlays } from '$lib/overlays.svelte.js';
+	import type { Overlays } from '$lib/overlays.svelte';
 	import AccommodationDialog, {
 		type Accommodation
 	} from '$lib/components/organisms/AccommodationDialog.svelte';
-	import { Media } from '$lib/services/Media.js';
+	import { Media } from '$lib/services/Media';
 
 	const overlays = getContext<Overlays<any>>('overlays');
 
