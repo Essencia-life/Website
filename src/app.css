@@ -64,6 +64,9 @@ body {
 	scroll-padding: 4.5rem;
 	padding: 0;
 	margin: 0;
+}
+
+body {
 	overflow-x: hidden;
 }
 
@@ -74,10 +77,6 @@ body {
 }
 
 html.has-overlay {
-	overflow: hidden;
-}
-
-body.no-scroll {
 	overflow: hidden;
 }
 
