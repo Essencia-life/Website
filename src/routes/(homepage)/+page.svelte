@@ -114,7 +114,7 @@
 				class="lg:h-full lg:object-cover"
 			/>
 		{:else if section.type === 'events'}
-			<div class="flex flex-col p-4 lg:container">
+			<div class="flex flex-col p-4 lg:container lg:mx-auto">
 				<h2 class="text-center">{section.headline}</h2>
 
 				<Events {lastEventsScrollPosition} />
@@ -154,7 +154,7 @@
 				</div>
 			</div>
 		{:else if section.type === 'accommodations'}
-			<div class="flex flex-col lg:container">
+			<div class="flex flex-col lg:container lg:mx-auto">
 				<div class="flex-col items-center pt-8 text-center lg:flex">
 					<h2>{section.headline}</h2>
 					{#if section.content}
