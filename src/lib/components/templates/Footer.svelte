@@ -32,19 +32,18 @@
 				</div>
 
 				<div class="social-media">
-					{#each platforms as platform, index (platform.name)}
+					{#each platforms as platform (platform.name)}
 						{@const Icon = iconMap.get(platform.name)}
 						<a
 							href={platform.link}
 							target="_blank"
 							aria-label={platform.label}
-							class="hint--rounded no-link"
-							class:hint--top-right={index === 0}
-							class:hint--top={index > 0}><Icon title="" /></a
-						>
+							class="no-link">
+							<Icon title="" />
+						</a>
 					{/each}
 					<!-- TODO: Add Newsletter to social media platforms ? -->
-					<!--					<a href="/#newsletter" aria-label="Newsletter" class="hint&#45;&#45;top hint&#45;&#45;rounded no-link"-->
+					<!--					<a href="/#newsletter" aria-label="Newsletter" class="no-link"-->
 					<!--						><Mail /></a-->
 					<!--					>-->
 				</div>
