@@ -74,10 +74,6 @@ body {
 	}
 }
 
-html.has-overlay {
-	overflow: hidden;
-}
-
 main {
 	font-family: system-ui, sans-serif;
 	font-weight: 300;

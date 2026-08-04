@@ -9,10 +9,6 @@
 	const overlays = new Overlays();
 
 	setContext('overlays', overlays);
-
-	$effect(() => {
-		document.documentElement.classList.toggle('has-overlay', !!page.state.overlays?.length);
-	});
 </script>
 
 {@render children?.()}
@@ -41,6 +37,7 @@
 <style>
 	.overlays :global(> *) {
 		z-index: 100;
+		overscroll-behavior: contain;
 	}
 
 	.backdrop {
@@ -48,5 +45,7 @@
 		inset: 0;
 		background-color: rgba(var(--brand-earthterracotta-rgb) / 70%);
 		backdrop-filter: blur(0.25rem);
+		overscroll-behavior: contain;
+		overflow: hidden;
 	}
 </style>
