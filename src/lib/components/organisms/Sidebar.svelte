@@ -18,7 +18,7 @@
 		<X />
 	</button>
 	<enhanced:img src="$lib/assets/logo.avif" alt="" />
-	<Navigation sidebar />
+	<Navigation sidebar {overlayRef} />
 </aside>
 
 <style>

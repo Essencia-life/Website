@@ -2,11 +2,13 @@
 	import { slide } from 'svelte/transition';
 	import headerData from '$lib/content/header.json';
 	import { ChevronDown, ChevronUp } from '@lucide/svelte';
+	import type { OverlayRef } from '$lib/overlays.svelte';
 
 	interface Props {
 		header?: true;
 		sidebar?: true;
 		menuAbove?: boolean;
+		overlayRef?: OverlayRef<any>;
 	}
 
 	interface NavigationItem {
@@ -16,7 +18,7 @@
 		open?: boolean;
 	}
 
-	const { header, sidebar, menuAbove }: Props = $props();
+	const { header, sidebar, menuAbove, overlayRef }: Props = $props();
 	const navigation = $state<NavigationItem[]>(headerData.navigation);
 
 	function scrollIntoView(event: CustomEvent) {
@@ -30,7 +32,7 @@
 		{#each navigation as item (item)}
 			<li>
 				<div class="root">
-					<a href={item.link}>{item.label}</a>
+					<a href={item.link} onpointerdown={item.link.startsWith('/#') && overlayRef ? () => overlayRef.close() : undefined}>{item.label}</a>
 
 					{#if item.children}
 						<div class="toggle">
