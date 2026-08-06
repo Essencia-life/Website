@@ -52,24 +52,37 @@
 						"type": "string",
 						"enum": ["event", "retreat"]
 					},
-					"tickets": {
-						"title": "Tickets",
+					"booking_link": {
+						"title": "Booking Link",
+						"type": "string",
+						"format": "uri"
+					},
+					"info_link": {
+						"title": "More Information Link",
+						"type": "string",
+						"format": "uri"
+					},
+					"car_sharing_link": {
+						"title": "Car Sharing Link",
+						"type": "string",
+						"format": "uri"
+					},
+					"organizers": {
 						"type": "array",
 						"items": {
-							"title": "Ticket",
 							"type": "object",
+							"title": "Event",
+							"additionalProperties": false,
 							"properties": {
-								"label": {
-									"title": "Label",
+								"name": {
 									"type": "string"
 								},
-								"price": {
-									"title": "Price",
-									"type": "number"
+								"photo": {
+									"type": "string",
+									"format": "uri"
 								},
-								"available": {
-									"title": "Available tickets",
-									"type": "number"
+								"description": {
+									"type": "string"
 								}
 							}
 						}
