@@ -6,7 +6,7 @@ title: Retreats
 
 Ready to book a retreat?
 
-<Button primary href="mailto:ola@essencia.life?subject=Book%20a%20retreat">Contact us</Button>
+<Button primary href="/contact?topic=retreat#form">Contact us</Button>
 
 ### Upcoming Retreats
 <EventCalendar type="retreat" filter="upcoming" />

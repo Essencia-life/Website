@@ -73,7 +73,7 @@
       ],
       "button": {
         "label": "Sign up",
-        "link": "mailto:events@essencia.life?subject=Community Day"
+        "link": "/contact?topic=community_day#form"
       }
     },
     {

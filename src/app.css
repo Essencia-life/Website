@@ -59,7 +59,7 @@ body {
 	background: var(--brand-background-color);
 	height: 100%;
 	box-sizing: border-box;
-	scroll-padding: 4.5rem;
+	scroll-padding: 5.5rem;
 	padding: 0;
 	margin: 0;
 }
