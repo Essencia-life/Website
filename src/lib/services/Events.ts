@@ -10,12 +10,16 @@ interface EventRaw {
 	description: string;
 	cover_image: string;
 	weekly?: string;
-	tickets?: {
-		label: string;
-		price: number;
-		available: number;
-		link?: string;
-	}[];
+	booking_link?: string;
+	info_link?: string;
+	car_sharing_link?: string;
+	organizers?: EventOrganizer[];
+}
+
+interface EventOrganizer {
+	name: string;
+	photo: string;
+	description: string;
 }
 
 export interface Event extends Omit<EventRaw, 'type' | 'start' | 'end'> {
