@@ -168,17 +168,15 @@
 				<figcaption>Morning practices with the community</figcaption>
 			</figure>
 			<figure>
-				<enhanced:img src={Media.getFile('media/photo_2025-10-21_21-15-23.jpg')} />
+				<enhanced:img src={Media.getFile('media/photo_2026-08-06_12-31-52.jpg')} />
 				<figcaption>Tending the land and garden</figcaption>
 			</figure>
 			<figure>
-				<enhanced:img src={Media.getFile('media/volunteer.jpg')} />
+				<enhanced:img src={Media.getFile('media/cooking-together.jpg')} />
 				<figcaption>Cooking together — seasonal, plant-based</figcaption>
 			</figure>
 			<figure>
-				<enhanced:img
-					src={Media.getFile('media/1909d5_9e82de9c58ca46f19ec6e211343d4228~mv2.jpg')}
-				/>
+				<enhanced:img src={Media.getFile('media/beach2.jpg')} />
 				<figcaption>Beach afternoons with the community</figcaption>
 			</figure>
 			<figure>
