@@ -31,7 +31,7 @@
 				<dd>Build your home</dd>
 				<dd>Life in nature</dd>
 			</dl>
-			<a href="mailto:ola@essencia.life" class="button button-primary"> Explore residency </a>
+			<a href="/contact?topic=residency#form" class="button button-primary"> Explore residency </a>
 		</article>
 	</div>
 	<div class="card">
@@ -74,7 +74,7 @@
 				<dd>Retreat access</dd>
 				<dd>Glamping stays</dd>
 			</dl>
-			<a href="mailto:ola@essencia.life" class="button button-oceanteal"> Support the dream </a>
+			<a href="/contact?topic=invest#form" class="button button-oceanteal"> Support the dream </a>
 		</article>
 	</div>
 </section>

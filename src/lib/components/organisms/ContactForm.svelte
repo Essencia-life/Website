@@ -46,7 +46,7 @@
 			</p>
 		</div>
 
-		<div class="flex flex-1 flex-col gap-4">
+		<div id="form" class="flex flex-1 flex-col gap-4">
 			<FormField label="Your Name" error={page.form?.invalid.name}>
 				{#snippet children({ classes })}
 					<input
@@ -80,7 +80,7 @@
 						name="phone"
 						value={page.form?.phone ?? ''}
 						class={classes}
-						placeholder="What is your phone number?"
+						placeholder="Enter your phone number"
 					/>
 				{/snippet}
 			</FormField>

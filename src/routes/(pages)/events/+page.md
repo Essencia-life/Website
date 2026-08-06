@@ -30,7 +30,7 @@ If your concept resonates with what we do, feel free to reach out.
 - 50% off a room price for the night before and after the event for the organisers
 - 30% off for the participants
 
-<Button primary href="mailto:events@essencia.life?subject=My%20event%20at%20Ess%C3%AAncia">Contact us</Button>
+<Button primary href="/contact?topic=event#form">Contact us</Button>
 
 </ImageAndContent>
 
