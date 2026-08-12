@@ -21,6 +21,11 @@
 		Whether you're curious about residency, planning a visit, or just want to say hello — write to
 		us and someone from the community will get back to you soon.
 	</p>
+
+	<a href="https://wa.me/351911514554" target="_blank" class="button mx-auto mt-6">
+		<SiWhatsapp size={20} />
+		Chat with us on WhatsApp
+	</a>
 </div>
 
 {#if page.form?.success}
@@ -47,6 +52,17 @@
 		</div>
 
 		<div id="form" class="flex flex-1 flex-col gap-4">
+			<FormField label="Topic">
+				{#snippet children({ classes })}
+					<select required name="topic" class={classes} bind:value={topic}>
+						<option selected disabled>Why you approach us?</option>
+						{#each page.data.topics as topicOption (topicOption.key)}
+							<option value={topicOption.key}>{topicOption.label}</option>
+						{/each}
+					</select>
+				{/snippet}
+			</FormField>
+
 			<FormField label="Your Name" error={page.form?.invalid.name}>
 				{#snippet children({ classes })}
 					<input
@@ -84,26 +100,6 @@
 					/>
 				{/snippet}
 			</FormField>
-
-			<FormField label="Topic">
-				{#snippet children({ classes })}
-					<select required name="topic" class={classes} bind:value={topic}>
-						<option selected disabled>Why you approach us?</option>
-						{#each page.data.topics as topicOption (topicOption.key)}
-							<option value={topicOption.key}>{topicOption.label}</option>
-						{/each}
-					</select>
-				{/snippet}
-			</FormField>
-
-			{#if topic === 'stay'}
-				<div>
-					<a href="https://wa.me/351911514554" target="_blank" class="button">
-						<SiWhatsapp size={20} />
-						Get in touch directly
-					</a>
-				</div>
-			{/if}
 
 			<FormField label="Your Message" error={page.form?.invalid.message} class="col-span-2">
 				{#snippet children({ classes })}
