@@ -9,6 +9,7 @@
 	import type { Snippet } from 'svelte';
 	import type { Metadata } from './+layout.server';
 	import { onNavigate } from '$app/navigation';
+	import FloatingContactButton from '$lib/components/molecules/FloatingContactButton.svelte';
 
 	interface Props {
 		data: {
@@ -80,3 +81,5 @@
 {/if}
 
 <Overlays>{@render children?.()}</Overlays>
+
+<FloatingContactButton />
