@@ -31,7 +31,9 @@
 				<dd>Build your home</dd>
 				<dd>Life in nature</dd>
 			</dl>
-			<a href="/contact?topic=residency#form" class="button button-primary"> Explore residency </a>
+			<a href={resolve('/join-us/as-resident')} class="button button-primary">
+				Explore residency
+			</a>
 		</article>
 	</div>
 	<div class="card">

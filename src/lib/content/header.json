@@ -31,6 +31,10 @@
         {
           "label": "Volunteer with us",
           "link": "/join-us/as-volunteer"
+        },
+        {
+          "label": "Explore residency",
+          "link": "/join-us/as-resident"
         }
       ]
     }
