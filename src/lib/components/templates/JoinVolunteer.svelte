@@ -3,6 +3,7 @@
 	import { Media } from '$lib/services/Media';
 	import Slideshow from '$lib/components/molecules/Slideshow.svelte';
 	import type { Photo } from '$lib/components/molecules/Slideshow.svelte';
+	import StepList from '$lib/components/molecules/StepList.svelte';
 
 	const tentPhotos: Photo[] = [
 		{
@@ -26,17 +27,17 @@
 </script>
 
 <section class="dark flex flex-col items-center px-4 py-10 text-center">
-	<h2 class="my-4!">Offer your gifts.<br />Receive in kind.</h2>
-	<h3 class="-order-1 m-0! text-xs! font-bold tracking-widest uppercase opacity-70">
-		Volunteer at Essência
-	</h3>
+	<sup>Volunteer at Essência</sup>
+	<h2 class="my-4">Offer your gifts.<br />Receive in kind.</h2>
 	<i>A season of meaningful work, healing, and community — in exchange for your time and skills.</i>
 	<a class="button mt-10" href="#apply" onclick={scrollToApply}>Apply now</a>
 </section>
 
-<section>
+<section class="py-16">
 	<div class="page-content">
-		<h3>A genuine exchange — your skills and presence for a place to live, grow, and belong</h3>
+		<h3 class="mb-6">
+			A genuine exchange — your skills and presence for a place to live, grow, and belong
+		</h3>
 		<p>
 			We are a community of people who genuinely believe the world can be different — and who are
 			committed to be part of the change. We live by love and abundance. We believe that how we live
@@ -58,9 +59,9 @@
 	</div>
 </section>
 
-<section>
+<section class="py-16">
 	<div class="page-content">
-		<h3>What you receive</h3>
+		<h3 class="mb-6">What you receive</h3>
 		<p>
 			Every volunteer has their own private accommodation — a space to rest, reflect, and recharge.
 			The kitchen is open and stocked with organic food throughout the day. And beyond the
@@ -68,7 +69,7 @@
 			place quietly offers.
 		</p>
 
-		<div class="grid gap-4 md:grid-cols-3">
+		<div class="mt-6 grid gap-4 md:grid-cols-3">
 			<article class="card">
 				<enhanced:img src={Media.getFile('media/morning-practice.jpg')} />
 				<div class="card-content">
@@ -133,7 +134,7 @@
 	</div>
 </section>
 
-<section class="dark py-10 md:py-16">
+<section class="dark py-16">
 	<div
 		class="page-content grid gap-y-6 overflow-visible! md:grid-cols-2 md:grid-rows-[auto_auto_auto] md:gap-x-10"
 	>
@@ -159,10 +160,10 @@
 	</div>
 </section>
 
-<section>
+<section class="py-16 text-center">
 	<div class="page-content">
-		<h3>What your day may look like</h3>
-		<div class="gallery grid gap-6 md:grid-cols-3 md:gap-4">
+		<h3 class="mb-6">What your day may look like</h3>
+		<div class="gallery grid gap-6 text-left md:grid-cols-3 md:gap-4">
 			<figure>
 				<enhanced:img src={Media.getFile('media/community-morning-practice.jpg')} />
 				<figcaption>Morning practices with the community</figcaption>
@@ -187,9 +188,9 @@
 	</div>
 </section>
 
-<section>
+<section class="py-16">
 	<div class="page-content">
-		<h3>Where you contribute</h3>
+		<h3 class="mb-6">Where you contribute</h3>
 		<p>
 			Volunteers can focus on one branch of community life or move across several. We'll find the
 			right fit together based on your skills, interests, and what the land needs.
@@ -223,9 +224,9 @@
 	</div>
 </section>
 
-<section class="secondary pb-12">
+<section class="secondary py-16">
 	<div class="page-content">
-		<h3>The exchange — clear, reciprocal, no surprises</h3>
+		<h3 class="mb-6">The exchange — clear, reciprocal, no surprises</h3>
 		<p>Here is what we ask of you, and what Essência offers in return.</p>
 		<div class="grid md:grid-cols-2 md:gap-8">
 			<article>
@@ -258,35 +259,32 @@
 	</div>
 </section>
 
-<section id="apply" bind:this={howToApplySection}>
+<section class="py-16" id="apply" bind:this={howToApplySection}>
 	<div class="page-content">
-		<h3>How to apply</h3>
-		<ol
-			role="list"
-			class="steps -m-4 mt-10 flex max-w-svw snap-x snap-mandatory grid-cols-3 overflow-x-auto overflow-y-hidden md:grid"
-		>
-			<li>
-				<div class="number"></div>
-				<h4>Fill in the form</h4>
-				<p>Share about yourself, your skills, and your intentions.</p>
-			</li>
-			<li>
-				<div class="number"></div>
-				<h4>We reach out</h4>
-				<p>We'll email you to schedule a short call and align on dates.</p>
-			</li>
-			<li>
-				<div class="number"></div>
-				<h4>You arrive</h4>
-				<p>Pack up, arrive with an open heart, and settle into your new home.</p>
-			</li>
-		</ol>
+		<h3 class="mb-6">How to apply</h3>
+
+		<StepList
+			items={[
+				{
+					title: 'Fill in the form',
+					description: 'Share about yourself, your skills, and your intentions.'
+				},
+				{
+					title: 'We reach out',
+					description: "We'll email you to schedule a short call and align on dates."
+				},
+				{
+					title: 'You arrive',
+					description: 'Pack up, arrive with an open heart, and settle into your new home.'
+				}
+			]}
+		/>
 	</div>
 </section>
 
-<section>
+<section class="py-16 text-center">
 	<div class="page-content">
-		<h3>Ready to apply?</h3>
+		<h3 class="mb-6">Ready to apply?</h3>
 		We read every application with care. Take a moment to look through the page before filling in the
 		form.
 		<div class="form secondary mt-6 mb-12 rounded-2xl p-2">
@@ -296,16 +294,6 @@
 </section>
 
 <style>
-	section + section {
-		margin-top: 1.5rem;
-	}
-
-	@media (width >= 48rem) {
-		section + section {
-			margin-top: 2.5rem;
-		}
-	}
-
 	.dark {
 		color-scheme: dark;
 		background: var(--brand-dark-section-color);

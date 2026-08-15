@@ -2,10 +2,54 @@
 @plugin "@tailwindcss/forms";
 
 @theme {
+    --font-serif: Alegreya, serif;
     --inset-shadow-md: inset 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 
 @layer base {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-serif font-medium;
+        color: var(--brand-accent-color);
+    }
+
+    h1 {
+        @apply text-6xl;
+    }
+
+    h2 {
+        @apply text-5xl leading-14;
+    }
+
+    h3 {
+        @apply text-3xl;
+    }
+
+    h4 {
+        @apply text-xl;
+    }
+
+    h5 {
+        @apply text-lg;
+    }
+
+    sup {
+        @apply font-serif text-xs font-bold tracking-widest uppercase opacity-70;
+    }
+
+    .inline-list {
+        @apply inline-flex gap-3 flex-wrap justify-center;
+    }
+
+    .inline-list li:not(:first-of-type)::before {
+        content: '—';
+        @apply pr-3;
+    }
+
     .fab {
         @apply rounded-full aspect-square w-14 bg-white! grid items-center justify-center cursor-pointer shadow-md/30;
     }
