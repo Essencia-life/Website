@@ -9,6 +9,7 @@
 		storeLinkUrlInPageState
 	} from '$lib/utils/eventCoverTransition.svelte';
 	import ScrollContainerArrows from '$lib/components/molecules/ScrollContainerArrows.svelte';
+	import EventRibbon from '$lib/components/atoms/EventRibbon.svelte';
 
 	interface Props {
 		lastEventsScrollPosition: Attachment<HTMLElement>;
@@ -26,12 +27,14 @@
 				{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > ms('1d')}
 				{@const linkUrl = resolve(`/(pages)/${event.type}s/[slug]`, { slug: event.slug })}
 				<a href={linkUrl} class="event no-link" onclick={storeLinkUrlInPageState}>
-					<enhanced:img
-						src={Media.getFile(event.cover_image)}
-						alt=""
-						loading="lazy"
-						style:view-transition-name={eventCoverTransitionName(linkUrl)}
-					/>
+					<EventRibbon {event}>
+						<enhanced:img
+							src={Media.getFile(event.cover_image)}
+							alt=""
+							loading="lazy"
+							style:view-transition-name={eventCoverTransitionName(linkUrl)}
+						/>
+					</EventRibbon>
 					<div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
 						<div style="display: flex; justify-content: space-between">
 							<small class="type-{event.type}">{event.type}</small>

@@ -7,6 +7,7 @@
 		eventCoverTransitionName,
 		storeLinkUrlInPageState
 	} from '$lib/utils/eventCoverTransition.svelte';
+	import EventRibbon from '../atoms/EventRibbon.svelte';
 
 	interface Props {
 		type: 'event' | 'retreat';
@@ -75,12 +76,14 @@
 					{/if}
 				</div>
 				<a class="cover" href={linkUrl} onclick={storeLinkUrlInPageState}>
-					<enhanced:img
-						src={Media.getFile(event.cover_image)}
-						loading="lazy"
-						alt=""
-						style:view-transition-name={eventCoverTransitionName(linkUrl)}
-					/>
+					<EventRibbon {event}>
+						<enhanced:img
+							src={Media.getFile(event.cover_image)}
+							loading="lazy"
+							alt=""
+							style:view-transition-name={eventCoverTransitionName(linkUrl)}
+						/>
+					</EventRibbon>
 				</a>
 				<div class="info">
 					<div class="description">
