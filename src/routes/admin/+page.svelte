@@ -4,6 +4,7 @@
 	import type { PageProps } from './$types';
 	import { headerCmsConfig } from '$lib/components/templates/Header.svelte';
 	import { footerCmsConfig } from '$lib/components/templates/Footer.svelte';
+	import { pageCollection } from '$lib/components/templates/Page.svelte';
 
 	const { data }: PageProps = $props();
 
@@ -35,6 +36,9 @@
                 singletons: [
 					headerCmsConfig,
 					footerCmsConfig,
+				],
+				collections: [
+					pageCollection,
 				]
 			}
 		});
