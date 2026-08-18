@@ -6,11 +6,11 @@
 		{
 			name: 'link',
 			label: 'Link',
-			widget: 'relation',
-			collection: 'pages',
-			search_fields: ['title'],
-			value_field: '/{{slug}}',
-			display_fields: ['title']
+			// widget: 'relation',
+			// collection: 'pages',
+			// search_fields: ['title'],
+			// value_field: '/{{slug}}',
+			// display_fields: ['title']
 		},
 	];
 	
