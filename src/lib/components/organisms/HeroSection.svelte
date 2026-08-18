@@ -1,0 +1,68 @@
+<script module lang="ts">
+	import type { ObjectField } from '@sveltia/cms';
+    
+    export const heroSectionField = {
+        name: 'hero', 
+        label: 'Hero Section', 
+        widget: 'object',
+        fields: [
+            {
+                name: 'type',
+                widget: 'hidden',
+                default: 'hero'
+            },
+            {
+                name: 'headline', 
+                label: 'Headline'
+            },
+            {
+                name: 'supline', 
+                label: 'Superline',
+                hint: 'Is display above the headline'
+            },
+            {
+                name: 'content',
+                label: 'Content',
+                widget: 'richtext'
+            },
+            {
+                name: 'button',
+                label: 'CTA button',
+                widget: 'object',
+                required: false,
+                fields: [
+                    {
+                        name: 'label', 
+                        label: 'Label'
+                    },
+                    {
+                        name: 'link', 
+                        label: 'Link'
+                    },
+                ] as const
+            },             
+        ] as const
+    } satisfies ObjectField;
+</script>
+
+<script lang="ts">
+	import type { InferFieldsObject } from '$lib/types/cms-types';
+	import Markdown from '../molecules/Markdown.svelte';
+    
+    interface Props {
+        section: InferFieldsObject<typeof heroSectionField.fields>;
+    }
+
+    const { section }: Props = $props();
+</script>
+
+<section class="dark flex flex-col items-center px-4 py-10 text-center">
+	<h2 class="my-4!">{section.headline}</h2>
+	<h3 class="-order-1 m-0! text-xs! font-bold tracking-widest uppercase opacity-70">{section.supline}</h3>
+	
+    <Markdown content={section.content} />
+    
+    {#if section.button}
+	    <a class="button mt-10" href={section.button.link}>{section.button.label}</a>
+    {/if}
+</section>
