@@ -24,6 +24,7 @@
             {
                 name: 'pictures',
                 label: 'Pictures',
+                label_singular: 'Picture',
                 widget: 'list',
                 min: 5,
                 max: 5,
