@@ -1,3 +1,70 @@
+<script lang="ts" module>
+	import type { CollectionFile, Field } from '@sveltia/cms';
+
+	const labelAndLinkFields: Field[] = [
+		{ name: 'label', label: 'Label' },
+		{
+			name: 'link',
+			label: 'Link',
+			widget: 'relation',
+			collection: 'pages',
+			search_fields: ['title'],
+			value_field: '/{{slug}}',
+			display_fields: ['title']
+		},
+	];
+	
+	export const footerCmsConfig: CollectionFile = {
+		name: 'footer',
+		label: 'Page Footer',
+		icon: 'page_footer',
+		file: 'src/lib/content/footer.json',
+		fields: [
+			{
+				name: 'cta',
+				label: 'CTA Button',
+				widget: 'object',
+				fields: [
+					...labelAndLinkFields,
+				]
+			},
+			{
+				name: 'social_media',
+				label: 'Social Media Platforms',
+				label_singular: 'Platform',
+				widget: 'list',
+				field: {
+					name: 'platform',
+					label: 'Platform',
+					widget: 'relation',
+					collection: 'social_media',
+					search_fields: ['label'],
+					value_field: 'name',
+					display_fields: ['label']
+				}
+			},
+			{
+				name: 'links',
+				label: 'Footer Links',
+				label_singular: 'Group',
+				widget: 'list',
+				min: 3,
+				max: 3,
+				fields: [
+					{
+						name: 'group',
+						label: 'Group',
+						widget: 'list',
+						fields: [
+							...labelAndLinkFields,
+						]
+					}
+				]
+			}
+		]
+	};
+</script>
+
 <script lang="ts">
 	import footerData from '$lib/content/footer.json';
 	import socialMediaData from '$lib/content/social-media.json';
