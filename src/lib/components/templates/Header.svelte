@@ -1,3 +1,48 @@
+<script lang="ts" module>
+	import type { CollectionFile, Field } from '@sveltia/cms';
+
+	const labelAndLinkFields: Field[] = [
+		{ name: 'label', label: 'Label' },
+		{
+			name: 'link',
+			label: 'Link',
+			widget: 'relation',
+			collection: 'pages',
+			search_fields: ['title'],
+			value_field: '/{{slug}}',
+			display_fields: ['title']
+		},
+	];
+	
+	export const headerCmsConfig: CollectionFile = {
+		name: 'header',
+		label: 'Page Header',
+		icon: 'page_header',
+		file: 'src/lib/content/header.json',
+		fields: [
+			{
+				name: 'navigation',
+				label: 'Navigation Items',
+				label_singular: 'Item',
+				widget: 'list',
+				fields: [
+					...labelAndLinkFields,
+					{
+						name: 'children',
+						label: 'Submenu Items',
+						label_singular: 'Item',
+						widget: 'list',
+						required: false,
+						fields: [
+							...labelAndLinkFields,
+						]
+					}
+				]
+			}
+		]
+	};
+</script>
+
 <script lang="ts">
 	import { Menu } from '@lucide/svelte';
 	import { getContext } from 'svelte';
