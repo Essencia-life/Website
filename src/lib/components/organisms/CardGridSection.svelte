@@ -24,6 +24,7 @@
             {
                 name: 'cards',
                 label: 'Cards',
+                label_singular: 'Card',
                 widget: 'list',
                 min: 6,
                 max: 6,
