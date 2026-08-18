@@ -9,8 +9,11 @@
 		name: 'pages',
 		label: 'Pages',
         label_singular: 'Page',
-		icon: 'article',
-     	create: true,
+        format: 'json',
+		icon: 'description',
+        identifier_field: 'meta.title',
+        path: '{{slug}}/index',
+        create: true,
         folder: "src/lib/content/pages",
 		fields: [
             {
