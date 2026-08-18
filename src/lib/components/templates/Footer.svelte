@@ -6,11 +6,11 @@
 		{
 			name: 'link',
 			label: 'Link',
-			widget: 'relation',
-			collection: 'pages',
-			search_fields: ['title'],
-			value_field: '/{{slug}}',
-			display_fields: ['title']
+			// widget: 'relation',
+			// collection: 'pages',
+			// search_fields: ['title'],
+			// value_field: '/{{slug}}',
+			// display_fields: ['title']
 		},
 	];
 	
@@ -36,11 +36,11 @@
 				field: {
 					name: 'platform',
 					label: 'Platform',
-					widget: 'relation',
-					collection: 'social_media',
-					search_fields: ['label'],
-					value_field: 'name',
-					display_fields: ['label']
+					// widget: 'relation',
+					// collection: 'social_media',
+					// search_fields: ['label'],
+					// value_field: 'name',
+					// display_fields: ['label']
 				}
 			},
 			{
