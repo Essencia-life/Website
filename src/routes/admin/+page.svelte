@@ -29,6 +29,9 @@
 						deleteMedia: 'feat({{collection}}): deleted “{{path}}”'
 					}
 				},
+				editor: {
+					preview: false,
+				},
                 singletons: [
 					headerCmsConfig,
 					footerCmsConfig,
