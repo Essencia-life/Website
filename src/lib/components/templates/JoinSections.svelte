@@ -3,16 +3,6 @@
 	import { resolve } from '$app/paths';
 </script>
 
-<div class="join-us">
-	<h2>You are welcome here</h2>
-
-	<p><i>This is more than an invitation — it's a calling</i></p>
-
-	<p>
-		There are many ways to belong to Essência. Whether you're ready to put down roots, offer your
-		hands for a season, or simply support what's growing here — there's a place for you.
-	</p>
-</div>
 <section>
 	<div class="card">
 		<enhanced:img src={Media.getFile('media/resident.jpg')} />
@@ -82,10 +72,6 @@
 </section>
 
 <style>
-	.join-us {
-		text-align: center;
-	}
-
 	@media screen and (width >= 800px) {
 		section {
 			display: grid;

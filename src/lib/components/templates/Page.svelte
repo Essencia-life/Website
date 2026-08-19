@@ -1,9 +1,7 @@
 <script module lang="ts">
 	import type { Collection } from '@sveltia/cms';
-	import { heroSectionField } from '../organisms/HeroSection.svelte';
-	import { textSectionField } from '../organisms/TextSection.svelte';
-	import { galleryGridSectionField } from '../organisms/GalleryGridSection.svelte';
-	import { cardGridSectionField } from '../organisms/CardGridSection.svelte';
+	import { heroSectionField } from './sections/HeroSection.svelte';
+	import DefaultSection, { defaultSectionField } from './sections/DefaultSection.svelte';
     
     export const pageCollection = {
 		name: 'pages',
@@ -44,9 +42,10 @@
                 widget: 'list',
                 types: [
                     heroSectionField,
-                    textSectionField,
-                    galleryGridSectionField,
-                    cardGridSectionField,
+                    defaultSectionField,
+                    accommodationSectionField,
+                    residencyCostsSectionField,
+                    joinUsColumnsSectionField,
                 ] as const
             }
         ] as const
@@ -55,10 +54,12 @@
 
 <script lang="ts">
    	import type { InferCollectionType } from '$lib/types/cms-types';
-   	import HeroSection from '../organisms/HeroSection.svelte';
-	import TextSection from '../organisms/TextSection.svelte';
-	import GalleryGridSection from '../organisms/GalleryGridSection.svelte';
-	import CardGridSection from '../organisms/CardGridSection.svelte';
+   	import HeroSection from './sections/HeroSection.svelte';
+	import SEO from '$lib/components/atoms/SEO.svelte';
+	import { Media } from '$lib/services/Media';
+	import AccommodationSection, { accommodationSectionField } from './sections/AccommodationSection.svelte';
+	import ResidencyCostsSection, { residencyCostsSectionField } from './sections/ResidencyCostsSection.svelte';
+	import JoinUsColumnsSection, { joinUsColumnsSectionField } from './sections/JoinUsColumnsSection.svelte';
 
     interface Props {
         page: InferCollectionType<typeof pageCollection>;
@@ -67,14 +68,27 @@
     const { page }: Props = $props();
 </script>
 
-{#each page.sections as section}
+<SEO
+	schema={{
+		'@context': 'https://schema.org',
+		'@type': 'WebPage',
+		name: page.meta.title,
+		description: page.meta.description,
+        image: page.meta.cover && Media.getFile(page.meta.cover).img.src,
+		// url: `https://${page.data.VERCEL_PROJECT_PRODUCTION_URL}${page.url.pathname}` // TODO
+	}}
+/>
+
+{#each page.sections as section, index}
     {#if section.type === 'hero'}
         <HeroSection {section} />
-    {:else if section.type === 'text'}
-        <TextSection {section} />
-    {:else if section.type === 'gallery-grid'}
-        <GalleryGridSection {section} />
-    {:else if section.type === 'card-grid'}
-        <CardGridSection {section} />
+    {:else if section.type === 'default-section'}
+        <DefaultSection {index} {section} />
+    {:else if section.type === 'accommodation'}
+        <AccommodationSection {section} />
+    {:else if section.type === 'residency-costs'}
+        <ResidencyCostsSection {section} />
+    {:else if section.type === 'join-us-columns'}
+        <JoinUsColumnsSection {section} />
     {/if}
 {/each}

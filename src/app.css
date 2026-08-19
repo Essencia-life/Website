@@ -88,7 +88,6 @@ main {
 	box-sizing: inherit;
 }
 
-/* TODO replace with tailwind container */
 .page-content {
 	width: calc(100vw - (100vw - 100%));
 	max-width: 1024px;
