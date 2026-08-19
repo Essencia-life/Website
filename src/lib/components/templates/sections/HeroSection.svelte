@@ -47,22 +47,52 @@
 
 <script lang="ts">
 	import type { InferFieldsObject } from '$lib/types/cms-types';
-	import Markdown from '../molecules/Markdown.svelte';
+	import Markdown from '../../molecules/Markdown.svelte';
     
     interface Props {
         section: InferFieldsObject<typeof heroSectionField.fields>;
     }
 
     const { section }: Props = $props();
+
+    function scrollToAnchor(event: MouseEvent & { currentTarget: HTMLAnchorElement }) {
+        const href = event.currentTarget.getAttribute('href');
+       
+        if (href?.startsWith('#')) {
+            const anchorElm = document.getElementById(href.substring(1));
+
+            if (anchorElm) {
+                event.preventDefault();
+                anchorElm.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+	}
 </script>
 
-<section class="dark flex flex-col items-center px-4 py-10 text-center">
-	<h2 class="my-4!">{section.headline}</h2>
-	<h3 class="-order-1 m-0! text-xs! font-bold tracking-widest uppercase opacity-70">{section.supline}</h3>
+<section class="dark flex flex-col items-center gap-4 px-4 py-16 text-center">
+	<sup>{section.supline}</sup>
+	<h2 class="mb-4">{section.headline}</h2>
 	
     <Markdown content={section.content} />
     
     {#if section.button}
-	    <a class="button mt-10" href={section.button.link}>{section.button.label}</a>
+	    <a class="button mt-10" href={section.button.link} onclick={scrollToAnchor}>{section.button.label}</a>
     {/if}
 </section>
+
+<style>
+	.dark {
+		color-scheme: dark;
+		background: var(--brand-dark-section-color);
+		color: var(--brand-stonewhite-color);
+	}
+
+	.dark h2 {
+		color: var(--brand-stonewhite-color);
+	}
+
+	.dark .button {
+		border-color: var(--brand-stonewhite-color);
+		color: var(--brand-stonewhite-color);
+	}
+</style>
