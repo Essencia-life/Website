@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import type { ObjectField } from '@sveltia/cms';
     
-    export const galleryGridSectionField = {
+    export const galleryGridWidgetField = {
         name: 'gallery-grid', 
         label: 'Gallery Grid', 
         widget: 'object',
@@ -10,16 +10,6 @@
                 name: 'type',
                 widget: 'hidden',
                 default: 'gallery-grid'
-            },
-            {
-                name: 'headline',
-                label: 'Headline',
-            },
-            {
-                name: 'content',
-                label: 'Content',
-                widget: 'richtext',
-                required: false
             },
             {
                 name: 'pictures',
@@ -47,31 +37,57 @@
 
 <script lang="ts">
 	import type { InferFieldsObject } from '$lib/types/cms-types';
-	import Markdown from '../molecules/Markdown.svelte';
 	import { Media } from '$lib/services/Media';
     
     interface Props {
-        section: InferFieldsObject<typeof galleryGridSectionField.fields>;
+        widget: InferFieldsObject<typeof galleryGridWidgetField.fields>;
     }
 
-    const { section }: Props = $props();
+    const { widget }: Props = $props();
 </script>
 
-<section>
-	<div class="page-content">
-        <h3>{section.headline}</h3>
+<div class="gallery grid gap-6 md:grid-cols-3 md:gap-4 my-12">
+    {#each widget.pictures as picture}
+        <figure>
+            <enhanced:img src={Media.getFile(picture.image)} />
+            <figcaption>{picture.caption}</figcaption>
+        </figure>
+    {/each}
+</div>
 
-        {#if section.content}
-            <Markdown content={section.content} />
-        {/if}
+<style>
+	enhanced\:img {
+		max-width: 100%;
+		height: 100%;
+		aspect-ratio: 3 / 2;
+		object-fit: cover;
+	}
 
-        <div class="gallery grid gap-6 md:grid-cols-3 md:gap-4">
-            {#each section.pictures as picture}
-                <figure>
-                    <enhanced:img src={Media.getFile(picture.image)} />
-                    <figcaption>{picture.caption}</figcaption>
-                </figure>
-            {/each}
-		</div>
-	</div>
-</section>
+	.gallery figure {
+		position: relative;
+		margin: 0;
+		border-radius: 1rem;
+		overflow: hidden;
+	}
+
+	.gallery figcaption {
+		position: absolute;
+		inset-inline: 0;
+		bottom: 0;
+		padding: 2rem 1rem 1rem;
+		background: linear-gradient(to top, rgba(0 0 0 / 70%), rgba(0 0 0 / 0));
+		color: var(--brand-stonewhite-color);
+		font-style: italic;
+		font-weight: 400;
+	}
+
+	.gallery figure:first-of-type {
+		grid-row: span 2;
+	}
+
+	.gallery figure:first-of-type enhanced\:img {
+		aspect-ratio: auto;
+		height: 100%;
+		width: 100%;
+	}
+</style>
