@@ -1,385 +1,385 @@
 {
-  "$schema": "./events.schema.json",
-  "events": [
-    {
-      "weekly": "every Thursday",
-      "start": "2100-01-01T18:00:00.000+00:00",
-      "slug": "sparkling-night",
-      "cover_image": "media/events/sparkling-night.jpg",
-      "title": "SPArkling Night",
-      "short_description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire",
-      "type": "event",
-      "end": "2100-01-01T22:00:00.000+00:00",
-      "description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire.  \nSubstance free, plantbased and kids friendly.\n\nBring: 2 towels, instruments and good vibes.\n\n**Contribution 20€**"
-    },
-    {
-      "start": "2025-10-26T15:00:00.000+00:00",
-      "slug": "2025-10-26-fundaments",
-      "cover_image": "media/events/photo_2025-10-21_15-14-30.jpg",
-      "title": "FUNDAMENTS",
-      "short_description": "Contemplating the Yamas in the spiritual and physical practice",
-      "type": "event",
-      "end": "2025-10-26T18:30:00.000+00:00",
-      "description": "Contemplating the Yamas in the spiritual and physical practice"
-    },
-    {
-      "start": "2025-10-25T15:00:00.000+00:00",
-      "slug": "2025-10-25-essencia-4-years-anniversary",
-      "cover_image": "media/events/photo_2025-10-11_00-24-06.jpg",
-      "title": "Essência 4 Years Anniversary",
-      "short_description": "Celebration of our Magic EcoVillage",
-      "type": "event",
-      "end": "2025-10-25T22:00:00.000+00:00",
-      "description": "Celebration of our Magic EcoVillage"
-    },
-    {
-      "start": "2025-09-27T19:00:00.000+00:00",
-      "slug": "2025-09-27-ecstatic-ways",
-      "cover_image": "media/events/photo_2025-09-08_16-16-36.jpg",
-      "title": "Ecstatic Ways",
-      "short_description": "Live music / Ecstatic dance / kundalini cacao activation",
-      "type": "event",
-      "end": "2025-08-28T00:00:00.000+00:00",
-      "description": "Live music / Ecstatic dance / kundalini cacao activation"
-    },
-    {
-      "start": "2025-08-30T18:00:00.000+00:00",
-      "slug": "2025-08-30-cacao-dance",
-      "cover_image": "media/events/photo_2025-08-17_20-14-51.jpg",
-      "title": "Cacao dance",
-      "short_description": "Ecstatic dance - Yoga meditation",
-      "type": "event",
-      "end": "2025-08-30T21:00:00.000+00:00",
-      "description": "Ecstatic dance - Yoga meditation"
-    },
-    {
-      "slug": "2025-10-27-the-art-of-touch",
-      "title": "The Art of Touch",
-      "cover_image": "media/events/photo_2025-10-21_21-15-29.jpg",
-      "short_description": "A Foundational Massage Practitioner Course",
-      "description": "## The Art Of Touch\n\nA Foundational Massage Practitioner Course\\\n27.10 – 30.10 2025\n\nWould you like to learn how to give (and receive) a heart-centred, deeply relaxing massage\\\nMaybe you’ve been feeling a certain energy in your hands and a wish to explore the field of massage and bodywork\n\nIn this 4-day training course you will learn principles and techniques that will give you the skills and confidence to give a full body relaxation massage with oil\n\nThroughout the course you'll explore both the physical as well as energetic aspects of massage therapy\\\nThe main focus is the quality of touch and the connection between giver and receiver rather than anatomy knowledge\n\n### Who is this for\n\nFor anyone who would like to explore the gifts we can bring through touch\\\nFor beginners as well as those already practicing healing arts who want to deepen understanding\n\n### Learning outcomes\n\n* Foundations to give a deeply relaxing nurturing massage with confidence\n* Techniques for a complete full body massage\n* Effects of massage therapy on body-mind and nervous system\n* Deeper connection with yourself and your body\n* Keep energy flowing without getting exhausted as a giver\n* Attunement and intuitive sensitivity\n* Attitude of loving presence\n* Connect with a small international group to continue practicing\n* Receive a video of the sequence you learn\n\n### Workshop hours\n\n* Saturday 11:00–17:30\n* Sunday 11:00–18:30\n* Monday 10:00–16:30\n* Tuesday 11:00–18:30\n\nShared vegetarian lunch each day\n\n### 3-tier pricing\n\n* 370€ low income\n* 410€ fair\n* 450€ supportive\n\nSmall group (max. 8 participants)\\\nWorkshop held in English, translations into German and Spanish possible\\\n60€ referral discount, bring a friend\\\nOne helper spot available for 275€\n\nRegistration contact as listed on the page via Telegram/WhatsApp: +351927576899\n\n### Meet the Facilitator\n\nJulia Ocean\\\nTherapeutic massage practitioner, yoga teacher and multifaceted artist\\\nPassionate about facilitating deep relaxation and nurturing and creating transformative healing experiences through loving presence and mindful touch\n\n#### Here is one of my latest reviews:\n\n> I had the wonderful opportunity to participate in Julia’s massage course, which gave me a deep and well-rounded insight into her work and teaching style. From the very beginning, the atmosphere felt incredibly warm, familiar and truly on eye-level — something I deeply value, especially as a learner.\n>\n> The course offered a beautiful balance between theory and practice. Julia was always open to questions and made sure everyone felt seen and supported. I learned so much — especially the massage basics, the do’s and don’ts — making this course perfect for anyone starting out.\n>\n> The setting was absolutely stunning and sharing our lunch breaks with potluck meals brought the group even closer together. It felt more like a shared journey than just a course. Julia is not only an amazing teacher, but also a beautiful soul. Truly a special experience that I can wholeheartedly recommend.\n>\n> Miriam",
-      "start": "2025-10-27T11:00:00.000+00:00",
-      "end": "2025-10-30T18:30:00.000+00:00",
-      "type": "event"
-    },
-    {
-      "slug": "2025-10-31-autum-yoga-retreat",
-      "title": "Autum Yoga Retreat",
-      "cover_image": "media/events/photo_2025-10-27_19-48-11.jpg",
-      "short_description": "A few immersive days of yoga, stillness and connection  Explore a functional approach to yoga, daily Yang & Yin practices, meditation and philosophy workshops",
-      "description": "## Autumn Yoga Retreat with Ehud Neuhaus\nALGARVE, PORTUGAL  \nOCTOBER 31th – NOVEMBER 5th 2025\n\nA few immersive days of yoga, stillness and connection  \nExplore a functional approach to yoga, daily Yang & Yin practices, meditation and philosophy workshops\n\n### What to expect\n- Functional approach to yoga: honor uniqueness in all aspects of practice, daily vigorous Yang movement, quiet Yin time and meditation\n- Daily practice & meditation: 2 daily classes (Yang and Yin), morning meditation, workshops on philosophy\n- Nourishment & relaxation: 3 daily plant-based meals, sauna and hot tub under the open sky\n- Workshops: two afternoons diving into yoga philosophy\n\n### The Facilitator\nEhud Neuhaus  \nPractising yoga 20+ years, teaching since 2014  \nAssisted Anat Geiger and Marcel van de Vis Heil in Functional Yoga Teacher Training since 2013  \nStudied with Paul and Suzee Grilley (Yin Yoga)  \nFounded the online platform The Fat Yogis with Anat and Marcel",
-      "start": "2025-10-31T09:00:00.000+00:00",
-      "end": "2025-11-05T18:00:00.000+00:00",
-      "type": "retreat"
-    },
-    {
-      "title": "The Course of Transformation",
-      "type": "retreat",
-      "short_description": "The Course of Transformation is a retreat in southern Portugal combining yoga, meditation, pranayama, kriya yoga, tantra and conscious living practices. Through daily structured sessions and group processes, it supports self-awareness, personal growth and inner transformation.",
-      "description": "The Course of Transformation is a retreat that combines yoga, meditation, pranayama, kriya yoga, tantra and conscious living practices. The course offers a structured program of daily practices, teachings and group processes. Its focus is on personal growth, self-awareness and inner transformation, with the intention of supporting participants in bringing these practices into their everyday lives.\n\n[More Information](https://www.thecourseoftransformation.com/)",
-      "slug": "2026-06-10-the-course-of-transformation",
-      "cover_image": "media/events/e5268e_884b65ab0a8244968ebe284a772755a0~mv2.jpg",
-      "start": "2026-06-10T00:00:00.000+01:00",
-      "end": "2026-06-20T00:00:00.000+01:00"
-    },
-    {
-      "title": "The Embodied Voice",
-      "type": "retreat",
-      "short_description": "The Embodied Voice is a practice for living more joyfully in mind and body by bringing together voice, movement, mindful awareness and improvisation. Balancing science and technique with play and creativity, it helps us tap into a voice and body that is free, expressive, vital and present.",
-      "description": "\n## SINGING INTO PRESENCE\nALGARVE, PORTUGAL  \nMAY 3–9, 2026  \nVOICE RETREAT\n\nJoin The Embodied Voice for 6 days of moving, sounding and singing, to\n- Nourish your body, mind and voice\n- Cultivate clarity and presence\n- Unlock your creativity\n- Awaken your vitality\n- Restore, rest, reflect\n- Release into flow\n\n### The Facilitators\nKate — vocal acrobat, composer and facilitator  \nCreator of The Embodied Voice©, a research, performance and teaching practice addressing presence, body-mind relationship and human rewilding through voice, movement and improvisation\n\nLiv — working with the voice as a tool for healing for 15 years across many settings  \nInspired by Hindustani singing studies and years in India  \nWeaves jazz singing, creative practice, singing therapy and yoga teaching into Voice Yoga\n\n[More Information](https://theembodiedvoice.net/offerings/singingintopresence2026)",
-      "slug": "2026-03-05-the-embodied-voice",
-      "cover_image": "media/events/151345_7f1b31960eaf4c6dba160c9157eb3471~mv2.jpg",
-      "start": "2026-05-03T00:00:00.000+01:00",
-      "end": "2026-05-09T00:00:00.000+01:00"
-    },
-    {
-      "slug": "2025-10-07-the-embodied-woman-retreat",
-      "title": "The Embodied Woman",
-      "description": "## The Embodied Woman\nAn AUTHENTIC SHAPES RETREAT  \nALGARVE, PORTUGAL  \nOCTOBER 7th – 11th 2025\n\nEmbodied wisdom begins when a woman listens to her body\n\nFive days to reconnect with your body, return to your inner truth and embody your natural feminine strength\n\nYou crave deeper intimacy and a more embodied connection with yourself and with others  \nBut the daily hustle pulls you out of your flow  \nWhen we give ourselves space to feel, we notice what’s truly going on inside  \nEmotions may surface  \nForgotten parts of ourselves may begin to speak  \nAnd in that quiet awareness, something powerful is revealed\n\nYour body holds wisdom  \nWhen we learn to truly listen, our body guides us  \nIt tells us when to rest, when to move, when to say yes and when to say no  \nThis is what it means to live in alignment — to trust the voice within instead of seeking validation from the outside  \nYou don’t need to become more or do more  \nYour strength is already within you — ready to be felt, expressed and shared\n\n### The Facilitator\nCindy de Vogel  \nMentor, trauma-informed breathwork facilitator, 1:1 coach, sacred space holder, somatic yoga teacher",
-      "type": "retreat",
-      "short_description": "Five days to reconnect with your body, return to your inner truth and embody your natural feminine strength",
-      "start": "2025-10-07T00:00:00.000+01:00",
-      "end": "2025-10-11T00:00:00.000+01:00",
-      "cover_image": "media/events/151345_37c52bf2d86a4ed1871b1aa975cea9bb~mv2.png"
-    },
-    {
-      "description": "## Harvest of the Heart\nA 5RHYTHMS HEARTBEAT RETREAT  \nALGARVE, PORTUGAL  \nSEPTEMBER 6–11, 2025\n\nStep away from the noise and into the rhythm of integration\n\nA 6-day, 5-night 5Rhythms retreat in the raw beauty of nature — where land, sea and sky invite you to dance through the change of the season, release what’s ready to go and harvest what’s truly yours\n\nThis retreat offers a chance to step away from daily routines and into a rhythm that reflects the shifting season  \nThrough 5Rhythms Waves & Heartbeat, move with cycles of fullness, release and deep integration — allowing the body to unwind, the heart to open and the mind to soften  \nMovement as a way to reclaim presence, emotional clarity and embodied freedom\n\nSet in Essência’s secluded retreat center between rolling hills and the vast ocean  \nEnjoy sauna session, refreshing dips in the wild lake, nourishing vegan meals and time to breathe in the raw beauty of the land  \nBetween sessions: walk the coastline, rest under the open sky and let nature guide you back to center\n\n### The Facilitators\nVehllia Tranne & Alessandro Moruzzi  \nCertified 5Rhythms® Teachers and founders of The City Waves 5Rhythms® (San Francisco)",
-      "slug": "2025-09-06-harvest-of-the-heart",
-      "title": "Harvest of the Heart",
-      "type": "retreat",
-      "short_description": "Step away from the noise and into the rhythm of integration",
-      "start": "2025-09-06T00:00:00.000+01:00",
-      "end": "2025-09-11T00:00:00.000+01:00",
-      "cover_image": "media/events/151345_cf173b17e2ef462fb65a741b1b8a135b~mv2.png"
-    },
-    {
-      "description": "🌟 UNITED WE TRIBE 🌟\n🔥 CACAO CEREMONY · ECSTATIC DANCE · LIVE MUSIC · OPEN STAGE 🔥\n\nJoin this special gathering to remember, release and celebrate — a journey to open our hearts with cacao, songs and shared practices of reflection, compassion, gratitude.\nMovement becomes prayer and our Ecstatic Dance a wild offering to life.\nWe nourish the body, ground with live music and open the stage for you to share your gifts, your flavour, your medicine.\n\n🗓 PROGRAM\n13:00 — Doors Open\n14:00 — Cacao Ceremony\n17:00 — Ecstatic Dance\n19:30 — Food Nourishment\n20:30 — Live Music\n21:30 — Open Stage\n00:00 — Chill & Goodbyes\n\n📅 Saturday, 7 March 2026\n📍 Essencia, Algarve\n📍 https://maps.app.goo.gl/AvBaoYS49tXjujWVA\n\n💶 Contribution\nEarly Bird — €27 (until Fri 27 Feb 12pm)  \nRegular — €33 (until Fri 6 Mar 12pm)\nAt the door -  €40\n\n🍲 Food available on-site | € extra.\n\nBUY TICKET https://fienta.com/united-we-tribe-7-mar-2026?utm_source=t\n\nA MEDICINE LIFE https://linktr.ee/a_medicine_life",
-      "start": "2026-03-07T13:00:00.000+00:00",
-      "end": "2026-03-08T00:00:00.000+00:00",
-      "title": "UNITED WE TRIBE",
-      "type": "event",
-      "short_description": "Join this special gathering to remember, release and celebrate. We open our hearts with cacao, song and shared practices of reflection, compassion and gratitude. Movement turns into prayer, Ecstatic Dance into a wild offering to life. We nourish the body, ground in live music and share our gifts.",
-      "cover_image": "media/events/photo_2026-02-15_15-28-33.jpg",
-      "slug": "2026-03-07-united-we-tribe"
-    },
-    {
-      "description": "✨ Ecstatic Dance & Cacao Gathering with Sound Healing & Breathwork \nOn the Full Worm “Blood” Moon March 3, 2026 ✨\n⏰ Time: 18:00 – 21:00\nMagic love on your way. \nGet reserve your spot  B4 it ending. \n\nSome encounters cannot be explained… they can only be felt. 💖  \nThis is one of them.\n\nLet’s come together in a circle to celebrate life, with medicine music that inspires, heals and connects us and the sacred power of cacao, opening the heart, quieting the mind, energizing the body and reminding us of who we truly are when we gather. 💞\n\nEach song is a prayer.  \nEach prayer, a portal.  \nEach one of us, guardian of the magic and the intention.  \nEach sip of cacao, a call to full presence. 🙏🏼\n\nIt is an invitation to deep listening within and to meeting the heart in a state of pure presence. 🤎🌿\n\n💚 Divinekode – Live DJ set  \n(new unreleased music)  \nOrganic Tribal Medicine Music  \n💚 Lena Younes \nClosing Circle with Sound Healing & Breathwork \n\n🌕 🗓️ Date: March 3, 2026 (Tuesday)  \n📍 Location: Essência Retreat Aljezur \n⏰ Time: 18:00 – 21:00\n💫 Contribution: Magic bird: €15 | At the door: €20  \n🔔 Limited spots!\n\n💚 17:30 Arrives \n18:00 Cacao Gathering \n18:15 Ecstatic Dance by Divinekode \n20:30 Sound Healing with Breathwork by Lena Younes \n\nEnergy Exchange Contribution Link below 👇 \nInvite link 🔗 https://t.me/+y3GPHDKs68s1N2Vk\n\nWishing you beautiful warm and radiant days ahead. With love always 🌞💫❤️",
-      "short_description": "An evening to be felt, not explained. We gather in circle with cacao, medicine music, breath and sound to open the heart and quiet the mind. Movement becomes prayer, presence becomes portal. A space to connect, release and remember who we are — together.",
-      "slug": "2026-03-03-ecstatic-ways",
-      "title": "Ecstatic Ways Full Worm “Blood” Moon ",
-      "type": "event",
-      "cover_image": "media/events/photo_2026-02-20_16-48-16.jpg",
-      "start": "2026-03-03T18:00:00.000+00:00",
-      "end": "2026-03-03T21:00:00.000+00:00"
-    },
-    {
-      "description": "HIGH ON LOVE\n“The Art of Juicy Relationship”\n\n🌹 SACRED SEXUALITY TALK 🌹\n Saturday 28th February - Aljezur\n\nWarm Welcome as You Are!\n\nThis workshop is perfect for singles, couples, men, women, non-binary. We open a space to come together to share and understand the mysterious ways of Sexuality. This talk is for you if you want to heal, evolve, deepen and unlock your multi-orgasmic superpowers. \n\nDuring this talk we will share juicy practical knowledge to create a vibrant foundation for the Sexuality of our dream.\n\nIntegrating Conscious Sexuality as your personal practice, healing art and spiritual path you will feel more vitality, connected to yourself, authentic, safe, powerful, peaceful and connected to other. You will generate lot of extra energy to uplift you, boost your creativity and your projects.\n\nYou can bring your main questions of the moment around those subjects and we will weave some propositions of answers and offer practical keys and tools for you to explore. \n\nAll excercices and demo will be with clothes during the workshop. \n\nAt 7pm we close the circle and we open the sauna and cold plunge for those who want to stay to keep sharing around the fire (sauna+soup 10€)\n\nLet's say yes to Life and open up to Bloom! 🌺\n\nSaturday 28 February\n⭐️ 10am -7pm⭐️\nIn the Shala\nEssência Nature Retreat, Aljezur\nEnergy exchange sliding scale : €33 - 44€\nOrganic vegan juice, light lunch & tea break included \n\nBook your spot for lunch preparation\n❤️ Simona +351 91 444 81 88\n\n🙏🏼 Much Love,\n\nSimona & Antoine\n\nSimona has been studying taoist tantra and accompanying women and men for 15 years. With Antoine, we walk this conscious path since 7 years and offer life+business coaching, couples coaching, meditation, yoga and tantra retreats. we serve together as doula for natural home births. Our practice has created a strong bond and lot of energy to co-found 5 projects. We are so grateful for this Knowledge we have received we are passionate to share it with everyone willing to choose Life and to open their wings !  \n\nhttps://www.livetolove.life (https://www.livetolove.life/)\ninsta: we.live.to.love (https://www.instagram.com/we.live.to.love?igsh=b3hwODZqMnc5OXpt&utm_source=qr)",
-      "cover_image": "media/events/photo_2026-02-22_16-21-58.jpg",
-      "slug": "2026-02-28-high-on-love",
-      "title": "HIGH ON LOVE - The Art of Juicy Relationship",
-      "type": "event",
-      "short_description": "A full-day immersion into conscious sexuality and authentic connection. In a safe space for singles and couples, we explore intimacy, healing and deeper relating — cultivating vitality, trust and presence and allowing love to truly bloom.",
-      "start": "2026-02-28T10:00:00.000+00:00",
-      "end": "2026-02-28T19:00:00.000+00:00"
-    },
-    {
-      "description": "Join us for a joyful celebration of colors and community @ Essência Aljezur! 🇮🇳🌹🇵🇹\n\nHoli is an Indian festival celebrated around the Full Moon before the Spring Equinox. It marks the arrival of spring and the victory of light over darkness.\n\nInspired by this ancient tradition, we gather to release the old, welcome the new and celebrate love and connection.\n\n✨ All Holi color powders are self-made, skin-friendly & fully organic! Please wear light clothes ready to get colored 🩵💜💛\n\nFlow & Timing\n3.00 Arrival, Chai & Connection\n4.00 Opening, Grounding & Intention Setting\n4.30 Krishna Kirtan & Puja\n5.30 Holi Ecstatic & Color Blessings \n6.30 Holi Fire, Integration & Closing\n\nLimited spaces available! Please secure your ticket in advance by scanning the QR code or following the link: www.anantaholistic.art/event/holi-ecstatic-celebration/\n\nCurious? Check our vibe Instagram @anantaholistic or listen to the recording on Soundcloud: https://on.soundcloud.com/gVvneEQk0zv1Sqi7Do\n\nWe are looking forward! Happy Holi!",
-      "start": "2026-03-04T15:00:00.000+00:00",
-      "end": "2026-03-04T19:00:00.000+00:00",
-      "short_description": "Join us for a joyful Holi celebration of color and community. Inspired by the ancient spring festival, we gather to release the old, welcome the new and celebrate love, light and connection. With music, ritual and vibrant organic colors, we honor renewal — and each other.",
-      "cover_image": "media/events/photo_2026-02-24_22-10-15.jpg",
-      "type": "event",
-      "title": "Holi - celebration of colors",
-      "slug": "2026-03-04-holi-celebration-of-colors"
-    },
-    {
-      "description": "Join us in the beautiful south of Portugal for a Spring Yoga retreat. Over the course of a few days, you’ll immerse yourself in the peaceful environment and the practice of Yoga, with focus on connecting to your own experience and by that, deepening your understanding of your own unique anatomy. This retreat is an opportunity to slow down, cultivate awareness and explore the subtleties of your practice.\n\n[More information](https://yoga.ehudneuhaus.com)",
-      "short_description": "Join us in the beautiful south of Portugal for a Spring Yoga retreat. Over a few days, immerse yourself in a peaceful environment and the practice of Yoga, connecting to your own experience and deepening the understanding of your unique anatomy. A chance to slow down and cultivate awareness.",
-      "cover_image": "media/events/photo_2026-03-11_11-40-47.jpg",
-      "start": "2026-03-20T15:00:00.000+00:00",
-      "end": "2026-03-25T12:00:00.000+00:00",
-      "type": "retreat",
-      "title": "Spring Yoga Retreat",
-      "slug": "2026-03-20-spring-yoga-retreat"
-    },
-    {
-      "title": "Flow State Retreat",
-      "type": "retreat",
-      "short_description": "A 5-Day Yoga & Somatics Reset for Your Body, Nervous System & Energy",
-      "description": "Picture yourself waking up with the first rays of autumn sun filtering through linen curtains and warming your skin.\n\nThe room is quiet. Outside, you hear birds singing, the kind of sound that settles your whole system before you even open your eyes.\n\nYou walk barefoot to the terrace with a warm cup of coffee or herbal tea, observing the trees and the birds in the forest that surrounds you. The morning is slow. There’s no one asking for you. No notifications. Nowhere else to be.\n\nYou begin your day with conscious movement that feels good in your body, not another task on your to-do list, but something you actually want to do.\n\nYou’ll laugh with women you met just days ago, yet somehow feel like you’ve known for years.\n\nYou’ll enjoy the warmth of Portugal’s south coast. You’ll surf, rest, journal, move and stargaze under clear October skies.\n\nYou’ll remember what it feels like to live from presence — instead of rush or pressure.\n\nThis is Flow State Retreat.\n\nAn experience designed to help your nervous system recalibrate.\nWhere movement, rest, play and connection bring you back into regulation.\n\nWhere your body feels safe enough to slow down and strong enough to expand.\n\n[More information & booking](https://www.catarinaamaralyoga.com/flowstateretreat)",
-      "slug": "2026-10-14-flow-state-retreat",
-      "cover_image": "media/events/0f847d_61ecfe8a479d4344991a25aa0728f5c3~mv2.jpg",
-      "start": "2026-10-14T16:00:00.000+01:00",
-      "end": "2026-10-18T12:00:00.000+01:00"
-    },
-    {
-      "description": "Ecstatic Dance Aljezur 14/3\n\nDJ & Facilitator Pablo Gascon\n\nDate: 14/3\n\n\n\nTimes: 17h - 20h\n\nWarm up: 17:15 - 18h\n\nEcstatic: 18h - 20h\n\n\n\nContributions:\n\nEarly bird 13€\n\nOn the Door 20€\n\n\n\nPay Pal option: https://www.paypal.me/yogabeatsproject\n\nBank transfer on request \n\nCash on the door or in advance \n\n\n\n\n\nLocation: Essência Nature Retreat, Aljezur \n\nhttps://maps.app.goo.gl/ArUKJT1jXY8unpFT9?g_st=ipc\n\n\n\nWarm up to slowly connect with your body! To move freely within the space!\n\n\n\nMusic styles: a variety of electronic music, slow and fast paced rhythms, chill out vibes and ecstatic energy!! A little bit for everyone to enjoy a magical experience!\n\n\n\nMore info and any request please dont hesitate to contact down below 👇🏼 \n\n\n\nInstagram @pablogasconprojects\n\nWhatsApp +46720249575 \n\nEmail: info.pablogascon@gmail.com\n\npablogascon.com",
-      "title": "Ecstatic Dance Aljezur",
-      "type": "event",
-      "slug": "2026-03-14-ecstatic-dance-aljezur",
-      "start": "2026-03-14T17:00:00.000+00:00",
-      "end": "2026-03-14T20:00:00.000+00:00",
-      "short_description": "Warm up to slowly connect with your body! To move freely within the space! Music styles: a variety of electronic music, slow and fast paced rhythms, chill out vibes and ecstatic energy!! A little bit for everyone to enjoy a magical experience!",
-      "cover_image": "media/events/photo_2026-03-10_10-40-29.jpg"
-    },
-    {
-      "slug": "2026-04-05-harmonium-workshop",
-      "title": "(POSTPONED) Harmonium Workshop",
-      "type": "event",
-      "description": "Harmonium - Workshop at Essência\n\n**POSTPONED. Info will follow.**\n\nHarmonium course with mantras and heart songs.\n\nA gentle space to explore sound, voice, and presence through simple melodies and repetition.\n\nBeginner-friendly and open to all levels, whether you are just starting or already familiar with the instrument. We’ll learn the basics of the Indian harmonium, dive into mantras from different traditions, and sing together.\n\nCome as you are, no perfection needed—just a willingness to listen, feel, and express. Let’s chant, connect, and create something beautiful together.\n\nBeginner:  Sunday 5th April 10am - 4pm\n\nExtension:  12th of April. 10am - 4pm\n\nWhere:  Essência Nature Retreat, Aljezur\n\nContribution: €100 / Day incl. Script & Harmonium-Rent.\n\nSign-Up & Info:  matthuji (at) icloud.com\n\nWhat to bring: Snacks for your lunch and water. Yourself ❤️\n\nThere is a selection of different Indian Harmoniums available to play during the Workshop, if you wish to buy one, i will advice you for the best choice for you.",
-      "cover_image": "media/events/photo_2026-03-19_08-48-19.jpg",
-      "start": "2026-04-05T09:00:00.000Z",
-      "end": "2026-04-05T15:00:00.000Z",
-      "short_description": "POSTPONED. Info will follow. Beginner-friendly harmonium workshop with mantras and simple songs. Explore voice, sound, and presence in a relaxed group setting. Includes basics, instruments provided, and guidance for all levels."
-    },
-    {
-      "slug": "2026-03-28-gathering-of-essence",
-      "title": "Gathering of Essence - FULLY ALIVE",
-      "type": "event",
-      "start": "2026-03-28T13:00:00.000Z",
-      "end": "2026-03-28T22:00:00.000Z",
-      "cover_image": "media/events/photo_2026-03-21_10-10-20.jpg",
-      "short_description": "A vibrant gathering to reconnect, recharge, and feel fully alive. Enjoy ceremonies, ecstatic dance, forest spa, nourishing food, sound healing, and live music—surrounded by community, magic, and the beauty of the land.",
-      "description": "**☀️ Gathering of Essênce - FULLY ALIVE ☀️**\\\n📆 Saturday 28.3. - 13:00 - 22:00\\\n📍 Essência Nature Retreat (between Aljezur and Lagos )\n\n**🪷 Contribution:** \\\nEarly Bird until 24.3. ~ 30€ \\\nFrom 25.3. & @ the door ~ 40€\n\n**🌀 Registration:**\\\n<https://fienta.com/de/gathering-of-essence-fully-alive>\n\n🌺 Ready to blossom after this long winter? We are turning the mud into a lotus flower. Let’s connect to our inner sunshine and enjoy feeling fully alive in the middle of nature 🌳\n\n**🌊✨ The Flow ✨🌊**\n\n13:00 Arrival\\\n13:30 Opening Ceremony\\\n14:00 Spring Aliveness  🎉🌻\\\n16:00 Forest SPA & Soul-Food\\\n18:00 Ecstatic Dance 🔥🪩\\\n20:00 Sound Healing & Consensual Cuddle Puddle\\\n20:45 Concert Lena Younes 🎶\\\n21:30 Closing Ceremony\n\n☀️ The event takes place in our beautiful Shala & outdoors\n\n🔥 In our Forest SPA we will have a hot tub, sauna and natural pond surrounded by magical nature\n\n🥗 We offer nourishing, organic & vegan Soul-Food for sale\n\n❗️Please bring your yoga mat & two towels\n\n🐞Kids are super welcome and can come for free\n\n🌱 Please respect that Essência is a vegan, substance- and smoke-free land\n\n🛖 Coming to this gathering supports building the wooden deck of our community yurt\n\n📸 At the Gathering we take fotos & videos in a concious and sensitive way to create an aftermovie\n\n⛺️ With your camper-van, caravan or tent you can stay for 10€ overnight, use our hot shower and enjoy the energy of the land the next day \n\nWe are looking forward to celebrate our Aliveness together with you and honor the gift of being on this planet 🌍 \n\nIn Love and Joy \n\n🌳 The Essência Family 🤍"
-    },
-    {
-      "title": "Autumn Yoga Retreat",
-      "type": "retreat",
-      "start": "2026-10-30T15:00:00.000Z",
-      "end": "2026-11-04T12:00:00.000Z",
-      "cover_image": "media/events/photo_2026-03-22_22-33-22.jpg",
-      "short_description": "This is an invitation to immerse yourself in a peaceful setting and enriching functional yoga practice, connecting with your inner experience and unique anatomy. Guided by Ehud Neuhaus, it’s a chance to slow down and explore your practice in a playful, introspective way.",
-      "description": "This is an invitation to immerse yourself in a peaceful environment and a deeply enriching functional yoga practice, connecting to your inner experience and deepening your understanding of your unique anatomy. Guided by Ehud Neuhaus, it’s an opportunity to slow down and explore the subtleties of your practice in a playful and introspective way.\n\n[More information](https://yoga.ehudneuhaus.com/)",
-      "slug": "2026-10-30-autumn-yoga-retreat"
-    },
-    {
-      "short_description": "Final ecstatic dance of the season ✨ Move freely through a guided warm-up into an immersive dance journey with diverse electronic rhythms—from chill to high-energy—creating a magical space for connection, expression, and embodiment 💫",
-      "description": "ECSTATIC DANCE ALJEZUR 4/4 Last event of this season….\n\n\n\nDJ & Facilitator Pablo Gascon\n\n\n\nDate: 4/4\n\nTimes: 18h-21h\n\nWarm up: 18:15 - 19h\n\nEcstatic: 19h - 21h\n\n\n\nContributions:\n\nEarly bird 13€\n\nOn the Door 20€\n\nPay Pal option: https://www.paypal.me/yogabeatsproject\n\nBank transfer on request \n\nCash on the door or in advance \n\n\n\nLocation: Essência Nature Retreat, Aljezur \n\nhttps://maps.app.goo.gl/ArUKJT1jXY8unpFT9?g_st=ipc\n\n\n\nWarm up to slowly connect with your body! To move freely within the space!\n\n\n\nMusic styles: a variety of electronic music, slow and fast paced rhythms, chill out vibes and ecstatic energy!! A little bit for everyone to enjoy a magical experience!\n\nMore info and any request please dont hesitate to contact down below 👇🏼 \n\n\n\nInstagram @pablogasconprojects\n\nWhatsApp +46720249575 \n\nEmail: info.pablogascon@gmail.com\n\npablogascon.com",
-      "start": "2026-04-04T17:00:00.000Z",
-      "end": "2026-04-04T20:00:00.000Z",
-      "cover_image": "media/events/photo_2026-03-24_09-52-08.jpg",
-      "type": "event",
-      "title": "Ecstatic Dance Aljezur",
-      "slug": "2026-04-04-ecstatic-dance-aljezur"
-    },
-    {
-      "slug": "2026-07-17-capturing-the-soul",
-      "title": "Capturing the Soul: The Hermetic Art of Spagyrics",
-      "type": "event",
-      "start": "2026-07-17T00:00:00.000Z",
-      "end": "2026-07-21T00:00:00.000Z",
-      "cover_image": "media/events/photo_2026-07-02_08-41-31.jpg",
-      "short_description": "A 4-day immersion into the Hermetic art of Spagyrics, exploring the soul of plants through philosophy and hands-on laboratory practice. Learn essential oil distillation, aromatic waters, oleolites, and melites while discovering how plant essences become powerful tools for transformation and healing.",
-      "description": "Join us in Aljezur, Portugal, for a four-day immersion dedicated to the Soul of the plants — their anima, where the foundations of Spagyrics unfold through philosophy and practice.\n\nThis workshop offers a living introduction to the art and science of Spagyric extraction — a path that unites hands-on laboratory work with a deeper understanding of nature’s intelligence.\n\nThrough guided distillations, discussions, and reflections, we will explore how to capture the most subtle and volatile principles of life — the aromatic soul of the plants — and preserve them in forms that hold both beauty and vitality.\n\nYou will learn to work with:\n• Essential oil distillation (complete extraction)\n• Aromatic waters\n• Oleolites (oil infusions)\n• Melites (honey infusions)\n\nThis workshop serves as an introduction to Spagyric philosophy and practice, offering a tangible experience of the anima as the bridge between matter and spirit — the place where fragrance becomes medicine and transformation reveals the hidden virtues of nature.\n\n[More Information](https://stan.store/kermesspagyrics/p/capturing-the-soul-the-hermetic-art-of-spagyrics)"
-    },
-    {
-      "type": "retreat",
-      "cover_image": "media/events/photo_2026-07-02_08-41-30.jpg",
-      "short_description": "This is an invitation to immerse yourself in a peaceful environment and a deeply enriching spagyric practice, combining laboratory work, astrology, and plant medicine. It offers a direct experience of Hermetic principles and a deeper connection to nature and your inner process.",
-      "description": "Join us for a ten-day immersion in Portugal that unites **Spagyric laboratory work, astrology, and phytotherapy**, offering a direct experience of how **Hermetic principles** come alive through the healing intelligence of nature — transforming plants into medicine for **body, spirit, and soul**.\n\nThrough **philosophy, hands-on practice, storytelling, astrology, and Spagyric phytotherapy**, you will learn to capture the essence of plants and craft remedies that nurture both the physical body and the subtle dimensions of being.\n\nStep by step, you will be guided through the foundations of Spagyric practice: **distilling essential oils and aromatic waters, preparing medicinal wines, purifying salts, and reuniting body, spirit, and soul to make a Spagyric tincture.**\n\nThe study of **planetary archetypes and astrological correspondences** will deepen your understanding of timing, energetics, and balance — the scientific and philosophical foundation of the Hermetic principle *“As above, so below.”*\n\n### **What You Will Experience and Lear**n\n\n#### **Part I – Capturing the Soul**\n\n* Essential oil distillation (complete extraction)\n* Aromatic waters\n* Oleolites (oil infusions)\n* Melites (honey infusions)\n\n#### **Parts II & III – Spirit & Body**\n\n* Fermentation of the Spirit & medicinal wines\n* Crafting Spagyric tinctures and exploring their unique properties\n* Calcination & purification of salts\n* Reunification of body, spirit & soul\n* Introduction to Spagyric Quintessences and their physical and energetic effects\n\n[More Information](https://stan.store/kermesspagyrics/p/portugal)",
-      "slug": "2026-07-17-spagyric-immersion",
-      "title": "Spagyric Immersion Portugal",
-      "start": "2026-07-17T00:00:00.000Z",
-      "end": "2026-07-26T00:00:00.000Z"
-    },
-    {
-      "description": "Hello dear dance lovers welcome to\n\n✨WILD EMBRACE ✨\n\n5Rhythms & Nature Dance Retreat with \nLive Music\nAljezur Essencia - May 11 - 16\n\n5 days of workshops in studio and in nature with live music. \n\nThis retreat counts for 30 hours of Waves as prerequisites onto the 5Rhythms teacher training path.\n\n• 5RHYTHMS® movement practice\n• NATURE & OCEAN EXPLORATION\n• ECSTATIC DANCE\n• LIVE MUSIC\n• VEGAN CUISINE\n• SAUNA & LAKE\n• DIGITAL DETOX\n• ECO RETREAT CENTER\n\n\nDeepening the maps of the 5Rhythms from Gabrielle Roth: Flowing, Staccato, Chaos, Lyrical and Stillness immersed in connection with nature.  \n\n\nFacilitation by Guillaume Laplane (FR)\n\nLive music by Andréa Sampalmieri (IT) drums and Pablo Mesguen (FR) Guitare & piano. \n\n\n5 days retreat fees from 300€\n\nwww.guillaumelaplane.com\nWhatsApp +33 665 603 718\n\n******\n\nDetails\nbilletweb.fr/wild-embrace-nature-embodiment-retreat-algarve-portugal-may-11-16-2026\n\n*******\n\nOpen live session Thursday May 14th 4:30-7pm - 25€\n\nAll infos in bio and here:\n\nTelegram canal: https://t.me/+dTs48bvMGcE3NzRk\nWhatsApp: +33665604718\nWebsite: www.guillaumelaplane.com\nInsta: @guillaumelaplane",
-      "short_description": "A 5-day 5Rhythms® & nature dance retreat with live music in Aljezur. Immerse in movement, ocean explorations, and deep connection to yourself and nature. A playful, introspective journey through the 5Rhythms maps in a supportive, eco-conscious setting.",
-      "type": "retreat",
-      "title": "WILD EMBRACE",
-      "start": "2026-05-11T11:00:00.000Z",
-      "end": "2026-05-16T16:00:00.000Z",
-      "cover_image": "media/events/image15.jpeg",
-      "slug": "2026-05-11-wild-embrace"
-    },
-    {
-      "short_description": "Be welcomed to a deep, yet light-hearted space of intentional music with Australian heart-song couple Lulu & Mischka. Join their 2 hour vocal workshop to step into more freedom in your expression and voice; and be part of their heart opening evening of sacred songs to sing together as One voice.",
-      "description": "**Voice Your Freedom Workshop**\n\n*3pm - 5pm*\n\nThe workshop is an opportunity to meet your truest inner essence in a profound, intimate and safe way. A deep journey of embodiment, breath, alignment as well as full surrender, direct connection to spirit. We move, we breathe, we sing and we rest and receive. Remembering who we truly are. Simple, direct, effortless, joyous.\n\nLulu & Mischka have both worked with their voices for various decades as a tool for transformation, expression, somatic harmony, art, music and true liberation. They have worked with vocal masters from vast backgrounds such as Indian classical, western classical and opera, as well as other intuitive vocal masters. Their approach is light-hearted, yet profound; the workshop is for all who have a voice. It is for those who feel shy around their voices, as well as those who have already cultivated a lot of connection and wish to go deeper.\n\n*\\- dinner break -*\n\n**Sonic Medicine Chanting Concert**\n\n*7pm - 9.15pm*\n\nA ceremonial concert that invites all listeners to sing their hearts. Chants, mantras and prayers from around the world inspire the space to become a collective field of resonance. Gorgeous melodies blend with heart-felt lyrics and ancient languages that invoke a deep sense of unity and remembrance. Lulu & Mischka’s vocals enchant listeners around the world, their chemistry with each other and the audience brings a sense of peace and joy that is uniquely heart-opening.\n\n- - -\n\n**Kids**\\\nChildren who want to be there are welcome.\nToddlers who need to run around and play, please do so at home (this space is not a playground)\nBabies in arms are welcome as long as they flow with the energy well\n\n- - -\n\n**Get your ticket here**\\\n<https://www.eventbrite.com/e/lulu-mischka-aljezur-sonic-medicine-chanting-concert-voice-workshop-tickets-1988220001546>",
-      "start": "2026-06-10T14:00:00.000Z",
-      "cover_image": "media/events/photo_2026-05-08_16-00-36.jpg",
-      "type": "event",
-      "title": "Lulu & Mischka - Voice Workshop & Chanting Concert",
-      "slug": "2026-06-10-lulu-and-mischka-voice-workshop-and-chanting-concert",
-      "end": "2026-06-10T20:30:00.000Z"
-    },
-    {
-      "description": "Hi dear dancers!!!\n\nTikTek invite you for a special session, this time at the beautiful Forest of Essência close to Aljezur, Sunday the 17th of May.\n\nWe will start at 6 pm and the proposal is to Dance and Dance and Dance!!! We will play an Ecstatic Dance with Live Music and a lot of 🎵 Rhythm!!!\n\n Let’s get together and enjoy!!!\n\nContribution: 20 Euros\n\nJust come!!!!",
-      "start": "2026-05-17T17:00:00.000Z",
-      "end": "2026-05-17T20:00:00.000Z",
-      "cover_image": "media/events/photo_2026-05-10_20-46-13.jpg",
-      "short_description": "A special Ecstatic Dance session with live music in the beautiful forest of Essência. An evening of dance, live music, rhythm, and connection—immersing together in movement, freedom, and celebration in nature.",
-      "type": "event",
-      "title": "TikTek Ecstatic Dance",
-      "slug": "2026-05-17-tiktek-ecstatic-dance"
-    },
-    {
-      "short_description": "The Way of Freedom is an ecstatic dance journey to release, expand and return to your truth. We begin with a warm-up, move into 20 minutes of breathwork, and then enter a free-flowing dance journey guided by music.",
-      "description": "**The Way of Freedom** is an immersive ecstatic dance journey designed to help you release what no longer belongs to you, expand your energy and reconnect with your inner truth.\n\nWe will begin with a gentle warm-up to arrive in the body, soften the mind and create a safe space for movement. From there, we will move into a 20-minute breathwork session to open the breath, activate presence and prepare the body for a deeper experience.\n\nAfter the breathwork, the ecstatic dance journey begins: a DJ live set created as a musical wave, guiding you through different rhythms, emotions and states of expression. A space to move freely, let go of control, connect with your body and allow the music to lead you back to yourself.\n\nCome as you are. No experience needed. Just your body, your breath and your willingness to move.\n\n[More information](https://esmerise.com/alwarecstatic/pages/thewayoffreedom)",
-      "start": "2026-06-26T16:00:00.000Z",
-      "end": "2026-06-26T19:00:00.000Z",
-      "cover_image": "media/events/the-way-of-freedom.png",
-      "type": "event",
-      "title": "The Way of Freedom",
-      "slug": "2026-06-26-the-way-of-freedom"
-    },
-    {
-      "short_description": "An evening exploring the mystic arts of devotional dance, poetry, prayer, and live Sufi music. Through whirling, chanting, movement, and sacred practices, this gathering invites deep connection, remembrance, and ecstatic expression in a space for the modern mystic.",
-      "description": "Join us for an evening exploring the mystic arts of devotional dance,  poetry and prayers supported by live sufi music.  \n\n\nA gathering for the modern mystic to connect within, without and with others through sacred Sufi practices. \n\n\n🌹 Listen to the whispers of the divine through Whirling, chanting, dancing and praying. \n\n\nBe held in an evening of remembrance, guidance through sufi whirling and chanting with Serafina Mystix, ecstatic sufi trance dance with Taban and live music by Meir Gassenbaur & Tal Alkalay.\n\n\nTurn towards the heart, in sync with the cosmos, letting go of distractions and worldly attachments. Each rotation becoming a silent prayer, a movement towards inner stillness despite external motion. \n\n\nThrough repetition and rhythm, be moved into trance-like states that elevate consciousness. \n\n\nIn this spiritual ecstasy, the ego dissolves, and only the presence of the divine remains. \n\n\nThe whirler becomes a vessel — empty of self, full of spirit.\n\n\nSaturday 6 June  \n6-11pm  \nEssencia, Aljezur\n\n\n€25 pre-booking  \n€30 on the door\n\n\n[Booking](https://www.localista.pt/event/sufi-trance-ritual)",
-      "start": "2026-06-06T17:00:00.000Z",
-      "end": "2026-06-06T22:00:00.000Z",
-      "cover_image": "media/events/sufi-dance.png",
-      "type": "event",
-      "title": "Sufi Trance Ritual",
-      "slug": "2026-06-06-sufi-trance-ritual"
-    },
-    {
-      "booking_link": "https://fienta.com/13th-rite-of-the-munay-ki",
-      "start": "2026-08-15T09:00:00.000Z",
-      "slug": "2026-08-15-13th-rite-of-the-munay-ki",
-      "cover_image": "media/events/2.png",
-      "title": "13th Rite of the Munay-Ki",
-      "short_description": "A sacred ceremony rooted in Amazonian wisdom, dedicated to healing and harmonizing feminine energy through the 13th Rite of the Munay-Ki. This initiation invites women into a space of remembrance, connection, and empowerment, honoring the womb as a source of intuition, creativity, and life force.",
-      "type": "event",
-      "end": "2026-08-15T16:00:00.000Z",
-      "description": "### A Ceremony for the Healing of the Womb\n\nWe warmly invite you to a sacred ceremony dedicated to the healing and harmonization of feminine energy: the 13th Rite of the Munay-Ki.\n\nThis beautiful initiation, rooted in the wisdom of the Amazonian tradition, is passed from woman to woman, honoring the lineage of feminine strength and remembrance.\n\nThe womb is more than a physical space — it is a center of intuition, creativity, connection, and life force. Within it lives the ancient wisdom of the feminine. When we reconnect with this sacred space within our bodies, we reconnect with our primal source, our inner strength, and our authentic power as women.\n\nThrough this rite, we create a safe and supportive space where healing, release, and remembrance can unfold. Together, we honor our bodies, our stories, and the creative energy that flows through us.\n\nThis ceremony can be deeply moving and transformative — a gentle yet powerful invitation to come home to yourself.\n\n### Program\n\n10 am: Doors Open and arriving in the space  \n11 am: Start of the program  \n1 pm: snack/lunch break  \n2 pm: womb Ritus  \n4 pm: integration and flower ritual  \n5 pm: end of program  \n\n#### Please bring\n\nfilled water bottle, your own snack/lunch\n\n### 💴 Contribution\n\n- Early bird: € 33 until 30 July\n- Regular: €40 (until Saturday, 14 August 12 pm)\n- At the door: € 45\n\n[Get your ticket here](https://fienta.com/13th-rite-of-the-munay-ki)"
-    },
-    {
-      "booking_link": "https://fienta.com/amaru",
-      "start": "2026-08-16T09:00:00.000Z",
-      "slug": "2026-08-16-the-power-of-amaru",
-      "cover_image": "media/events/4.png",
-      "title": "The Power of Amaru",
-      "short_description": "A transformative one-day workshop inspired by Amaru, the Great Medicine Serpent of the Andean tradition. Through shamanic journeying, meditation, ritual, and ceremony, participants are invited to release old patterns, cleanse their energy, and embrace renewal, clarity, and inner strength. 🐍✨",
-      "type": "event",
-      "end": "2026-08-16T16:00:00.000Z",
-      "description": "### Shedding the Old Skin & Awakening Anew 🐍\n\nIn the ancient Andean tradition, Amaru — the Great Medicine Serpent — is a powerful guardian of transformation. Just as the serpent sheds her skin, Amaru teaches us how to release what no longer serves us and step into renewed clarity, vitality, and inner strength.\n\nI warmly invite you to a transformative one-day workshop where we will connect deeply with the spirit of Amaru and enter her field of powerful renewal.\n\n### What Awaits You\n\n#### 🐍 Shamanic Journey to the Lower World\nThrough a guided shamanic journey, you will meet Amaru and connect with her medicine. Her energy supports you in releasing old layers held within your energetic body.\n\n#### 🌘 Meditation: Identifying Your “Old Skin”\nA reflective inner process to recognize the patterns, stories, or emotional imprints you are ready to shed.\n\n#### 🔥 Amaru Ceremony – Energetic Transformation\nIn this sacred ritual, Amaru is invoked to work within the space. Participants are supported in shedding old energetic layers, creating space for new awareness and alignment.\n\n#### 🔥 Andean Fire Ritual\nA powerful offering ceremony where you symbolically and energetically surrender the old to the fire, deepening your process of transformation.\n\n#### 🌬️ Energetic Cleansing Rituals\nPurification practices to clear your energy field and prepare your body and spirit for renewal.\n\n#### 🌏 Closing Ceremony for Pachamama\nA heartfelt ritual honoring Mother Earth, grounding your experience and blessing your new beginning.\n\nThis workshop offers an immersive and profound journey of renewal — guided by the transformative spirit of Amaru.\n\nIf you feel the call of the Serpent, this is an invitation to shed the old and awaken anew. 🐍✨\n\n### Program\n10 am: Doors Open and arriving in the space  \n11 am: Start of the program  \n1 pm: snack/lunch break  \n2 pm: ritual with Amaru medicine  \n4 pm: integration and mother earth ritual  \n5pm: end of program\n\n#### Please bring\nfilled water bottle, your own snack/lunch\n\n### Contribution:\n- Early bird: € 33 until 30 July\n- Regular: € 40 (until Saturday, 14 August 12 pm)\n- At the door: € 45\n\n[Get your ticket here](https://fienta.com/amaru)"
-    },
-    {
-      "description": "🌟 UNITED WE TRIBE 🌟\n\n🔥 CACAO · SINGING CIRCLE ·  ECSTATIC DANCE · LIVE MUSIC · OPEN CIRCLE 🔥\n\nA full day immersion to open our hearts with cacao, singing, dancing, and sharing. We gather to celebrate the good, the bad, the beauty and the ugly — standing accountable to the life we are living. United as one tribe, one family, one love. We close the day by offering the circle to you: song, poetry, art, or whatever form your medicine takes.\n\n🗓 PROGRAM\n\n13:00 — Doors Open\n\n14:00 — Cacao & Singing Circle\n\n17:00 — Ecstatic Dance\n\n19:30 — Food Nourishment\n\n20:30 — Live Music\n\n21:00 — Open Circle\n\n23:00 — Closing\n\n📅 Saturday, 27 June 2026\n\n📍 Essência, Aljezur (Algarve)\n\n📍 https://maps.app.goo.gl/AvBaoYS49tXjujWVA\n\n⊹ Value\n\n\\- Early Bird — €29 (only 10 til Fri 19 Jun)\n\n\\- Regular — €36 (til Fri 26 Jun)\n\n\\- At the door — €40\n\n🍲 Food available on-site | € extra\n\ninfo → <https://fienta.com/united-we-tribe-27-june-2026>\n\nA MEDICINE LIFE <https://linktr.ee/a_medicine_life>",
-      "short_description": "A full-day immersion with cacao, singing, dancing, and heartfelt sharing. Together we celebrate life in all its colors, deepen connection and community, and create space for authentic expression through song, poetry, art, or any gift you wish to share.",
-      "cover_image": "media/events/img_20260622_220818_182.jpg",
-      "type": "event",
-      "title": "UNITED WE TRIBE",
-      "slug": "2026-06-27-united-we-tribe",
-      "start": "2026-06-27T12:00:00.000Z",
-      "end": "2026-06-27T22:00:00.000Z"
-    },
-    {
-      "start": "2026-09-26T12:00:00.000Z",
-      "organizers": [
-        {
-          "name": "Jenny",
-          "description": "Womb Yoga & Womb Healing Practicioner | Mentorin für zyklisches Leben",
-          "photo": "media/events/organizer/raumhalterinjenny_86252d1d.jpeg"
-        },
-        {
-          "name": "Jessica",
-          "description": "Light- & Shadow Worker | Spiritueller Guide | Mentorin für Persönlichkeitsentwicklung",
-          "photo": "media/events/organizer/raumhalterinjessica_ca123fc1.jpg"
-        }
-      ],
-      "info_link": "https://spirit-daughters-portugal-aljezur-2026.inti-yoga.de/",
-      "slug": "2026-09-26-spirit-daughters",
-      "cover_image": "media/events/1-1-.png",
-      "title": "SPIRIT DAUGHTERS",
-      "short_description": "6 Tage INITIATIONSREISE in die zutiefst haptische und erdige Arbeit mit dem Raum der Gebärmutter und der gelichzeitig frei, weit & lichtvollen Verbindung zu Spirit. Womb & Lightwork, Embodiment, Rituale & Frauenkreis",
-      "type": "retreat",
-      "end": "2026-10-01T18:00:00.000Z",
-      "description": "*This retreat will be held in German and therefore the following text is also in German.*\n\nSPIRIT DAUGHTERS ist eine Selbsterfahrungsreise, in der du die Anbindung an oben und unten ERLEBST und ERFÄHRST und das Vertrauen in deine (Selbst)Heilungskräfte, Wirkkraft und Verbindung zu Spirit stärkst.\n\nTief erdig, haptisch, mystisch, dunkel durch die Arbeit mit Mutter Erde, dem Raum der Gebärmutter und deiner weiblichen Spiritualität.\n\nGleichzeitig innerlich frei, weit & leicht, geführt, lichtvoll und von Klarheit durchströmt, durch die Verbundenheit mit Schöpfung und Co-Creation mit der Quelle allen Seins.\n\nDie wohl persönlichste und tiefgehendste Reise die Jessy & Jenny je gemeinsam ins Feld gelegt haben.\n\n* Rituale & Innenweltreisen: um deine Gebärmutter nicht nur als Organ, sondern als Intelligenz in dir zu fühlen \n* Selbsterfahrung: erleben und fühlen statt Wissensvermittlung\n* The Guru in You: du wirst an deine eigene Weisheit und Anbindung erinnert und nicht vom Außen „gefüttert“ \n* Frauengesundheit: Anwendungen für deine eigene Pflege oder zur Anwendung bei anderen Frauen\n* Persönlichkeitsentwicklung: mit Anteilen deiner Selbst in Kontakt treten und dich GANZ wahrnehmen\n* Kleine Gruppe (max. 14 Teilnehmerinnen)\n\n[More Information](https://spirit-daughters-portugal-aljezur-2026.inti-yoga.de/)"
-    },
-    {
-      "booking_link": "https://fienta.com/en/gathering-of-essence-funky-monkey",
-      "start": "2026-07-11T13:00:00.000Z",
-      "slug": "2026-07-11-gathering-of-essence-funky-monkey",
-      "cover_image": "media/events/img_20260706_164612_973.jpg",
-      "title": "GATHERING OF ESSENCE ~ Funky Monkey",
-      "short_description": "A playful day of movement, dance, water, and community to reconnect with your inner child and the joyful spirit of the monkey. Enjoy embodied practices, ecstatic dance, nature, sauna, and a sound journey in a heart-centered gathering for all ages. 🐒🌿💧",
-      "type": "event",
-      "end": "2026-07-11T21:00:00.000Z",
-      "description": "🐒 GATHERING OF ESSENCE ~ Funky Monkey\n\n📆 Saturday 11.7. ~ 2pm - 11.45pm\n\n📍Essência Nature Retreat (between Lagos & Aljezur) in our temple & outdoor space\n\n🪷 Contribution: 17€ early bird (until 6.7.), 22€ normal (until 10.7.), 27€ at the door \n\nBring one monkey friend for just 10€ when you buy your ticket online\n\n🌳 Registration: <https://fienta.com/en/gathering-of-essence-funky-monkey>\n\n⏳ Timetable:\n\n🌀 2:00pm - Opening Circle\n\n🦥 2:30pm - Funny & Playfull Body Practice  \n\n🌊 3:30pm - Refreshing Water Dance \n\n❄️ 5:00pm - Forest SPA: Cold Tub, Natural Pond & Iced Soulfood\n\n🐴 7:00pm - Animal Movement & Play \n\n🐵 7:30pm - Ecstatic Monkey Dance\n\n✨ 9:00pm - Sound&Touch Journey and Closing\n\n🔥 10:00pm - Late Night Sauna\n\nDear Friends, Dancers, Lightworkers, Families, Creators, Yogis & Water Beings,\n\n🌊 We, the Essência Family invite You on a whole day journey to connect to our inner children and the power of the monkey which lives within us \n\n🐒 We will celebrate our inner joy, play, dance, embody our funkiness and connect from heart to heart \n\n🌊 During this journey the waters of our Land will cool us down. So bring your swimming clothes and jump with us in our natural pond, plunge in our cold tub and taste yummy iced soul food \n\n🐒 After our monkey dance in the evening we will offer you a Sound&Touch\\~Journey and then open the doors of our Late\\~Night Sauna to integrate the experiences of the day\n\n🐞 Kids are warmly welcome. They can come for free. \n\n🛖 We use the income of the gathering to built the wooden deck of our community yurt. \n\n📷 We will take some videos during the gathering to create an aftermovie \n\n⛺️ With your tent, campervan or caravan you can stay for 10€ overnight \n\n✨ We are looking forward to welcome you and remember the joyfulness which is always available in us! \n\n🌳 The Essência Family"
-    },
-    {
-      "booking_link": "https://forms.gle/B61jzVhhF8j3MADa6",
-      "start": "2026-09-16T14:00:00.000Z",
-      "slug": "2026-09-16-re-connect-family-nature-retreat",
-      "cover_image": "media/events/img_20260717_214609_247.jpg",
-      "title": "(re)connect Family Nature Gathering",
-      "short_description": "A slow, magical space for families to ground, share & play. Kids program, yoga, adventures, cacao ceremony, sharing & singing circles, sauna, vegan meals and lots of fun.",
-      "type": "retreat",
-      "end": "2026-09-20T18:00:00.000Z",
-      "description": "In a world that moves so quickly, there is a quiet magic in coming together and reconnecting.\n\nDear Parents and Kids,\n\n🦋 We warmly invite you to become a part of our Family Nature Gathering in Essência where we live together with our children between hills, gardens and a mystical forest close to the most magnificent beaches of the Algarve, Portugal. \n\n🌻 From the 16.9.26 - 20.9.26 we come together to (re)connect to ourselves, other parents and kids, the earth and the power of the tribe.\n\n🦋 (re)connect is a space to experience the support of each other when we accompany our children on their path. It is a space where we breathe, share, care and play together.\n\n🌻 Every day we create a loving and inspiring program to feel our hearts, roots and creativity. It will be a slow and spacious flow of the day to ground and interact with the magical nature around us.\n\n🛖 Stay in one of our Glamping tents, your own Camper Van or tent or in one of our rooms in the Farmhouse.\n\n🎬️ Watch our promotion **video** on Instagram: \\\n<https://www.instagram.com/reel/DbIf9zeIAk5>\n\n### What we will offer\n\n🌳 Morning practice for parents & kids (yoga, dance, meditation…)\\\n🐞 Loving KidsSpace\\\n🌳 Creative Workshops\\\n🐞 Cacao~Ceremony\\\n🌳 Ecstatic Dance\\\n🐞 Nature & Beach Adventures\\\n🌳 Mother & Father Circles\\\n🐞 vegan community meals\\\n🌳 Sauna Afternoon\\\n🐞 Heart Sharings\n\n#### 🦥 Where\n\nEssência Nature Retreat, Aljezur, Portugal\n\n#### 💗 When\n\n16th of September - 20th of September 2026\n\n#### 💎 Arrival\n\nAirport „Faro“, Portugal -> Uber to Essência Nature Retreat.\n\n#### 🌱 Language\n\nEnglish, German \n\n### 🌀 Registration and Questions\n\n<https://forms.gle/B61jzVhhF8j3MADa6>\n\n### 🪙️ Energy Exchange\n\n#### Family Gathering Ticket:\n\n##### First 3 bookings:\n333€ per family \n\n##### After the first 3 bookings:\n444€ per family\n\n#### Accomodation:\n##### Farmhouse room depending on the size:\n354€ per family or\\\n396€ per family \n\n##### Glamping tent:\n220€ per family\n\n##### Own Camper / own tent:\n88€ per family\n\n#### Meals:\nChild <2 free\\\nChild <6 40€\\\nChild >6 80€\\\nAdult 160€\n\n- - -\n\n#### Please note\n\n*Farmhouse rooms and glamping tents are equipped with one double bed (or two single beds).\n1–2 additional mattresses (depending on room size; subject to availability) can be provided for children. Please inquire when booking.\nIf your family requires additional rooms or tents, these can be booked for an additional fee.\\\nUpon request and for an additional fee, you can also arrive earlier and depart later, allowing you to enjoy your stay at Essência a little longer.*\n\n\n#### 🪷 The Team:\n\nIn Love and Joy \n\nJohanna, Katie, Nadine, Lua, Steffen and Fox with our Kids Paul, Lilly, Mairi, Floki and Malou"
-    },
-    {
-      "booking_link": "https://tally.so/r/1ABjMM",
-      "start": "2026-09-07T14:00:00.000Z",
-      "info_link": "https://www.womensnaturalbuilding.org/essencia-sept-2026",
-      "slug": "2026-09-07-womens-natural-building",
-      "cover_image": "media/events/img_20260722_141148_303.jpg",
-      "title": "Women's Natural Building",
-      "short_description": "The Women’s Natural Building Collective and Essência are coming together. Imagine the combination of practicing aroma yoga, learning cob building, singing circles, exploring carpentry skills and Live to Love talks.",
-      "type": "retreat",
-      "end": "2026-09-14T20:00:00.000Z",
-      "description": "### 7-Day Women’s Natural Building Retreat\n\nBuild with Your Hands. Connect with Nature. Celebrate the Feminine.\n\nWe invite you to join us for a unique 7-day, women-only natural building workshop on our land in Southern Portugal.\n\nThis immersive experience, guided by the skilled builders of the Women’s Natural Building Collective (WNBC), brings together ancient building traditions and modern ecological practices. Through hands-on work, practical learning, and shared experience, you’ll gain a deeper understanding of natural building — and the confidence to put these skills into practice in your own life.\n\nAlongside the building, we create space to connect, reflect, laugh, move, rest, and celebrate the feminine in a safe, supportive, and inspiring environment.\n\n### [Register here](https://tally.so/r/1ABjMM)\n#### 👆️\n\n**About the Women’s Natural Building Collective**\n\nThe Women’s Natural Building Collective (WNBC) is a group of passionate and experienced women builders based in Southern Portugal.\n\nThey design and construct unique natural structures while empowering other women with the knowledge and practical skills to build and create homes of their own.\nThey also share a deep passion for building, a commitment to celebrating and honoring the feminine, and a strong calling to protect our planet. Through our work, we hope to contribute to a more balanced, connected, and beautiful future.\n\n**What You’ll Learn**\n\nThis hands-on workshop will focus on building a volunteer house using a variety of natural building methods and techniques.\n\nYou’ll gain practical skills, theoretical knowledge, and the confidence to carry these practices into your own projects and everyday life.\n\n**Practical Skills**\n\nDuring the workshop, you will learn about:\n\nEcological house design and implementation\nTesting clay subsoils to create the perfect earth mix\nMaking adobe bricks\nThe different stages of construction\nMixing and applying cob using a variety of techniques\nMixing and applying slip straw\nWorking safely with power tools\nBasic woodworking\nCreating artwork using glass bottles\nTheoretical Learning\n\nWe’ll also explore the principles and ideas behind natural building, including:\n\n**Ecological House Design**\n\nHow to design energy-efficient homes that respond to and work in harmony with their climate.\n\n**Natural Building Theory**\n\nHow natural building works, why different materials and techniques are used, and how to choose the right approach for a project.\n\n**Natural Building Around the World**\n\nExploring building techniques from different cultures and regions — and understanding what is being used, where, and why.\n\n**Beyond Building: Celebrating the Feminine**\n\nThis retreat is about more than learning how to build with natural materials.\n\nIt is also an opportunity to connect with ourselves and one another — to share, laugh, dance, sing, cry if we want to, and explore the many layers of who we are.\n\nWe will offer a range of optional morning and evening activities designed to support connection, presence, and joy. These may include:\n\nMovement\nWomen’s circles\nMeditation\nDance\nSinging\nTime in the sauna\n\nThere is no pressure to participate in everything. This is a space to listen to your body, follow your own rhythm, and be exactly where you are.\n\nTogether, we create a supportive space to celebrate all that we are — and all that we can become.\n\n### Accommodation\n\nChoose the way you’d most like to stay during your retreat:\n\n#### Guesthouse Room\n\nEnjoy the comfort of a private room in our guesthouse, with access to the shared facilities and communal spaces.\n\n#### Glamping Bell Tent\n\nLive a little closer to nature in one of our comfortable glamping bell tents.\n\nInside, you’ll find either a king-size or twin-bed setup, with bed frames, organic mattresses, duvets, and carpets to create a warm, homely feeling.\n\n#### Bring Your Own Tent\n\nBring your own tent and create your own little home on the land. A simple and immersive way to connect with nature while still being part of the retreat community.\n\n#### Bring Your Own Campervan\n\nIf you’re travelling with your own campervan, you’re welcome to make yourself at home on the land and enjoy the retreat from your own cosy space.\n\n- - -\n\n### Living Close to Nature\n\nA little note about the facilities: this is a natural building retreat, and our accommodation reflects that connection to the land.\n\nWe have two compost toilets on the property and outdoor showers where you can wash off the dust and refresh after a day of building.\n\nYou’ll be living simply and closely with nature — with the sounds, sights, and occasional surprises that come with being outdoors. Think fresh air, open skies, earthy feet, and a little less luxury than a hotel.\n\nIn return, you’ll have the chance to slow down, disconnect from everyday life, and experience the beauty of living more simply and in connection with the land.\n\nAnd after a hard day of building? There’s always the sauna. \n\n\n\n### [Register here](https://tally.so/r/1ABjMM)"
-    }
-  ]
+	"$schema": "./events.schema.json",
+	"events": [
+		{
+			"weekly": "every Thursday",
+			"start": "2100-01-01T18:00:00.000+00:00",
+			"slug": "sparkling-night",
+			"cover_image": "media/events/sparkling-night.jpg",
+			"title": "SPArkling Night",
+			"short_description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire",
+			"type": "event",
+			"end": "2100-01-01T22:00:00.000+00:00",
+			"description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire.  \nSubstance free, plantbased and kids friendly.\n\nBring: 2 towels, instruments and good vibes.\n\n**Contribution 20€**"
+		},
+		{
+			"start": "2025-10-26T15:00:00.000+00:00",
+			"slug": "2025-10-26-fundaments",
+			"cover_image": "media/events/photo_2025-10-21_15-14-30.jpg",
+			"title": "FUNDAMENTS",
+			"short_description": "Contemplating the Yamas in the spiritual and physical practice",
+			"type": "event",
+			"end": "2025-10-26T18:30:00.000+00:00",
+			"description": "Contemplating the Yamas in the spiritual and physical practice"
+		},
+		{
+			"start": "2025-10-25T15:00:00.000+00:00",
+			"slug": "2025-10-25-essencia-4-years-anniversary",
+			"cover_image": "media/events/photo_2025-10-11_00-24-06.jpg",
+			"title": "Essência 4 Years Anniversary",
+			"short_description": "Celebration of our Magic EcoVillage",
+			"type": "event",
+			"end": "2025-10-25T22:00:00.000+00:00",
+			"description": "Celebration of our Magic EcoVillage"
+		},
+		{
+			"start": "2025-09-27T19:00:00.000+00:00",
+			"slug": "2025-09-27-ecstatic-ways",
+			"cover_image": "media/events/photo_2025-09-08_16-16-36.jpg",
+			"title": "Ecstatic Ways",
+			"short_description": "Live music / Ecstatic dance / kundalini cacao activation",
+			"type": "event",
+			"end": "2025-08-28T00:00:00.000+00:00",
+			"description": "Live music / Ecstatic dance / kundalini cacao activation"
+		},
+		{
+			"start": "2025-08-30T18:00:00.000+00:00",
+			"slug": "2025-08-30-cacao-dance",
+			"cover_image": "media/events/photo_2025-08-17_20-14-51.jpg",
+			"title": "Cacao dance",
+			"short_description": "Ecstatic dance - Yoga meditation",
+			"type": "event",
+			"end": "2025-08-30T21:00:00.000+00:00",
+			"description": "Ecstatic dance - Yoga meditation"
+		},
+		{
+			"slug": "2025-10-27-the-art-of-touch",
+			"title": "The Art of Touch",
+			"cover_image": "media/events/photo_2025-10-21_21-15-29.jpg",
+			"short_description": "A Foundational Massage Practitioner Course",
+			"description": "## The Art Of Touch\n\nA Foundational Massage Practitioner Course\\\n27.10 – 30.10 2025\n\nWould you like to learn how to give (and receive) a heart-centred, deeply relaxing massage\\\nMaybe you’ve been feeling a certain energy in your hands and a wish to explore the field of massage and bodywork\n\nIn this 4-day training course you will learn principles and techniques that will give you the skills and confidence to give a full body relaxation massage with oil\n\nThroughout the course you'll explore both the physical as well as energetic aspects of massage therapy\\\nThe main focus is the quality of touch and the connection between giver and receiver rather than anatomy knowledge\n\n### Who is this for\n\nFor anyone who would like to explore the gifts we can bring through touch\\\nFor beginners as well as those already practicing healing arts who want to deepen understanding\n\n### Learning outcomes\n\n* Foundations to give a deeply relaxing nurturing massage with confidence\n* Techniques for a complete full body massage\n* Effects of massage therapy on body-mind and nervous system\n* Deeper connection with yourself and your body\n* Keep energy flowing without getting exhausted as a giver\n* Attunement and intuitive sensitivity\n* Attitude of loving presence\n* Connect with a small international group to continue practicing\n* Receive a video of the sequence you learn\n\n### Workshop hours\n\n* Saturday 11:00–17:30\n* Sunday 11:00–18:30\n* Monday 10:00–16:30\n* Tuesday 11:00–18:30\n\nShared vegetarian lunch each day\n\n### 3-tier pricing\n\n* 370€ low income\n* 410€ fair\n* 450€ supportive\n\nSmall group (max. 8 participants)\\\nWorkshop held in English, translations into German and Spanish possible\\\n60€ referral discount, bring a friend\\\nOne helper spot available for 275€\n\nRegistration contact as listed on the page via Telegram/WhatsApp: +351927576899\n\n### Meet the Facilitator\n\nJulia Ocean\\\nTherapeutic massage practitioner, yoga teacher and multifaceted artist\\\nPassionate about facilitating deep relaxation and nurturing and creating transformative healing experiences through loving presence and mindful touch\n\n#### Here is one of my latest reviews:\n\n> I had the wonderful opportunity to participate in Julia’s massage course, which gave me a deep and well-rounded insight into her work and teaching style. From the very beginning, the atmosphere felt incredibly warm, familiar and truly on eye-level — something I deeply value, especially as a learner.\n>\n> The course offered a beautiful balance between theory and practice. Julia was always open to questions and made sure everyone felt seen and supported. I learned so much — especially the massage basics, the do’s and don’ts — making this course perfect for anyone starting out.\n>\n> The setting was absolutely stunning and sharing our lunch breaks with potluck meals brought the group even closer together. It felt more like a shared journey than just a course. Julia is not only an amazing teacher, but also a beautiful soul. Truly a special experience that I can wholeheartedly recommend.\n>\n> Miriam",
+			"start": "2025-10-27T11:00:00.000+00:00",
+			"end": "2025-10-30T18:30:00.000+00:00",
+			"type": "event"
+		},
+		{
+			"slug": "2025-10-31-autum-yoga-retreat",
+			"title": "Autum Yoga Retreat",
+			"cover_image": "media/events/photo_2025-10-27_19-48-11.jpg",
+			"short_description": "A few immersive days of yoga, stillness and connection  Explore a functional approach to yoga, daily Yang & Yin practices, meditation and philosophy workshops",
+			"description": "## Autumn Yoga Retreat with Ehud Neuhaus\nALGARVE, PORTUGAL  \nOCTOBER 31th – NOVEMBER 5th 2025\n\nA few immersive days of yoga, stillness and connection  \nExplore a functional approach to yoga, daily Yang & Yin practices, meditation and philosophy workshops\n\n### What to expect\n- Functional approach to yoga: honor uniqueness in all aspects of practice, daily vigorous Yang movement, quiet Yin time and meditation\n- Daily practice & meditation: 2 daily classes (Yang and Yin), morning meditation, workshops on philosophy\n- Nourishment & relaxation: 3 daily plant-based meals, sauna and hot tub under the open sky\n- Workshops: two afternoons diving into yoga philosophy\n\n### The Facilitator\nEhud Neuhaus  \nPractising yoga 20+ years, teaching since 2014  \nAssisted Anat Geiger and Marcel van de Vis Heil in Functional Yoga Teacher Training since 2013  \nStudied with Paul and Suzee Grilley (Yin Yoga)  \nFounded the online platform The Fat Yogis with Anat and Marcel",
+			"start": "2025-10-31T09:00:00.000+00:00",
+			"end": "2025-11-05T18:00:00.000+00:00",
+			"type": "retreat"
+		},
+		{
+			"title": "The Course of Transformation",
+			"type": "retreat",
+			"short_description": "The Course of Transformation is a retreat in southern Portugal combining yoga, meditation, pranayama, kriya yoga, tantra and conscious living practices. Through daily structured sessions and group processes, it supports self-awareness, personal growth and inner transformation.",
+			"description": "The Course of Transformation is a retreat that combines yoga, meditation, pranayama, kriya yoga, tantra and conscious living practices. The course offers a structured program of daily practices, teachings and group processes. Its focus is on personal growth, self-awareness and inner transformation, with the intention of supporting participants in bringing these practices into their everyday lives.\n\n[More Information](https://www.thecourseoftransformation.com/)",
+			"slug": "2026-06-10-the-course-of-transformation",
+			"cover_image": "media/events/e5268e_884b65ab0a8244968ebe284a772755a0~mv2.jpg",
+			"start": "2026-06-10T00:00:00.000+01:00",
+			"end": "2026-06-20T00:00:00.000+01:00"
+		},
+		{
+			"title": "The Embodied Voice",
+			"type": "retreat",
+			"short_description": "The Embodied Voice is a practice for living more joyfully in mind and body by bringing together voice, movement, mindful awareness and improvisation. Balancing science and technique with play and creativity, it helps us tap into a voice and body that is free, expressive, vital and present.",
+			"description": "\n## SINGING INTO PRESENCE\nALGARVE, PORTUGAL  \nMAY 3–9, 2026  \nVOICE RETREAT\n\nJoin The Embodied Voice for 6 days of moving, sounding and singing, to\n- Nourish your body, mind and voice\n- Cultivate clarity and presence\n- Unlock your creativity\n- Awaken your vitality\n- Restore, rest, reflect\n- Release into flow\n\n### The Facilitators\nKate — vocal acrobat, composer and facilitator  \nCreator of The Embodied Voice©, a research, performance and teaching practice addressing presence, body-mind relationship and human rewilding through voice, movement and improvisation\n\nLiv — working with the voice as a tool for healing for 15 years across many settings  \nInspired by Hindustani singing studies and years in India  \nWeaves jazz singing, creative practice, singing therapy and yoga teaching into Voice Yoga\n\n[More Information](https://theembodiedvoice.net/offerings/singingintopresence2026)",
+			"slug": "2026-03-05-the-embodied-voice",
+			"cover_image": "media/events/151345_7f1b31960eaf4c6dba160c9157eb3471~mv2.jpg",
+			"start": "2026-05-03T00:00:00.000+01:00",
+			"end": "2026-05-09T00:00:00.000+01:00"
+		},
+		{
+			"slug": "2025-10-07-the-embodied-woman-retreat",
+			"title": "The Embodied Woman",
+			"description": "## The Embodied Woman\nAn AUTHENTIC SHAPES RETREAT  \nALGARVE, PORTUGAL  \nOCTOBER 7th – 11th 2025\n\nEmbodied wisdom begins when a woman listens to her body\n\nFive days to reconnect with your body, return to your inner truth and embody your natural feminine strength\n\nYou crave deeper intimacy and a more embodied connection with yourself and with others  \nBut the daily hustle pulls you out of your flow  \nWhen we give ourselves space to feel, we notice what’s truly going on inside  \nEmotions may surface  \nForgotten parts of ourselves may begin to speak  \nAnd in that quiet awareness, something powerful is revealed\n\nYour body holds wisdom  \nWhen we learn to truly listen, our body guides us  \nIt tells us when to rest, when to move, when to say yes and when to say no  \nThis is what it means to live in alignment — to trust the voice within instead of seeking validation from the outside  \nYou don’t need to become more or do more  \nYour strength is already within you — ready to be felt, expressed and shared\n\n### The Facilitator\nCindy de Vogel  \nMentor, trauma-informed breathwork facilitator, 1:1 coach, sacred space holder, somatic yoga teacher",
+			"type": "retreat",
+			"short_description": "Five days to reconnect with your body, return to your inner truth and embody your natural feminine strength",
+			"start": "2025-10-07T00:00:00.000+01:00",
+			"end": "2025-10-11T00:00:00.000+01:00",
+			"cover_image": "media/events/151345_37c52bf2d86a4ed1871b1aa975cea9bb~mv2.png"
+		},
+		{
+			"description": "## Harvest of the Heart\nA 5RHYTHMS HEARTBEAT RETREAT  \nALGARVE, PORTUGAL  \nSEPTEMBER 6–11, 2025\n\nStep away from the noise and into the rhythm of integration\n\nA 6-day, 5-night 5Rhythms retreat in the raw beauty of nature — where land, sea and sky invite you to dance through the change of the season, release what’s ready to go and harvest what’s truly yours\n\nThis retreat offers a chance to step away from daily routines and into a rhythm that reflects the shifting season  \nThrough 5Rhythms Waves & Heartbeat, move with cycles of fullness, release and deep integration — allowing the body to unwind, the heart to open and the mind to soften  \nMovement as a way to reclaim presence, emotional clarity and embodied freedom\n\nSet in Essência’s secluded retreat center between rolling hills and the vast ocean  \nEnjoy sauna session, refreshing dips in the wild lake, nourishing vegan meals and time to breathe in the raw beauty of the land  \nBetween sessions: walk the coastline, rest under the open sky and let nature guide you back to center\n\n### The Facilitators\nVehllia Tranne & Alessandro Moruzzi  \nCertified 5Rhythms® Teachers and founders of The City Waves 5Rhythms® (San Francisco)",
+			"slug": "2025-09-06-harvest-of-the-heart",
+			"title": "Harvest of the Heart",
+			"type": "retreat",
+			"short_description": "Step away from the noise and into the rhythm of integration",
+			"start": "2025-09-06T00:00:00.000+01:00",
+			"end": "2025-09-11T00:00:00.000+01:00",
+			"cover_image": "media/events/151345_cf173b17e2ef462fb65a741b1b8a135b~mv2.png"
+		},
+		{
+			"description": "🌟 UNITED WE TRIBE 🌟\n🔥 CACAO CEREMONY · ECSTATIC DANCE · LIVE MUSIC · OPEN STAGE 🔥\n\nJoin this special gathering to remember, release and celebrate — a journey to open our hearts with cacao, songs and shared practices of reflection, compassion, gratitude.\nMovement becomes prayer and our Ecstatic Dance a wild offering to life.\nWe nourish the body, ground with live music and open the stage for you to share your gifts, your flavour, your medicine.\n\n🗓 PROGRAM\n13:00 — Doors Open\n14:00 — Cacao Ceremony\n17:00 — Ecstatic Dance\n19:30 — Food Nourishment\n20:30 — Live Music\n21:30 — Open Stage\n00:00 — Chill & Goodbyes\n\n📅 Saturday, 7 March 2026\n📍 Essencia, Algarve\n📍 https://maps.app.goo.gl/AvBaoYS49tXjujWVA\n\n💶 Contribution\nEarly Bird — €27 (until Fri 27 Feb 12pm)  \nRegular — €33 (until Fri 6 Mar 12pm)\nAt the door -  €40\n\n🍲 Food available on-site | € extra.\n\nBUY TICKET https://fienta.com/united-we-tribe-7-mar-2026?utm_source=t\n\nA MEDICINE LIFE https://linktr.ee/a_medicine_life",
+			"start": "2026-03-07T13:00:00.000+00:00",
+			"end": "2026-03-08T00:00:00.000+00:00",
+			"title": "UNITED WE TRIBE",
+			"type": "event",
+			"short_description": "Join this special gathering to remember, release and celebrate. We open our hearts with cacao, song and shared practices of reflection, compassion and gratitude. Movement turns into prayer, Ecstatic Dance into a wild offering to life. We nourish the body, ground in live music and share our gifts.",
+			"cover_image": "media/events/photo_2026-02-15_15-28-33.jpg",
+			"slug": "2026-03-07-united-we-tribe"
+		},
+		{
+			"description": "✨ Ecstatic Dance & Cacao Gathering with Sound Healing & Breathwork \nOn the Full Worm “Blood” Moon March 3, 2026 ✨\n⏰ Time: 18:00 – 21:00\nMagic love on your way. \nGet reserve your spot  B4 it ending. \n\nSome encounters cannot be explained… they can only be felt. 💖  \nThis is one of them.\n\nLet’s come together in a circle to celebrate life, with medicine music that inspires, heals and connects us and the sacred power of cacao, opening the heart, quieting the mind, energizing the body and reminding us of who we truly are when we gather. 💞\n\nEach song is a prayer.  \nEach prayer, a portal.  \nEach one of us, guardian of the magic and the intention.  \nEach sip of cacao, a call to full presence. 🙏🏼\n\nIt is an invitation to deep listening within and to meeting the heart in a state of pure presence. 🤎🌿\n\n💚 Divinekode – Live DJ set  \n(new unreleased music)  \nOrganic Tribal Medicine Music  \n💚 Lena Younes \nClosing Circle with Sound Healing & Breathwork \n\n🌕 🗓️ Date: March 3, 2026 (Tuesday)  \n📍 Location: Essência Retreat Aljezur \n⏰ Time: 18:00 – 21:00\n💫 Contribution: Magic bird: €15 | At the door: €20  \n🔔 Limited spots!\n\n💚 17:30 Arrives \n18:00 Cacao Gathering \n18:15 Ecstatic Dance by Divinekode \n20:30 Sound Healing with Breathwork by Lena Younes \n\nEnergy Exchange Contribution Link below 👇 \nInvite link 🔗 https://t.me/+y3GPHDKs68s1N2Vk\n\nWishing you beautiful warm and radiant days ahead. With love always 🌞💫❤️",
+			"short_description": "An evening to be felt, not explained. We gather in circle with cacao, medicine music, breath and sound to open the heart and quiet the mind. Movement becomes prayer, presence becomes portal. A space to connect, release and remember who we are — together.",
+			"slug": "2026-03-03-ecstatic-ways",
+			"title": "Ecstatic Ways Full Worm “Blood” Moon ",
+			"type": "event",
+			"cover_image": "media/events/photo_2026-02-20_16-48-16.jpg",
+			"start": "2026-03-03T18:00:00.000+00:00",
+			"end": "2026-03-03T21:00:00.000+00:00"
+		},
+		{
+			"description": "HIGH ON LOVE\n“The Art of Juicy Relationship”\n\n🌹 SACRED SEXUALITY TALK 🌹\n Saturday 28th February - Aljezur\n\nWarm Welcome as You Are!\n\nThis workshop is perfect for singles, couples, men, women, non-binary. We open a space to come together to share and understand the mysterious ways of Sexuality. This talk is for you if you want to heal, evolve, deepen and unlock your multi-orgasmic superpowers. \n\nDuring this talk we will share juicy practical knowledge to create a vibrant foundation for the Sexuality of our dream.\n\nIntegrating Conscious Sexuality as your personal practice, healing art and spiritual path you will feel more vitality, connected to yourself, authentic, safe, powerful, peaceful and connected to other. You will generate lot of extra energy to uplift you, boost your creativity and your projects.\n\nYou can bring your main questions of the moment around those subjects and we will weave some propositions of answers and offer practical keys and tools for you to explore. \n\nAll excercices and demo will be with clothes during the workshop. \n\nAt 7pm we close the circle and we open the sauna and cold plunge for those who want to stay to keep sharing around the fire (sauna+soup 10€)\n\nLet's say yes to Life and open up to Bloom! 🌺\n\nSaturday 28 February\n⭐️ 10am -7pm⭐️\nIn the Shala\nEssência Nature Retreat, Aljezur\nEnergy exchange sliding scale : €33 - 44€\nOrganic vegan juice, light lunch & tea break included \n\nBook your spot for lunch preparation\n❤️ Simona +351 91 444 81 88\n\n🙏🏼 Much Love,\n\nSimona & Antoine\n\nSimona has been studying taoist tantra and accompanying women and men for 15 years. With Antoine, we walk this conscious path since 7 years and offer life+business coaching, couples coaching, meditation, yoga and tantra retreats. we serve together as doula for natural home births. Our practice has created a strong bond and lot of energy to co-found 5 projects. We are so grateful for this Knowledge we have received we are passionate to share it with everyone willing to choose Life and to open their wings !  \n\nhttps://www.livetolove.life (https://www.livetolove.life/)\ninsta: we.live.to.love (https://www.instagram.com/we.live.to.love?igsh=b3hwODZqMnc5OXpt&utm_source=qr)",
+			"cover_image": "media/events/photo_2026-02-22_16-21-58.jpg",
+			"slug": "2026-02-28-high-on-love",
+			"title": "HIGH ON LOVE - The Art of Juicy Relationship",
+			"type": "event",
+			"short_description": "A full-day immersion into conscious sexuality and authentic connection. In a safe space for singles and couples, we explore intimacy, healing and deeper relating — cultivating vitality, trust and presence and allowing love to truly bloom.",
+			"start": "2026-02-28T10:00:00.000+00:00",
+			"end": "2026-02-28T19:00:00.000+00:00"
+		},
+		{
+			"description": "Join us for a joyful celebration of colors and community @ Essência Aljezur! 🇮🇳🌹🇵🇹\n\nHoli is an Indian festival celebrated around the Full Moon before the Spring Equinox. It marks the arrival of spring and the victory of light over darkness.\n\nInspired by this ancient tradition, we gather to release the old, welcome the new and celebrate love and connection.\n\n✨ All Holi color powders are self-made, skin-friendly & fully organic! Please wear light clothes ready to get colored 🩵💜💛\n\nFlow & Timing\n3.00 Arrival, Chai & Connection\n4.00 Opening, Grounding & Intention Setting\n4.30 Krishna Kirtan & Puja\n5.30 Holi Ecstatic & Color Blessings \n6.30 Holi Fire, Integration & Closing\n\nLimited spaces available! Please secure your ticket in advance by scanning the QR code or following the link: www.anantaholistic.art/event/holi-ecstatic-celebration/\n\nCurious? Check our vibe Instagram @anantaholistic or listen to the recording on Soundcloud: https://on.soundcloud.com/gVvneEQk0zv1Sqi7Do\n\nWe are looking forward! Happy Holi!",
+			"start": "2026-03-04T15:00:00.000+00:00",
+			"end": "2026-03-04T19:00:00.000+00:00",
+			"short_description": "Join us for a joyful Holi celebration of color and community. Inspired by the ancient spring festival, we gather to release the old, welcome the new and celebrate love, light and connection. With music, ritual and vibrant organic colors, we honor renewal — and each other.",
+			"cover_image": "media/events/photo_2026-02-24_22-10-15.jpg",
+			"type": "event",
+			"title": "Holi - celebration of colors",
+			"slug": "2026-03-04-holi-celebration-of-colors"
+		},
+		{
+			"description": "Join us in the beautiful south of Portugal for a Spring Yoga retreat. Over the course of a few days, you’ll immerse yourself in the peaceful environment and the practice of Yoga, with focus on connecting to your own experience and by that, deepening your understanding of your own unique anatomy. This retreat is an opportunity to slow down, cultivate awareness and explore the subtleties of your practice.\n\n[More information](https://yoga.ehudneuhaus.com)",
+			"short_description": "Join us in the beautiful south of Portugal for a Spring Yoga retreat. Over a few days, immerse yourself in a peaceful environment and the practice of Yoga, connecting to your own experience and deepening the understanding of your unique anatomy. A chance to slow down and cultivate awareness.",
+			"cover_image": "media/events/photo_2026-03-11_11-40-47.jpg",
+			"start": "2026-03-20T15:00:00.000+00:00",
+			"end": "2026-03-25T12:00:00.000+00:00",
+			"type": "retreat",
+			"title": "Spring Yoga Retreat",
+			"slug": "2026-03-20-spring-yoga-retreat"
+		},
+		{
+			"title": "Flow State Retreat",
+			"type": "retreat",
+			"short_description": "A 5-Day Yoga & Somatics Reset for Your Body, Nervous System & Energy",
+			"description": "Picture yourself waking up with the first rays of autumn sun filtering through linen curtains and warming your skin.\n\nThe room is quiet. Outside, you hear birds singing, the kind of sound that settles your whole system before you even open your eyes.\n\nYou walk barefoot to the terrace with a warm cup of coffee or herbal tea, observing the trees and the birds in the forest that surrounds you. The morning is slow. There’s no one asking for you. No notifications. Nowhere else to be.\n\nYou begin your day with conscious movement that feels good in your body, not another task on your to-do list, but something you actually want to do.\n\nYou’ll laugh with women you met just days ago, yet somehow feel like you’ve known for years.\n\nYou’ll enjoy the warmth of Portugal’s south coast. You’ll surf, rest, journal, move and stargaze under clear October skies.\n\nYou’ll remember what it feels like to live from presence — instead of rush or pressure.\n\nThis is Flow State Retreat.\n\nAn experience designed to help your nervous system recalibrate.\nWhere movement, rest, play and connection bring you back into regulation.\n\nWhere your body feels safe enough to slow down and strong enough to expand.\n\n[More information & booking](https://www.catarinaamaralyoga.com/flowstateretreat)",
+			"slug": "2026-10-14-flow-state-retreat",
+			"cover_image": "media/events/0f847d_61ecfe8a479d4344991a25aa0728f5c3~mv2.jpg",
+			"start": "2026-10-14T16:00:00.000+01:00",
+			"end": "2026-10-18T12:00:00.000+01:00"
+		},
+		{
+			"description": "Ecstatic Dance Aljezur 14/3\n\nDJ & Facilitator Pablo Gascon\n\nDate: 14/3\n\n\n\nTimes: 17h - 20h\n\nWarm up: 17:15 - 18h\n\nEcstatic: 18h - 20h\n\n\n\nContributions:\n\nEarly bird 13€\n\nOn the Door 20€\n\n\n\nPay Pal option: https://www.paypal.me/yogabeatsproject\n\nBank transfer on request \n\nCash on the door or in advance \n\n\n\n\n\nLocation: Essência Nature Retreat, Aljezur \n\nhttps://maps.app.goo.gl/ArUKJT1jXY8unpFT9?g_st=ipc\n\n\n\nWarm up to slowly connect with your body! To move freely within the space!\n\n\n\nMusic styles: a variety of electronic music, slow and fast paced rhythms, chill out vibes and ecstatic energy!! A little bit for everyone to enjoy a magical experience!\n\n\n\nMore info and any request please dont hesitate to contact down below 👇🏼 \n\n\n\nInstagram @pablogasconprojects\n\nWhatsApp +46720249575 \n\nEmail: info.pablogascon@gmail.com\n\npablogascon.com",
+			"title": "Ecstatic Dance Aljezur",
+			"type": "event",
+			"slug": "2026-03-14-ecstatic-dance-aljezur",
+			"start": "2026-03-14T17:00:00.000+00:00",
+			"end": "2026-03-14T20:00:00.000+00:00",
+			"short_description": "Warm up to slowly connect with your body! To move freely within the space! Music styles: a variety of electronic music, slow and fast paced rhythms, chill out vibes and ecstatic energy!! A little bit for everyone to enjoy a magical experience!",
+			"cover_image": "media/events/photo_2026-03-10_10-40-29.jpg"
+		},
+		{
+			"slug": "2026-04-05-harmonium-workshop",
+			"title": "(POSTPONED) Harmonium Workshop",
+			"type": "event",
+			"description": "Harmonium - Workshop at Essência\n\n**POSTPONED. Info will follow.**\n\nHarmonium course with mantras and heart songs.\n\nA gentle space to explore sound, voice, and presence through simple melodies and repetition.\n\nBeginner-friendly and open to all levels, whether you are just starting or already familiar with the instrument. We’ll learn the basics of the Indian harmonium, dive into mantras from different traditions, and sing together.\n\nCome as you are, no perfection needed—just a willingness to listen, feel, and express. Let’s chant, connect, and create something beautiful together.\n\nBeginner:  Sunday 5th April 10am - 4pm\n\nExtension:  12th of April. 10am - 4pm\n\nWhere:  Essência Nature Retreat, Aljezur\n\nContribution: €100 / Day incl. Script & Harmonium-Rent.\n\nSign-Up & Info:  matthuji (at) icloud.com\n\nWhat to bring: Snacks for your lunch and water. Yourself ❤️\n\nThere is a selection of different Indian Harmoniums available to play during the Workshop, if you wish to buy one, i will advice you for the best choice for you.",
+			"cover_image": "media/events/photo_2026-03-19_08-48-19.jpg",
+			"start": "2026-04-05T09:00:00.000Z",
+			"end": "2026-04-05T15:00:00.000Z",
+			"short_description": "POSTPONED. Info will follow. Beginner-friendly harmonium workshop with mantras and simple songs. Explore voice, sound, and presence in a relaxed group setting. Includes basics, instruments provided, and guidance for all levels."
+		},
+		{
+			"slug": "2026-03-28-gathering-of-essence",
+			"title": "Gathering of Essence - FULLY ALIVE",
+			"type": "event",
+			"start": "2026-03-28T13:00:00.000Z",
+			"end": "2026-03-28T22:00:00.000Z",
+			"cover_image": "media/events/photo_2026-03-21_10-10-20.jpg",
+			"short_description": "A vibrant gathering to reconnect, recharge, and feel fully alive. Enjoy ceremonies, ecstatic dance, forest spa, nourishing food, sound healing, and live music—surrounded by community, magic, and the beauty of the land.",
+			"description": "**☀️ Gathering of Essênce - FULLY ALIVE ☀️**\\\n📆 Saturday 28.3. - 13:00 - 22:00\\\n📍 Essência Nature Retreat (between Aljezur and Lagos )\n\n**🪷 Contribution:** \\\nEarly Bird until 24.3. ~ 30€ \\\nFrom 25.3. & @ the door ~ 40€\n\n**🌀 Registration:**\\\n<https://fienta.com/de/gathering-of-essence-fully-alive>\n\n🌺 Ready to blossom after this long winter? We are turning the mud into a lotus flower. Let’s connect to our inner sunshine and enjoy feeling fully alive in the middle of nature 🌳\n\n**🌊✨ The Flow ✨🌊**\n\n13:00 Arrival\\\n13:30 Opening Ceremony\\\n14:00 Spring Aliveness  🎉🌻\\\n16:00 Forest SPA & Soul-Food\\\n18:00 Ecstatic Dance 🔥🪩\\\n20:00 Sound Healing & Consensual Cuddle Puddle\\\n20:45 Concert Lena Younes 🎶\\\n21:30 Closing Ceremony\n\n☀️ The event takes place in our beautiful Shala & outdoors\n\n🔥 In our Forest SPA we will have a hot tub, sauna and natural pond surrounded by magical nature\n\n🥗 We offer nourishing, organic & vegan Soul-Food for sale\n\n❗️Please bring your yoga mat & two towels\n\n🐞Kids are super welcome and can come for free\n\n🌱 Please respect that Essência is a vegan, substance- and smoke-free land\n\n🛖 Coming to this gathering supports building the wooden deck of our community yurt\n\n📸 At the Gathering we take fotos & videos in a concious and sensitive way to create an aftermovie\n\n⛺️ With your camper-van, caravan or tent you can stay for 10€ overnight, use our hot shower and enjoy the energy of the land the next day \n\nWe are looking forward to celebrate our Aliveness together with you and honor the gift of being on this planet 🌍 \n\nIn Love and Joy \n\n🌳 The Essência Family 🤍"
+		},
+		{
+			"title": "Autumn Yoga Retreat",
+			"type": "retreat",
+			"start": "2026-10-30T15:00:00.000Z",
+			"end": "2026-11-04T12:00:00.000Z",
+			"cover_image": "media/events/photo_2026-03-22_22-33-22.jpg",
+			"short_description": "This is an invitation to immerse yourself in a peaceful setting and enriching functional yoga practice, connecting with your inner experience and unique anatomy. Guided by Ehud Neuhaus, it’s a chance to slow down and explore your practice in a playful, introspective way.",
+			"description": "This is an invitation to immerse yourself in a peaceful environment and a deeply enriching functional yoga practice, connecting to your inner experience and deepening your understanding of your unique anatomy. Guided by Ehud Neuhaus, it’s an opportunity to slow down and explore the subtleties of your practice in a playful and introspective way.\n\n[More information](https://yoga.ehudneuhaus.com/)",
+			"slug": "2026-10-30-autumn-yoga-retreat"
+		},
+		{
+			"short_description": "Final ecstatic dance of the season ✨ Move freely through a guided warm-up into an immersive dance journey with diverse electronic rhythms—from chill to high-energy—creating a magical space for connection, expression, and embodiment 💫",
+			"description": "ECSTATIC DANCE ALJEZUR 4/4 Last event of this season….\n\n\n\nDJ & Facilitator Pablo Gascon\n\n\n\nDate: 4/4\n\nTimes: 18h-21h\n\nWarm up: 18:15 - 19h\n\nEcstatic: 19h - 21h\n\n\n\nContributions:\n\nEarly bird 13€\n\nOn the Door 20€\n\nPay Pal option: https://www.paypal.me/yogabeatsproject\n\nBank transfer on request \n\nCash on the door or in advance \n\n\n\nLocation: Essência Nature Retreat, Aljezur \n\nhttps://maps.app.goo.gl/ArUKJT1jXY8unpFT9?g_st=ipc\n\n\n\nWarm up to slowly connect with your body! To move freely within the space!\n\n\n\nMusic styles: a variety of electronic music, slow and fast paced rhythms, chill out vibes and ecstatic energy!! A little bit for everyone to enjoy a magical experience!\n\nMore info and any request please dont hesitate to contact down below 👇🏼 \n\n\n\nInstagram @pablogasconprojects\n\nWhatsApp +46720249575 \n\nEmail: info.pablogascon@gmail.com\n\npablogascon.com",
+			"start": "2026-04-04T17:00:00.000Z",
+			"end": "2026-04-04T20:00:00.000Z",
+			"cover_image": "media/events/photo_2026-03-24_09-52-08.jpg",
+			"type": "event",
+			"title": "Ecstatic Dance Aljezur",
+			"slug": "2026-04-04-ecstatic-dance-aljezur"
+		},
+		{
+			"slug": "2026-07-17-capturing-the-soul",
+			"title": "Capturing the Soul: The Hermetic Art of Spagyrics",
+			"type": "event",
+			"start": "2026-07-17T00:00:00.000Z",
+			"end": "2026-07-21T00:00:00.000Z",
+			"cover_image": "media/events/photo_2026-07-02_08-41-31.jpg",
+			"short_description": "A 4-day immersion into the Hermetic art of Spagyrics, exploring the soul of plants through philosophy and hands-on laboratory practice. Learn essential oil distillation, aromatic waters, oleolites, and melites while discovering how plant essences become powerful tools for transformation and healing.",
+			"description": "Join us in Aljezur, Portugal, for a four-day immersion dedicated to the Soul of the plants — their anima, where the foundations of Spagyrics unfold through philosophy and practice.\n\nThis workshop offers a living introduction to the art and science of Spagyric extraction — a path that unites hands-on laboratory work with a deeper understanding of nature’s intelligence.\n\nThrough guided distillations, discussions, and reflections, we will explore how to capture the most subtle and volatile principles of life — the aromatic soul of the plants — and preserve them in forms that hold both beauty and vitality.\n\nYou will learn to work with:\n• Essential oil distillation (complete extraction)\n• Aromatic waters\n• Oleolites (oil infusions)\n• Melites (honey infusions)\n\nThis workshop serves as an introduction to Spagyric philosophy and practice, offering a tangible experience of the anima as the bridge between matter and spirit — the place where fragrance becomes medicine and transformation reveals the hidden virtues of nature.\n\n[More Information](https://stan.store/kermesspagyrics/p/capturing-the-soul-the-hermetic-art-of-spagyrics)"
+		},
+		{
+			"type": "retreat",
+			"cover_image": "media/events/photo_2026-07-02_08-41-30.jpg",
+			"short_description": "This is an invitation to immerse yourself in a peaceful environment and a deeply enriching spagyric practice, combining laboratory work, astrology, and plant medicine. It offers a direct experience of Hermetic principles and a deeper connection to nature and your inner process.",
+			"description": "Join us for a ten-day immersion in Portugal that unites **Spagyric laboratory work, astrology, and phytotherapy**, offering a direct experience of how **Hermetic principles** come alive through the healing intelligence of nature — transforming plants into medicine for **body, spirit, and soul**.\n\nThrough **philosophy, hands-on practice, storytelling, astrology, and Spagyric phytotherapy**, you will learn to capture the essence of plants and craft remedies that nurture both the physical body and the subtle dimensions of being.\n\nStep by step, you will be guided through the foundations of Spagyric practice: **distilling essential oils and aromatic waters, preparing medicinal wines, purifying salts, and reuniting body, spirit, and soul to make a Spagyric tincture.**\n\nThe study of **planetary archetypes and astrological correspondences** will deepen your understanding of timing, energetics, and balance — the scientific and philosophical foundation of the Hermetic principle *“As above, so below.”*\n\n### **What You Will Experience and Lear**n\n\n#### **Part I – Capturing the Soul**\n\n* Essential oil distillation (complete extraction)\n* Aromatic waters\n* Oleolites (oil infusions)\n* Melites (honey infusions)\n\n#### **Parts II & III – Spirit & Body**\n\n* Fermentation of the Spirit & medicinal wines\n* Crafting Spagyric tinctures and exploring their unique properties\n* Calcination & purification of salts\n* Reunification of body, spirit & soul\n* Introduction to Spagyric Quintessences and their physical and energetic effects\n\n[More Information](https://stan.store/kermesspagyrics/p/portugal)",
+			"slug": "2026-07-17-spagyric-immersion",
+			"title": "Spagyric Immersion Portugal",
+			"start": "2026-07-17T00:00:00.000Z",
+			"end": "2026-07-26T00:00:00.000Z"
+		},
+		{
+			"description": "Hello dear dance lovers welcome to\n\n✨WILD EMBRACE ✨\n\n5Rhythms & Nature Dance Retreat with \nLive Music\nAljezur Essencia - May 11 - 16\n\n5 days of workshops in studio and in nature with live music. \n\nThis retreat counts for 30 hours of Waves as prerequisites onto the 5Rhythms teacher training path.\n\n• 5RHYTHMS® movement practice\n• NATURE & OCEAN EXPLORATION\n• ECSTATIC DANCE\n• LIVE MUSIC\n• VEGAN CUISINE\n• SAUNA & LAKE\n• DIGITAL DETOX\n• ECO RETREAT CENTER\n\n\nDeepening the maps of the 5Rhythms from Gabrielle Roth: Flowing, Staccato, Chaos, Lyrical and Stillness immersed in connection with nature.  \n\n\nFacilitation by Guillaume Laplane (FR)\n\nLive music by Andréa Sampalmieri (IT) drums and Pablo Mesguen (FR) Guitare & piano. \n\n\n5 days retreat fees from 300€\n\nwww.guillaumelaplane.com\nWhatsApp +33 665 603 718\n\n******\n\nDetails\nbilletweb.fr/wild-embrace-nature-embodiment-retreat-algarve-portugal-may-11-16-2026\n\n*******\n\nOpen live session Thursday May 14th 4:30-7pm - 25€\n\nAll infos in bio and here:\n\nTelegram canal: https://t.me/+dTs48bvMGcE3NzRk\nWhatsApp: +33665604718\nWebsite: www.guillaumelaplane.com\nInsta: @guillaumelaplane",
+			"short_description": "A 5-day 5Rhythms® & nature dance retreat with live music in Aljezur. Immerse in movement, ocean explorations, and deep connection to yourself and nature. A playful, introspective journey through the 5Rhythms maps in a supportive, eco-conscious setting.",
+			"type": "retreat",
+			"title": "WILD EMBRACE",
+			"start": "2026-05-11T11:00:00.000Z",
+			"end": "2026-05-16T16:00:00.000Z",
+			"cover_image": "media/events/image15.jpeg",
+			"slug": "2026-05-11-wild-embrace"
+		},
+		{
+			"short_description": "Be welcomed to a deep, yet light-hearted space of intentional music with Australian heart-song couple Lulu & Mischka. Join their 2 hour vocal workshop to step into more freedom in your expression and voice; and be part of their heart opening evening of sacred songs to sing together as One voice.",
+			"description": "**Voice Your Freedom Workshop**\n\n*3pm - 5pm*\n\nThe workshop is an opportunity to meet your truest inner essence in a profound, intimate and safe way. A deep journey of embodiment, breath, alignment as well as full surrender, direct connection to spirit. We move, we breathe, we sing and we rest and receive. Remembering who we truly are. Simple, direct, effortless, joyous.\n\nLulu & Mischka have both worked with their voices for various decades as a tool for transformation, expression, somatic harmony, art, music and true liberation. They have worked with vocal masters from vast backgrounds such as Indian classical, western classical and opera, as well as other intuitive vocal masters. Their approach is light-hearted, yet profound; the workshop is for all who have a voice. It is for those who feel shy around their voices, as well as those who have already cultivated a lot of connection and wish to go deeper.\n\n*\\- dinner break -*\n\n**Sonic Medicine Chanting Concert**\n\n*7pm - 9.15pm*\n\nA ceremonial concert that invites all listeners to sing their hearts. Chants, mantras and prayers from around the world inspire the space to become a collective field of resonance. Gorgeous melodies blend with heart-felt lyrics and ancient languages that invoke a deep sense of unity and remembrance. Lulu & Mischka’s vocals enchant listeners around the world, their chemistry with each other and the audience brings a sense of peace and joy that is uniquely heart-opening.\n\n- - -\n\n**Kids**\\\nChildren who want to be there are welcome.\nToddlers who need to run around and play, please do so at home (this space is not a playground)\nBabies in arms are welcome as long as they flow with the energy well\n\n- - -\n\n**Get your ticket here**\\\n<https://www.eventbrite.com/e/lulu-mischka-aljezur-sonic-medicine-chanting-concert-voice-workshop-tickets-1988220001546>",
+			"start": "2026-06-10T14:00:00.000Z",
+			"cover_image": "media/events/photo_2026-05-08_16-00-36.jpg",
+			"type": "event",
+			"title": "Lulu & Mischka - Voice Workshop & Chanting Concert",
+			"slug": "2026-06-10-lulu-and-mischka-voice-workshop-and-chanting-concert",
+			"end": "2026-06-10T20:30:00.000Z"
+		},
+		{
+			"description": "Hi dear dancers!!!\n\nTikTek invite you for a special session, this time at the beautiful Forest of Essência close to Aljezur, Sunday the 17th of May.\n\nWe will start at 6 pm and the proposal is to Dance and Dance and Dance!!! We will play an Ecstatic Dance with Live Music and a lot of 🎵 Rhythm!!!\n\n Let’s get together and enjoy!!!\n\nContribution: 20 Euros\n\nJust come!!!!",
+			"start": "2026-05-17T17:00:00.000Z",
+			"end": "2026-05-17T20:00:00.000Z",
+			"cover_image": "media/events/photo_2026-05-10_20-46-13.jpg",
+			"short_description": "A special Ecstatic Dance session with live music in the beautiful forest of Essência. An evening of dance, live music, rhythm, and connection—immersing together in movement, freedom, and celebration in nature.",
+			"type": "event",
+			"title": "TikTek Ecstatic Dance",
+			"slug": "2026-05-17-tiktek-ecstatic-dance"
+		},
+		{
+			"short_description": "The Way of Freedom is an ecstatic dance journey to release, expand and return to your truth. We begin with a warm-up, move into 20 minutes of breathwork, and then enter a free-flowing dance journey guided by music.",
+			"description": "**The Way of Freedom** is an immersive ecstatic dance journey designed to help you release what no longer belongs to you, expand your energy and reconnect with your inner truth.\n\nWe will begin with a gentle warm-up to arrive in the body, soften the mind and create a safe space for movement. From there, we will move into a 20-minute breathwork session to open the breath, activate presence and prepare the body for a deeper experience.\n\nAfter the breathwork, the ecstatic dance journey begins: a DJ live set created as a musical wave, guiding you through different rhythms, emotions and states of expression. A space to move freely, let go of control, connect with your body and allow the music to lead you back to yourself.\n\nCome as you are. No experience needed. Just your body, your breath and your willingness to move.\n\n[More information](https://esmerise.com/alwarecstatic/pages/thewayoffreedom)",
+			"start": "2026-06-26T16:00:00.000Z",
+			"end": "2026-06-26T19:00:00.000Z",
+			"cover_image": "media/events/the-way-of-freedom.png",
+			"type": "event",
+			"title": "The Way of Freedom",
+			"slug": "2026-06-26-the-way-of-freedom"
+		},
+		{
+			"short_description": "An evening exploring the mystic arts of devotional dance, poetry, prayer, and live Sufi music. Through whirling, chanting, movement, and sacred practices, this gathering invites deep connection, remembrance, and ecstatic expression in a space for the modern mystic.",
+			"description": "Join us for an evening exploring the mystic arts of devotional dance,  poetry and prayers supported by live sufi music.  \n\n\nA gathering for the modern mystic to connect within, without and with others through sacred Sufi practices. \n\n\n🌹 Listen to the whispers of the divine through Whirling, chanting, dancing and praying. \n\n\nBe held in an evening of remembrance, guidance through sufi whirling and chanting with Serafina Mystix, ecstatic sufi trance dance with Taban and live music by Meir Gassenbaur & Tal Alkalay.\n\n\nTurn towards the heart, in sync with the cosmos, letting go of distractions and worldly attachments. Each rotation becoming a silent prayer, a movement towards inner stillness despite external motion. \n\n\nThrough repetition and rhythm, be moved into trance-like states that elevate consciousness. \n\n\nIn this spiritual ecstasy, the ego dissolves, and only the presence of the divine remains. \n\n\nThe whirler becomes a vessel — empty of self, full of spirit.\n\n\nSaturday 6 June  \n6-11pm  \nEssencia, Aljezur\n\n\n€25 pre-booking  \n€30 on the door\n\n\n[Booking](https://www.localista.pt/event/sufi-trance-ritual)",
+			"start": "2026-06-06T17:00:00.000Z",
+			"end": "2026-06-06T22:00:00.000Z",
+			"cover_image": "media/events/sufi-dance.png",
+			"type": "event",
+			"title": "Sufi Trance Ritual",
+			"slug": "2026-06-06-sufi-trance-ritual"
+		},
+		{
+			"booking_link": "https://fienta.com/13th-rite-of-the-munay-ki",
+			"start": "2026-08-15T09:00:00.000Z",
+			"slug": "2026-08-15-13th-rite-of-the-munay-ki",
+			"cover_image": "media/events/2.png",
+			"title": "13th Rite of the Munay-Ki",
+			"short_description": "A sacred ceremony rooted in Amazonian wisdom, dedicated to healing and harmonizing feminine energy through the 13th Rite of the Munay-Ki. This initiation invites women into a space of remembrance, connection, and empowerment, honoring the womb as a source of intuition, creativity, and life force.",
+			"type": "event",
+			"end": "2026-08-15T16:00:00.000Z",
+			"description": "### A Ceremony for the Healing of the Womb\n\nWe warmly invite you to a sacred ceremony dedicated to the healing and harmonization of feminine energy: the 13th Rite of the Munay-Ki.\n\nThis beautiful initiation, rooted in the wisdom of the Amazonian tradition, is passed from woman to woman, honoring the lineage of feminine strength and remembrance.\n\nThe womb is more than a physical space — it is a center of intuition, creativity, connection, and life force. Within it lives the ancient wisdom of the feminine. When we reconnect with this sacred space within our bodies, we reconnect with our primal source, our inner strength, and our authentic power as women.\n\nThrough this rite, we create a safe and supportive space where healing, release, and remembrance can unfold. Together, we honor our bodies, our stories, and the creative energy that flows through us.\n\nThis ceremony can be deeply moving and transformative — a gentle yet powerful invitation to come home to yourself.\n\n### Program\n\n10 am: Doors Open and arriving in the space  \n11 am: Start of the program  \n1 pm: snack/lunch break  \n2 pm: womb Ritus  \n4 pm: integration and flower ritual  \n5 pm: end of program  \n\n#### Please bring\n\nfilled water bottle, your own snack/lunch\n\n### 💴 Contribution\n\n- Early bird: € 33 until 30 July\n- Regular: €40 (until Saturday, 14 August 12 pm)\n- At the door: € 45\n\n[Get your ticket here](https://fienta.com/13th-rite-of-the-munay-ki)"
+		},
+		{
+			"booking_link": "https://fienta.com/amaru",
+			"start": "2026-08-16T09:00:00.000Z",
+			"slug": "2026-08-16-the-power-of-amaru",
+			"cover_image": "media/events/4.png",
+			"title": "The Power of Amaru",
+			"short_description": "A transformative one-day workshop inspired by Amaru, the Great Medicine Serpent of the Andean tradition. Through shamanic journeying, meditation, ritual, and ceremony, participants are invited to release old patterns, cleanse their energy, and embrace renewal, clarity, and inner strength. 🐍✨",
+			"type": "event",
+			"end": "2026-08-16T16:00:00.000Z",
+			"description": "### Shedding the Old Skin & Awakening Anew 🐍\n\nIn the ancient Andean tradition, Amaru — the Great Medicine Serpent — is a powerful guardian of transformation. Just as the serpent sheds her skin, Amaru teaches us how to release what no longer serves us and step into renewed clarity, vitality, and inner strength.\n\nI warmly invite you to a transformative one-day workshop where we will connect deeply with the spirit of Amaru and enter her field of powerful renewal.\n\n### What Awaits You\n\n#### 🐍 Shamanic Journey to the Lower World\nThrough a guided shamanic journey, you will meet Amaru and connect with her medicine. Her energy supports you in releasing old layers held within your energetic body.\n\n#### 🌘 Meditation: Identifying Your “Old Skin”\nA reflective inner process to recognize the patterns, stories, or emotional imprints you are ready to shed.\n\n#### 🔥 Amaru Ceremony – Energetic Transformation\nIn this sacred ritual, Amaru is invoked to work within the space. Participants are supported in shedding old energetic layers, creating space for new awareness and alignment.\n\n#### 🔥 Andean Fire Ritual\nA powerful offering ceremony where you symbolically and energetically surrender the old to the fire, deepening your process of transformation.\n\n#### 🌬️ Energetic Cleansing Rituals\nPurification practices to clear your energy field and prepare your body and spirit for renewal.\n\n#### 🌏 Closing Ceremony for Pachamama\nA heartfelt ritual honoring Mother Earth, grounding your experience and blessing your new beginning.\n\nThis workshop offers an immersive and profound journey of renewal — guided by the transformative spirit of Amaru.\n\nIf you feel the call of the Serpent, this is an invitation to shed the old and awaken anew. 🐍✨\n\n### Program\n10 am: Doors Open and arriving in the space  \n11 am: Start of the program  \n1 pm: snack/lunch break  \n2 pm: ritual with Amaru medicine  \n4 pm: integration and mother earth ritual  \n5pm: end of program\n\n#### Please bring\nfilled water bottle, your own snack/lunch\n\n### Contribution:\n- Early bird: € 33 until 30 July\n- Regular: € 40 (until Saturday, 14 August 12 pm)\n- At the door: € 45\n\n[Get your ticket here](https://fienta.com/amaru)"
+		},
+		{
+			"description": "🌟 UNITED WE TRIBE 🌟\n\n🔥 CACAO · SINGING CIRCLE ·  ECSTATIC DANCE · LIVE MUSIC · OPEN CIRCLE 🔥\n\nA full day immersion to open our hearts with cacao, singing, dancing, and sharing. We gather to celebrate the good, the bad, the beauty and the ugly — standing accountable to the life we are living. United as one tribe, one family, one love. We close the day by offering the circle to you: song, poetry, art, or whatever form your medicine takes.\n\n🗓 PROGRAM\n\n13:00 — Doors Open\n\n14:00 — Cacao & Singing Circle\n\n17:00 — Ecstatic Dance\n\n19:30 — Food Nourishment\n\n20:30 — Live Music\n\n21:00 — Open Circle\n\n23:00 — Closing\n\n📅 Saturday, 27 June 2026\n\n📍 Essência, Aljezur (Algarve)\n\n📍 https://maps.app.goo.gl/AvBaoYS49tXjujWVA\n\n⊹ Value\n\n\\- Early Bird — €29 (only 10 til Fri 19 Jun)\n\n\\- Regular — €36 (til Fri 26 Jun)\n\n\\- At the door — €40\n\n🍲 Food available on-site | € extra\n\ninfo → <https://fienta.com/united-we-tribe-27-june-2026>\n\nA MEDICINE LIFE <https://linktr.ee/a_medicine_life>",
+			"short_description": "A full-day immersion with cacao, singing, dancing, and heartfelt sharing. Together we celebrate life in all its colors, deepen connection and community, and create space for authentic expression through song, poetry, art, or any gift you wish to share.",
+			"cover_image": "media/events/img_20260622_220818_182.jpg",
+			"type": "event",
+			"title": "UNITED WE TRIBE",
+			"slug": "2026-06-27-united-we-tribe",
+			"start": "2026-06-27T12:00:00.000Z",
+			"end": "2026-06-27T22:00:00.000Z"
+		},
+		{
+			"start": "2026-09-26T12:00:00.000Z",
+			"organizers": [
+				{
+					"name": "Jenny",
+					"description": "Womb Yoga & Womb Healing Practicioner | Mentorin für zyklisches Leben",
+					"photo": "media/events/organizer/raumhalterinjenny_86252d1d.jpeg"
+				},
+				{
+					"name": "Jessica",
+					"description": "Light- & Shadow Worker | Spiritueller Guide | Mentorin für Persönlichkeitsentwicklung",
+					"photo": "media/events/organizer/raumhalterinjessica_ca123fc1.jpg"
+				}
+			],
+			"info_link": "https://spirit-daughters-portugal-aljezur-2026.inti-yoga.de/",
+			"slug": "2026-09-26-spirit-daughters",
+			"cover_image": "media/events/1-1-.png",
+			"title": "SPIRIT DAUGHTERS",
+			"short_description": "6 Tage INITIATIONSREISE in die zutiefst haptische und erdige Arbeit mit dem Raum der Gebärmutter und der gelichzeitig frei, weit & lichtvollen Verbindung zu Spirit. Womb & Lightwork, Embodiment, Rituale & Frauenkreis",
+			"type": "retreat",
+			"end": "2026-10-01T18:00:00.000Z",
+			"description": "*This retreat will be held in German and therefore the following text is also in German.*\n\nSPIRIT DAUGHTERS ist eine Selbsterfahrungsreise, in der du die Anbindung an oben und unten ERLEBST und ERFÄHRST und das Vertrauen in deine (Selbst)Heilungskräfte, Wirkkraft und Verbindung zu Spirit stärkst.\n\nTief erdig, haptisch, mystisch, dunkel durch die Arbeit mit Mutter Erde, dem Raum der Gebärmutter und deiner weiblichen Spiritualität.\n\nGleichzeitig innerlich frei, weit & leicht, geführt, lichtvoll und von Klarheit durchströmt, durch die Verbundenheit mit Schöpfung und Co-Creation mit der Quelle allen Seins.\n\nDie wohl persönlichste und tiefgehendste Reise die Jessy & Jenny je gemeinsam ins Feld gelegt haben.\n\n* Rituale & Innenweltreisen: um deine Gebärmutter nicht nur als Organ, sondern als Intelligenz in dir zu fühlen \n* Selbsterfahrung: erleben und fühlen statt Wissensvermittlung\n* The Guru in You: du wirst an deine eigene Weisheit und Anbindung erinnert und nicht vom Außen „gefüttert“ \n* Frauengesundheit: Anwendungen für deine eigene Pflege oder zur Anwendung bei anderen Frauen\n* Persönlichkeitsentwicklung: mit Anteilen deiner Selbst in Kontakt treten und dich GANZ wahrnehmen\n* Kleine Gruppe (max. 14 Teilnehmerinnen)\n\n[More Information](https://spirit-daughters-portugal-aljezur-2026.inti-yoga.de/)"
+		},
+		{
+			"booking_link": "https://fienta.com/en/gathering-of-essence-funky-monkey",
+			"start": "2026-07-11T13:00:00.000Z",
+			"slug": "2026-07-11-gathering-of-essence-funky-monkey",
+			"cover_image": "media/events/img_20260706_164612_973.jpg",
+			"title": "GATHERING OF ESSENCE ~ Funky Monkey",
+			"short_description": "A playful day of movement, dance, water, and community to reconnect with your inner child and the joyful spirit of the monkey. Enjoy embodied practices, ecstatic dance, nature, sauna, and a sound journey in a heart-centered gathering for all ages. 🐒🌿💧",
+			"type": "event",
+			"end": "2026-07-11T21:00:00.000Z",
+			"description": "🐒 GATHERING OF ESSENCE ~ Funky Monkey\n\n📆 Saturday 11.7. ~ 2pm - 11.45pm\n\n📍Essência Nature Retreat (between Lagos & Aljezur) in our temple & outdoor space\n\n🪷 Contribution: 17€ early bird (until 6.7.), 22€ normal (until 10.7.), 27€ at the door \n\nBring one monkey friend for just 10€ when you buy your ticket online\n\n🌳 Registration: <https://fienta.com/en/gathering-of-essence-funky-monkey>\n\n⏳ Timetable:\n\n🌀 2:00pm - Opening Circle\n\n🦥 2:30pm - Funny & Playfull Body Practice  \n\n🌊 3:30pm - Refreshing Water Dance \n\n❄️ 5:00pm - Forest SPA: Cold Tub, Natural Pond & Iced Soulfood\n\n🐴 7:00pm - Animal Movement & Play \n\n🐵 7:30pm - Ecstatic Monkey Dance\n\n✨ 9:00pm - Sound&Touch Journey and Closing\n\n🔥 10:00pm - Late Night Sauna\n\nDear Friends, Dancers, Lightworkers, Families, Creators, Yogis & Water Beings,\n\n🌊 We, the Essência Family invite You on a whole day journey to connect to our inner children and the power of the monkey which lives within us \n\n🐒 We will celebrate our inner joy, play, dance, embody our funkiness and connect from heart to heart \n\n🌊 During this journey the waters of our Land will cool us down. So bring your swimming clothes and jump with us in our natural pond, plunge in our cold tub and taste yummy iced soul food \n\n🐒 After our monkey dance in the evening we will offer you a Sound&Touch\\~Journey and then open the doors of our Late\\~Night Sauna to integrate the experiences of the day\n\n🐞 Kids are warmly welcome. They can come for free. \n\n🛖 We use the income of the gathering to built the wooden deck of our community yurt. \n\n📷 We will take some videos during the gathering to create an aftermovie \n\n⛺️ With your tent, campervan or caravan you can stay for 10€ overnight \n\n✨ We are looking forward to welcome you and remember the joyfulness which is always available in us! \n\n🌳 The Essência Family"
+		},
+		{
+			"booking_link": "https://forms.gle/B61jzVhhF8j3MADa6",
+			"start": "2026-09-16T14:00:00.000Z",
+			"slug": "2026-09-16-re-connect-family-nature-retreat",
+			"cover_image": "media/events/img_20260717_214609_247.jpg",
+			"title": "(re)connect Family Nature Gathering",
+			"short_description": "A slow, magical space for families to ground, share & play. Kids program, yoga, adventures, cacao ceremony, sharing & singing circles, sauna, vegan meals and lots of fun.",
+			"type": "retreat",
+			"end": "2026-09-20T18:00:00.000Z",
+			"description": "In a world that moves so quickly, there is a quiet magic in coming together and reconnecting.\n\nDear Parents and Kids,\n\n🦋 We warmly invite you to become a part of our Family Nature Gathering in Essência where we live together with our children between hills, gardens and a mystical forest close to the most magnificent beaches of the Algarve, Portugal. \n\n🌻 From the 16.9.26 - 20.9.26 we come together to (re)connect to ourselves, other parents and kids, the earth and the power of the tribe.\n\n🦋 (re)connect is a space to experience the support of each other when we accompany our children on their path. It is a space where we breathe, share, care and play together.\n\n🌻 Every day we create a loving and inspiring program to feel our hearts, roots and creativity. It will be a slow and spacious flow of the day to ground and interact with the magical nature around us.\n\n🛖 Stay in one of our Glamping tents, your own Camper Van or tent or in one of our rooms in the Farmhouse.\n\n🎬️ Watch our promotion **video** on Instagram: \\\n<https://www.instagram.com/reel/DbIf9zeIAk5>\n\n### What we will offer\n\n🌳 Morning practice for parents & kids (yoga, dance, meditation…)\\\n🐞 Loving KidsSpace\\\n🌳 Creative Workshops\\\n🐞 Cacao~Ceremony\\\n🌳 Ecstatic Dance\\\n🐞 Nature & Beach Adventures\\\n🌳 Mother & Father Circles\\\n🐞 vegan community meals\\\n🌳 Sauna Afternoon\\\n🐞 Heart Sharings\n\n#### 🦥 Where\n\nEssência Nature Retreat, Aljezur, Portugal\n\n#### 💗 When\n\n16th of September - 20th of September 2026\n\n#### 💎 Arrival\n\nAirport „Faro“, Portugal -> Uber to Essência Nature Retreat.\n\n#### 🌱 Language\n\nEnglish, German \n\n### 🌀 Registration and Questions\n\n<https://forms.gle/B61jzVhhF8j3MADa6>\n\n### 🪙️ Energy Exchange\n\n#### Family Gathering Ticket:\n\n##### First 3 bookings:\n333€ per family \n\n##### After the first 3 bookings:\n444€ per family\n\n#### Accomodation:\n##### Farmhouse room depending on the size:\n354€ per family or\\\n396€ per family \n\n##### Glamping tent:\n220€ per family\n\n##### Own Camper / own tent:\n88€ per family\n\n#### Meals:\nChild <2 free\\\nChild <6 40€\\\nChild >6 80€\\\nAdult 160€\n\n- - -\n\n#### Please note\n\n*Farmhouse rooms and glamping tents are equipped with one double bed (or two single beds).\n1–2 additional mattresses (depending on room size; subject to availability) can be provided for children. Please inquire when booking.\nIf your family requires additional rooms or tents, these can be booked for an additional fee.\\\nUpon request and for an additional fee, you can also arrive earlier and depart later, allowing you to enjoy your stay at Essência a little longer.*\n\n\n#### 🪷 The Team:\n\nIn Love and Joy \n\nJohanna, Katie, Nadine, Lua, Steffen and Fox with our Kids Paul, Lilly, Mairi, Floki and Malou"
+		},
+		{
+			"booking_link": "https://tally.so/r/1ABjMM",
+			"start": "2026-09-07T14:00:00.000Z",
+			"info_link": "https://www.womensnaturalbuilding.org/essencia-sept-2026",
+			"slug": "2026-09-07-womens-natural-building",
+			"cover_image": "media/events/img_20260722_141148_303.jpg",
+			"title": "Women's Natural Building",
+			"short_description": "The Women’s Natural Building Collective and Essência are coming together. Imagine the combination of practicing aroma yoga, learning cob building, singing circles, exploring carpentry skills and Live to Love talks.",
+			"type": "retreat",
+			"end": "2026-09-14T20:00:00.000Z",
+			"description": "### 7-Day Women’s Natural Building Retreat\n\nBuild with Your Hands. Connect with Nature. Celebrate the Feminine.\n\nWe invite you to join us for a unique 7-day, women-only natural building workshop on our land in Southern Portugal.\n\nThis immersive experience, guided by the skilled builders of the Women’s Natural Building Collective (WNBC), brings together ancient building traditions and modern ecological practices. Through hands-on work, practical learning, and shared experience, you’ll gain a deeper understanding of natural building — and the confidence to put these skills into practice in your own life.\n\nAlongside the building, we create space to connect, reflect, laugh, move, rest, and celebrate the feminine in a safe, supportive, and inspiring environment.\n\n### [Register here](https://tally.so/r/1ABjMM)\n#### 👆️\n\n**About the Women’s Natural Building Collective**\n\nThe Women’s Natural Building Collective (WNBC) is a group of passionate and experienced women builders based in Southern Portugal.\n\nThey design and construct unique natural structures while empowering other women with the knowledge and practical skills to build and create homes of their own.\nThey also share a deep passion for building, a commitment to celebrating and honoring the feminine, and a strong calling to protect our planet. Through our work, we hope to contribute to a more balanced, connected, and beautiful future.\n\n**What You’ll Learn**\n\nThis hands-on workshop will focus on building a volunteer house using a variety of natural building methods and techniques.\n\nYou’ll gain practical skills, theoretical knowledge, and the confidence to carry these practices into your own projects and everyday life.\n\n**Practical Skills**\n\nDuring the workshop, you will learn about:\n\nEcological house design and implementation\nTesting clay subsoils to create the perfect earth mix\nMaking adobe bricks\nThe different stages of construction\nMixing and applying cob using a variety of techniques\nMixing and applying slip straw\nWorking safely with power tools\nBasic woodworking\nCreating artwork using glass bottles\nTheoretical Learning\n\nWe’ll also explore the principles and ideas behind natural building, including:\n\n**Ecological House Design**\n\nHow to design energy-efficient homes that respond to and work in harmony with their climate.\n\n**Natural Building Theory**\n\nHow natural building works, why different materials and techniques are used, and how to choose the right approach for a project.\n\n**Natural Building Around the World**\n\nExploring building techniques from different cultures and regions — and understanding what is being used, where, and why.\n\n**Beyond Building: Celebrating the Feminine**\n\nThis retreat is about more than learning how to build with natural materials.\n\nIt is also an opportunity to connect with ourselves and one another — to share, laugh, dance, sing, cry if we want to, and explore the many layers of who we are.\n\nWe will offer a range of optional morning and evening activities designed to support connection, presence, and joy. These may include:\n\nMovement\nWomen’s circles\nMeditation\nDance\nSinging\nTime in the sauna\n\nThere is no pressure to participate in everything. This is a space to listen to your body, follow your own rhythm, and be exactly where you are.\n\nTogether, we create a supportive space to celebrate all that we are — and all that we can become.\n\n### Accommodation\n\nChoose the way you’d most like to stay during your retreat:\n\n#### Guesthouse Room\n\nEnjoy the comfort of a private room in our guesthouse, with access to the shared facilities and communal spaces.\n\n#### Glamping Bell Tent\n\nLive a little closer to nature in one of our comfortable glamping bell tents.\n\nInside, you’ll find either a king-size or twin-bed setup, with bed frames, organic mattresses, duvets, and carpets to create a warm, homely feeling.\n\n#### Bring Your Own Tent\n\nBring your own tent and create your own little home on the land. A simple and immersive way to connect with nature while still being part of the retreat community.\n\n#### Bring Your Own Campervan\n\nIf you’re travelling with your own campervan, you’re welcome to make yourself at home on the land and enjoy the retreat from your own cosy space.\n\n- - -\n\n### Living Close to Nature\n\nA little note about the facilities: this is a natural building retreat, and our accommodation reflects that connection to the land.\n\nWe have two compost toilets on the property and outdoor showers where you can wash off the dust and refresh after a day of building.\n\nYou’ll be living simply and closely with nature — with the sounds, sights, and occasional surprises that come with being outdoors. Think fresh air, open skies, earthy feet, and a little less luxury than a hotel.\n\nIn return, you’ll have the chance to slow down, disconnect from everyday life, and experience the beauty of living more simply and in connection with the land.\n\nAnd after a hard day of building? There’s always the sauna. \n\n\n\n### [Register here](https://tally.so/r/1ABjMM)"
+		}
+	]
 }

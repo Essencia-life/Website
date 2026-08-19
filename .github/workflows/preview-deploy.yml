@@ -11,7 +11,7 @@ jobs:
   set-preview-status:
     runs-on: ubuntu-latest
     if: github.event.deployment_status.state == 'success' &&
-        github.event.deployment.environment == 'preview'
+      github.event.deployment.environment == 'preview'
     steps:
       - name: Set Commit Status for Decap
         uses: actions/github-script@v7

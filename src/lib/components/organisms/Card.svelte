@@ -1,22 +1,22 @@
 <script lang="ts">
-	import { Media } from "$lib/services/Media";
-	import type { Snippet } from "svelte";
+	import { Media } from '$lib/services/Media';
+	import type { Snippet } from 'svelte';
 
-    interface Props {
-        image?: string;
-        children: Snippet;
-    }
+	interface Props {
+		image?: string;
+		children: Snippet;
+	}
 
-    const {image, children}: Props = $props();
+	const { image, children }: Props = $props();
 </script>
 
-<article class="flex flex-col border border-(--brand-border-color) rounded-lg overflow-hidden">
-    {#if image}
-        <enhanced:img src={Media.getFile(image)} />
-    {/if}
-    <div class="p-4 flex-1">
-        {@render children()}
-    </div>
+<article class="flex flex-col overflow-hidden rounded-lg border border-(--brand-border-color)">
+	{#if image}
+		<enhanced:img src={Media.getFile(image)} />
+	{/if}
+	<div class="flex-1 p-4">
+		{@render children()}
+	</div>
 </article>
 
 <style>

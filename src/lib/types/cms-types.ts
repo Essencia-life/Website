@@ -51,10 +51,10 @@ export type InferFieldType<F> = F extends {
 /**
  * Helper: Extract a specific field from array by name
  */
-type ExtractFieldByName<Fields extends readonly any[], Name extends string> = Fields extends readonly [
-	infer Head,
-	...infer Tail,
-]
+type ExtractFieldByName<
+	Fields extends readonly any[],
+	Name extends string
+> = Fields extends readonly [infer Head, ...infer Tail]
 	? Head extends { name: Name }
 		? Head
 		: ExtractFieldByName<Tail, Name>
@@ -77,9 +77,7 @@ type FieldNames<Fields extends readonly any[]> = Fields extends readonly (infer 
 export type InferFieldsObject<Fields extends readonly any[]> = {
 	[K in FieldNames<Fields> as ExtractFieldByName<Fields, K & string> extends { required: false }
 		? never
-		: K]: ExtractFieldByName<Fields, K & string> extends infer F
-		? InferFieldType<F>
-		: never;
+		: K]: ExtractFieldByName<Fields, K & string> extends infer F ? InferFieldType<F> : never;
 } & {
 	[K in FieldNames<Fields> as ExtractFieldByName<Fields, K & string> extends { required: false }
 		? K
@@ -101,7 +99,10 @@ export type InferCollectionType<Config> = Config extends { fields: infer F }
 /**
  * Helper: Filter out hidden 'type' fields from array
  */
-type FilterTypeField<Fields extends readonly any[]> = Fields extends readonly [infer Head, ...infer Tail]
+type FilterTypeField<Fields extends readonly any[]> = Fields extends readonly [
+	infer Head,
+	...infer Tail
+]
 	? Head extends { name: 'type'; widget: 'hidden' }
 		? FilterTypeField<Tail>
 		: readonly [Head, ...FilterTypeField<Tail>]
@@ -110,7 +111,10 @@ type FilterTypeField<Fields extends readonly any[]> = Fields extends readonly [i
 /**
  * Helper: Extract the type value from hidden 'type' field's default property
  */
-type ExtractTypeValue<Fields extends readonly any[]> = Fields extends readonly [infer Head, ...infer Tail]
+type ExtractTypeValue<Fields extends readonly any[]> = Fields extends readonly [
+	infer Head,
+	...infer Tail
+]
 	? Head extends { name: 'type'; widget: 'hidden'; default: infer D }
 		? D
 		: ExtractTypeValue<Tail>
@@ -149,9 +153,7 @@ export type InferFromFields<F extends readonly any[]> = {
  * Alternative: Use this if your Field arrays aren't strictly typed
  * This version is more lenient with type inference
  */
-export type InferFieldsObjectLenient<
-	Fields extends readonly any[] = readonly Field[],
-> = {
+export type InferFieldsObjectLenient<Fields extends readonly any[] = readonly Field[]> = {
 	[K in Fields extends readonly (infer F)[]
 		? F extends { name: infer N }
 			? N

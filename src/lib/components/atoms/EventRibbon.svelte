@@ -29,20 +29,20 @@
 		}
 	});
 
-    function isTonight(target: Date) {
-        return isToday(target) && target.getHours() >= 18;
-    }
+	function isTonight(target: Date) {
+		return isToday(target) && target.getHours() >= 18;
+	}
 
-    function isToday(target: Date) {
-        return target.toDateString() === new Date().toDateString();
-    }
+	function isToday(target: Date) {
+		return target.toDateString() === new Date().toDateString();
+	}
 
-    function isTomorrow(target: Date) {
-        const tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
+	function isTomorrow(target: Date) {
+		const tomorrow = new Date();
+		tomorrow.setDate(tomorrow.getDate() + 1);
 
-        return target.toDateString() === tomorrow.toDateString();
-    }
+		return target.toDateString() === tomorrow.toDateString();
+	}
 
 	function isNextWeek(target: Date) {
 		const today = new Date();
@@ -66,7 +66,7 @@
 	<div class="relative overflow-hidden">
 		{@render children()}
 		<div
-			class="absolute top-0 left-0 -rotate-45 bg-amber-400 text-amber-900 px-6 py-1 text-center text-xs font-bold shadow-md"
+			class="absolute top-0 left-0 -rotate-45 bg-amber-400 px-6 py-1 text-center text-xs font-bold text-amber-900 shadow-md"
 			style="transform-origin: bottom right; translate: -30% -100%"
 		>
 			{text}

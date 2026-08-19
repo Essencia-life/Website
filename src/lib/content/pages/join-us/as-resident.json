@@ -1,0 +1,163 @@
+{
+	"meta": {
+		"parent": "join-us",
+		"title": "Join us as Resident",
+		"description": "Join us as Resident",
+		"cover": ""
+	},
+	"sections": [
+		{
+			"type": "hero",
+			"headline": "This is a place to put down roots.",
+			"supline": "Residency at Essência",
+			"content": "*Not just a home — a commitment to land, community, and a way of life.*",
+			"button": {
+				"label": "Get in touch",
+				"link": "#apply"
+			}
+		},
+		{
+			"type": "default-section",
+			"supline": "What Residency Means",
+			"headline": "More than a place to live",
+			"content": "Becoming a resident at Essência means becoming a member of the cooperative — an important co-steward of the land. You're not renting; you're joining a living project, with real ownership, shared governance, and legal agreements that protect you and the community alike.\n\nThis is a commitment to self-reflection, self-discovery, healing and growing proactively. Residents can be full-time or part-time depending on their life situation — you can build your own home here, raise your children, grow a business, or keep work outside, as long as you show up for the community and your commitments. Every resident contributes a few hours a week to shared life; families and our ecovillage's maintenance needs are supported with flexibility.\n\nThis is a long-term commitment — and it can also end. If the time comes to move on, the cooperative structure ensures a fair, legally supported exit process.",
+			"widget": [
+				{
+					"type": "youtube-video",
+					"id": "Ow-X1jZLZ64",
+					"title": "Video about Essência on Youtube"
+				}
+			]
+		},
+		{
+			"type": "default-section",
+			"supline": "What We Ask",
+			"headline": "Who thrives here",
+			"content": "Essência is not for everyone — and that's by design. The people who thrive here are ready to live by shared values, contribute to shared life, and do the inner work that community living asks of you: physically, emotionally, mentally, energetically, and spiritually.",
+			"widget": [
+				{
+					"type": "card-grid",
+					"cards": [
+						{
+							"content": "#### Live the values\n\nHonest communication, non-harm, radical ownership, the heart path — not as rules, but as a daily practice."
+						},
+						{
+							"content": "#### Show up for community\n\nA few hours of shared work each week — tending the land, cooking, building, holding space. Families are supported with flexibility."
+						},
+						{
+							"content": "#### Full-time or part-time\n\nResidency adapts to your life. Keep a job, build a business, travel — as long as you remain connected and committed."
+						},
+						{
+							"content": "#### Long-term intention\n\nWe're building something for generations. We look for people ready to invest in a place, not just pass through it."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "default-section",
+			"supline": "Daily Life",
+			"headline": "What life looks like here",
+			"content": "",
+			"textCenter": true,
+			"widget": [
+				{
+					"type": "gallery-grid",
+					"pictures": [
+						{
+							"image": "media/community-morning-practice.jpg",
+							"caption": "Morning practices — stillness, breathwork, conscious movement"
+						},
+						{
+							"image": "media/resident.jpg",
+							"caption": "Nourishing food, shared at the table"
+						},
+						{
+							"image": "media/3910838682479597506.jpg",
+							"caption": "Build your own home on the land"
+						},
+						{
+							"image": "media/inner-work.jpg",
+							"caption": "Heal, grow, and evolve together"
+						},
+						{
+							"image": "media/151345_e6a25dbd04ec4903bebb0b4326a3c446~mv2.jpg",
+							"caption": "Nature, open skies, and slow living"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "default-section",
+			"supline": "Our Values",
+			"headline": "The foundations we live by",
+			"textCenter": true,
+			"bgSecondary": true,
+			"content": "Inner work & self—awareness\n — Honesty\n — Radical ownership\n — Love & compassion\n — Forgiveness\n — Benevolent communication\n — High on life\n — Ahimsa\n — Service & purpose\n — Ecological stewardship\n — Shared governance",
+			"widget": []
+		},
+		{
+			"type": "residency-costs",
+			"costs": [
+				{
+					"number": 75000,
+					"label": "loan to the coop · single"
+				},
+				{
+					"number": 111000,
+					"label": "for couples & families"
+				},
+				{
+					"number": 222,
+					"suffix": "/mo",
+					"label": "contribution, per adult"
+				}
+			],
+			"content": "Reimbursed within 1 year of your request, after a minimum 3-year hold. The full budget is reviewed and adopted together each year at General Assembly.\n\n---\n\nYou choose the structure you build — yurt, tiny house, tent, dome, or clay house — in coordination with the cooperative's guidelines, and may rent it out when you're away. Full financial details and legal documents are shared once we've had a first conversation and confirmed mutual interest."
+		},
+		{
+			"type": "default-section",
+			"id": "apply",
+			"supline": "The Practical Path",
+			"headline": "How it works",
+			"content": "",
+			"widget": [
+				{
+					"type": "steps",
+					"steps": [
+						{
+							"title": "Reach out",
+							"description": "Write to us. We'll send an application form and, if it's a fit, schedule a short intro call."
+						},
+						{
+							"title": "Visit the land",
+							"description": "Come and feel it — as a guest or volunteer. At least 3 weeks recommended; most take 3 months to decide."
+						},
+						{
+							"title": "Letter of intent",
+							"description": "If it feels right on both sides, we begin the formal process together."
+						},
+						{
+							"title": "Welcome home",
+							"description": "Sign, join the cooperative, and start building your life here."
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "default-section",
+			"headline": "Start the conversation",
+			"content": "No commitment, no pressure — just a first hello. We read every message personally.",
+			"textCenter": true,
+			"widget": [
+				{
+					"type": "tally-form",
+					"id": "J9E8Or",
+					"title": "Residency Application Form"
+				}
+			]
+		}
+	]
+}

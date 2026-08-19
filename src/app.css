@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'Alegreya';
 	src:
-			url('/fonts/Alegreya.woff2') format('woff2'),
-			url('/fonts/Alegreya.woff') format('woff');
+		url('/fonts/Alegreya.woff2') format('woff2'),
+		url('/fonts/Alegreya.woff') format('woff');
 	font-weight: 400 600;
 	font-style: normal;
 	font-display: swap;
@@ -69,7 +69,8 @@ body {
 }
 
 @supports (height: 100dvh) {
-	html, body {
+	html,
+	body {
 		height: 100dvh;
 	}
 }
@@ -120,11 +121,12 @@ hr {
 	margin-block: 2.5rem;
 }
 
-p {
+/* FIXME restore margins with utility classes everywhere */
+/* p {
 	margin-top: 0;
 	margin-bottom: 0.75rem;
 	line-height: 1.5;
-}
+} */
 
 /* FIXME restore margins with utility classes everywhere */
 /*ul > li {*/
@@ -248,6 +250,6 @@ a[href^='mailto:']:not(.no-link, .button, .icon)::before {
 	}
 
 	a:not(.no-link, .button):hover {
-		opacity: .8;
+		opacity: 0.8;
 	}
 }

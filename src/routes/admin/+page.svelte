@@ -31,15 +31,10 @@
 					}
 				},
 				editor: {
-					preview: false,
+					preview: false
 				},
-                singletons: [
-					headerCmsConfig,
-					footerCmsConfig,
-				],
-				collections: [
-					pageCollection,
-				]
+				singletons: [headerCmsConfig, footerCmsConfig],
+				collections: [pageCollection]
 			}
 		});
 	});

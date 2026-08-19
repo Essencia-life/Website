@@ -1,42 +1,42 @@
 {
-  "navigation": [
-    {
-      "label": "Eco Village",
-      "link": "/eco-village"
-    },
-    {
-      "label": "Stay",
-      "link": "/#stay"
-    },
-    {
-      "label": "Heal",
-      "link": "/healing-center"
-    },
-    {
-      "label": "Events",
-      "link": "/events"
-    },
-    {
-      "label": "Retreats",
-      "link": "/retreats"
-    },
-    {
-      "label": "KidsTemple",
-      "link": "/eco-village/kids-temple"
-    },
-    {
-      "label": "Join us",
-      "link": "/join-us",
-      "children": [
-        {
-          "label": "Volunteer with us",
-          "link": "/join-us/as-volunteer"
-        },
-        {
-          "label": "Explore residency",
-          "link": "/join-us/as-resident"
-        }
-      ]
-    }
-  ]
+	"navigation": [
+		{
+			"label": "Eco Village",
+			"link": "/eco-village"
+		},
+		{
+			"label": "Stay",
+			"link": "/#stay"
+		},
+		{
+			"label": "Heal",
+			"link": "/healing-center"
+		},
+		{
+			"label": "Events",
+			"link": "/events"
+		},
+		{
+			"label": "Retreats",
+			"link": "/retreats"
+		},
+		{
+			"label": "KidsTemple",
+			"link": "/eco-village/kids-temple"
+		},
+		{
+			"label": "Join us",
+			"link": "/join-us",
+			"children": [
+				{
+					"label": "Volunteer with us",
+					"link": "/join-us/as-volunteer"
+				},
+				{
+					"label": "Explore residency",
+					"link": "/join-us/as-resident"
+				}
+			]
+		}
+	]
 }
