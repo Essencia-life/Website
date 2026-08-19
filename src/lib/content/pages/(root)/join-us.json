@@ -1,0 +1,55 @@
+{
+	"meta": {
+		"parent": "(root)",
+		"title": "Join Us",
+		"description": "There are many ways to belong to Essência. Whether you're ready to put down roots, offer your hands for a season, or simply support what's growing here — there's a place for you.",
+		"cover": ""
+	},
+	"sections": [
+		{
+			"type": "default-section",
+			"headline": "You are welcome here",
+			"content": "*This is more than an invitation — it's a calling*\n\nThere are many ways to belong to Essência. Whether you're ready to put down roots, offer your hands for a season, or simply support what's growing here — there's a place for you.",
+			"textCenter": true,
+			"widget": []
+		},
+		{
+			"type": "join-us-columns",
+			"columns": [
+				{
+					"image": "media/resident.jpg",
+					"supline": "Put down roots",
+					"headline": "Become a Resident",
+					"description": "Live on the land, share meals, and co-create a way of life that is regenerative and deeply alive. Residency is a commitment — to the community, and to your own becoming. Available full-time or part-time, depending on where you are in life.",
+					"tags": "Heal & grow — Morning practices — Community — Build your home — Life in nature",
+					"button": {
+						"label": "Explore residency",
+						"link": "/join-us/as-resident"
+					}
+				},
+				{
+					"image": "media/volunteer.jpg",
+					"supline": "Offer your gifts",
+					"headline": "Volunteer with Us",
+					"description": "Join us for a season of meaningful work. Choose one area or immerse in all. In return, receive nourishment, a place to rest, and space to heal and grow.",
+					"tags": "Heal & grow — Morning practices — Community — Land & garden — Building — Cooking — Spaces & accommodations",
+					"button": {
+						"label": "Bring in your gifts",
+						"link": "/join-us/as-volunteer"
+					}
+				},
+				{
+					"image": "media/friend.jpg",
+					"supline": "Support what grows",
+					"headline": "Become a Friend",
+					"description": "Believe in what we're building? Support Essência and receive gifts from the land — from a tree planted in your name to a weekend in our glamping. A way to belong, wherever you are.",
+					"tags": "Heal & grow — Morning practices — Community — Gifts from the land — Retreat access — Glamping stays",
+					"button": {
+						"label": "Support the dream",
+						"link": "/contact?topic=invest#form"
+					}
+				}
+			]
+		}
+	]
+}

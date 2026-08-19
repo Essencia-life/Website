@@ -2,6 +2,7 @@
 title: Self Discovery Journeys
 description: Self Discovery Journeys Explore, Learn, Heal, Grow, Blossom
 ---
+
 ## Self Discovery Journeys
 
 #### Explore, Learn, Heal, Grow, Blossom…
@@ -13,14 +14,14 @@ description: Self Discovery Journeys Explore, Learn, Heal, Grow, Blossom
 
 ### All our programs include
 
-* Morning Meditation, Breathwork, QiGong & Yoga
-* Regular chanting and dancing
-* Your personal Human Design reading
-* Enjoy our wild beaches
-* Borrow our kayak, paddle, surf and bodyboards
-* Regular sauna at sunset
-* Swim in our natural pond and melt in a warm jacuzzi at night under the stars
-* Possibility to contribute to the community life with permaculture gardening and eco construction activities
+- Morning Meditation, Breathwork, QiGong & Yoga
+- Regular chanting and dancing
+- Your personal Human Design reading
+- Enjoy our wild beaches
+- Borrow our kayak, paddle, surf and bodyboards
+- Regular sauna at sunset
+- Swim in our natural pond and melt in a warm jacuzzi at night under the stars
+- Possibility to contribute to the community life with permaculture gardening and eco construction activities
 
 For more information and to book your journey: contact Simona (+351 914 448 188) on WhatsApp or Telegram
 
@@ -29,6 +30,7 @@ For more information and to book your journey: contact Simona (+351 914 448 188)
 <ImageAndContent image="media/c97792_b4f5e3d471c74bd4a1c402214693a8c2~mv2.jpeg" alt="Sunset in Essência">
 
 #### Rest, Detox & Regenerate
+
 A body cleanse & nutrition upgrade  
 A rejuvenating multi-dimensional cure for body, mind and spirit
 
@@ -37,25 +39,27 @@ A rejuvenating multi-dimensional cure for body, mind and spirit
 - 1 polarity therapy 2h session
 - 1 bodywork or massage (various choice)
 
-444€ per week  
+444€ per week
 
 </ImageAndContent>
 
 <ImageAndContent image="media/1909d5_9e82de9c58ca46f19ec6e211343d4228~mv2.jpg" alt="Sunset at the beach" lgRight>
 
 #### Pranic Lifestyle Initiation
+
 Experiment the bliss of living on light  
 Daily pranic lifestyle tools and breathwork initiations
 
 - 3 sessions per week of polarity bodywork or sacred sexuality coaching or massage
 
-€1777 for 4 weeks  
+€1777 for 4 weeks
 
 </ImageAndContent>
 
 <ImageAndContent image="media/c97792_82012477755343bb9b9dbf509ceac5a5~mv2.jpg" alt="Couple at the beach">
 
 #### Tantric Couple
+
 Deep connection on all levels with your partner  
 A fresh start for your old or new couple for a nourishing and multi-orgasmic life
 
@@ -71,23 +75,26 @@ A fresh start for your old or new couple for a nourishing and multi-orgasmic lif
 <ImageAndContent image="media/c97792_c4f6518296fc4953ab566072e2e4d3ff~mv2.jpg" alt="Cheering person at the ocean" lgRight>
 
 #### Free from Addictions
+
 Let go of unnecessary harming habits with a loving supportive team and activities in nature  
 Feel great, feel free
 
 18 sessions over 4 weeks
+
 - Life coaching
 - Sport or nutritional coaching
 - Breathwork
 - Energy healing or bodywork
 - Massage per day specifically adapted to your needs
 
-€1888  
+€1888
 
 </ImageAndContent>
 
 <ImageAndContent image="media/6fc3d610a075447594656284fb02bf06.jpg" alt="Woman in the wheat fields">
 
 #### Women Healing Temple
+
 Open your wings and heart to be the authentic and powerful woman that you are
 
 - 3 sessions of polarity bodywork
@@ -95,13 +102,14 @@ Open your wings and heart to be the authentic and powerful woman that you are
 - 1 Art of Self-Love session
 - 2 personal project coaching
 
-€888 for 2 weeks  
+€888 for 2 weeks
 
 </ImageAndContent>
 
 <ImageAndContent image="media/11062b_ef0c7c9359e1400982c88b686d051943~mv2.jpg" alt="Person on a computer" lgRight>
 
 #### Conscious Entrepreneur
+
 An inspiring place to give birth to your idea, book, website, business plan or positive impact project
 
 - Daily morning practices
@@ -116,6 +124,7 @@ An inspiring place to give birth to your idea, book, website, business plan or p
 <ImageAndContent image="media/nsplsh_5f41535459624343413167~mv2_d_3818_2546_s_4_2.jpg" alt="Plants at a farm">
 
 #### Fun Permaculture HolyDays
+
 Spend holidays in a meaningful way  
 Deepen your connection with nature, yourself and your family through permaculture gardening, eco-constructions, fun outdoor sports and practices such as meditation, yoga, singing, dance and art
 

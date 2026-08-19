@@ -1,4 +1,4 @@
-import { Pages } from '$lib/services/Pages';
+import { LegacyPages } from '$lib/services/LegacyPages';
 import { VERCEL_PROJECT_PRODUCTION_URL, VERCEL_ENV } from '$env/static/private';
 
 export interface Metadata {
@@ -12,7 +12,7 @@ export async function load({ url, request }) {
 	return {
 		VERCEL_PROJECT_PRODUCTION_URL,
 		VERCEL_ENV,
-		metadata: Pages.getPageMetadata(url.pathname),
+		metadata: LegacyPages.getPageMetadata(url.pathname),
 		saveData: saveDataHeader === 'on'
 	};
 }

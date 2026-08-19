@@ -1,12 +1,28 @@
 import type { RequestHandler } from './$types';
 import { env } from '$env/dynamic/private';
-import { supportedProviders, escapeRegExp, outputHTML, getProviderCredentials, type Provider } from '$lib/server/cms-auth-utils';
+import {
+	supportedProviders,
+	escapeRegExp,
+	outputHTML,
+	getProviderCredentials,
+	type Provider
+} from '$lib/server/cms-auth-utils';
 
-const buildAuthURL = (provider: Provider, origin: string, csrfToken: string): { url?: string; error?: Response } => {
+const buildAuthURL = (
+	provider: Provider,
+	origin: string,
+	csrfToken: string
+): { url?: string; error?: Response } => {
 	const { clientId, hostname } = getProviderCredentials(provider);
 
 	if (!clientId) {
-		return { error: outputHTML({ provider, error: 'OAuth app client ID or secret is not configured.', errorCode: 'MISCONFIGURED_CLIENT' }) };
+		return {
+			error: outputHTML({
+				provider,
+				error: 'OAuth app client ID or secret is not configured.',
+				errorCode: 'MISCONFIGURED_CLIENT'
+			})
+		};
 	}
 
 	if (provider === 'github') {
@@ -29,7 +45,9 @@ const buildAuthURL = (provider: Provider, origin: string, csrfToken: string): { 
 		return { url: `https://${hostname}/oauth/authorize?${params.toString()}` };
 	}
 
-	return { error: outputHTML({ provider, error: 'Unknown provider', errorCode: 'UNKNOWN_PROVIDER' }) };
+	return {
+		error: outputHTML({ provider, error: 'Unknown provider', errorCode: 'UNKNOWN_PROVIDER' })
+	};
 };
 
 export const GET: RequestHandler = async ({ request: { url } }) => {

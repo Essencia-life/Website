@@ -13,6 +13,7 @@ These spaces are practical, embodied and grounded. They invite movement, learnin
 </ImageAndContent>
 
 ### Upcoming Events
+
 <EventCalendar type="event" filter="upcoming" />
 
 ### Host your event at Essência
@@ -23,10 +24,12 @@ We open our space to your events and workshops.
 If your concept resonates with what we do, feel free to reach out.
 
 #### Easy friendly low risk conditions
+
 - 50€ to book the date
 - 30% share of your income
 
 #### Discount on accommodation
+
 - 50% off a room price for the night before and after the event for the organisers
 - 30% off for the participants
 
@@ -35,4 +38,5 @@ If your concept resonates with what we do, feel free to reach out.
 </ImageAndContent>
 
 ### Past Events
+
 <EventCalendar type="event" filter="past" />

@@ -1,11 +1,26 @@
 import type { RequestHandler } from '../$types';
-import { supportedProviders, outputHTML, getProviderCredentials, type Provider } from '$lib/server/cms-auth-utils';
+import {
+	supportedProviders,
+	outputHTML,
+	getProviderCredentials,
+	type Provider
+} from '$lib/server/cms-auth-utils';
 
-const buildTokenRequest = (provider: Provider, code: string, origin: string): { url?: string; body?: any; error?: Response } => {
+const buildTokenRequest = (
+	provider: Provider,
+	code: string,
+	origin: string
+): { url?: string; body?: any; error?: Response } => {
 	const { clientId, clientSecret, hostname } = getProviderCredentials(provider);
 
 	if (!clientId || !clientSecret) {
-		return { error: outputHTML({ provider, error: 'OAuth app client ID or secret is not configured.', errorCode: 'MISCONFIGURED_CLIENT' }) };
+		return {
+			error: outputHTML({
+				provider,
+				error: 'OAuth app client ID or secret is not configured.',
+				errorCode: 'MISCONFIGURED_CLIENT'
+			})
+		};
 	}
 
 	if (provider === 'github') {
@@ -28,7 +43,9 @@ const buildTokenRequest = (provider: Provider, code: string, origin: string): { 
 		};
 	}
 
-	return { error: outputHTML({ provider, error: 'Unknown provider', errorCode: 'UNKNOWN_PROVIDER' }) };
+	return {
+		error: outputHTML({ provider, error: 'Unknown provider', errorCode: 'UNKNOWN_PROVIDER' })
+	};
 };
 
 export const GET: RequestHandler = async ({ request: { url, headers } }) => {
