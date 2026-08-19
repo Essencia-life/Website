@@ -1,4 +1,4 @@
-import type { Metadata } from '../../routes/(pages)/+layout.server';
+import type { Metadata } from '../../routes/+layout.server';
 
 const pageRegExp = /\/src\/routes\/\(pages\)(?<path>\/[a-z0-9-/]+)\/\+page.md/;
 const pages = new Map(
@@ -7,7 +7,7 @@ const pages = new Map(
 	)
 );
 
-export class Pages {
+export class LegacyPages {
 	public static getPageMetadata(url: string) {
 		return pages.get(url);
 	}

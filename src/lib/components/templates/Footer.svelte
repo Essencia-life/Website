@@ -5,15 +5,15 @@
 		{ name: 'label', label: 'Label' },
 		{
 			name: 'link',
-			label: 'Link',
+			label: 'Link'
 			// widget: 'relation',
 			// collection: 'pages',
 			// search_fields: ['title'],
 			// value_field: '/{{slug}}',
 			// display_fields: ['title']
-		},
+		}
 	];
-	
+
 	export const footerCmsConfig: CollectionFile = {
 		name: 'footer',
 		label: 'Page Footer',
@@ -24,9 +24,7 @@
 				name: 'cta',
 				label: 'CTA Button',
 				widget: 'object',
-				fields: [
-					...labelAndLinkFields,
-				]
+				fields: [...labelAndLinkFields]
 			},
 			{
 				name: 'social_media',
@@ -35,7 +33,7 @@
 				widget: 'list',
 				field: {
 					name: 'platform',
-					label: 'Platform',
+					label: 'Platform'
 					// widget: 'relation',
 					// collection: 'social_media',
 					// search_fields: ['label'],
@@ -55,9 +53,7 @@
 						name: 'group',
 						label: 'Group',
 						widget: 'list',
-						fields: [
-							...labelAndLinkFields,
-						]
+						fields: [...labelAndLinkFields]
 					}
 				]
 			}
@@ -101,11 +97,7 @@
 				<div class="social-media">
 					{#each platforms as platform (platform.name)}
 						{@const Icon = iconMap.get(platform.name)}
-						<a
-							href={platform.link}
-							target="_blank"
-							aria-label={platform.label}
-							class="no-link">
+						<a href={platform.link} target="_blank" aria-label={platform.label} class="no-link">
 							<Icon title="" />
 						</a>
 					{/each}

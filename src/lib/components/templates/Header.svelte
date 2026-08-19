@@ -5,15 +5,15 @@
 		{ name: 'label', label: 'Label' },
 		{
 			name: 'link',
-			label: 'Link',
+			label: 'Link'
 			// widget: 'relation',
 			// collection: 'pages',
 			// search_fields: ['title'],
 			// value_field: '/{{slug}}',
 			// display_fields: ['title']
-		},
+		}
 	];
-	
+
 	export const headerCmsConfig: CollectionFile = {
 		name: 'header',
 		label: 'Page Header',
@@ -33,9 +33,7 @@
 						label_singular: 'Item',
 						widget: 'list',
 						required: false,
-						fields: [
-							...labelAndLinkFields,
-						]
+						fields: [...labelAndLinkFields]
 					}
 				]
 			}
