@@ -1,39 +1,39 @@
-import { events as eventsRaw } from '$lib/content/events.json';
+import type { InferCollectionType } from '$lib/types/cms-types';
+import { eventCollection } from '$lib/components/templates/Event.svelte';
 
-interface EventRaw {
-	type: string;
-	title: string;
-	slug: string;
-	start: string;
-	end: string;
-	short_description: string;
-	description: string;
-	cover_image: string;
-	weekly?: string;
-	booking_link?: string;
-	info_link?: string;
-	car_sharing_link?: string;
-	organizers?: EventOrganizer[];
-}
+// TODO move into $lib/server
 
-interface EventOrganizer {
-	name: string;
-	photo: string;
-	description: string;
-}
+type EventRaw = InferCollectionType<typeof eventCollection>;
 
 export interface Event extends Omit<EventRaw, 'type' | 'start' | 'end'> {
+	slug: string;
 	type: 'event' | 'retreat';
 	start: Date;
 	end: Date;
 }
 
-const events: Event[] = eventsRaw.map((event) => ({
-	...event,
-	type: event.type === 'event' || event.type === 'retreat' ? event.type : 'event',
-	start: new Date(event.start),
-	end: new Date(event.end)
-}));
+const eventRegExp = new RegExp('/src/lib/content/events/(?<slug>[a-zA-Z0-9-]+)\\.json');
+const eventsRaw = new Map(
+	Object.entries(
+		import.meta.glob<{ default: EventRaw }>('$lib/content/events/*.json', { eager: true })
+	).map(([path, module]) => {
+		return [path.match(eventRegExp)!.groups!.slug, module.default];
+	})
+);
+
+function transformEvent([slug, event]: [string, EventRaw]): Event {
+	return {
+		...event,
+		slug,
+		type: event.type === 'event' || event.type === 'retreat' ? event.type : 'event',
+		start: new Date(event.start),
+		end: new Date(event.end)
+	};
+}
+
+const events: Event[] = Array.from(eventsRaw.entries(), transformEvent);
+
+// console.log(events);
 
 const byDateIncrementing = (a: Event, b: Event) => a.start.getTime() - b.start.getTime();
 const byDateDescending = (a: Event, b: Event) => b.start.getTime() - a.start.getTime();
@@ -64,21 +64,25 @@ export class Events {
 	}
 
 	public static getEvent(slug: string) {
-		const event = events.find((it) => it.slug === slug);
+		const event = eventsRaw.get(slug);
 
 		if (event) {
-			return event;
+			return transformEvent([slug, event]);
 		} else {
 			throw new EventNotFound(slug);
 		}
 	}
 
 	public static getAllEventSlugs() {
-		return events.filter((it) => it.type === 'event').map(({ slug }) => ({ slug }));
+		return Array.from(eventsRaw.entries())
+			.filter(([, event]) => event.type === 'event')
+			.map(([slug]) => ({ slug }));
 	}
 
 	public static getAllRetreatSlugs() {
-		return events.filter((it) => it.type === 'retreat').map(({ slug }) => ({ slug }));
+		return Array.from(eventsRaw.entries())
+			.filter(([, event]) => event.type === 'retreat')
+			.map(([slug]) => ({ slug }));
 	}
 }
 
