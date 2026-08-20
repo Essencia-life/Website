@@ -5,6 +5,7 @@
 	import { headerCmsConfig } from '$lib/components/templates/Header.svelte';
 	import { footerCmsConfig } from '$lib/components/templates/Footer.svelte';
 	import { pageCollection } from '$lib/components/templates/Page.svelte';
+	import { eventCollection } from '$lib/components/templates/Event.svelte';
 
 	const { data }: PageProps = $props();
 
@@ -34,7 +35,7 @@
 					preview: false
 				},
 				singletons: [headerCmsConfig, footerCmsConfig],
-				collections: [pageCollection]
+				collections: [pageCollection, eventCollection]
 			}
 		});
 	});

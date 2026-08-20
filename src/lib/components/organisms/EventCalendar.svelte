@@ -64,7 +64,7 @@
 				hour: 'numeric',
 				minute: '2-digit'
 			})}
-			{@const linkUrl = resolve(`/(pages)/${type}s/[slug]`, { slug: event.slug })}
+			{@const linkUrl = resolve(`/(new-pages)/${type}s/[slug]`, { slug: event.slug })}
 
 			<article>
 				<div class="date">

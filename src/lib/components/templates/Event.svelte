@@ -1,5 +1,143 @@
+<script module lang="ts">
+	import type { Collection } from '@sveltia/cms';
+
+	export const eventCollection = {
+		name: 'events',
+		label: 'Events',
+		label_singular: 'Event',
+		format: 'json',
+		icon: 'event',
+		identifier_field: 'meta.title',
+		slug: "{{fields.start | date('YYYY-MM-DD')}}-{{fields.title}}",
+		summary: "{{start | date('DD.MM.')}} — {{title}}",
+		media_folder: 'src/lib/assets/media/events',
+		sortable_fields: {
+			fields: ['title', 'start'],
+			default: {
+				field: 'start',
+				direction: 'descending'
+			}
+		},
+		view_groups: {
+			groups: [
+				{
+					name: 'type',
+					label: 'Type',
+					field: 'type'
+				},
+				{
+					name: 'year',
+					label: 'Year',
+					field: 'start',
+					pattern: '\\d{4}'
+				}
+			],
+			default: 'year'
+		},
+		view_filters: [
+			{
+				label: 'Events',
+				field: 'type',
+				pattern: 'event'
+			},
+			{
+				label: 'Retreats',
+				field: 'type',
+				pattern: 'retreat'
+			}
+		],
+		create: true,
+		folder: 'src/lib/content/events',
+		fields: [
+			{
+				name: 'type',
+				label: 'Type',
+				widget: 'select',
+				options: ['event', 'retreat']
+			},
+			{
+				name: 'start',
+				label: 'Start',
+				widget: 'datetime',
+				input_timezone: 'Europe/Lisbon'
+			},
+			{
+				name: 'end',
+				label: 'End',
+				widget: 'datetime',
+				input_timezone: 'Europe/Lisbon'
+			},
+			{
+				name: 'title',
+				label: 'Title'
+			},
+			{
+				name: 'cover_image',
+				label: 'Cover Image',
+				widget: 'image',
+				choose_url: false
+			},
+			{
+				name: 'short_description',
+				label: 'Short Description',
+				widget: 'text',
+				max: 300
+			},
+			{
+				name: 'description',
+				label: 'Description',
+				widget: 'richtext'
+			},
+			{
+				name: 'booking_link',
+				label: 'Booking / Ticket Link',
+				required: false
+			},
+			{
+				name: 'car_sharing_link',
+				label: 'Car-Sharing Group Link',
+				required: false
+			},
+			{
+				name: 'info_link',
+				label: 'More Information Link',
+				required: false
+			},
+			{
+				name: 'organizers',
+				label: 'Organizers',
+				label_singular: 'Organizer',
+				widget: 'list',
+				required: false,
+				fields: [
+					{
+						widget: 'object',
+						name: 'organizer',
+						fields: [
+							{
+								name: 'name',
+								label: 'Name'
+							},
+							{
+								name: 'description',
+								label: 'Description',
+								max: 100
+							},
+							{
+								name: 'photo',
+								label: 'Photo',
+								widget: 'image',
+								choose_url: false
+							}
+						]
+					}
+				]
+			}
+		] as const
+	} satisfies Collection;
+</script>
+
 <script lang="ts">
-	import type { Event } from '$lib/services/Events';
 	import { Media } from '$lib/services/Media';
 	import Markdown from '$lib/components/molecules/Markdown.svelte';
 	import Calendar from '@lucide/svelte/icons/calendar';
@@ -9,9 +147,13 @@
 	import Car from '@lucide/svelte/icons/car';
 	import CalendarCheck from '@lucide/svelte/icons/calendar-check';
 	import SquareArrowOutUpRight from '@lucide/svelte/icons/square-arrow-out-up-right';
+	import type { InferCollectionType } from '$lib/types/cms-types';
 
 	interface Props {
-		event: Event;
+		event: Omit<InferCollectionType<typeof eventCollection>, 'start' | 'End'> & {
+			start: Date;
+			end: Date;
+		};
 	}
 
 	const { event }: Props = $props();
