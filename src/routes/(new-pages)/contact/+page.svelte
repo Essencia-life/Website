@@ -2,11 +2,12 @@
 	import { enhance } from '$app/forms';
 	import SiWhatsapp from '@icons-pack/svelte-simple-icons/icons/SiWhatsapp';
 	import FormField from '$lib/components/molecules/FormField.svelte';
-	import { page } from '$app/state';
+	import type { PageProps } from './$types';
 	import { Media } from '$lib/services/Media';
 	import Map from '$lib/components/atoms/Map.svelte';
 
-	let topic = $derived(page.form?.topic ?? page.url.searchParams.get('topic'));
+	const { form, data }: PageProps = $props();
+	let topic = $derived(form?.topic ?? data.topic);
 </script>
 
 <div class="my-12 flex flex-col text-center">
@@ -28,7 +29,7 @@
 	</a>
 </div>
 
-{#if page.form?.success}
+{#if form?.success}
 	<div class="mb-8 rounded-lg bg-green-100 p-4 text-green-800">
 		<b>Thank you for your message!</b>
 		<p>We will get back to you soon.</p>
@@ -56,65 +57,65 @@
 				{#snippet children({ classes })}
 					<select required name="topic" class={classes} bind:value={topic}>
 						<option selected disabled>Why you approach us?</option>
-						{#each page.data.topics as topicOption (topicOption.key)}
+						{#each data.topics as topicOption (topicOption.key)}
 							<option value={topicOption.key}>{topicOption.label}</option>
 						{/each}
 					</select>
 				{/snippet}
 			</FormField>
 
-			<FormField label="Your Name" error={page.form?.invalid.name}>
+			<FormField label="Your Name" error={form?.invalid?.name}>
 				{#snippet children({ classes })}
 					<input
 						type="text"
 						name="name"
 						required
-						value={page.form?.name ?? ''}
+						value={form?.name ?? ''}
 						class={classes}
 						placeholder="Enter your name"
 					/>
 				{/snippet}
 			</FormField>
 
-			<FormField label="Your Email" error={page.form?.invalid.email}>
+			<FormField label="Your Email" error={form?.invalid?.email}>
 				{#snippet children({ classes })}
 					<input
 						type="email"
 						name="email"
 						required
-						value={page.form?.email ?? ''}
+						value={form?.email ?? ''}
 						class={classes}
 						placeholder="Enter your Email address"
 					/>
 				{/snippet}
 			</FormField>
 
-			<FormField label="Your Phone (optional)" error={page.form?.invalid.phone}>
+			<FormField label="Your Phone (optional)" error={form?.invalid?.phone}>
 				{#snippet children({ classes })}
 					<input
 						type="tel"
 						name="phone"
-						value={page.form?.phone ?? ''}
+						value={form?.phone ?? ''}
 						class={classes}
 						placeholder="Enter your phone number"
 					/>
 				{/snippet}
 			</FormField>
 
-			<FormField label="Your Message" error={page.form?.invalid.message} class="col-span-2">
+			<FormField label="Your Message" error={form?.invalid?.message} class="col-span-2">
 				{#snippet children({ classes })}
 					<textarea
 						name="message"
 						required
 						class="min-h-40 {classes}"
-						placeholder="Write your message here...">{page.form?.message ?? ''}</textarea
+						placeholder="Write your message here...">{form?.message ?? ''}</textarea
 					>
 				{/snippet}
 			</FormField>
 
 			<!-- TODO hidden captcha ? -->
 
-			{#if page.form?.error}
+			{#if form?.error}
 				<div class="mb-8 rounded-lg bg-red-100 p-4 text-red-800">
 					<p>There was an error submitting your message. Please try again later.</p>
 				</div>

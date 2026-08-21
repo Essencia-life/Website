@@ -8,8 +8,9 @@ import { isValidEmail, isValidName, isValidPhoneOrEmpty } from './validation.uti
 
 export const prerender = false;
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ url }) => {
 	return {
+		topic: url.searchParams.get('topic'),
 		topics: Object.entries(topicMap).map(([key, { label }]) => ({
 			key,
 			label
