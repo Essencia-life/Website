@@ -10,13 +10,14 @@ import { enableAltcha, enableAltchaFallback } from '$lib/server/flags';
 
 export const prerender = false;
 
-export const load: PageServerLoad = async () => {
+export const load: PageServerLoad = async ({ url }) => {
 	const useAltcha = await enableAltcha();
 	const useAltchaFallback = await enableAltchaFallback();
 
 	return {
 		useAltcha,
 		useAltchaFallback,
+		topic: url.searchParams.get('topic'),
 		topics: Object.entries(topicMap).map(([key, { label }]) => ({
 			key,
 			label

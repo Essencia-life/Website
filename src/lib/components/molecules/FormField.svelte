@@ -4,7 +4,7 @@
 
 	interface Props extends Omit<HTMLLabelAttributes, 'children'> {
 		label: string;
-		error?: string;
+		error?: string | false;
 		children: Snippet<[{ classes: string }]>;
 	}
 
