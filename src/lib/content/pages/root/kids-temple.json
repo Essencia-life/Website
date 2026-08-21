@@ -1,0 +1,84 @@
+{
+  "meta": {
+    "parent": "(root)",
+    "title": "Kids Temple",
+    "description": "A forest-school inspired space for ages 2–10, on the sacred land of Essência.",
+    "cover": ""
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Kids Temple",
+      "supline": "Closed for Summer Holidays",
+      "content": "_A forest-school inspired space for ages 2–10, on the sacred land of Essência._",
+      "button": null
+    },
+    {
+      "type": "default-section",
+      "headline": "A forest, not a classroom",
+      "supline": "What the Kids Temple Is",
+      "content": "> Our Kids Temple is closed for Summer Holidays until mid September. The covered space and outdoor playground remain available for families and children to use.\n\nThe Kids Temple embraces a Forest School ethos: nature as the classroom, and play as the way in. Every day is shaped around games and activities that awaken a child's social, physical, intellectual, emotional and spiritual sides — with plenty of room to simply follow their own curiosity. It exists for the children of residents, neighbors and guests alike, and for the parents who come with them.",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "content": "#### Purpose\n\nAn inspiring space to awaken children to their full potential — and a way for more guests and lightworkers to come, knowing their kids are cared for."
+            },
+            {
+              "content": "#### Vision\n\nChildren welcomed into nature for a holistic, playful education — blossoming freely, while parents relax and share some time and skills in return."
+            },
+            {
+              "content": "#### Mission\n\nAn accessible, safe, inspiring space for children's and parents' growth in nature — building self-awareness, self-regulation, social skills and empathy."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "Six ways children grow here",
+      "supline": "Our Ethics",
+      "content": "...",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": true,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "card-grid",
+          "cards": [
+            {
+              "image": "",
+              "content": "#### Nature\n\nSeeding, planting, growing, animal observation, eco constructions, land art."
+            },
+            {
+              "image": "",
+              "content": "#### Play\n\nGames, ropes, swings, balls, circus."
+            },
+            {
+              "image": "",
+              "content": "#### Communicate\n\nSocial skills, compassion, empathy, sharing, expressing needs and boundaries, storytelling."
+            },
+            {
+              "image": "",
+              "content": "#### Blossom\n\nMeditation, confidence, concentration, senses, belonging, arts and crafts."
+            },
+            {
+              "image": "",
+              "content": "#### Moving\n\nDancing, singing, kids & acro yoga, qigong, nature hikes, beach play & swimming."
+            },
+            {
+              "image": "",
+              "content": "#### Be Alive\n\nFreedom, exploration, celebration, wonder, presence, gratitude."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
