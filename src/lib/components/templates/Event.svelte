@@ -10,6 +10,7 @@
 		identifier_field: 'meta.title',
 		slug: "{{fields.start | date('YYYY-MM-DD')}}-{{fields.title}}",
 		summary: "{{start | date('DD.MM.')}} — {{title}}",
+		thumbnail: 'cover_image',
 		media_folder: 'src/lib/assets/media/events',
 		sortable_fields: {
 			fields: ['title', 'start'],

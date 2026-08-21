@@ -36,7 +36,8 @@
 			{
 				name: 'content',
 				label: 'Content',
-				widget: 'richtext'
+				widget: 'richtext',
+				required: false
 			},
 			{
 				name: 'textCenter',
