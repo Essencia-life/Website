@@ -79,6 +79,40 @@
           ]
         }
       ]
+    },
+    {
+      "type": "default-section",
+      "headline": "",
+      "supline": "",
+      "content": "",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "content": "### What's already there\n\nEven over the summer break, families are welcome to enjoy:\n\n- 1 dome (indoor space)\n- 1 temple tent (shaded, outdoor)\n- 1 natural pond\n- 1 juice bar & 1 kitchen\n- 1 playground with trampoline and swings\n- Shower and toilets on site\n- A forest tea room chill space for parents"
+            },
+            {
+              "content": "### The previous rhythm\n\n1. Monday – Friday, 10:30am – 3pm\n2. Ages 2 – 10\n3. Thursday gardening & Portuguese class woven in\n4. English, German & Dutch spoken"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "",
+      "supline": "",
+      "content": "_We're always happy to hear from who'd love to get involved in shaping what's next here —_ [_reach out_](/contact?topic=kids) _if that's you._",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
     }
   ]
 }
