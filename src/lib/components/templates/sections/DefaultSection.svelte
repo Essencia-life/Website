@@ -31,7 +31,8 @@
 			},
 			{
 				name: 'headline',
-				label: 'Headline'
+				label: 'Headline',
+				required: false
 			},
 			{
 				name: 'content',

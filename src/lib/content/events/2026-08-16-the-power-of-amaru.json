@@ -1,7 +1,7 @@
 {
   "booking_link": "https://fienta.com/amaru",
   "start": "2026-08-16T09:00:00.000Z",
-  "cover_image": "media/events/4.png",
+  "cover_image": "/media/events/4.png",
   "title": "The Power of Amaru",
   "short_description": "A transformative one-day workshop inspired by Amaru, the Great Medicine Serpent of the Andean tradition. Through shamanic journeying, meditation, ritual, and ceremony, participants are invited to release old patterns, cleanse their energy, and embrace renewal, clarity, and inner strength. 🐍✨",
   "type": "event",
