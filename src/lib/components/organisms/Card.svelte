@@ -10,7 +10,9 @@
 	const { image, children }: Props = $props();
 </script>
 
-<article class="flex flex-col overflow-hidden rounded-lg border border-(--brand-border-color)">
+<article
+	class="flex flex-col overflow-hidden rounded-lg border border-(--brand-border-color) bg-(--brand-background-color)"
+>
 	{#if image}
 		<enhanced:img src={Media.getFile(image)} />
 	{/if}
