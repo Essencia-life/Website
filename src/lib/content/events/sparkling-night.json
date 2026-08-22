@@ -1,7 +1,7 @@
 {
   "weekly": "every Thursday",
   "start": "2100-01-01T18:00:00.000+00:00",
-  "cover_image": "media/events/sparkling-night.jpg",
+  "cover_image": "/media/events/sparkling-night.jpg",
   "title": "SPArkling Night",
   "short_description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire",
   "type": "event",

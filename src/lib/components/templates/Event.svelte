@@ -11,7 +11,8 @@
 		slug: "{{fields.start | date('YYYY-MM-DD')}}-{{fields.title}}",
 		summary: "{{start | date('DD.MM.')}} — {{title}}",
 		thumbnail: 'cover_image',
-		media_folder: 'src/lib/assets/media/events',
+		media_folder: '{{media_folder}}/events',
+		public_folder: '/media/events',
 		sortable_fields: {
 			fields: ['title', 'start'],
 			default: {
@@ -112,25 +113,21 @@
 				required: false,
 				fields: [
 					{
-						widget: 'object',
-						name: 'organizer',
-						fields: [
-							{
-								name: 'name',
-								label: 'Name'
-							},
-							{
-								name: 'description',
-								label: 'Description',
-								max: 100
-							},
-							{
-								name: 'photo',
-								label: 'Photo',
-								widget: 'image',
-								choose_url: false
-							}
-						]
+						name: 'name',
+						label: 'Name'
+					},
+					{
+						name: 'description',
+						label: 'Description',
+						max: 100
+					},
+					{
+						name: 'photo',
+						label: 'Photo',
+						widget: 'image',
+						choose_url: false,
+						media_folder: '{{media_folder}}/events/organizer',
+						public_folder: '/media/events/organizer'
 					}
 				]
 			}
@@ -291,7 +288,7 @@
 
 				<h3 class="mt-0! text-xs! font-bold tracking-widest uppercase opacity-70">Hosted by:</h3>
 
-				{#each event.organizers as organizer}
+				{#each event.organizers as organizer (organizer.name)}
 					<div class="mt-4 grid gap-x-4 gap-y-1" class:grid-cols-[auto_1fr]={organizer.photo}>
 						<div class="row-span-2 aspect-square w-14 overflow-hidden rounded-full">
 							<enhanced:img
