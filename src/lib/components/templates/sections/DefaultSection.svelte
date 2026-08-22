@@ -43,23 +43,27 @@
 			{
 				name: 'textCenter',
 				label: 'Center text',
-				widget: 'boolean'
+				widget: 'boolean',
+				required: false
 			},
 			{
 				name: 'bgSecondary',
 				label: 'Background secondary',
-				widget: 'boolean'
+				widget: 'boolean',
+				required: false
 			},
 			{
 				name: 'bgDark',
 				label: 'Background dark',
-				widget: 'boolean'
+				widget: 'boolean',
+				required: false
 			},
 			{
 				name: 'widget',
 				label: 'Widget',
 				widget: 'list',
 				max: 1,
+				required: false,
 				types: [
 					cardGridWidgetField,
 					galleryGridWidgetField,
