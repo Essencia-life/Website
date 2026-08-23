@@ -17,7 +17,7 @@
       "type": "default-section",
       "headline": "A forest, not a classroom",
       "supline": "What the Kids Temple Is",
-      "content": "> Our Kids Temple is closed for Summer Holidays until mid September. The covered space and outdoor playground remain available for families and children to use.\n\nThe Kids Temple embraces a Forest School ethos: nature as the classroom, and play as the way in. Every day is shaped around games and activities that awaken a child's social, physical, intellectual, emotional and spiritual sides — with plenty of room to simply follow their own curiosity. It exists for the children of residents, neighbors and guests alike, and for the parents who come with them.",
+      "content": "> **Our Kids Temple is closed for Summer Holidays until mid September.**\\\nThe covered space and outdoor playground remain available for families and children to use.\n\nThe Kids Temple embraces a Forest School ethos: nature as the classroom, and play as the way in. Every day is shaped around games and activities that awaken a child's social, physical, intellectual, emotional and spiritual sides — with plenty of room to simply follow their own curiosity. It exists for the children of residents, neighbors and guests alike, and for the parents who come with them.",
       "id": "",
       "textCenter": true,
       "bgSecondary": false,
@@ -41,12 +41,29 @@
     },
     {
       "type": "default-section",
-      "headline": "Six ways children grow here",
-      "supline": "Our Ethics",
+      "headline": "@kidstemple_essencia",
+      "supline": "Follow Along",
       "content": "",
       "id": "",
       "textCenter": true,
       "bgSecondary": true,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "instagram-profile",
+          "title": "@kidstemple_essencia",
+          "link": "https://www.instagram.com/kidstemple_essencia"
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "Six ways children grow here",
+      "supline": "Our Ethics",
+      "content": "_Beyond safety rules, children are never obliged to follow an activity at a given time — they're free to follow their bliss and curiosity until they're ready to join in._",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": false,
       "bgDark": false,
       "widget": [
         {
@@ -87,7 +104,7 @@
       "content": "",
       "id": "",
       "textCenter": false,
-      "bgSecondary": false,
+      "bgSecondary": true,
       "bgDark": false,
       "widget": [
         {
@@ -97,7 +114,7 @@
               "content": "### What's already there\n\nEven over the summer break, families are welcome to enjoy:\n\n- 1 dome (indoor space)\n- 1 temple tent (shaded, outdoor)\n- 1 natural pond\n- 1 juice bar & 1 kitchen\n- 1 playground with trampoline and swings\n- Shower and toilets on site\n- A forest tea room chill space for parents"
             },
             {
-              "content": "### The previous rhythm\n\n1. Monday – Friday, 10:30am – 3pm\n2. Ages 2 – 10\n3. Thursday gardening & Portuguese class woven in\n4. English, German & Dutch spoken"
+              "content": "### The previous rhythm\n\n- Monday – Friday, 10:30am – 3pm\n- Ages 2 – 10\n- Music & movement, nature exploration & building, crafting & drawing\n- Thursday gardening & Portuguese class woven in\n- Organic snack & vegan lunch included; parents welcome to join Community Lunch for €8\n- Thursdays close with the Forest SPA — €20/person, free for kids in the program\n- English, German & Dutch spoken\n- One day a month set aside for parents to connect on holistic education and their child's individual growth"
             }
           ]
         }
@@ -107,9 +124,32 @@
       "type": "default-section",
       "headline": "",
       "supline": "",
-      "content": "_We're always happy to hear from who'd love to get involved in shaping what's next here —_ [_reach out_](/contact?topic=kids) _if that's you._",
+      "content": "",
       "id": "",
       "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "content": "### Parents are welcome to join\n\nParents are encouraged to spend a day a month — or more — in service of the temple and the children: assisting the facilitator, observing, sharing knowledge, offering a workshop, or helping build something for the space.\n\n_These contributions help keep the program affordable, and make it richer for everyone._"
+            },
+            {
+              "content": "### What to bring\n\nOutdoor shoes & clothes, a hat, organic sun screen, swimming costume & gear, a rain coat, a warm jacket, a water bottle, and fruits or snacks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "Let's keep in touch.",
+      "supline": "Stay Connected",
+      "content": "Questions, or want to be notified when the Kids Temple reopens?\\\nWe read every message.\n\n_And if you'd love to get involved in shaping what's next here — we'd love to hear that too._\n\n[**Get in touch**](/contact?topic=kids#form)",
+      "id": "",
+      "textCenter": true,
       "bgSecondary": false,
       "bgDark": false,
       "widget": []
