@@ -154,7 +154,3 @@ dancing, singing, kids yoga, acro yoga, aerial yoga, acrobatics, qigong, nature 
 #### BE ALIVE
 
 be free, explore life, celebrate, wonder, awaken curiosity, be present, listen, be grateful
-
-## Follow us! 📱
-
-<Instagram link="https://www.instagram.com/kidstemple_essencia" />
