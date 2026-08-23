@@ -17,6 +17,16 @@
 		path: '{{meta.parent}}/{{slug}}',
 		create: true,
 		folder: 'src/lib/content/pages',
+		view_groups: {
+			groups: [
+				{
+					name: 'parent',
+					label: 'Parent',
+					field: 'meta.parent'
+				}
+			],
+			default: 'parent'
+		},
 		fields: [
 			{
 				name: 'meta',
