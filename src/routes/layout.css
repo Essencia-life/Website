@@ -57,4 +57,8 @@
 	.fab.small {
 		@apply w-10;
 	}
+
+	blockquote {
+		@apply bg-sky-100 border-l-4 border-sky-500 p-4 rounded-md text-left;
+	}
 }

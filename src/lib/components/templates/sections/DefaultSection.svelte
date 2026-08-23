@@ -6,6 +6,7 @@
 	import { stepsWidgetField } from '../widgets/StepsWidget.svelte';
 	import { tallyFormWidgetField } from '../widgets/TallyFormWidget.svelte';
 	import { columnsWidgetField } from '../widgets/ColumnsWidget.svelte';
+	import { instagramProfileLinkWidgetField } from '../widgets/InstagramProfileWidget.svelte';
 
 	export const defaultSectionField = {
 		name: 'default-section',
@@ -70,7 +71,8 @@
 					youtubeVideoWidgetField,
 					stepsWidgetField,
 					tallyFormWidgetField,
-					columnsWidgetField
+					columnsWidgetField,
+					instagramProfileLinkWidgetField
 				]
 			}
 		] as const
@@ -86,6 +88,7 @@
 	import StepsWidget from '../widgets/StepsWidget.svelte';
 	import TallyFormWidget from '../widgets/TallyFormWidget.svelte';
 	import ColumnsWidget from '../widgets/ColumnsWidget.svelte';
+	import InstagramProfileWidget from '../widgets/InstagramProfileWidget.svelte';
 
 	interface Props {
 		index: number;
@@ -125,6 +128,8 @@
 					<StepsWidget {widget} />
 				{:else if widget.type === 'youtube-video'}
 					<YouTubeVideoWidget {widget} />
+				{:else if widget.type === 'instagram-profile'}
+					<InstagramProfileWidget {widget} />
 				{:else if widget.type === 'tally-form'}
 					<TallyFormWidget {widget} />
 				{/if}
