@@ -1,11 +1,39 @@
+<script module lang="ts">
+	import type { ObjectField } from '@sveltia/cms';
+
+	export const instagramProfileLinkWidgetField = {
+		name: 'instagram-profile',
+		label: 'Embedded Instagram Profile',
+		widget: 'object',
+		fields: [
+			{
+				name: 'type',
+				widget: 'hidden',
+				default: 'instagram-profile'
+			},
+			{
+				name: 'link',
+				label: 'Instagram Profile Link'
+			},
+			{
+				name: 'title',
+				label: 'Title'
+			}
+		] as const
+	} satisfies ObjectField;
+</script>
+
 <script lang="ts">
+	import type { InferFieldsObject } from '$lib/types/cms-types';
+
 	interface Props {
-		link: string;
+		widget: InferFieldsObject<typeof instagramProfileLinkWidgetField.fields>;
 	}
 
-	const { link }: Props = $props();
+	const { widget }: Props = $props();
+
 	const url = $derived.by(() => {
-		const u = new URL(link);
+		const u = new URL(widget.link);
 		u.searchParams.set('utm_source', 'ig_embed');
 		u.searchParams.set('utm_campaign', 'loading');
 		return u.toString();
