@@ -31,10 +31,13 @@
 		"@tailwindcss/vite": "^4.3.0",
 		"@types/node": "^20",
 		"@vitest/browser": "^4.1.10",
+		"altcha": "^3.2.2",
+		"altcha-lib": "^2.5.0",
 		"autoprefixer": "^10.4.27",
 		"eslint": "^10.1.0",
 		"eslint-config-prettier": "^10.1.8",
 		"eslint-plugin-svelte": "^3.16.0",
+		"flags": "^4.3.1",
 		"globals": "^16.4.0",
 		"markdown-ast": "^0.3.0",
 		"mdast-util-from-markdown": "^2.0.2",
@@ -61,6 +64,8 @@
 		"yaml": "^2.8.1"
 	},
 	"dependencies": {
+		"@flags-sdk/vercel": "^1.4.8",
+		"@upstash/redis": "^1.38.4",
 		"@vercel/speed-insights": "^2.0.0"
 	},
 	"overrides": {

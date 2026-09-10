@@ -5,11 +5,18 @@ import { fail } from '@sveltejs/kit';
 import { topicMap } from './contact-topics';
 import { constants } from 'http2';
 import { isValidEmail, isValidName, isValidPhoneOrEmpty } from './validation.utils';
+import { altcha } from '$lib/server/altcha';
+import { enableAltcha, enableAltchaFallback } from '$lib/server/flags';
 
 export const prerender = false;
 
 export const load: PageServerLoad = async () => {
+	const useAltcha = await enableAltcha();
+	const useAltchaFallback = await enableAltchaFallback();
+
 	return {
+		useAltcha,
+		useAltchaFallback,
 		topics: Object.entries(topicMap).map(([key, { label }]) => ({
 			key,
 			label
@@ -18,58 +25,89 @@ export const load: PageServerLoad = async () => {
 };
 
 export const actions: Actions = {
-	default: async ({ request }) => {
-		const formData = await request.formData();
-		const name = formData.get('name') as string;
-		const email = formData.get('email') as string;
-		const phone = formData.get('phone') as string;
-		const topic = formData.get('topic') as string;
-		const message = formData.get('message') as string;
-		const { subject, recipient } = topicMap[topic] || topicMap['general'];
+	default: async (event) => {
+		const formData = await event.request.formData();
+		const verification = formData.get('text') as string | null;
 
-		const validations: [string, string | false][] = [
-			['name', !isValidName(name) && 'Please enter a valid name'],
-			['email', !isValidEmail(email) && 'Please enter a valid email'],
-			['phone', !isValidPhoneOrEmpty(phone) && 'Please enter a valid phone number'],
-			['message', message.trim() === '' && 'Please enter a message']
-		];
+		const useAltcha = await enableAltcha();
+		const useAltchaFallback = await enableAltchaFallback();
 
-		const isInvalid = ([, value]: [string, string | false]) => value;
+		if (useAltchaFallback && (verification === null || verification && verification !== 'altcha')) {
+			console.warn('Potential bot request');
+		} else {
+			const name = formData.get('name') as string;
+			const email = formData.get('email') as string;
+			const phone = formData.get('phone') as string;
+			const topic = formData.get('topic') as string;
+			const message = formData.get('message') as string;
+			const { subject, recipient } = topicMap[topic] || topicMap['general'];
 
-		if (validations.some(isInvalid)) {
-			return fail(constants.HTTP_STATUS_BAD_REQUEST, {
-				name,
-				email,
-				phone,
-				topic,
-				message,
-				invalid: Object.fromEntries(validations.filter(isInvalid))
+			const validations: [string, string | false][] = [
+				['name', !isValidName(name) && 'Please enter a valid name'],
+				['email', !isValidEmail(email) && 'Please enter a valid email'],
+				['phone', !isValidPhoneOrEmpty(phone) && 'Please enter a valid phone number'],
+				['message', message.trim() === '' && 'Please enter a message']
+			];
+
+			const isInvalid = ([, value]: [string, string | false]) => value;
+
+			if (validations.some(isInvalid)) {
+				return fail(constants.HTTP_STATUS_BAD_REQUEST, {
+					name,
+					email,
+					phone,
+					topic,
+					message,
+					invalid: Object.fromEntries(validations.filter(isInvalid))
+				});
+			}
+
+			if (useAltcha && !useAltchaFallback || verification === 'altcha') {
+				const result = await altcha.verifyEvent(event);
+
+				if (result.error) {
+					console.error(result.error);
+
+					return fail(constants.HTTP_STATUS_BAD_REQUEST, {
+						name,
+						email,
+						phone,
+						topic,
+						message,
+						invalid: {},
+						error: true
+					});
+				}
+			}
+
+			console.info('Email will be send');
+			const resend = new Resend(RESEND_API_KEY);
+
+			const { error } = await resend.emails.send({
+				from: `[Contact Form] ${name} <no-reply@essencia.life>`,
+				replyTo: `${name} <${email}>`,
+				to: `${recipient}@essencia.life`,
+				subject,
+				text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`
 			});
-		}
 
-		const resend = new Resend(RESEND_API_KEY);
+			if (error) {
+				console.error(error);
 
-		const { error } = await resend.emails.send({
-			from: `[Contact Form] ${name} <no-reply@essencia.life>`,
-			replyTo: `${name} <${email}>`,
-			to: `${recipient}@essencia.life`,
-			subject,
-			text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessage:\n${message}`
-		});
+				// TODO log it in service like Sentry or similar
 
-		if (error) {
-			console.log(error);
-
-			// TODO log it in service like Sentry or similar
-
-			return fail(constants.HTTP_STATUS_INTERNAL_SERVER_ERROR, {
-				name,
-				email,
-				phone,
-				topic,
-				message,
-				error: true
-			});
+				return fail(constants.HTTP_STATUS_INTERNAL_SERVER_ERROR, {
+					name,
+					email,
+					phone,
+					topic,
+					message,
+					invalid: {},
+					error: true
+				});
+			} else {
+				console.info('Email sent')
+			}
 		}
 
 		return { success: true };
