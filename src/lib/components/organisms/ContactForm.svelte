@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import { enhance } from '$app/forms';
 	import SiWhatsapp from '@icons-pack/svelte-simple-icons/icons/SiWhatsapp';
 	import FormField from '$lib/components/molecules/FormField.svelte';
@@ -7,6 +8,13 @@
 	import Map from '$lib/components/atoms/Map.svelte';
 
 	let topic = $derived(page.form?.topic ?? page.url.searchParams.get('topic'));
+	let altchaLoaded = $state('');
+
+	onMount(()=> {
+		if (page.data.useAltcha) {
+			import('altcha').then(() => altchaLoaded = 'altcha');
+		}
+	})
 </script>
 
 <div class="my-12 flex flex-col text-center">
@@ -46,7 +54,7 @@
 				class="aspect-square w-86 justify-self-end object-cover drop-shadow-2xl/35"
 				style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%"
 			/>
-			<p class="text-terra/70 max-w-[220px] text-[0.92rem] leading-relaxed italic">
+			<p class="text-terra/70 max-w-55 text-[0.92rem] leading-relaxed italic">
 				Real connection starts with a simple hello.
 			</p>
 		</div>
@@ -112,7 +120,13 @@
 				{/snippet}
 			</FormField>
 
-			<!-- TODO hidden captcha ? -->
+			{#if page.data.useAltcha}
+				<altcha-widget challenge="/altcha/challenge"></altcha-widget>
+			{/if}
+
+			{#if page.data.useAltchaFallback}
+				<input name="text" autocomplete="off" class="absolute -left-full" aria-hidden="true" value={altchaLoaded} />
+			{/if}
 
 			{#if page.form?.error}
 				<div class="mb-8 rounded-lg bg-red-100 p-4 text-red-800">

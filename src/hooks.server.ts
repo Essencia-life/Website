@@ -1,5 +1,11 @@
 import { type Handle, redirect } from '@sveltejs/kit';
 import { constants } from 'node:http2';
+import { createHandle } from 'flags/sveltekit';
+import { FLAGS_SECRET } from '$env/static/private';
+import * as flags from '$lib/server/flags';
+import { sequence } from '@sveltejs/kit/hooks';
+
+const flagsHandle = createHandle({ secret: FLAGS_SECRET, flags });
 
 const legacyPaths: Record<string, string> = {
 	'/about-3': '/eco-village',
@@ -16,10 +22,12 @@ const legacyPaths: Record<string, string> = {
 	'/general-7': '/retreats/2025-09-06-harvest-of-the-heart'
 };
 
-export const handle: Handle = async ({ event, resolve }) => {
+const redirectHandle: Handle = async ({ event, resolve }) => {
 	if (event.url.pathname in legacyPaths) {
 		return redirect(constants.HTTP_STATUS_MOVED_PERMANENTLY, legacyPaths[event.url.pathname]);
 	}
 
 	return resolve(event);
 };
+
+export const handle = sequence(flagsHandle, redirectHandle);
