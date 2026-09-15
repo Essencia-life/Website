@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "parent": "join-us",
+    "title": "Become a friend",
+    "description": "Essência runs as a cooperative, not a company — which means the land, the buildings, and the projects we take on are funded by the people who believe in them. Your support, in whatever form it takes, goes directly into keeping this place running, growing, and open to those who need it.",
+    "cover": ""
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Support what's growing here.",
+      "supline": "Become a Friend",
+      "content": "_You don't have to live on the land to belong to it. There are many ways to help Essência grow — choose what feels right._",
+      "button": null
+    },
+    {
+      "type": "default-section",
+      "headline": "Every gift keeps this place alive.",
+      "supline": "",
+      "content": "Essência runs as a cooperative — which means the land, the buildings, and the projects we take on are funded by the people who believe in them. Your support, in whatever form it takes, goes directly into keeping this place running, growing, and open to those who need it.\n\nIn return, we like to share what the land gives back — from a tree planted in your name to an open invitation to visit, rest, and see exactly where your support went.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "Find your way to support us.",
+      "supline": "Ways to Give",
+      "content": "",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "card-grid",
+          "cards": [
+            {
+              "image": "",
+              "content": "#### 🌿  \n\n#### Become a Friend\n\nA monthly membership, with gifts from the land in return."
+            },
+            {
+              "image": "",
+              "content": "#### 💛\n\n#### Make a Donation\n\nA one-time gift, of any size, whenever it feels right."
+            },
+            {
+              "image": "",
+              "content": "#### 🌱\n\n#### Fund a Project\n\nBack a specific project on the land, from start to finish."
+            },
+            {
+              "image": "",
+              "content": "#### 🤝\n\n#### Invest in the Coop\n\nA repayable community loan that grows our shared home."
+            },
+            {
+              "image": "",
+              "content": "#### 🌳\n\n#### Sponsor a Tree or Plot\n\nA one-time gift that quite literally puts down roots."
+            },
+            {
+              "image": "",
+              "content": "#### 🏛️\n\n#### Partnership & Legacy\n\nFor businesses, foundations, and long-term giving."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "A monthly gift, gifts in return.",
+      "supline": "Become a Friend",
+      "content": "Join as a Friend of Essência with a small recurring contribution — cancel any time. Every tier includes an open invitation to visit the land.",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "card-grid",
+          "cards": [
+            {
+              "image": "",
+              "content": "#### Seedling\n\n**€10**/mo\n\n- Our seasonal newsletter, from the land\n- An open invitation to visit\n- Know your gift covers real, daily costs"
+            },
+            {
+              "image": "",
+              "content": "#### Sapling\n\n**€35**/mo\n\n- Everything in Seedling\n- A tree planted in your name on the land\n- 10% off events and retreats"
+            },
+            {
+              "image": "",
+              "content": "#### Grove\n\n**€100**/mo\n\n- Everything in Sapling\n- One complimentary glamping weekend per year\n- A standing invite to community celebrations"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "Back something specific.",
+      "supline": "Fund a Project",
+      "content": "Rather see exactly where your money goes? These are the projects we're actively raising for right now.",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": true,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "Put your capital where your heart is.",
+      "supline": "Invest in the Cooperative",
+      "content": "Beyond gifts and donations, Essência also welcomes community loans from friends who want to support us with larger sums, in a way that can be repaid. Your investment goes directly toward land, infrastructure, and the long-term security of the cooperative — on flexible terms we agree together.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "residency-costs",
+      "content": "Every community loan is documented with a clear written agreement. Reach out and we'll walk you through the current terms, repayment options, and how your investment would be used.",
+      "costs": [
+        {
+          "number": 5000,
+          "suffix": "+",
+          "label": "typical starting investment"
+        },
+        {
+          "number": 0,
+          "suffix": "Flexible",
+          "label": "terms, agreed together"
+        },
+        {
+          "number": 0,
+          "suffix": "Direct",
+          "label": "into land & infrastructure"
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "However you'd like to help.",
+      "supline": "A Few More Ways",
+      "content": "",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "card-grid",
+          "cards": [
+            {
+              "image": "",
+              "content": "#### Sponsor a Tree or Plot\n\nA one-time gift plants a tree in your name on the land, with a photo update once a year as it grows."
+            },
+            {
+              "image": "",
+              "content": "#### Corporate Partnership\n\nSponsorships, in-kind donations of materials or equipment, or team retreats that double as support for the land."
+            },
+            {
+              "image": "",
+              "content": "#### Legacy Giving\n\nInclude Essência in your estate planning, and help secure this land for generations after us. Write to us to talk it through."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "Make a one-time gift.",
+      "supline": "",
+      "content": "Any amount helps. Every donation goes straight into daily life and care of the land.",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": true,
+      "bgDark": false,
+      "widget": []
+    }
+  ]
+}
