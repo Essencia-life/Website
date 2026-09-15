@@ -1,0 +1,219 @@
+{
+  "meta": {
+    "parent": "(root)",
+    "title": "Eco-Village",
+    "description": "Essência is an off-grid eco-village, healing center and retreat venue on the wild coast of Aljezur. We're a community who believe life can be lived differently — slower, closer to the earth, more connected to ourselves and to each other.",
+    "cover": ""
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "headline": "Life, slowed down and rewilded.",
+      "supline": "Eco-Village · Aljezur, Portugal",
+      "content": "_An off-grid community by the coast, built around presence, care, and the rhythm of the land._",
+      "button": null
+    },
+    {
+      "type": "default-section",
+      "headline": "About Essência",
+      "supline": "Who We Are",
+      "content": "Essência is an off-grid eco-village, healing center and retreat venue on the wild coast of Aljezur. We're a community who believe life can be lived differently — slower, closer to the earth, more connected to ourselves and to each other. Six residents call this land home today, with room and intention to grow toward 22; many more come to rest, heal, learn, or lend a hand. Every one of you is welcome.",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "content": "#### Our Intentions\n\nWe felt called to create a safe, sacred space — and found it on this rich, peaceful stretch of coast, where the ocean opens hearts and the people move slowly and kindly."
+            },
+            {
+              "content": "#### Our Purpose\n\nA slower, more conscious life in nature — for us, and for our children to grow up in. To restore peace, harmony and natural joy."
+            },
+            {
+              "content": "#### Our Vision\n\nA world of unity and belonging — a home where people share, sing, dance, and grow into their fullest health and potential."
+            },
+            {
+              "content": "#### Our Mission\n\nTo hold safe, heart-centred spaces where people can purify, regenerate and grow joyfully — together, on this land."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "Golden Agreements",
+      "supline": "For Harmony & Peace",
+      "content": "How we cultivate a healing environment, together.",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": false,
+      "bgDark": true,
+      "widget": [
+        {
+          "type": "columns",
+          "columns": [
+            {
+              "content": "#### Honesty\n\nOpen, sincere communication — everything can be said."
+            },
+            {
+              "content": "#### Ahimsa\n\nNo harm, to ourselves, each other, or the earth — we grow and eat organic, plant-based food as medicine."
+            },
+            {
+              "content": "#### Benevolent Communication\n\nWe speak to each other with care, even in disagreement."
+            },
+            {
+              "content": "#### Glorify Your Space\n\nWherever you are, here and now — make it sacred, beautiful and cared for."
+            },
+            {
+              "content": "#### High on Life\n\nA substance-free community — high instead on gratitude, health and full potential."
+            },
+            {
+              "content": "#### Self Expression\n\nBe authentic, vulnerable, and unapologetically yourself."
+            },
+            {
+              "content": "#### The Heart Path\n\nChoose love, breath by breath."
+            },
+            {
+              "content": "#### Radical Ownership\n\nTake responsibility for your actions, emotions and impact — we each co-create this place."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "The Cooperativa",
+      "supline": "How We're Structured",
+      "content": "Essência is more than a place to stay — it's a cooperative. The land, the buildings and the life we're building here belong to the community that lives and cares for it, not to any single owner.\n\nResidents share in the responsibility — and the decisions — that shape our common home, from the projects we take on in the garden to the direction the village grows in next. It's a slower, more collective way of building something, and we think that's the point.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": true,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "What \"Off-Grid\" Actually Means",
+      "supline": "Living Off-Grid",
+      "content": "There's no mains connection out here — every drop of water and every watt of power is something we generate, manage and take responsibility for ourselves.",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": [
+        {
+          "type": "card-grid",
+          "cards": [
+            {
+              "image": "",
+              "content": "#### Power\n\nOur electricity comes from solar power, backed up by a diesel generator for the days the sun doesn't cooperate. It's honest, imperfect infrastructure — and we're working to make it cleaner.\n\nOne project we're actively raising funds for is a small hydro generator, powered by the stream on our land, to reduce our reliance on diesel altogether. [Help fund it →](https://essencia.life/join-us/as-supporter#projects)."
+            },
+            {
+              "image": "",
+              "content": "#### Water\n\nDrawn from our own borehole, straight from the ground beneath us. Since pumping it up depends entirely on electricity, water and power are tied together here — one more reason we use both with real intention."
+            },
+            {
+              "image": "",
+              "content": "#### Toilets\n\nDry-separation compost toilets throughout the land — no water wasted, no sewage system needed. What's collected returns, composted, to the soil rather than to a pipe."
+            },
+            {
+              "image": "",
+              "content": "#### Waste\n\nWe're working toward zero — or at least low — waste. In practice, that means buying unpackaged or in bulk wherever we can, so there's simply less to throw away in the first place.\n\nWhat waste we do produce doesn't disappear easily out here: there's no local collection, so it still has to be sorted and driven to recycling ourselves. It's part of why we try to avoid creating it at all."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "headline": "The Eco Village",
+      "supline": "Around the Land",
+      "content": "",
+      "id": "",
+      "textCenter": true,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "The Shala",
+      "supline": "Yoga & Ceremony",
+      "content": "Open on one side to the forest, the Shala is where the community's day begins — morning meditation, breathwork, movement and yoga, held with the birds and the light. It's also home to the ceremonies, chanting and dance that mark our evenings and gatherings.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "Farmhouse",
+      "supline": "Our Guest House",
+      "content": "Six lovingly designed guest rooms, each with a private bathroom, floor-to-ceiling windows and a terrace with a view. Guests share an open kitchen and a cosy living room with fireplace — heated by solar-thermal and the fire, powered by our own solar panels and battery, with Starlink Wi-Fi throughout.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "The Hive",
+      "supline": "Focus & Fast Wifi",
+      "content": "A quiet co-working space with a fast Starlink connection — for the days you need to focus, take a call, or simply get things done. The Hive is where community life and real work overlap, without you having to choose between them.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "Forest SPA",
+      "supline": "Rest & Release",
+      "content": "Sauna at sunset, a warm hot tub under the stars, and a natural pond for cold plunges — our open-air spa is where the week softens. Every Thursday it opens to everyone for SPArkling Night.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": true,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "The Garden",
+      "supline": "Grown, Not Bought",
+      "content": "Much of what lands on our table is grown just steps away. The garden is tended collectively — residents, volunteers and visiting hands all take a turn in the soil, especially on Thursdays, when Community Day gathers everyone for a shared morning of planting, weeding and permaculture.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "Soul Food Kitchen",
+      "supline": "Nourishment, Shared",
+      "content": "Our open-air community kitchen turns the day's harvest into simple, plant-based meals shared at the food circle — organic, seasonal, and always enough for one more plate.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": true,
+      "bgDark": false,
+      "widget": []
+    },
+    {
+      "type": "default-section",
+      "headline": "Kids Temple",
+      "supline": "For Ages 2–10",
+      "content": "A forest-school inspired space where children play, explore and grow at their own pace — building confidence, connection and curiosity among the trees. Open weekday mornings, with a rhythm built around wonder rather than a strict schedule.",
+      "id": "",
+      "textCenter": false,
+      "bgSecondary": false,
+      "bgDark": false,
+      "widget": []
+    }
+  ]
+}
