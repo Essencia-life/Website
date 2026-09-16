@@ -106,7 +106,7 @@
       "buttons": [
         {
           "label": "Meet the people of Essência",
-          "link": "/eco-village/people",
+          "link": "/eco-village",
           "variant": "primary"
         },
         {
