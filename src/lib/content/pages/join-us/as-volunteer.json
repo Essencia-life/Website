@@ -78,7 +78,9 @@
 			"type": "default-section",
 			"headline": "What your day may look like",
 			"content": "",
-			"textCenter": true,
+			"settings": {
+				"textCenter": true
+			},
 			"widget": [
 				{
 					"type": "gallery-grid",
@@ -191,7 +193,9 @@
 			"type": "default-section",
 			"headline": "Ready to apply?",
 			"content": "We read every application with care. Take a moment to look through the page before filling in the form.",
-			"textCenter": true,
+			"settings": {
+				"textCenter": true
+			},
 			"widget": [
 				{
 					"type": "tally-form",

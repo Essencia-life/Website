@@ -19,10 +19,54 @@
       "supline": "Our Guest House",
       "content": "_Come back to yourself, nestled in nature._\n\nSix lovingly designed rooms, each with a private bathroom, floor-to-ceiling windows and a terrace with a view worth waking up for. Guests share an open kitchen and a cosy living room with fireplace, plus a guest WC — heated by solar-thermal and the fire, and powered by 18 solar panels with battery storage and a backup generator. High-speed Wi-Fi throughout, via Starlink.\n\n- 6 rooms, each with a private bathroom\n- Solar-thermal heating & fireplace\n- 18 solar panels + battery, with backup generator\n- High-speed Wi-Fi via Starlink",
       "id": "",
-      "textCenter": false,
-      "bgSecondary": false,
-      "bgDark": false,
-      "widget": []
+      "settings": {
+        "variant": "",
+        "layout": "column-reverse",
+        "textCenter": false
+      },
+      "widget": [
+        {
+          "type": "slideshow",
+          "pictures": [
+            {
+              "caption": "A drone shot of our Farmhouse",
+              "photo": "/media/dji-farmhouse.jpg"
+            },
+            {
+              "caption": "The terrace of a Farmhouse room",
+              "photo": "/media/B0008417.jpg"
+            },
+            {
+              "caption": "More terraces of the Farmhouse",
+              "photo": "/media/accommodations/farmhouse-1.jpg"
+            },
+            {
+              "caption": "Double bed of room 1",
+              "photo": "/media/accommodations/farmhouse-2.jpg"
+            },
+            {
+              "caption": "Double bed of room 2",
+              "photo": "/media/accommodations/farmhouse-3.jpg"
+            },
+            {
+              "caption": "Double bed of room 3",
+              "photo": "/media/accommodations/farmhouse-4.jpg"
+            },
+            {
+              "caption": "Double bed of room 4",
+              "photo": "/media/accommodations/farmhouse-5.jpg"
+            },
+            {
+              "caption": "Triple bed of room 5",
+              "photo": "/media/accommodations/farmhouse-6.jpg"
+            },
+            {
+              "caption": "Shared living room with open kitchen",
+              "photo": "/media/accommodations/farmhouse-7.jpg"
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "default-section",
@@ -30,9 +74,11 @@
       "supline": "Round & Grounded",
       "content": "_Reconnect with yourself, surrounded by forest and birdsong._\n\nTwo to three single yurts and one double yurt, hand-built and tucked into the trees. Singles have a double bed and their own deck — pure nature, some with a fireplace or freestanding gas heater and an outdoor kitchen. The double yurt sleeps more, with two double beds, a couch, a kitchen, fireplace and pellet heating, plus Starlink internet. All yurts share access to a co-working space with the community, also on Starlink.\n\n- 2–3 single yurts, plus 1 double yurt\n- Cold water; some with hot water & outdoor shower\n- Outdoor compost toilet; some with fireplace or gas heater\n- Shared co-working space with Starlink internet",
       "id": "",
-      "textCenter": false,
-      "bgSecondary": true,
-      "bgDark": false,
+      "settings": {
+        "variant": "secondary",
+        "layout": "",
+        "textCenter": false
+      },
       "widget": []
     },
     {
@@ -41,9 +87,7 @@
       "supline": "The New Luxury",
       "content": "_Your temple in the forest, with the birds._\n\nThree 4-season tents, insulated and fitted with diesel heating for winter comfort — our other glamping tents run seasonally, available April through October. Every tent has a kingsize bed with a feather duvet and a carpeted floor. Guests share an outdoor kitchen, showers, toilets and a co-working space with the community, all on Starlink internet.\n\n- 3 four-season tents with diesel heating (winter)\n- Other tents available April – October\n- Kingsize bed, feather duvet & carpet\n- Shared kitchen, showers, WCs & co-working, Starlink",
       "id": "",
-      "textCenter": false,
-      "bgSecondary": false,
-      "bgDark": false,
+      "settings": null,
       "widget": []
     },
     {
@@ -52,9 +96,11 @@
       "supline": "Bring Your Own",
       "content": "_Wake up surrounded by nature, birdsong, and wide open skies._\n\nA peaceful place to slow down, recharge, and enjoy the simple beauty of countryside living — whether you stay a few nights or longer. We keep a small number of carefully placed spots to keep the atmosphere calm and spacious. Guests share access to the outdoor kitchen, showers, toilets and a co-working space with the community, all on Starlink internet.\n\n- A few carefully placed spots, kept calm & spacious\n- Shared kitchen, showers, WCs & co-working, Starlink",
       "id": "",
-      "textCenter": false,
-      "bgSecondary": true,
-      "bgDark": false,
+      "settings": {
+        "variant": "secondary",
+        "layout": "",
+        "textCenter": false
+      },
       "widget": []
     }
   ]

@@ -19,9 +19,10 @@
       "supline": "What the Kids Temple Is",
       "content": "> **Our Kids Temple is closed for Summer Holidays until mid September.**\\\nThe covered space and outdoor playground remain available for families and children to use.\n\nThe Kids Temple embraces a Forest School ethos: nature as the classroom, and play as the way in. Every day is shaped around games and activities that awaken a child's social, physical, intellectual, emotional and spiritual sides — with plenty of room to simply follow their own curiosity. It exists for the children of residents, neighbors and guests alike, and for the parents who come with them.",
       "id": "",
-      "textCenter": true,
-      "bgSecondary": false,
-      "bgDark": false,
+      "settings": {
+        "textCenter": true,
+        "variant": null
+      },
       "widget": [
         {
           "type": "columns",
@@ -35,7 +36,10 @@
             {
               "content": "#### Mission\n\nAn accessible, safe, inspiring space for children's and parents' growth in nature — building self-awareness, self-regulation, social skills and empathy."
             }
-          ]
+          ],
+          "settings": {
+            "variant": "top-border"
+          }
         }
       ]
     },
@@ -45,9 +49,10 @@
       "supline": "Follow Along",
       "content": "",
       "id": "",
-      "textCenter": true,
-      "bgSecondary": true,
-      "bgDark": false,
+      "settings": {
+        "textCenter": true,
+        "variant": "secondary"
+      },
       "widget": [
         {
           "type": "instagram-profile",
@@ -62,9 +67,10 @@
       "supline": "Our Ethics",
       "content": "_Beyond safety rules, children are never obliged to follow an activity at a given time — they're free to follow their bliss and curiosity until they're ready to join in._",
       "id": "",
-      "textCenter": true,
-      "bgSecondary": false,
-      "bgDark": false,
+      "settings": {
+        "textCenter": true,
+        "variant": null
+      },
       "widget": [
         {
           "type": "card-grid",
@@ -103,9 +109,10 @@
       "supline": "",
       "content": "",
       "id": "",
-      "textCenter": false,
-      "bgSecondary": true,
-      "bgDark": false,
+      "settings": {
+        "textCenter": false,
+        "variant": "secondary"
+      },
       "widget": [
         {
           "type": "columns",
@@ -126,9 +133,7 @@
       "supline": "",
       "content": "",
       "id": "",
-      "textCenter": false,
-      "bgSecondary": false,
-      "bgDark": false,
+      "settings": null,
       "widget": [
         {
           "type": "columns",
@@ -149,9 +154,10 @@
       "supline": "Stay Connected",
       "content": "Questions, or want to be notified when the Kids Temple reopens?\\\nWe read every message.\n\n_And if you'd love to get involved in shaping what's next here — we'd love to hear that too._\n\n[**Get in touch**](/contact?topic=kids#form)",
       "id": "",
-      "textCenter": true,
-      "bgSecondary": false,
-      "bgDark": false,
+      "settings": {
+        "textCenter": true,
+        "variant": null
+      },
       "widget": []
     }
   ]

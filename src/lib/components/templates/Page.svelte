@@ -69,6 +69,7 @@
 				label: 'Page Sections',
 				label_singular: 'Section',
 				widget: 'list',
+				collapsed: true,
 				types: [
 					heroSectionField,
 					defaultSectionField,
