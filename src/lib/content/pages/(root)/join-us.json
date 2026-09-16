@@ -12,9 +12,10 @@
       "supline": "",
       "content": "_This is more than an invitation — it's a calling_\n\nThere are many ways to belong to Essência. Whether you're ready to put down roots, offer your hands for a season, or simply support what's growing here — there's a place for you.",
       "id": "",
-      "textCenter": true,
-      "bgSecondary": false,
-      "bgDark": false,
+      "settings": {
+        "textCenter": true,
+        "variant": null
+      },
       "widget": []
     },
     {

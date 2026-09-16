@@ -7,6 +7,7 @@
 	import { tallyFormWidgetField } from '../widgets/TallyFormWidget.svelte';
 	import { columnsWidgetField } from '../widgets/ColumnsWidget.svelte';
 	import { instagramProfileLinkWidgetField } from '../widgets/InstagramProfileWidget.svelte';
+	import { slideshowWidgetField } from '../widgets/SlideshowWidget.svelte';
 
 	export const defaultSectionField = {
 		name: 'default-section',
@@ -42,22 +43,68 @@
 				required: false
 			},
 			{
-				name: 'textCenter',
-				label: 'Center text',
-				widget: 'boolean',
-				required: false
+				name: 'buttons',
+				label: 'Buttons',
+				widget: 'list',
+				required: false,
+				collapsed: true,
+				fields: [
+					{
+						name: 'label',
+						label: 'Label'
+					},
+					{
+						name: 'link',
+						label: 'Link'
+					},
+					{
+						name: 'variant',
+						label: 'Variant',
+						widget: 'select',
+						required: false,
+						options: [
+							{ label: 'Default', value: null },
+							{ label: 'Primary', value: 'primary' }
+						]
+					}
+				]
 			},
 			{
-				name: 'bgSecondary',
-				label: 'Background secondary',
-				widget: 'boolean',
-				required: false
-			},
-			{
-				name: 'bgDark',
-				label: 'Background dark',
-				widget: 'boolean',
-				required: false
+				name: 'settings',
+				label: 'Settings',
+				widget: 'object',
+				required: false,
+				collapsed: true,
+				fields: [
+					{
+						name: 'variant',
+						label: 'Variant',
+						widget: 'select',
+						required: false,
+						options: [
+							{ label: 'Default', value: null },
+							{ label: 'Secondary', value: 'secondary' },
+							{ label: 'Dark', value: 'dark' }
+						]
+					},
+					{
+						name: 'layout',
+						label: 'Layout',
+						widget: 'select',
+						required: false,
+						options: [
+							{ label: 'Default', value: null },
+							{ label: 'Column', value: 'column' },
+							{ label: 'Column Reverse', value: 'column-reverse' }
+						]
+					},
+					{
+						name: 'textCenter',
+						label: 'Center text',
+						widget: 'boolean',
+						required: false
+					}
+				]
 			},
 			{
 				name: 'widget',
@@ -65,6 +112,7 @@
 				widget: 'list',
 				max: 1,
 				required: false,
+				collapsed: true,
 				types: [
 					cardGridWidgetField,
 					galleryGridWidgetField,
@@ -72,7 +120,8 @@
 					stepsWidgetField,
 					tallyFormWidgetField,
 					columnsWidgetField,
-					instagramProfileLinkWidgetField
+					instagramProfileLinkWidgetField,
+					slideshowWidgetField
 				]
 			}
 		] as const
@@ -89,6 +138,7 @@
 	import TallyFormWidget from '../widgets/TallyFormWidget.svelte';
 	import ColumnsWidget from '../widgets/ColumnsWidget.svelte';
 	import InstagramProfileWidget from '../widgets/InstagramProfileWidget.svelte';
+	import SlideshowWidget from '$lib/components/templates/widgets/SlideshowWidget.svelte';
 
 	interface Props {
 		index: number;
@@ -102,22 +152,44 @@
 <section
 	id={section.id}
 	class="py-16"
-	class:text-center={section.textCenter}
-	class:secondary={section.bgSecondary}
-	class:dark={section.bgDark}
+	class:text-center={section.settings?.textCenter}
+	class:secondary={section.settings?.variant === 'secondary'}
+	class:dark={section.settings?.variant === 'dark'}
 >
-	<div class="page-content">
-		<svelte:element this={index === 0 ? 'h2' : 'h3'} class="mb-6">
-			{#if section.supline}
-				<sup class="top-0 mb-2 block">{section.supline}</sup>
-			{/if}
-			{section.headline}
-		</svelte:element>
+	<div
+		class="page-content grid items-center gap-12"
+		class:md:grid-cols-2={section.settings?.layout?.startsWith('column')}
+	>
+		<div>
+			<svelte:element this={index === 0 ? 'h2' : 'h3'} class="mb-6">
+				{#if section.supline}
+					<sup class="top-0 mb-2 block">{section.supline}</sup>
+				{/if}
+				{section.headline}
+			</svelte:element>
 
-		<Markdown content={section.content} />
+			{#if section.content}
+				<Markdown content={section.content} />
+			{/if}
+
+			{#if section.buttons?.length}
+				<div class="mt-8 inline-flex gap-4">
+					{#each section.buttons ?? [] as button (button)}
+						<!-- eslint-disable svelte/no-navigation-without-resolve -->
+						<a
+							href={button.link}
+							class="button"
+							class:button-primary={button.variant === 'primary'}
+						>
+							{button.label}
+						</a>
+					{/each}
+				</div>
+			{/if}
+		</div>
 
 		{#if widget}
-			<div class="mt-12 text-left">
+			<div class="text-left" class:md:-order-1={section.settings?.layout === 'column-reverse'}>
 				{#if widget.type === 'card-grid'}
 					<CardGridWidget {widget} />
 				{:else if widget.type === 'gallery-grid'}
@@ -132,6 +204,8 @@
 					<InstagramProfileWidget {widget} />
 				{:else if widget.type === 'tally-form'}
 					<TallyFormWidget {widget} />
+				{:else if widget.type === 'slideshow'}
+					<SlideshowWidget {widget} />
 				{/if}
 			</div>
 		{/if}
@@ -147,5 +221,12 @@
 		color-scheme: dark;
 		background: var(--brand-dark-section-color);
 		color: var(--brand-stonewhite-color);
+	}
+
+	.dark :global(h2),
+	.dark :global(h3),
+	.dark :global(h4),
+	.dark :global(h5) {
+		color: var(--brand-ambergold-color);
 	}
 </style>

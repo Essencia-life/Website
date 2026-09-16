@@ -59,7 +59,9 @@
 			"supline": "Daily Life",
 			"headline": "What life looks like here",
 			"content": "",
-			"textCenter": true,
+			"settings": {
+				"textCenter": true
+			},
 			"widget": [
 				{
 					"type": "gallery-grid",
@@ -92,8 +94,10 @@
 			"type": "default-section",
 			"supline": "Our Values",
 			"headline": "The foundations we live by",
-			"textCenter": true,
-			"bgSecondary": true,
+			"settings": {
+				"textCenter": true,
+				"variant": "secondary"
+			},
 			"content": "Inner work & self—awareness\n — Honesty\n — Radical ownership\n — Love & compassion\n — Forgiveness\n — Benevolent communication\n — High on life\n — Ahimsa\n — Service & purpose\n — Ecological stewardship\n — Shared governance",
 			"widget": []
 		},
@@ -150,7 +154,9 @@
 			"type": "default-section",
 			"headline": "Start the conversation",
 			"content": "No commitment, no pressure — just a first hello. We read every message personally.",
-			"textCenter": true,
+			"settings": {
+				"textCenter": true
+			},
 			"widget": [
 				{
 					"type": "tally-form",

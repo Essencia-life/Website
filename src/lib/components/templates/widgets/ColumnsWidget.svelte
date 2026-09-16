@@ -24,6 +24,31 @@
 						widget: 'richtext'
 					}
 				]
+			},
+			{
+				name: 'settings',
+				label: 'Settings',
+				widget: 'object',
+				required: false,
+				fields: [
+					{
+						name: 'variant',
+						label: 'Variant',
+						widget: 'select',
+						required: false,
+						options: [
+							{ label: 'Default', value: null },
+							{ label: 'Colored top border', value: 'top-border' }
+						]
+					},
+					{
+						name: 'columns',
+						label: 'Number of columns',
+						widget: 'number',
+						value_type: 'int',
+						required: false
+					}
+				]
 			}
 		] as const
 	} satisfies ObjectField;
@@ -41,13 +66,13 @@
 </script>
 
 <div
-	class="mt-12 grid md:grid-cols-[repeat(var(--columns),_1fr)] md:gap-8"
-	style:--columns={widget.columns.length}
+	class="mt-12 grid md:grid-cols-[repeat(var(--columns),1fr)] md:gap-8"
+	class:top-border-colored={widget.settings?.variant === 'top-border'}
+	style:--columns={widget.settings?.columns ?? widget.columns.length}
 >
-	{#each widget.columns as column}
+	{#each widget.columns as column (column)}
 		<article>
 			<Markdown content={column.content}>
-
 				{#snippet headlineNode(node, sharedProps)}
 					<svelte:element this={'h' + node.depth} class="mb-6">
 						<Markdown content={node} {...sharedProps} />
@@ -55,7 +80,11 @@
 				{/snippet}
 
 				{#snippet listNode(node, sharedProps)}
-					<svelte:element this={node.ordered ? 'ol' : 'ul'} class="pl-3" class:list-hyphen={!node.ordered}>
+					<svelte:element
+						this={node.ordered ? 'ol' : 'ul'}
+						class="pl-3"
+						class:list-hyphen={!node.ordered}
+					>
 						<Markdown content={node} {...sharedProps} />
 					</svelte:element>
 				{/snippet}
@@ -72,6 +101,23 @@
 
 <style>
 	.list-hyphen {
-		list-style: "–";
+		list-style: '–';
+	}
+
+	.top-border-colored article {
+		border-top: 2px solid var(--brand-forestdeep-color);
+		padding-top: 1rem;
+	}
+
+	.top-border-colored article:nth-child(2) {
+		border-color: var(--brand-oceanteal-color);
+	}
+
+	.top-border-colored article:nth-child(3) {
+		border-color: var(--brand-ambergold-color);
+	}
+
+	.top-border-colored article:nth-child(4) {
+		border-color: var(--brand-earthterracotta-color);
 	}
 </style>
