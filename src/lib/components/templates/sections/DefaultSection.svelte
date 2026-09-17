@@ -173,7 +173,7 @@
 			{/if}
 
 			{#if section.buttons?.length}
-				<div class="mt-8 inline-flex gap-4">
+				<div class="mt-8 inline-flex flex-wrap gap-4">
 					{#each section.buttons ?? [] as button (button)}
 						<!-- eslint-disable svelte/no-navigation-without-resolve -->
 						<a

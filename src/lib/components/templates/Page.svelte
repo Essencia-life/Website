@@ -40,11 +40,11 @@
 						collection: 'pages',
 						display_fields: ['meta.title'],
 						dropdown_threshold: 0,
-						default: '(root)',
+						default: '__root',
 						filters: [
 							{
 								field: 'meta.parent',
-								values: ['(root)']
+								values: ['__root']
 							}
 						]
 					},
