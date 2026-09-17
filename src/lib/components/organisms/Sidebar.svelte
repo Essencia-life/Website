@@ -2,7 +2,7 @@
 	import { quartInOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
 	import Navigation from '../molecules/Navigation.svelte';
-	import { X } from '@lucide/svelte';
+	import X from '@lucide/svelte/icons/x';
 	import type { OverlayRef } from '$lib/overlays.svelte';
 
 	interface Props {

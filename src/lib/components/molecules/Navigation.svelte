@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import headerData from '$lib/content/header.json';
-	import { ChevronDown, ChevronUp } from '@lucide/svelte';
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
+	import ChevronUp from '@lucide/svelte/icons/chevron-up';
 
 	interface Props {
 		header?: true;
