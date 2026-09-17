@@ -1,4 +1,4 @@
-import type { Metadata } from '../../routes/+layout.server';
+import type { Metadata } from '../../routes/(website)/+layout.server';
 
 const pageRegExp = /\/src\/routes\/\(pages\)(?<path>\/[a-z0-9-/]+)\/\+page.md/;
 const pages = new Map(

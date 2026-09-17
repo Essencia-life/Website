@@ -6,7 +6,7 @@ import {
 	outputHTML,
 	getProviderCredentials,
 	type Provider
-} from '$lib/server/cms-auth-utils';
+} from './auth-utils.server';
 
 const buildAuthURL = (
 	provider: Provider,

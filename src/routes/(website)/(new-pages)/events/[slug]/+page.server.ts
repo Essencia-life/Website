@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import type { EntryGenerator, PageServerLoad } from './$types';
+import type { EntryGenerator, PageServerLoad } from '../../../../../../.svelte-kit/types/src/routes';
 import { EventNotFound, Events } from '$lib/services/Events';
 
 export const prerender = true;

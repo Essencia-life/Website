@@ -1,0 +1,267 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+
+@theme {
+	--font-serif: Alegreya, serif;
+	--inset-shadow-md: inset 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+@layer base {
+	@font-face {
+		font-family: 'Alegreya';
+		src:
+				url('$lib/assets/fonts/Alegreya.woff2') format('woff2'),
+				url('$lib/assets/fonts/Alegreya.woff') format('woff');
+		font-weight: 400 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+
+
+	:root {
+		--brand-mossgreen-rgb: 103 118 82;
+		--brand-mossgreen-color: rgb(var(--brand-mossgreen-rgb));
+		--brand-earthterracotta-rgb: 96 72 47;
+		--brand-earthterracotta-color: rgb(var(--brand-earthterracotta-rgb));
+		--brand-parchment-rgb: 233 228 211;
+		--brand-parchment-color: rgb(var(--brand-parchment-rgb));
+		--brand-stonewhite-rgb: 252 250 244;
+		--brand-stonewhite-color: rgb(var(--brand-stonewhite-rgb));
+		--brand-earthbrown-rgb: 49 39 19;
+		--brand-earthbrown-color: rgb(var(--brand-earthbrown-rgb));
+		--brand-forestdeep-rgb: 58 75 57;
+		--brand-forestdeep-color: rgb(var(--brand-forestdeep-rgb));
+		--brand-ambergold-rgb: 196 146 42;
+		--brand-ambergold-color: rgb(var(--brand-ambergold-rgb));
+		--brand-oceanteal-rgb: 74 123 138;
+		--brand-oceanteal-color: rgb(var(--brand-oceanteal-rgb));
+		--brand-crimsonred-rgb: 192 57 43;
+		--brand-crimsonred-color: rgb(var(--brand-crimsonred-rgb));
+
+		/* purpose */
+		--brand-primary-rgb: var(--brand-mossgreen-rgb);
+		--brand-primary-color: var(--brand-mossgreen-color);
+		--brand-accent-rgb: var(--brand-earthterracotta-rgb);
+		--brand-accent-color: var(--brand-earthterracotta-color);
+		--brand-backround-rgb: var(--brand-stonewhite-rgb);
+		--brand-background-color: var(--brand-stonewhite-color);
+		--brand-text-rgb: var(--brand-earthbrown-rgb);
+		--brand-text-color: var(--brand-earthbrown-color);
+		--brand-border-rgb: var(--brand-parchment-rgb);
+		--brand-border-color: var(--brand-parchment-color);
+		--brand-dark-section-rgb: var(--brand-forestdeep-rgb);
+		--brand-dark-section-color: var(--brand-forestdeep-color);
+		--brand-highlight-rgb: var(--brand-ambergold-rgb);
+		--brand-highlight-color: var(--brand-ambergold-color);
+		--brand-healing-rgb: var(--brand-oceanteal-rgb);
+		--brand-healing-color: var(--brand-oceanteal-color);
+		--brand-danger-rgb: var(--brand-crimsonred-rgb);
+		--brand-danger-color: var(--brand-crimsonred-color);
+	}
+
+	::view-transition-old(root),
+	::view-transition-new(root) {
+		animation: none;
+	}
+
+	html,
+	body {
+		background: var(--brand-background-color);
+		height: 100%;
+		box-sizing: border-box;
+		scroll-padding: 5.5rem;
+		padding: 0;
+		margin: 0;
+	}
+
+	body {
+		overflow-x: hidden;
+	}
+
+	@supports (height: 100dvh) {
+		html,
+		body {
+			height: 100dvh;
+		}
+	}
+
+	main {
+		font-family: system-ui, sans-serif;
+		font-weight: 300;
+		letter-spacing: 0.2px;
+		word-spacing: 2px;
+		color: var(--brand-text-color);
+	}
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+
+	.page-content {
+		width: calc(100vw - (100vw - 100%));
+		max-width: 1024px;
+		margin-inline: auto;
+		padding: 0 1rem;
+		overflow: hidden;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		@apply font-serif font-medium;
+		color: var(--brand-accent-color);
+	}
+
+	h1 {
+		@apply text-6xl;
+	}
+
+	h2 {
+		@apply text-5xl leading-14;
+	}
+
+	h3 {
+		@apply text-3xl;
+	}
+
+	h4 {
+		@apply text-xl;
+	}
+
+	h5 {
+		@apply text-lg;
+	}
+
+	sup {
+		@apply font-serif text-xs font-bold tracking-widest uppercase opacity-70;
+	}
+
+	.inline-list {
+		@apply inline-flex flex-wrap justify-center gap-3;
+	}
+
+	.inline-list li:not(:first-of-type)::before {
+		content: '—';
+		@apply pr-3;
+	}
+
+	.fab {
+		@apply grid aspect-square w-14 cursor-pointer items-center justify-center rounded-full bg-white! shadow-md/30;
+	}
+
+	.fab.small {
+		@apply w-10;
+	}
+
+	blockquote {
+		@apply bg-sky-100 border-l-4 border-sky-500 p-4 rounded-md text-left;
+	}
+
+	strong {
+		font-weight: 600;
+	}
+
+	hr {
+		height: 1px;
+		background: var(--brand-border-color);
+		border: none;
+		margin-block: 2.5rem;
+	}
+
+	button {
+		appearance: none;
+		margin: 0;
+		padding: 0;
+		font: inherit;
+		background: transparent;
+		border: 0;
+	}
+
+	.button {
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
+		cursor: pointer;
+		gap: 0.5rem;
+		padding: 0.625rem 0.75rem;
+		border: 2px solid var(--brand-earthterracotta-color);
+		border-radius: 24px 8px 24px 8px;
+		font-weight: 600;
+		font-size: 1rem;
+		color: var(--brand-earthterracotta-color);
+		background-color: rgba(var(--brand-stonewhite-rgb) / 15%);
+		text-align: center;
+	}
+
+	.button.button-primary {
+		border-color: transparent;
+		background-color: var(--brand-primary-color);
+		color: var(--brand-background-color);
+	}
+
+	.button.button-ambergold {
+		border-color: transparent;
+		background-color: var(--brand-ambergold-color);
+		color: var(--brand-background-color);
+	}
+
+	.button.button-oceanteal {
+		border-color: transparent;
+		background-color: var(--brand-oceanteal-color);
+		color: var(--brand-background-color);
+	}
+
+	.icon-button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 3rem;
+		aspect-ratio: 1;
+		border-radius: 100%;
+	}
+
+	::selection {
+		background: var(--brand-dark-section-color);
+		color: var(--brand-background-color);
+	}
+
+	a:not(.no-link, .button) {
+		color: var(--brand-primary-color);
+		font-weight: 500;
+	}
+
+	a[target='_blank']:not(.no-link, .button, .icon)::after {
+		content: '';
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background: no-repeat 80% 80% / 80%
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23526b4f' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M15 3h6v6M10 14 21 3M18 13v6l-2 2H5l-2-2V8l2-2h6'/%3E%3C/svg%3E");
+	}
+
+	a[href^='mailto:']:not(.no-link, .button, .icon)::before {
+		content: '';
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background: no-repeat 0 15% / 80%
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23526b4f' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m22 7-9 6h-2L2 7'/%3E%3Crect width='20' height='16' x='2' y='4' rx='2'/%3E%3C/svg%3E");
+		vertical-align: middle;
+	}
+
+	@media screen and (hover: hover) {
+		a:hover {
+			text-decoration: none;
+		}
+
+		a:not(.no-link, .button):hover {
+			opacity: 0.8;
+		}
+	}
+}

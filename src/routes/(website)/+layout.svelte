@@ -1,7 +1,7 @@
 <script lang="ts">
 	import './layout.css';
-	import '../app.css';
 	import logo from '$lib/assets/logo_tree.png';
+	import font from '$lib/assets/fonts/Alegreya.woff2';
 	import Overlays from '$lib/components/atoms/Overlays.svelte';
 	import { page } from '$app/state';
 	import SEO from '$lib/components/atoms/SEO.svelte';
@@ -35,6 +35,7 @@
 </script>
 
 <svelte:head>
+	<link rel="preload" href={font} as="font" type="font/woff2" crossorigin />
 	<link rel="icon" href={logo} />
 	<meta name="theme-color" content="#e9e4d3" />
 

@@ -3,7 +3,7 @@ import devtoolsJson from 'vite-plugin-devtools-json';
 import { defineConfig } from 'vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
-// @ts-ignore
+// @ts-expect-error vite needs .ts extension for local plugins
 import { previewCss } from './cms-preview-css-plugin.ts';
 
 export default defineConfig({
