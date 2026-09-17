@@ -10,9 +10,9 @@
 	const { data }: PageProps = $props();
 
 	onMount(async () => {
-		const { init } = await import('@sveltia/cms');
+		const { init, registerPreviewTemplate } = await import('@sveltia/cms');
 
-		void init({
+		await init({
 			config: {
 				load_config_file: false,
 				media_folder: '/src/lib/assets/media',
@@ -36,12 +36,29 @@
 						deleteMedia: 'feat({{collection}}): deleted “{{path}}”'
 					}
 				},
-				editor: {
-					preview: false
-				},
+				// editor: {
+				// 	preview: false
+				// },
 				singletons: [headerCmsConfig, footerCmsConfig],
 				collections: [pageCollection, eventCollection]
 			}
 		});
+
+		// Register Svelte components as preview templates by wrapping them in a small React adapter
+		const { svelteToReactWrapper } = await import('$lib/admin/sveltePreviewMapper');
+		const [{ default: PageTemplate }, { default: EventTemplate }] = await Promise.all([
+			import('$lib/components/templates/Page.svelte'),
+			import('$lib/components/templates/Event.svelte')
+		]);
+
+		// Use the collection name if available, otherwise fall back to the conventional string
+		registerPreviewTemplate(
+			pageCollection?.name ?? 'pages',
+			svelteToReactWrapper(PageTemplate, 'page')
+		);
+		registerPreviewTemplate(
+			eventCollection?.name ?? 'events',
+			svelteToReactWrapper(EventTemplate, 'event')
+		);
 	});
 </script>
