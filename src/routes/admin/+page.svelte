@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
 	import { onMount } from 'svelte';
 	import type { PageProps } from './$types';
 	import { headerCmsConfig } from '$lib/components/templates/Header.svelte';
 	import { footerCmsConfig } from '$lib/components/templates/Footer.svelte';
-	import { pageCollection } from '$lib/components/templates/Page.svelte';
-	import { eventCollection } from '$lib/components/templates/Event.svelte';
+	import PageTemplate, { pageCollection } from '$lib/components/templates/Page.svelte';
+	import EventTemplate, { eventCollection } from '$lib/components/templates/Event.svelte';
+	import { svelteToReactWrapper } from './sveltePreviewMapper.svelte';
 
 	const { data }: PageProps = $props();
 
 	onMount(async () => {
-		const { init, registerPreviewTemplate } = await import('@sveltia/cms');
+		const { init, registerPreviewTemplate, registerPreviewStyle } = await import('@sveltia/cms');
 
 		await init({
 			config: {
@@ -27,7 +27,7 @@
 					repo: 'Essencia-life/Website',
 					branch: 'sveltia',
 					base_url: `https://${data.baseUrl}`,
-					auth_endpoint: resolve('/admin/auth'),
+					auth_endpoint: '/admin/auth',
 					commit_messages: {
 						create: 'feat({{collection}}): created “{{slug}}”',
 						update: 'feat({{collection}}): updated “{{slug}}”',
@@ -36,22 +36,12 @@
 						deleteMedia: 'feat({{collection}}): deleted “{{path}}”'
 					}
 				},
-				// editor: {
-				// 	preview: false
-				// },
 				singletons: [headerCmsConfig, footerCmsConfig],
 				collections: [pageCollection, eventCollection]
 			}
 		});
 
-		// Register Svelte components as preview templates by wrapping them in a small React adapter
-		const { svelteToReactWrapper } = await import('$lib/admin/sveltePreviewMapper');
-		const [{ default: PageTemplate }, { default: EventTemplate }] = await Promise.all([
-			import('$lib/components/templates/Page.svelte'),
-			import('$lib/components/templates/Event.svelte')
-		]);
-
-		// Use the collection name if available, otherwise fall back to the conventional string
+		registerPreviewStyle('/admin/preview.css');
 		registerPreviewTemplate(
 			pageCollection?.name ?? 'pages',
 			svelteToReactWrapper(PageTemplate, 'page')

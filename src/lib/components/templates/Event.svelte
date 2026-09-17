@@ -7,7 +7,7 @@
 		label_singular: 'Event',
 		format: 'json',
 		icon: 'event',
-		identifier_field: 'meta.title',
+		identifier_field: 'title',
 		slug: "{{fields.start | date('YYYY-MM-DD')}}-{{fields.title}}",
 		summary: "{{start | date('DD.MM.')}} — {{title}}",
 		thumbnail: 'cover_image',
