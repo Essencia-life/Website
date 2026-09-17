@@ -60,8 +60,8 @@
 		--brand-danger-color: var(--brand-crimsonred-color);
 	}
 
-	::view-transition-old(root),
-	::view-transition-new(root) {
+	::view-transition-old__root,
+	::view-transition-new__root {
 		animation: none;
 	}
 

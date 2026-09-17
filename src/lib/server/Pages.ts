@@ -9,14 +9,14 @@ const pages = new Map(
 			{ eager: true }
 		)
 	).map(([path, module]) => [
-		path.match(pageRegExp)!.groups!.path!.replaceAll('(root)/', ''),
+		path.match(pageRegExp)!.groups!.path!.replaceAll('__root/', ''),
 		module.default
 	])
 );
 
 export class Pages {
 	static getAllPaths() {
-		return Array.from(pages.keys(), (path) => ({ path })).filter(({ path }) => path !== '(root)');
+		return Array.from(pages.keys(), (path) => ({ path })).filter(({ path }) => path !== '__root');
 	}
 
 	public static getPage(path: string) {

@@ -1,4 +1,4 @@
-import React, {
+import {
 	Component as ReactComponent,
 	type ComponentType as ReactComponentType
 } from 'react';
@@ -60,7 +60,7 @@ export function svelteToReactWrapper<C extends SvelteComponent>(
 		}
 
 		render() {
-			return React.createElement('div');
+			return '';
 		}
 	};
 }
