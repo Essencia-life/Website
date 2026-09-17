@@ -2,7 +2,7 @@
 	import { type Event, Events } from '$lib/services/Events';
 	import { Media } from '$lib/services/Media';
 	import { resolve } from '$app/paths';
-	import { ArrowRight } from '@lucide/svelte';
+	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import {
 		eventCoverTransitionName,
 		storeLinkUrlInPageState

@@ -42,7 +42,7 @@
 </script>
 
 <script lang="ts">
-	import { Menu } from '@lucide/svelte';
+	import Menu from '@lucide/svelte/icons/menu';
 	import { getContext } from 'svelte';
 	import Sidebar from '../organisms/Sidebar.svelte';
 	import Navigation from '../molecules/Navigation.svelte';
