@@ -92,6 +92,7 @@
 		letter-spacing: 0.2px;
 		word-spacing: 2px;
 		color: var(--brand-text-color);
+		height: 100%;
 	}
 
 	*,
@@ -209,6 +210,12 @@
 		border-color: transparent;
 		background-color: var(--brand-ambergold-color);
 		color: var(--brand-background-color);
+	}
+
+	.button.button-outline {
+		border-color: white;
+		background-color: rgba(0 0 0 / 30%);
+		color: white;
 	}
 
 	.button.button-oceanteal {
