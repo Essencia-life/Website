@@ -33,7 +33,7 @@
 				<div class="root">
 					<a href={item.link}>{item.label}</a>
 
-					{#if item.children}
+					{#if item.children?.length}
 						<div class="toggle">
 							<button class="icon-button" onclick={() => (item.open = !item.open)}>
 								{#if !item.open}
@@ -46,7 +46,7 @@
 					{/if}
 				</div>
 
-				{#if item.children && (item.open || header)}
+				{#if item.children?.length && (item.open || header)}
 					<div class="children" transition:slide onintroend={scrollIntoView}>
 						<ul>
 							{#each item.children as child (child)}
