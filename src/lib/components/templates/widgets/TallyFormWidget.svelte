@@ -40,6 +40,6 @@
 
 <style>
 	.secondary {
-		background: var(--brand-parchment-color);
+		background: var(--color-stone-100);
 	}
 </style>

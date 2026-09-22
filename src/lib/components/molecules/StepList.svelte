@@ -52,7 +52,7 @@
 		content: '';
 		position: absolute;
 		inset: 50% 0 auto 0;
-		border-bottom: 2px solid var(--brand-border-color);
+		border-bottom: 2px solid var(--color-stone-100);
 	}
 
 	.steps li .number::after {
@@ -62,12 +62,12 @@
 		justify-content: center;
 		height: inherit;
 		aspect-ratio: 1;
-		border: 2px solid var(--brand-border-color);
+		border: 2px solid var(--color-stone-100);
 		border-radius: 100%;
-		background: var(--brand-background-color);
+		background: var(--color-stone-50);
 		font-family: Alegreya, serif;
 		font-weight: 600;
-		color: var(--brand-primary-color);
+		color: var(--color-olive-700);
 		z-index: 1;
 	}
 

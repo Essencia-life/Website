@@ -11,7 +11,7 @@
 </script>
 
 <article
-	class="flex flex-col overflow-hidden rounded-lg border border-(--brand-border-color) bg-(--brand-background-color)"
+	class="flex flex-col overflow-hidden rounded-lg border border-stone-100 bg-stone-50"
 >
 	{#if image}
 		<enhanced:img src={Media.getFile(image)} />

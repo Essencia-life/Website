@@ -34,7 +34,7 @@
 				await importLibrary('places');
 
 				mapRef.innerMap.setOptions({
-					backgroundColor: 'var(--brand-parchment-color)',
+					backgroundColor: 'var(--color-stone-100)',
 					mapTypeId: MapTypeId.TERRAIN,
 					disableDefaultUI: true,
 					scrollwheel: false
@@ -87,7 +87,7 @@
 	gmp-map {
 		position: absolute;
 		inset: 0;
-		background: var(--brand-parchment-color);
+		background: var(--color-stone-100);
 	}
 
 	.loading {

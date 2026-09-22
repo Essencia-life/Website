@@ -13,7 +13,7 @@
 			<label>
 				<input type="radio" bind:group={value} value={option.value} class="hidden peer" />
 				<div
-					class="peer-checked:bg-(--brand-mossgreen-color) peer-checked:text-white px-3 py-1 rounded-full text-gray-800 cursor-pointer"
+					class="peer-checked:bg-olive-700 peer-checked:text-white px-3 py-1 rounded-full text-gray-800 cursor-pointer"
 				>
 					{option.label}
 				</div>

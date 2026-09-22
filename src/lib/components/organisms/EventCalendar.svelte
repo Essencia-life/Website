@@ -129,7 +129,7 @@
 	article:not(:last-of-type) {
 		padding-bottom: 2.5rem;
 		margin-bottom: 2.5rem;
-		border-bottom: 0.5rem solid rgba(var(--brand-parchment-rgb) / 50%);
+		border-bottom: 0.5rem solid color-mix(in oklab, var(--color-stone-100) 50%, transparent);
 	}
 
 	.date {
@@ -154,7 +154,7 @@
 		height: 0.25rem;
 		width: 2rem;
 		margin-top: 1rem;
-		background: var(--brand-ambergold-color);
+		background: var(--color-amber-500);
 	}
 
 	.date .day {
@@ -175,7 +175,7 @@
 		height: auto;
 		aspect-ratio: 4 / 5;
 		object-fit: cover;
-		box-shadow: 0 0 0.75rem rgba(var(--brand-earthbrown-rgb) / 40%);
+		box-shadow: 0 0 0.75rem color-mix(in oklab, var(--color-stone-900) 40%, transparent);
 	}
 
 	.info {
@@ -195,7 +195,7 @@
 
 	.description {
 		flex: 1;
-		border-bottom: 1px solid var(--brand-parchment-color);
+		border-bottom: 1px solid var(--color-stone-100);
 	}
 
 	.description h4 {

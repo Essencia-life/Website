@@ -84,7 +84,7 @@
 <style>
 	.dark {
 		color-scheme: dark;
-		background: var(--brand-dark-section-color);
-		color: var(--brand-stonewhite-color);
+		background: var(--color-olive-800);
+		color: var(--color-stone-50);
 	}
 </style>

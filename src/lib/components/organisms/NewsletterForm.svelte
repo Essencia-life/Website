@@ -28,11 +28,11 @@
 	}
 
 	.input:hover {
-		border-color: var(--brand-accent-color);
+		border-color: var(--color-taupe-700);
 	}
 
 	.input:focus {
-		border-color: var(--brand-primary-color);
+		border-color: var(--color-olive-700);
 	}
 
 </style>

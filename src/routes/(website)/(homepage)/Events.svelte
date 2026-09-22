@@ -91,10 +91,10 @@
 		gap: 1rem;
 		text-decoration: none;
 		color: inherit;
-		background: rgba(var(--brand-parchment-rgb) / 40%);
+		background: color-mix(in oklab, var(--color-stone-100) 40%, transparent);
 		padding: 1rem;
 		border-radius: 0.5rem;
-		box-shadow: 0 1px 4px rgba(var(--brand-earthbrown-rgb) / 30%);
+		box-shadow: 0 1px 4px color-mix(in oklab, var(--color-stone-900) 30%, transparent);
 		scroll-snap-align: center;
 		flex-direction: column;
 		scroll-snap-stop: always;
@@ -132,19 +132,19 @@
 
 	.event small {
 		text-transform: uppercase;
-		background-color: var(--brand-primary-color);
-		color: var(--brand-stonewhite-color);
+		background-color: var(--color-olive-700);
+		color: var(--color-stone-50);
 		font-weight: 700;
 		padding: 0.25rem 0.5rem;
 		border-radius: 0.25rem;
 		font-size: 0.625rem;
 		letter-spacing: 1px;
-		text-shadow: 1px 1px var(--brand-mossgreen-color);
+		text-shadow: 1px 1px var(--color-olive-700);
 		line-height: 1.5;
 	}
 
 	.event small.type-retreat {
-		background-color: var(--brand-healing-color);
+		background-color: var(--color-cyan-600);
 	}
 
 	.event enhanced\:img {

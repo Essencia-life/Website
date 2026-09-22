@@ -105,19 +105,19 @@
 	}
 
 	.top-border-colored article {
-		border-top: 2px solid var(--brand-forestdeep-color);
+		border-top: 2px solid var(--color-olive-800);
 		padding-top: 1rem;
 	}
 
 	.top-border-colored article:nth-child(2) {
-		border-color: var(--brand-oceanteal-color);
+		border-color: var(--color-cyan-600);
 	}
 
 	.top-border-colored article:nth-child(3) {
-		border-color: var(--brand-ambergold-color);
+		border-color: var(--color-amber-500);
 	}
 
 	.top-border-colored article:nth-child(4) {
-		border-color: var(--brand-earthterracotta-color);
+		border-color: var(--color-taupe-700);
 	}
 </style>

@@ -13,14 +13,14 @@
 
 {@render children?.()}
 
-<div class="overlays">
-	{#each page.state.overlays as overlayId}
+<div class="*:z-100 *:overscroll-contain">
+	{#each page.state.overlays as overlayId (overlayId)}
 		{@const overlay = overlays.byId[overlayId]}
 
 		{#if overlay}
 			{#if overlay.config.backdrop}
 				<div
-					class="backdrop"
+					class="fixed inset-0 bg-taupe-700/70 blur-xs overflow-hidden"
 					onclick={() => overlay.close()}
 					transition:fade|global
 					style:background-color={overlay.config.backdrop === true
@@ -33,19 +33,3 @@
 		{/if}
 	{/each}
 </div>
-
-<style>
-	.overlays :global(> *) {
-		z-index: 100;
-		overscroll-behavior: contain;
-	}
-
-	.backdrop {
-		position: fixed;
-		inset: 0;
-		background-color: rgba(var(--brand-earthterracotta-rgb) / 70%);
-		backdrop-filter: blur(0.25rem);
-		overscroll-behavior: contain;
-		overflow: hidden;
-	}
-</style>

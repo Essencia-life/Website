@@ -83,11 +83,11 @@
 <style>
 	.dark {
 		color-scheme: dark;
-		background: var(--brand-dark-section-color);
-		color: var(--brand-stonewhite-color);
+		background: var(--color-olive-800);
+		color: var(--color-stone-50);
 	}
 
 	.dark h3 {
-		color: var(--brand-stonewhite-color);
+		color: var(--color-stone-50);
 	}
 </style>

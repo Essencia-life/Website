@@ -46,7 +46,7 @@
 	.social-media-button {
 		padding: 1rem;
 		border-radius: 1rem;
-		background: rgba(var(--brand-parchment-rgb) / 80%);
+		background: color-mix(in oklab, var(--color-stone-100) 80%, transparent);
 		color: inherit;
 		text-decoration: none;
 	}

@@ -116,8 +116,8 @@
 							/>
 						</EventRibbon>
 						<div class="absolute bottom-0 -translate-x-2 translate-y-2 rounded-lg text-center text-white w-11 pb-1.5 font-serif  shadow-lg/30"
-								 class:bg-(--brand-mossgreen-color)={event.type === 'event'}
-								 class:bg-(--brand-oceanteal-color)={event.type === 'retreat'}>
+								 class:bg-olive-700={event.type === 'event'}
+								 class:bg-cyan-600={event.type === 'retreat'}>
 							<div class="text-2xl font-bold">{day}</div>
 							<div class="text-sm uppercase font-medium opacity-80">{month}</div>
 						</div>
@@ -125,8 +125,8 @@
 					<div class="space-y-4">
 						<div class="max-sm:flex flex-row-reverse justify-between space-x-2">
 							<span class="text-white py-1 px-2 text-xs rounded uppercase font-medium"
-										class:bg-(--brand-mossgreen-color)={event.type === 'event'}
-										class:bg-(--brand-oceanteal-color)={event.type === 'retreat'}>{event.type}</span>
+										class:bg-olive-700={event.type === 'event'}
+										class:bg-cyan-600={event.type === 'retreat'}>{event.type}</span>
 							<time>
 								{#if isMoreThanOneDay}
 									{startDate} &mdash; {endDate}
@@ -188,8 +188,8 @@
 				<div class="space-y-2">
 					<div>
 						<span class="text-white py-1 px-2 text-xs rounded uppercase font-medium"
-									class:bg-(--brand-mossgreen-color)={event.type === 'event'}
-									class:bg-(--brand-oceanteal-color)={event.type === 'retreat'}>{event.type}</span>
+									class:bg-olive-700={event.type === 'event'}
+									class:bg-cyan-600={event.type === 'retreat'}>{event.type}</span>
 					</div>
 					<h4>{event.title}</h4>
 					<time class="opacity-75 text-sm">

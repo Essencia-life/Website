@@ -142,7 +142,7 @@
 		width: 0.5rem;
 		height: 0.5rem;
 		border-radius: 100%;
-		background: light-dark(var(--brand-parchment-color), rgba(0 0 0 / 50%));
+		background: light-dark(var(--color-stone-100), rgba(0 0 0 / 50%));
 	}
 
 	.indicators > button::after {
@@ -151,12 +151,12 @@
 		width: 0.5rem;
 		height: 0.5rem;
 		border-radius: 100%;
-		background: light-dark(rgba(0 0 0 / 50%), var(--brand-parchment-color));
+		background: light-dark(rgba(0 0 0 / 50%), var(--color-stone-100));
 		opacity: var(--ratio);
 	}
 
 	figcaption {
-		color: var(--brand-stonewhite-color);
+		color: var(--color-stone-50);
 	}
 
 	.navigate {
@@ -170,7 +170,7 @@
 		margin: 0;
 		color: #fff;
 		cursor: pointer;
-		filter: drop-shadow(var(--brand-earthbrown-color) 0 0 0.25rem);
+		filter: drop-shadow(var(--color-stone-900) 0 0 0.25rem);
 	}
 
 	.navigate:disabled {
