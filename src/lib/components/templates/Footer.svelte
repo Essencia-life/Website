@@ -83,7 +83,7 @@
 	]);
 </script>
 
-<footer>
+<footer class="mt-12">
 	<div class="background">
 		<enhanced:img src="$lib/assets/media/footer.png" alt="Essência forest skyline" loading="lazy" />
 	</div>
