@@ -16,10 +16,6 @@
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "slideshow",
@@ -64,70 +60,307 @@
         },
         {
           "type": "content",
-          "headline": "The Farmhouse",
           "supline": "Our Guest House",
+          "headline": "The Farmhouse",
           "content": "_Come back to yourself, nestled in nature._\n\nSix lovingly designed rooms, each with a private bathroom, floor-to-ceiling windows and a terrace with a view worth waking up for. Guests share an open kitchen and a cosy living room with fireplace, plus a guest WC — heated by solar-thermal and the fire, and powered by 18 solar panels with battery storage and a backup generator. High-speed Wi-Fi throughout, via Starlink.\n\n- 6 rooms, each with a private bathroom\n- Solar-thermal heating & fireplace\n- 18 solar panels + battery, with backup generator\n- High-speed Wi-Fi via Starlink",
-          "buttons": [],
           "settings": {
-            "textCenter": false
-          }
+            "textCenter": false,
+            "listIcons": "room,heating,solar,wifi"
+          },
+          "buttons": []
         }
-      ]
+      ],
+      "settings": {
+        "variant": "",
+        "layout": "column",
+        "spacing": "top"
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "secondary",
-        "layout": ""
-      },
       "widget": [
         {
           "type": "content",
-          "headline": "The Yurts",
+          "supline": "",
+          "headline": "",
+          "content": "",
+          "settings": null,
+          "buttons": []
+        },
+        {
+          "type": "price-table",
+          "priceGroups": [
+            {
+              "headline": "Double Rooms 1–4",
+              "prices": [
+                {
+                  "label": "4–14 nights",
+                  "price": "€88/night"
+                },
+                {
+                  "label": "14–28 nights",
+                  "price": "€66/night"
+                }
+              ]
+            },
+            {
+              "headline": "Triple Rooms 5–6",
+              "prices": [
+                {
+                  "label": "4–14 nights",
+                  "price": "99/night"
+                },
+                {
+                  "label": "14–28 nights",
+                  "price": "77/night"
+                }
+              ]
+            }
+          ],
+          "subtext": "Summer season rates. Minimum stay: 4 nights.",
+          "button": {
+            "label": "Book a room",
+            "link": "/contact?topic=stay#form"
+          }
+        }
+      ],
+      "settings": {
+        "variant": "",
+        "layout": "column",
+        "spacing": "bottom"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
           "supline": "Round & Grounded",
+          "headline": "The Yurts",
           "content": "_Reconnect with yourself, surrounded by forest and birdsong._\n\nTwo to three single yurts and one double yurt, hand-built and tucked into the trees. Singles have a double bed and their own deck — pure nature, some with a fireplace or freestanding gas heater and an outdoor kitchen. The double yurt sleeps more, with two double beds, a couch, a kitchen, fireplace and pellet heating, plus Starlink internet. All yurts share access to a co-working space with the community, also on Starlink.\n\n- 2–3 single yurts, plus 1 double yurt\n- Cold water; some with hot water & outdoor shower\n- Outdoor compost toilet; some with fireplace or gas heater\n- Shared co-working space with Starlink internet",
-          "buttons": [],
           "settings": {
-            "textCenter": false
-          }
-        }
-      ]
-    },
-    {
-      "type": "default-section",
-      "id": "",
-      "settings": null,
-      "widget": [
+            "textCenter": false,
+            "listIcons": "houses,shower,flame,wifi"
+          },
+          "buttons": []
+        },
         {
-          "type": "content",
-          "headline": "Glamping Tents",
-          "supline": "The New Luxury",
-          "content": "_Your temple in the forest, with the birds._\n\nThree 4-season tents, insulated and fitted with diesel heating for winter comfort — our other glamping tents run seasonally, available April through October. Every tent has a kingsize bed with a feather duvet and a carpeted floor. Guests share an outdoor kitchen, showers, toilets and a co-working space with the community, all on Starlink internet.\n\n- 3 four-season tents with diesel heating (winter)\n- Other tents available April – October\n- Kingsize bed, feather duvet & carpet\n- Shared kitchen, showers, WCs & co-working, Starlink",
-          "buttons": [],
-          "settings": null
+          "type": "slideshow",
+          "pictures": [
+            {
+              "caption": "A single yurt",
+              "photo": "/media/accommodations/yurt-1.jpg"
+            }
+          ]
         }
-      ]
-    },
-    {
-      "type": "default-section",
-      "id": "",
+      ],
       "settings": {
         "variant": "secondary",
-        "layout": ""
-      },
+        "layout": "column",
+        "spacing": "top"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "price-table",
+          "priceGroups": [
+            {
+              "headline": "Depending on the yurt",
+              "prices": [
+                {
+                  "label": "4–14 nights",
+                  "price": "€44–88/night"
+                },
+                {
+                  "label": "14–28 nights",
+                  "price": "€33–66/night"
+                },
+                {
+                  "label": "28+ nights",
+                  "price": "€33–44/night"
+                }
+              ]
+            }
+          ],
+          "subtext": "Summer season rates.",
+          "button": {
+            "label": "Book a yurt",
+            "link": "/contact?topic=stay#form"
+          }
+        },
+        {
+          "type": "content",
+          "supline": "",
+          "headline": "",
+          "content": "",
+          "settings": null,
+          "buttons": []
+        }
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "column",
+        "spacing": "bottom"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "slideshow",
+          "pictures": [
+            {
+              "caption": "A glamping tent",
+              "photo": "/media/accommodations/tent-1.jpg"
+            }
+          ]
+        },
+        {
+          "type": "content",
+          "supline": "The New Luxury",
+          "headline": "Glamping Tents",
+          "content": "_Your temple in the forest, with the birds._\n\nThree 4-season tents, insulated and fitted with diesel heating for winter comfort — our other glamping tents run seasonally, available April through October. Every tent has a kingsize bed with a feather duvet and a carpeted floor. Guests share an outdoor kitchen, showers, toilets and a co-working space with the community, all on Starlink internet.\n\n- 3 four-season tents with diesel heating (winter)\n- Other tents available April – October\n- Kingsize bed, feather duvet & carpet\n- Shared kitchen, showers, WCs & co-working, Starlink",
+          "settings": {
+            "textCenter": false,
+            "listIcons": "seasons,tent,bed,shower"
+          },
+          "buttons": []
+        }
+      ],
+      "settings": {
+        "variant": "",
+        "layout": "column",
+        "spacing": "top"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
       "widget": [
         {
           "type": "content",
-          "headline": "Camper Vans & Vans",
-          "supline": "Bring Your Own",
-          "content": "_Wake up surrounded by nature, birdsong, and wide open skies._\n\nA peaceful place to slow down, recharge, and enjoy the simple beauty of countryside living — whether you stay a few nights or longer. We keep a small number of carefully placed spots to keep the atmosphere calm and spacious. Guests share access to the outdoor kitchen, showers, toilets and a co-working space with the community, all on Starlink internet.\n\n- A few carefully placed spots, kept calm & spacious\n- Shared kitchen, showers, WCs & co-working, Starlink",
-          "buttons": [],
-          "settings": {
-            "textCenter": false
+          "supline": "",
+          "headline": "",
+          "content": "",
+          "settings": null,
+          "buttons": []
+        },
+        {
+          "type": "price-table",
+          "priceGroups": [
+            {
+              "headline": "Summer Season Rates",
+              "prices": [
+                {
+                  "label": "4–14 nights",
+                  "price": "€55/night"
+                },
+                {
+                  "label": "14–28 nights",
+                  "price": "€33/night"
+                },
+                {
+                  "label": "28+ nights",
+                  "price": "€22/night"
+                }
+              ]
+            }
+          ],
+          "subtext": "4-season tents only, outside the April–October window.",
+          "button": {
+            "label": "Book a tent",
+            "link": "/contact?topic=stay#form"
           }
         }
-      ]
+      ],
+      "settings": {
+        "variant": "",
+        "layout": "column",
+        "spacing": "bottom"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "Bring Your Own",
+          "headline": "Camper Vans & Vans",
+          "content": "_Wake up surrounded by nature, birdsong, and wide open skies._\n\nA peaceful place to slow down, recharge, and enjoy the simple beauty of countryside living — whether you stay a few nights or longer. We keep a small number of carefully placed spots to keep the atmosphere calm and spacious. Guests share access to the outdoor kitchen, showers, toilets and a co-working space with the community, all on Starlink internet.\n\n- A few carefully placed spots, kept calm & spacious\n- Shared kitchen, showers, WCs & co-working, Starlink",
+          "settings": {
+            "textCenter": false,
+            "listIcons": "van,shower"
+          },
+          "buttons": []
+        },
+        {
+          "type": "slideshow",
+          "pictures": [
+            {
+              "caption": "Symbolic picture",
+              "photo": "/media/accommodations/camper.png"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "column",
+        "spacing": "top"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "price-table",
+          "priceGroups": [
+            {
+              "headline": "Summer Season Rates",
+              "prices": [
+                {
+                  "label": "Up to 28 nights",
+                  "price": "€22/night"
+                },
+                {
+                  "label": "28+ nights, 1 person",
+                  "price": "€333/month"
+                },
+                {
+                  "label": "28+ nights, 2 people",
+                  "price": "€444/month"
+                }
+              ]
+            }
+          ],
+          "subtext": "Illustrative photo — real spots vary.",
+          "button": {
+            "label": "Book a spot",
+            "link": "/contact?topic=stay#form"
+          }
+        },
+        {
+          "type": "content",
+          "supline": "",
+          "headline": "",
+          "content": "",
+          "settings": null,
+          "buttons": []
+        }
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "column",
+        "spacing": "bottom"
+      }
     }
   ]
 }

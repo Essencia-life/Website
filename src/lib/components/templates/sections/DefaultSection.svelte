@@ -9,6 +9,7 @@
 	import { columnsWidgetField } from '../widgets/ColumnsWidget.svelte';
 	import { instagramProfileLinkWidgetField } from '../widgets/InstagramProfileWidget.svelte';
 	import { slideshowWidgetField } from '../widgets/SlideshowWidget.svelte';
+	import { priceTableWidgetField } from '../widgets/PriceTableWidget.svelte'
 
 	export const defaultSectionField = {
 		name: 'default-section',
@@ -44,12 +45,13 @@
 					tallyFormWidgetField,
 					columnsWidgetField,
 					instagramProfileLinkWidgetField,
-					slideshowWidgetField
+					slideshowWidgetField,
+					priceTableWidgetField
 				]
 			},
 			{
 				name: 'settings',
-				label: 'Settings',
+				label: 'Section Settings',
 				widget: 'object',
 				required: false,
 				collapsed: true,
@@ -74,6 +76,17 @@
 							{ label: 'Row', value: null },
 							{ label: 'Column', value: 'column' },
 						]
+					},
+					{
+						name: 'spacing',
+						label: 'Spacing',
+						widget: 'select',
+						required: false,
+						options: [
+							{ label: 'Default', value: null },
+							{ label: 'Top only', value: 'top' },
+							{ label: 'Bottom only', value: 'bottom' },
+						]
 					}
 				]
 			},
@@ -92,6 +105,7 @@
 	import ColumnsWidget from '../widgets/ColumnsWidget.svelte';
 	import InstagramProfileWidget from '../widgets/InstagramProfileWidget.svelte';
 	import SlideshowWidget from '$lib/components/templates/widgets/SlideshowWidget.svelte';
+	import PriceTableWidget from '$lib/components/templates/widgets/PriceTableWidget.svelte';
 
 	interface Props {
 		index: number;
@@ -103,10 +117,12 @@
 
 <section
 	id={section.id}
-	class="py-16"
 	class:text-center={section.settings?.textCenter}
 	class:bg-stone-100={section.settings?.variant === 'secondary'}
 	class:dark={section.settings?.variant === 'dark'}
+	class:pt-16={section.settings?.spacing === 'top'}
+	class:pb-16={section.settings?.spacing === 'bottom'}
+	class:py-16={!section.settings?.spacing}
 >
 	<div
 		class="page-content grid items-center gap-12"
@@ -132,6 +148,8 @@
 					<TallyFormWidget {widget} />
 				{:else if widget.type === 'slideshow'}
 					<SlideshowWidget {widget} />
+				{:else if widget.type === 'price-table'}
+					<PriceTableWidget {widget} />
 				{/if}
 			</div>
 		{/each}

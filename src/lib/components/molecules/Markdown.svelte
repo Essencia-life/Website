@@ -172,7 +172,7 @@
 {/each}
 
 <style>
-	p {
+	*:not(li) > p {
 		margin-block: 1rem;
 	}
 </style>
