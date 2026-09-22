@@ -19,9 +19,11 @@
       "supline": "What the Kids Temple Is",
       "content": "> **Our Kids Temple is closed for Summer Holidays until mid September.**\\\nThe covered space and outdoor playground remain available for families and children to use.\n\nThe Kids Temple embraces a Forest School ethos: nature as the classroom, and play as the way in. Every day is shaped around games and activities that awaken a child's social, physical, intellectual, emotional and spiritual sides — with plenty of room to simply follow their own curiosity. It exists for the children of residents, neighbors and guests alike, and for the parents who come with them.",
       "id": "",
+      "buttons": [],
       "settings": {
-        "textCenter": true,
-        "variant": null
+        "variant": null,
+        "layout": "",
+        "textCenter": true
       },
       "widget": [
         {
@@ -38,7 +40,8 @@
             }
           ],
           "settings": {
-            "variant": "top-border"
+            "variant": "top-border",
+            "columns": null
           }
         }
       ]
@@ -49,9 +52,11 @@
       "supline": "Follow Along",
       "content": "",
       "id": "",
+      "buttons": [],
       "settings": {
-        "textCenter": true,
-        "variant": "secondary"
+        "variant": "secondary",
+        "layout": "",
+        "textCenter": true
       },
       "widget": [
         {
@@ -67,9 +72,11 @@
       "supline": "Our Ethics",
       "content": "_Beyond safety rules, children are never obliged to follow an activity at a given time — they're free to follow their bliss and curiosity until they're ready to join in._",
       "id": "",
+      "buttons": [],
       "settings": {
-        "textCenter": true,
-        "variant": null
+        "variant": null,
+        "layout": "",
+        "textCenter": true
       },
       "widget": [
         {
@@ -109,9 +116,11 @@
       "supline": "",
       "content": "",
       "id": "",
+      "buttons": [],
       "settings": {
-        "textCenter": false,
-        "variant": "secondary"
+        "variant": "secondary",
+        "layout": "",
+        "textCenter": false
       },
       "widget": [
         {
@@ -123,7 +132,8 @@
             {
               "content": "### The previous rhythm\n\n- Monday – Friday, 10:30am – 3pm\n- Ages 2 – 10\n- Music & movement, nature exploration & building, crafting & drawing\n- Thursday gardening & Portuguese class woven in\n- Organic snack & vegan lunch included; parents welcome to join Community Lunch for €8\n- Thursdays close with the Forest SPA — €20/person, free for kids in the program\n- English, German & Dutch spoken\n- One day a month set aside for parents to connect on holistic education and their child's individual growth"
             }
-          ]
+          ],
+          "settings": null
         }
       ]
     },
@@ -133,6 +143,7 @@
       "supline": "",
       "content": "",
       "id": "",
+      "buttons": [],
       "settings": null,
       "widget": [
         {
@@ -144,7 +155,8 @@
             {
               "content": "### What to bring\n\nOutdoor shoes & clothes, a hat, organic sun screen, swimming costume & gear, a rain coat, a warm jacket, a water bottle, and fruits or snacks."
             }
-          ]
+          ],
+          "settings": null
         }
       ]
     },
@@ -152,11 +164,19 @@
       "type": "default-section",
       "headline": "Let's keep in touch.",
       "supline": "Stay Connected",
-      "content": "Questions, or want to be notified when the Kids Temple reopens?\\\nWe read every message.\n\n_And if you'd love to get involved in shaping what's next here — we'd love to hear that too._\n\n[**Get in touch**](/contact?topic=kids#form)",
+      "content": "Questions, or want to be notified when the Kids Temple reopens?\\\nWe read every message.\n\n_And if you'd love to get involved in shaping what's next here — we'd love to hear that too._",
       "id": "",
+      "buttons": [
+        {
+          "label": "Get in touch",
+          "link": "/contact?topic=kids#form",
+          "variant": "primary"
+        }
+      ],
       "settings": {
-        "textCenter": true,
-        "variant": null
+        "variant": "",
+        "layout": "",
+        "textCenter": true
       },
       "widget": []
     }
