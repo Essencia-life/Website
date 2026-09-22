@@ -5,6 +5,7 @@
 		name: 'content',
 		label: 'Content',
 		widget: 'object',
+		summary: '{{headline}}',
 		fields: [
 			{
 				name: 'type',

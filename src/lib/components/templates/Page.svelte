@@ -32,6 +32,7 @@
 				name: 'meta',
 				label: 'Meta data',
 				widget: 'object',
+				collapsed: 'auto',
 				fields: [
 					{
 						name: 'parent',
