@@ -14,6 +14,7 @@
 		name: 'default-section',
 		label: 'Default Section',
 		widget: 'object',
+		summary: "{{fields.widget.0.headline}}{{fields.widget.1.headline}}",
 		fields: [
 			{
 				name: 'type',
@@ -28,7 +29,8 @@
 			},
 			{
 				name: 'widget',
-				label: 'Widget',
+				label: 'Widgets',
+				label_singular: 'Widget',
 				widget: 'list',
 				max: 2,
 				required: false,
