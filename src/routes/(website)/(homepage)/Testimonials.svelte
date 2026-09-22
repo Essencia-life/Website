@@ -68,7 +68,7 @@
 		position: relative;
 		padding: 1rem;
 		border-radius: 1rem;
-		background: rgba(var(--brand-parchment-rgb) / 80%);
+		background: color-mix(in oklab, var(--color-stone-100) 80%, transparent);
 		text-align: justify;
 	}
 
@@ -93,17 +93,17 @@
 		position: absolute;
 		top: 100%;
 		border: 1.5rem solid transparent;
-		border-top-color: rgba(var(--brand-parchment-rgb) / 80%);
+		border-top-color: color-mix(in oklab, var(--color-stone-100) 80%, transparent);
 	}
 
 	.testimonials > div:first-of-type .bubble::after {
 		right: 0;
-		border-right-color: rgba(var(--brand-parchment-rgb) / 80%);
+		border-right-color: color-mix(in oklab, var(--color-stone-100) 80%, transparent);
 	}
 
 	.testimonials > div:last-of-type .bubble::after {
 		left: 0;
-		border-left-color: rgba(var(--brand-parchment-rgb) / 80%);
+		border-left-color: color-mix(in oklab, var(--color-stone-100) 80%, transparent);
 	}
 
 	blockquote {
@@ -123,7 +123,7 @@
 		display: block;
 		font-family: Alegreya, serif;
 		font-size: 12.5rem;
-		color: var(--brand-highlight-color);
+		color: var(--color-amber-500);
 		line-height: 1;
 	}
 
@@ -137,7 +137,7 @@
 		align-items: center;
 		margin-top: 0.75rem;
 		padding-top: 0.75rem;
-		border-top: 1px solid var(--brand-border-color);
+		border-top: 1px solid var(--color-stone-100);
 		font-style: normal;
 		font-size: 1rem;
 	}

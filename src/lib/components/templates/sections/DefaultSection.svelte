@@ -153,7 +153,7 @@
 	id={section.id}
 	class="py-16"
 	class:text-center={section.settings?.textCenter}
-	class:secondary={section.settings?.variant === 'secondary'}
+	class:bg-stone-100={section.settings?.variant === 'secondary'}
 	class:dark={section.settings?.variant === 'dark'}
 >
 	<div
@@ -213,20 +213,16 @@
 </section>
 
 <style>
-	.secondary {
-		background: var(--brand-parchment-color);
-	}
-
 	.dark {
 		color-scheme: dark;
-		background: var(--brand-dark-section-color);
-		color: var(--brand-stonewhite-color);
+		background: var(--color-olive-800);
+		color: var(--color-stone-50);
 	}
 
 	.dark :global(h2),
 	.dark :global(h3),
 	.dark :global(h4),
 	.dark :global(h5) {
-		color: var(--brand-ambergold-color);
+		color: var(--color-amber-300);
 	}
 </style>

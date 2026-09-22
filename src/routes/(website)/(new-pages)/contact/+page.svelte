@@ -38,7 +38,7 @@
 </div>
 
 {#if form?.success}
-	<div class="mb-8 rounded-lg bg-green-100 p-4 text-green-800">
+	<div class="mb-8 rounded-lg bg-olive-100 p-4 text-olive-800">
 		<b>Thank you for your message!</b>
 		<p>We will get back to you soon.</p>
 	</div>
@@ -130,7 +130,7 @@
 			{/if}
 
 			{#if form?.error}
-				<div class="mb-8 rounded-lg bg-red-100 p-4 text-red-800">
+				<div class="mb-8 rounded-lg bg-rose-100 p-4 text-rose-800">
 					<p>There was an error submitting your message. Please try again later.</p>
 				</div>
 			{/if}

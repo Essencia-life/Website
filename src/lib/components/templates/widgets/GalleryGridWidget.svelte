@@ -76,7 +76,7 @@
 		bottom: 0;
 		padding: 2rem 1rem 1rem;
 		background: linear-gradient(to top, rgba(0 0 0 / 70%), rgba(0 0 0 / 0));
-		color: var(--brand-stonewhite-color);
+		color: var(--color-stone-50);
 		font-style: italic;
 		font-weight: 400;
 	}

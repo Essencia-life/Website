@@ -83,7 +83,7 @@
 	}
 
 	nav a {
-		color: var(--brand-mossgreen-color);
+		color: var(--color-olive-700);
 		font-weight: 500;
 		font-size: 1.125rem;
 		text-decoration: none;
@@ -107,7 +107,7 @@
 		display: flex;
 		justify-content: stretch;
 		margin-left: -1.5rem;
-		box-shadow: 0 3px 8px rgba(var(--brand-earthbrown-rgb) / 50%);
+		box-shadow: 0 3px 8px color-mix(in oklab, var(--color-stone-900) 50%, transparent);
 		border-radius: 0.25rem;
 	}
 
@@ -120,11 +120,11 @@
 	}
 
 	.sidebar .children {
-		background: rgba(var(--brand-earthbrown-rgb) / 4%);
+		background: color-mix(in oklab, var(--color-stone-900) 4%, transparent);
 	}
 
 	.header .children {
-		background: var(--brand-parchment-color);
+		background: var(--color-stone-100);
 	}
 
 	.children ul {
@@ -166,12 +166,12 @@
 		}
 
 		.toggle {
-			border-left: 1px solid var(--brand-highlight-color);
+			border-left: 1px solid var(--color-amber-500);
 			padding-left: 0.5rem;
 		}
 
 		.toggle .icon-button {
-			color: var(--brand-mossgreen-color);
+			color: var(--color-olive-700);
 		}
 
 		.children {
@@ -180,7 +180,7 @@
 
 		.children ul {
 			margin-left: 1rem;
-			background: var(--brand-parchment-color);
+			background: var(--color-stone-100);
 		}
 	}
 </style>

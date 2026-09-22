@@ -85,16 +85,16 @@
 <style>
 	.dark {
 		color-scheme: dark;
-		background: var(--brand-dark-section-color);
-		color: var(--brand-stonewhite-color);
+		background: var(--color-olive-800);
+		color: var(--color-stone-50);
 	}
 
 	.dark h2 {
-		color: var(--brand-stonewhite-color);
+		color: var(--color-stone-50);
 	}
 
 	.dark .button {
-		border-color: var(--brand-stonewhite-color);
-		color: var(--brand-stonewhite-color);
+		border-color: var(--color-stone-50);
+		color: var(--color-stone-50);
 	}
 </style>

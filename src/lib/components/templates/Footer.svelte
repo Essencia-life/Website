@@ -148,17 +148,17 @@
 		display: block;
 		background: linear-gradient(
 			to top,
-			var(--brand-dark-section-color) 5%,
-			rgba(var(--brand-dark-section-rgb) / 0) 60%
+			var(--color-olive-800) 5%,
+			color-mix(in oklab, var(--color-olive-800) 0%, transparent) 60%
 		);
 	}
 
 	.footer-content {
-		background: var(--brand-dark-section-color);
+		background: var(--color-olive-800);
 	}
 
 	.page-content {
-		color: var(--brand-parchment-color);
+		color: var(--color-stone-100);
 	}
 
 	.grid {
@@ -204,10 +204,10 @@
 
 	.copyright {
 		display: block;
-		border-top: 1px solid var(--brand-parchment-color);
+		border-top: 1px solid var(--color-stone-100);
 		text-align: center;
 		margin-top: 1rem;
 		padding-block: 0.5rem;
-		color: var(--brand-parchment-color);
+		color: var(--color-stone-100);
 	}
 </style>

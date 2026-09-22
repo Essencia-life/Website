@@ -64,7 +64,7 @@
 	}
 </script>
 
-<header>
+<header class="sticky top-0 z-11 bg-stone-100 border-b border-stone-50/50 shadow-md/25 [&_picture]:contents">
 	<div class="page-content">
 		<a href={resolve('/')} class="home" aria-hidden="true">
 			<enhanced:img class="logo" src={logoTree} alt="" />
@@ -84,19 +84,6 @@
 </header>
 
 <style>
-	header {
-		position: sticky;
-		top: 0;
-		z-index: 11;
-		background: var(--brand-parchment-color);
-		border-bottom: 1px solid rgba(var(--brand-stonewhite-rgb) / 50%);
-		box-shadow: 0 3px 8px rgba(var(--brand-earthbrown-rgb) / 50%);
-	}
-
-	header :global(picture) {
-		display: contents;
-	}
-
 	header .page-content {
 		display: flex;
 		height: 4.5rem;
@@ -133,7 +120,7 @@
 		justify-content: center;
 		height: 3rem;
 		aspect-ratio: 1;
-		color: var(--brand-mossgreen-color);
+		color: var(--color-olive-700);
 	}
 
 	@media screen and (width < 800px) {

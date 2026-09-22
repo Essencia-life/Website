@@ -35,8 +35,8 @@
 		width: 80vw;
 		max-width: 400px;
 		min-width: 320px;
-		background: var(--brand-parchment-color);
-		box-shadow: -3px 0 9px rgba(var(--brand-earthbrown-rgb) / 60%);
+		background: var(--color-stone-100);
+		box-shadow: -3px 0 9px color-mix(in oklab, var(--color-stone-900) 60%, transparent);
 		overflow-y: auto;
 	}
 
@@ -44,7 +44,7 @@
 		position: fixed;
 		top: 0.75rem;
 		right: 0.75rem;
-		background: var(--brand-parchment-color);
+		background: var(--color-stone-100);
 	}
 
 	aside :global(> picture) {

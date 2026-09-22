@@ -74,15 +74,15 @@
 
 <section class="pb-16">
 	<div class="page-content gap-8 max-sm:space-y-12 md:grid md:grid-cols-2 lg:grid-cols-3">
-		{#each section.columns as column, index}
+		{#each section.columns as column, index (index)}
 			<Card image={column.image}>
 				<div class="flex h-full flex-col gap-4 p-2">
 					<h3>
 						<sup
 							class="block"
-							class:primary={index === 0}
-							class:ambergold={index === 1}
-							class:oceanteal={index === 2}>{column.supline}</sup
+							class:text-olive-700={index === 0}
+							class:text-amber-500={index === 1}
+							class:text-cyan-600={index === 2}>{column.supline}</sup
 						>{column.headline}
 					</h3>
 					<p class="text-justify">{column.description}</p>
@@ -99,17 +99,3 @@
 		{/each}
 	</div>
 </section>
-
-<style>
-	sup.primary {
-		color: var(--brand-primary-color);
-	}
-
-	sup.ambergold {
-		color: var(--brand-ambergold-color);
-	}
-
-	sup.oceanteal {
-		color: var(--brand-oceanteal-color);
-	}
-</style>
