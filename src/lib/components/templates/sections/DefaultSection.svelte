@@ -1,5 +1,6 @@
 <script module lang="ts">
 	import type { ObjectField } from '@sveltia/cms';
+	import { contentWidgetField } from '../widgets/ContentWidget.svelte';
 	import { cardGridWidgetField } from '../widgets/CardGridWidget.svelte';
 	import { galleryGridWidgetField } from '../widgets/GalleryGridWidget.svelte';
 	import { youtubeVideoWidgetField } from '../widgets/YouTubeVideoWidget.svelte';
@@ -26,47 +27,22 @@
 				required: false
 			},
 			{
-				name: 'supline',
-				label: 'Supline',
-				hint: 'Is part of the headline but displayed above',
-				required: false
-			},
-			{
-				name: 'headline',
-				label: 'Headline',
-				required: false
-			},
-			{
-				name: 'content',
-				label: 'Content',
-				widget: 'richtext',
-				required: false
-			},
-			{
-				name: 'buttons',
-				label: 'Buttons',
+				name: 'widget',
+				label: 'Widget',
 				widget: 'list',
+				max: 2,
 				required: false,
 				collapsed: true,
-				fields: [
-					{
-						name: 'label',
-						label: 'Label'
-					},
-					{
-						name: 'link',
-						label: 'Link'
-					},
-					{
-						name: 'variant',
-						label: 'Variant',
-						widget: 'select',
-						required: false,
-						options: [
-							{ label: 'Default', value: null },
-							{ label: 'Primary', value: 'primary' }
-						]
-					}
+				types: [
+					contentWidgetField,
+					cardGridWidgetField,
+					galleryGridWidgetField,
+					youtubeVideoWidgetField,
+					stepsWidgetField,
+					tallyFormWidgetField,
+					columnsWidgetField,
+					instagramProfileLinkWidgetField,
+					slideshowWidgetField
 				]
 			},
 			{
@@ -93,44 +69,19 @@
 						widget: 'select',
 						required: false,
 						options: [
-							{ label: 'Default', value: null },
+							{ label: 'Row', value: null },
 							{ label: 'Column', value: 'column' },
-							{ label: 'Column Reverse', value: 'column-reverse' }
 						]
-					},
-					{
-						name: 'textCenter',
-						label: 'Center text',
-						widget: 'boolean',
-						required: false
 					}
 				]
 			},
-			{
-				name: 'widget',
-				label: 'Widget',
-				widget: 'list',
-				max: 1,
-				required: false,
-				collapsed: true,
-				types: [
-					cardGridWidgetField,
-					galleryGridWidgetField,
-					youtubeVideoWidgetField,
-					stepsWidgetField,
-					tallyFormWidgetField,
-					columnsWidgetField,
-					instagramProfileLinkWidgetField,
-					slideshowWidgetField
-				]
-			}
 		] as const
 	} satisfies ObjectField;
 </script>
 
 <script lang="ts">
 	import type { InferFieldsObject } from '$lib/types/cms-types';
-	import Markdown from '$lib/components/molecules/Markdown.svelte';
+	import ContentWidget from '../widgets/ContentWidget.svelte';
 	import CardGridWidget from '../widgets/CardGridWidget.svelte';
 	import GalleryGridWidget from '../widgets/GalleryGridWidget.svelte';
 	import YouTubeVideoWidget from '../widgets/YouTubeVideoWidget.svelte';
@@ -146,7 +97,6 @@
 	}
 
 	const { index, section }: Props = $props();
-	const [widget] = $derived(section.widget);
 </script>
 
 <section
@@ -160,37 +110,11 @@
 		class="page-content grid items-center gap-12"
 		class:md:grid-cols-2={section.settings?.layout?.startsWith('column')}
 	>
-		<div>
-			<svelte:element this={index === 0 ? 'h2' : 'h3'} class="mb-6">
-				{#if section.supline}
-					<sup class="top-0 mb-2 block">{section.supline}</sup>
-				{/if}
-				{section.headline}
-			</svelte:element>
-
-			{#if section.content}
-				<Markdown content={section.content} />
-			{/if}
-
-			{#if section.buttons?.length}
-				<div class="mt-8 inline-flex flex-wrap gap-4">
-					{#each section.buttons ?? [] as button (button)}
-						<!-- eslint-disable svelte/no-navigation-without-resolve -->
-						<a
-							href={button.link}
-							class="button"
-							class:button-primary={button.variant === 'primary'}
-						>
-							{button.label}
-						</a>
-					{/each}
-				</div>
-			{/if}
-		</div>
-
-		{#if widget}
-			<div class="text-left" class:md:-order-1={section.settings?.layout === 'column-reverse'}>
-				{#if widget.type === 'card-grid'}
+		{#each section.widget as widget, widgetIndex (widgetIndex)}
+			<div class:text-center={widget.settings?.textCenter}>
+				{#if widget.type === 'content'}
+					<ContentWidget {widget} {index} />
+				{:else if widget.type === 'card-grid'}
 					<CardGridWidget {widget} />
 				{:else if widget.type === 'gallery-grid'}
 					<GalleryGridWidget {widget} />
@@ -208,7 +132,7 @@
 					<SlideshowWidget {widget} />
 				{/if}
 			</div>
-		{/if}
+		{/each}
 	</div>
 </section>
 

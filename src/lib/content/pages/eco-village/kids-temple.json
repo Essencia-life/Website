@@ -15,17 +15,19 @@
     },
     {
       "type": "default-section",
-      "headline": "A forest, not a classroom",
-      "supline": "What the Kids Temple Is",
-      "content": "> **Our Kids Temple is closed for Summer Holidays until mid September.**\\\nThe covered space and outdoor playground remain available for families and children to use.\n\nThe Kids Temple embraces a Forest School ethos: nature as the classroom, and play as the way in. Every day is shaped around games and activities that awaken a child's social, physical, intellectual, emotional and spiritual sides — with plenty of room to simply follow their own curiosity. It exists for the children of residents, neighbors and guests alike, and for the parents who come with them.",
       "id": "",
-      "buttons": [],
-      "settings": {
-        "variant": null,
-        "layout": "",
-        "textCenter": true
-      },
+      "settings": null,
       "widget": [
+        {
+          "type": "content",
+          "headline": "A forest, not a classroom",
+          "supline": "What the Kids Temple Is",
+          "content": "> **Our Kids Temple is closed for Summer Holidays until mid September.**\\\nThe covered space and outdoor playground remain available for families and children to use.\n\nThe Kids Temple embraces a Forest School ethos: nature as the classroom, and play as the way in. Every day is shaped around games and activities that awaken a child's social, physical, intellectual, emotional and spiritual sides — with plenty of room to simply follow their own curiosity. It exists for the children of residents, neighbors and guests alike, and for the parents who come with them.",
+          "buttons": [],
+          "settings": {
+            "textCenter": true
+          }
+        },
         {
           "type": "columns",
           "columns": [
@@ -48,17 +50,22 @@
     },
     {
       "type": "default-section",
-      "headline": "@kidstemple_essencia",
-      "supline": "Follow Along",
-      "content": "",
       "id": "",
-      "buttons": [],
       "settings": {
         "variant": "secondary",
-        "layout": "",
-        "textCenter": true
+        "layout": ""
       },
       "widget": [
+        {
+          "type": "content",
+          "headline": "@kidstemple_essencia",
+          "supline": "Follow Along",
+          "content": "",
+          "buttons": [],
+          "settings": {
+            "textCenter": true
+          }
+        },
         {
           "type": "instagram-profile",
           "title": "@kidstemple_essencia",
@@ -68,17 +75,19 @@
     },
     {
       "type": "default-section",
-      "headline": "Six ways children grow here",
-      "supline": "Our Ethics",
-      "content": "_Beyond safety rules, children are never obliged to follow an activity at a given time — they're free to follow their bliss and curiosity until they're ready to join in._",
       "id": "",
-      "buttons": [],
-      "settings": {
-        "variant": null,
-        "layout": "",
-        "textCenter": true
-      },
+      "settings": null,
       "widget": [
+        {
+          "type": "content",
+          "headline": "Six ways children grow here",
+          "supline": "Our Ethics",
+          "content": "_Beyond safety rules, children are never obliged to follow an activity at a given time — they're free to follow their bliss and curiosity until they're ready to join in._",
+          "buttons": [],
+          "settings": {
+            "textCenter": true
+          }
+        },
         {
           "type": "card-grid",
           "cards": [
@@ -112,15 +121,10 @@
     },
     {
       "type": "default-section",
-      "headline": "",
-      "supline": "",
-      "content": "",
       "id": "",
-      "buttons": [],
       "settings": {
         "variant": "secondary",
-        "layout": "",
-        "textCenter": false
+        "layout": ""
       },
       "widget": [
         {
@@ -139,11 +143,7 @@
     },
     {
       "type": "default-section",
-      "headline": "",
-      "supline": "",
-      "content": "",
       "id": "",
-      "buttons": [],
       "settings": null,
       "widget": [
         {
@@ -162,23 +162,26 @@
     },
     {
       "type": "default-section",
-      "headline": "Let's keep in touch.",
-      "supline": "Stay Connected",
-      "content": "Questions, or want to be notified when the Kids Temple reopens?\\\nWe read every message.\n\n_And if you'd love to get involved in shaping what's next here — we'd love to hear that too._",
       "id": "",
-      "buttons": [
+      "settings": null,
+      "widget": [
         {
-          "label": "Get in touch",
-          "link": "/contact?topic=kids#form",
-          "variant": "primary"
+          "type": "content",
+          "headline": "Let's keep in touch.",
+          "supline": "Stay Connected",
+          "content": "Questions, or want to be notified when the Kids Temple reopens?\\\nWe read every message.\n\n_And if you'd love to get involved in shaping what's next here — we'd love to hear that too._",
+          "buttons": [
+            {
+              "label": "Get in touch",
+              "link": "/contact?topic=kids#form",
+              "variant": "primary"
+            }
+          ],
+          "settings": {
+            "textCenter": true
+          }
         }
-      ],
-      "settings": {
-        "variant": "",
-        "layout": "",
-        "textCenter": true
-      },
-      "widget": []
+      ]
     }
   ]
 }

@@ -15,21 +15,32 @@
     },
     {
       "type": "default-section",
-      "headline": "Every gift keeps this place alive.",
-      "supline": "",
-      "content": "Essência runs as a cooperative — which means the land, the buildings, and the projects we take on are funded by the people who believe in them. Your support, in whatever form it takes, goes directly into keeping this place running, growing, and open to those who need it.\n\nIn return, we like to share what the land gives back — from a tree planted in your name to an open invitation to visit, rest, and see exactly where your support went.",
-      "id": "",
-      "settings": null,
-      "widget": []
-    },
-    {
-      "type": "default-section",
-      "headline": "Find your way to support us.",
-      "supline": "Ways to Give",
-      "content": "",
       "id": "",
       "settings": null,
       "widget": [
+        {
+          "type": "content",
+          "headline": "Every gift keeps this place alive.",
+          "supline": "",
+          "content": "Essência runs as a cooperative — which means the land, the buildings, and the projects we take on are funded by the people who believe in them. Your support, in whatever form it takes, goes directly into keeping this place running, growing, and open to those who need it.\n\nIn return, we like to share what the land gives back — from a tree planted in your name to an open invitation to visit, rest, and see exactly where your support went.",
+          "buttons": [],
+          "settings": null
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "settings": null,
+      "widget": [
+        {
+          "type": "content",
+          "headline": "Find your way to support us.",
+          "supline": "Ways to Give",
+          "content": "",
+          "buttons": [],
+          "settings": null
+        },
         {
           "type": "card-grid",
           "cards": [
@@ -63,15 +74,21 @@
     },
     {
       "type": "default-section",
-      "headline": "A monthly gift, gifts in return.",
-      "supline": "Become a Friend",
-      "content": "Join as a Friend of Essência with a small recurring contribution — cancel any time. Every tier includes an open invitation to visit the land.",
       "id": "",
       "settings": {
-        "textCenter": true,
         "variant": null
       },
       "widget": [
+        {
+          "type": "content",
+          "headline": "A monthly gift, gifts in return.",
+          "supline": "Become a Friend",
+          "content": "Join as a Friend of Essência with a small recurring contribution — cancel any time. Every tier includes an open invitation to visit the land.",
+          "buttons": [],
+          "settings": {
+            "textCenter": true
+          }
+        },
         {
           "type": "card-grid",
           "cards": [
@@ -93,24 +110,37 @@
     },
     {
       "type": "default-section",
-      "headline": "Back something specific.",
-      "supline": "Fund a Project",
-      "content": "Rather see exactly where your money goes? These are the projects we're actively raising for right now.",
       "id": "",
       "settings": {
-        "textCenter": true,
         "variant": "secondary"
       },
-      "widget": []
+      "widget": [
+        {
+          "type": "content",
+          "headline": "Back something specific.",
+          "supline": "Fund a Project",
+          "content": "Rather see exactly where your money goes? These are the projects we're actively raising for right now.",
+          "buttons": [],
+          "settings": {
+            "textCenter": true
+          }
+        }
+      ]
     },
     {
       "type": "default-section",
-      "headline": "Put your capital where your heart is.",
-      "supline": "Invest in the Cooperative",
-      "content": "Beyond gifts and donations, Essência also welcomes community loans from friends who want to support us with larger sums, in a way that can be repaid. Your investment goes directly toward land, infrastructure, and the long-term security of the cooperative — on flexible terms we agree together.",
       "id": "",
       "settings": null,
-      "widget": []
+      "widget": [
+        {
+          "type": "content",
+          "headline": "Put your capital where your heart is.",
+          "supline": "Invest in the Cooperative",
+          "content": "Beyond gifts and donations, Essência also welcomes community loans from friends who want to support us with larger sums, in a way that can be repaid. Your investment goes directly toward land, infrastructure, and the long-term security of the cooperative — on flexible terms we agree together.",
+          "buttons": [],
+          "settings": null
+        }
+      ]
     },
     {
       "type": "residency-costs",
@@ -135,12 +165,17 @@
     },
     {
       "type": "default-section",
-      "headline": "However you'd like to help.",
-      "supline": "A Few More Ways",
-      "content": "",
       "id": "",
       "settings": null,
       "widget": [
+        {
+          "type": "content",
+          "headline": "However you'd like to help.",
+          "supline": "A Few More Ways",
+          "content": "",
+          "buttons": [],
+          "settings": null
+        },
         {
           "type": "card-grid",
           "cards": [
@@ -162,15 +197,22 @@
     },
     {
       "type": "default-section",
-      "headline": "Make a one-time gift.",
-      "supline": "",
-      "content": "Any amount helps. Every donation goes straight into daily life and care of the land.",
       "id": "",
       "settings": {
-        "textCenter": true,
         "variant": "secondary"
       },
-      "widget": []
+      "widget": [
+        {
+          "type": "content",
+          "headline": "Make a one-time gift.",
+          "supline": "",
+          "content": "Any amount helps. Every donation goes straight into daily life and care of the land.",
+          "buttons": [],
+          "settings": {
+            "textCenter": true
+          }
+        }
+      ]
     }
   ]
 }
