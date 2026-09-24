@@ -2,7 +2,7 @@
 	import type { Collection } from '@sveltia/cms';
 	import { heroSectionField } from './sections/HeroSection.svelte';
 	import { defaultSectionField } from './sections/DefaultSection.svelte';
-	import { accommodationSectionField } from './sections/AccommodationSection.svelte';
+	import { peopleSectionField } from './sections/PeopleSection.svelte';
 	import { residencyCostsSectionField } from './sections/ResidencyCostsSection.svelte';
 	import { joinUsColumnsSectionField } from './sections/JoinUsColumnsSection.svelte';
 
@@ -14,18 +14,15 @@
 		icon: 'description',
 		identifier_field: 'meta.title',
 		slug: '{{fields._slug}}',
-		path: '{{meta.parent}}/{{slug}}',
 		create: true,
 		folder: 'src/lib/content/pages',
-		view_groups: {
-			groups: [
-				{
-					name: 'parent',
-					label: 'Parent',
-					field: 'meta.parent'
-				}
-			],
-			default: 'parent'
+		nested: {
+			depth: 2,
+			summary: "{{meta.title}}",
+			subfolders: false,
+		},
+		meta: {
+			path: {}
 		},
 		fields: [
 			{
@@ -34,21 +31,6 @@
 				widget: 'object',
 				collapsed: 'auto',
 				fields: [
-					{
-						name: 'parent',
-						label: 'Parent',
-						widget: 'relation',
-						collection: 'pages',
-						display_fields: ['meta.title'],
-						dropdown_threshold: 0,
-						default: '__root',
-						filters: [
-							{
-								field: 'meta.parent',
-								values: ['__root']
-							}
-						]
-					},
 					{ name: 'title', label: 'Page Title' },
 					{
 						name: 'description',
@@ -74,7 +56,7 @@
 				types: [
 					heroSectionField,
 					defaultSectionField,
-					accommodationSectionField,
+					peopleSectionField,
 					residencyCostsSectionField,
 					joinUsColumnsSectionField
 				] as const
@@ -89,7 +71,7 @@
 	import SEO from '$lib/components/atoms/SEO.svelte';
 	import { Media } from '$lib/services/Media';
 	import DefaultSection from './sections/DefaultSection.svelte';
-	import AccommodationSection from './sections/AccommodationSection.svelte';
+	import PeopleSection from './sections/PeopleSection.svelte';
 	import ResidencyCostsSection from './sections/ResidencyCostsSection.svelte';
 	import JoinUsColumnsSection from './sections/JoinUsColumnsSection.svelte';
 
@@ -111,13 +93,13 @@
 	}}
 />
 
-{#each page.sections as section, index}
+{#each page.sections as section, index (index)}
 	{#if section.type === 'hero'}
 		<HeroSection {section} />
 	{:else if section.type === 'default-section'}
 		<DefaultSection {index} {section} />
-	{:else if section.type === 'accommodation'}
-		<AccommodationSection {section} />
+	{:else if section.type === 'people'}
+		<PeopleSection {section} />
 	{:else if section.type === 'residency-costs'}
 		<ResidencyCostsSection {section} />
 	{:else if section.type === 'join-us-columns'}

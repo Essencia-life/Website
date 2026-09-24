@@ -1,6 +1,5 @@
 {
   "meta": {
-    "parent": "__root",
     "title": "Eco-Village",
     "description": "Essência is an off-grid eco-village, healing center and retreat venue on the wild coast of Aljezur. We're a community who believe life can be lived differently — slower, closer to the earth, more connected to ourselves and to each other.",
     "cover": ""
@@ -16,20 +15,17 @@
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": null,
-        "layout": ""
-      },
       "widget": [
         {
           "type": "content",
-          "headline": "About Essência",
           "supline": "Who We Are",
+          "headline": "About Essência",
           "content": "Essência is an off-grid eco-village, healing center and retreat venue on the wild coast of Aljezur. We're a community who believe life can be lived differently — slower, closer to the earth, more connected to ourselves and to each other. Six residents call this land home today, with room and intention to grow toward 22; many more come to rest, heal, learn, or lend a hand. Every one of you is welcome.",
-          "buttons": [],
           "settings": {
-            "textCenter": true
-          }
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
         },
         {
           "type": "columns",
@@ -52,25 +48,27 @@
             "columns": null
           }
         }
-      ]
+      ],
+      "settings": {
+        "variant": null,
+        "layout": "",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "dark",
-        "layout": ""
-      },
       "widget": [
         {
           "type": "content",
-          "headline": "Golden Agreements",
           "supline": "For Harmony & Peace",
+          "headline": "Golden Agreements",
           "content": "How we cultivate a healing environment, together.",
-          "buttons": [],
           "settings": {
-            "textCenter": true
-          }
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
         },
         {
           "type": "columns",
@@ -105,25 +103,27 @@
             "columns": 4
           }
         }
-      ]
+      ],
+      "settings": {
+        "variant": "dark",
+        "layout": "",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "secondary",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "content",
-          "headline": "The Cooperativa",
           "supline": "How We're Structured",
+          "headline": "The Cooperativa",
           "content": "Essência is more than a place to stay — it's a cooperative. The land, the buildings and the life we're building here belong to the community that lives and cares for it, not to any single owner.\n\nResidents share in the responsibility — and the decisions — that shape our common home, from the projects we take on in the garden to the direction the village grows in next. It's a slower, more collective way of building something, and we think that's the point.",
+          "settings": null,
           "buttons": [
             {
               "label": "Meet the people of Essência",
-              "link": "/eco-village",
+              "link": "/eco-village/people",
               "variant": "primary"
             },
             {
@@ -131,8 +131,7 @@
               "link": "/join-us/as-resident",
               "variant": ""
             }
-          ],
-          "settings": null
+          ]
         },
         {
           "type": "card-grid",
@@ -147,22 +146,27 @@
             }
           ]
         }
-      ]
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "column",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": null,
       "widget": [
         {
           "type": "content",
-          "headline": "What \"Off-Grid\" Actually Means",
           "supline": "Living Off-Grid",
+          "headline": "What \"Off-Grid\" Actually Means",
           "content": "There's no mains connection out here — every drop of water and every watt of power is something we generate, manage and take responsibility for ourselves.",
-          "buttons": [],
           "settings": {
-            "textCenter": true
-          }
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
         },
         {
           "type": "card-grid",
@@ -185,32 +189,30 @@
             }
           ]
         }
-      ]
+      ],
+      "settings": null
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": null,
       "widget": [
         {
           "type": "content",
-          "headline": "The Eco Village",
           "supline": "Around the Land",
+          "headline": "The Eco Village",
           "content": "",
-          "buttons": [],
           "settings": {
-            "textCenter": true
-          }
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
         }
-      ]
+      ],
+      "settings": null
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "slideshow",
@@ -239,41 +241,42 @@
         },
         {
           "type": "content",
-          "headline": "The Shala",
           "supline": "Yoga & Ceremony",
+          "headline": "The Shala",
           "content": "Open on one side to the forest, the Shala is where the community's day begins — morning meditation, breathwork, movement and yoga, held with the birds and the light. It's also home to the ceremonies, chanting and dance that mark our evenings and gatherings.\n\n_Morning practices — Yoga — Ceremony — Sound & chanting_",
+          "settings": null,
           "buttons": [
             {
               "label": "See upcoming events",
               "link": "/events",
               "variant": "primary"
             }
-          ],
-          "settings": null
+          ]
         }
-      ]
+      ],
+      "settings": {
+        "variant": "",
+        "layout": "column",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "secondary",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "content",
-          "headline": "Farmhouse",
           "supline": "Our Guest House",
+          "headline": "Farmhouse",
           "content": "Six lovingly designed guest rooms, each with a private bathroom, floor-to-ceiling windows and a terrace with a view. Guests share an open kitchen and a cosy living room with fireplace — heated by solar-thermal and the fire, powered by our own solar panels and battery, with Starlink Wi-Fi throughout.",
+          "settings": null,
           "buttons": [
             {
               "label": "See rooms & book",
               "link": "/stay",
               "variant": "primary"
             }
-          ],
-          "settings": null
+          ]
         },
         {
           "type": "slideshow",
@@ -296,15 +299,16 @@
             }
           ]
         }
-      ]
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "column",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "slideshow",
@@ -317,35 +321,36 @@
         },
         {
           "type": "content",
-          "headline": "The Hive",
           "supline": "Focus & Fast Wifi",
+          "headline": "The Hive",
           "content": "A quiet co-working space with a fast Starlink connection — for the days you need to focus, take a call, or simply get things done. The Hive is where community life and real work overlap, without you having to choose between them.",
-          "buttons": [],
-          "settings": null
+          "settings": null,
+          "buttons": []
         }
-      ]
+      ],
+      "settings": {
+        "variant": "",
+        "layout": "column",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "secondary",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "content",
-          "headline": "Forest SPA",
           "supline": "Rest & Release",
+          "headline": "Forest SPA",
           "content": "Sauna at sunset, a warm hot tub under the stars, and a natural pond for cold plunges — our open-air spa is where the week softens. Every Thursday it opens to everyone for SPArkling Night.",
+          "settings": null,
           "buttons": [
             {
               "label": "More about our SPArkling Night",
               "link": "/events/sparkling-night",
               "variant": ""
             }
-          ],
-          "settings": null
+          ]
         },
         {
           "type": "slideshow",
@@ -356,15 +361,16 @@
             }
           ]
         }
-      ]
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "column",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "slideshow",
@@ -377,9 +383,10 @@
         },
         {
           "type": "content",
-          "headline": "The Garden",
           "supline": "Grown, Not Bought",
+          "headline": "The Garden",
           "content": "Much of what lands on our table is grown just steps away. The garden is tended collectively — residents, volunteers and visiting hands all take a turn in the soil, especially on Thursdays, when Community Day gathers everyone for a shared morning of planting, weeding and permaculture.",
+          "settings": null,
           "buttons": [
             {
               "label": "Become a volunteer",
@@ -391,32 +398,32 @@
               "link": "/contact?topic=community_day",
               "variant": ""
             }
-          ],
-          "settings": null
+          ]
         }
-      ]
+      ],
+      "settings": {
+        "variant": "",
+        "layout": "column",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "secondary",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "content",
-          "headline": "Soul Food Kitchen",
           "supline": "Nourishment, Shared",
+          "headline": "Soul Food Kitchen",
           "content": "Our open-air community kitchen turns the day's harvest into simple, plant-based meals shared at the food circle — organic, seasonal, and always enough for one more plate.",
+          "settings": null,
           "buttons": [
             {
               "label": "Cook with us as volunteer",
               "link": "/join-us/as-volunteer",
               "variant": "primary"
             }
-          ],
-          "settings": null
+          ]
         },
         {
           "type": "slideshow",
@@ -427,15 +434,16 @@
             }
           ]
         }
-      ]
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "column",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": {
-        "variant": "",
-        "layout": "column"
-      },
       "widget": [
         {
           "type": "slideshow",
@@ -448,30 +456,38 @@
         },
         {
           "type": "content",
-          "headline": "Kids Temple",
           "supline": "For Ages 2–10",
+          "headline": "Kids Temple",
           "content": "A forest-school inspired space where children play, explore and grow at their own pace — building confidence, connection and curiosity among the trees. Open weekday mornings, with a rhythm built around wonder rather than a strict schedule.",
+          "settings": null,
           "buttons": [
             {
               "label": "More about the Kids Temple",
               "link": "/eco-village/kids-temple",
               "variant": "primary"
             }
-          ],
-          "settings": null
+          ]
         }
-      ]
+      ],
+      "settings": {
+        "variant": "",
+        "layout": "column",
+        "spacing": ""
+      }
     },
     {
       "type": "default-section",
       "id": "",
-      "settings": null,
       "widget": [
         {
           "type": "content",
-          "headline": "Come stay a while.",
           "supline": "Curious to See It Yourself?",
+          "headline": "Come stay a while.",
           "content": "",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
           "buttons": [
             {
               "label": "See where to stay",
@@ -480,14 +496,13 @@
             },
             {
               "label": "Join Essência",
-              "link": "/join-us"
+              "link": "/join-us",
+              "variant": ""
             }
-          ],
-          "settings": {
-            "textCenter": true
-          }
+          ]
         }
-      ]
+      ],
+      "settings": null
     }
   ]
 }
