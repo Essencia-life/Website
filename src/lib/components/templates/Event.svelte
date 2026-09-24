@@ -3,7 +3,7 @@
 
 	export const eventCollection = {
 		name: 'events',
-		label: 'Events',
+		label: 'Events & Retreats',
 		label_singular: 'Event',
 		format: 'json',
 		icon: 'event',
@@ -83,7 +83,7 @@
 				name: 'short_description',
 				label: 'Short Description',
 				widget: 'text',
-				max: 300
+				maxlength: 300
 			},
 			{
 				name: 'description',
@@ -119,7 +119,7 @@
 					{
 						name: 'description',
 						label: 'Description',
-						max: 100
+						maxlength: 100
 					},
 					{
 						name: 'photo',
