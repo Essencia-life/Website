@@ -1,52 +1,56 @@
 {
-  "navigation": [
-    {
-      "label": "Eco Village",
-      "link": "/eco-village",
-      "children": [
-        {
-          "label": "Kids Temple",
-          "link": "/eco-village/kids-temple"
-        }
-      ]
-    },
-    {
-      "label": "Stay",
-      "link": "/stay",
-      "children": []
-    },
-    {
-      "label": "Heal",
-      "link": "/healing-center",
-      "children": []
-    },
-    {
-      "label": "Events",
-      "link": "/events",
-      "children": []
-    },
-    {
-      "label": "Retreats",
-      "link": "/retreats",
-      "children": []
-    },
-    {
-      "label": "Join us",
-      "link": "/join-us",
-      "children": [
-        {
-          "label": "Volunteer with us",
-          "link": "/join-us/as-volunteer"
-        },
-        {
-          "label": "Explore residency",
-          "link": "/join-us/as-resident"
-        },
-        {
-          "label": "Become a friend",
-          "link": "/join-us/as-supporter"
-        }
-      ]
-    }
-  ]
+	"navigation": [
+		{
+			"label": "Eco Village",
+			"link": "/eco-village",
+			"children": [
+				{
+					"label": "Kids Temple",
+					"link": "/eco-village/kids-temple"
+				},
+				{
+					"label": "People of Essência",
+					"link": "/eco-village/people"
+				}
+			]
+		},
+		{
+			"label": "Stay",
+			"link": "/stay",
+			"children": []
+		},
+		{
+			"label": "Heal",
+			"link": "/heal",
+			"children": []
+		},
+		{
+			"label": "Events",
+			"link": "/events",
+			"children": []
+		},
+		{
+			"label": "Retreats",
+			"link": "/retreats",
+			"children": []
+		},
+		{
+			"label": "Join us",
+			"link": "/join-us",
+			"children": [
+				{
+					"label": "Volunteer with us",
+					"link": "/join-us/as-volunteer"
+				},
+				{
+					"label": "Explore residency",
+					"link": "/join-us/as-resident"
+				},
+				{
+					"label": "Become a friend",
+					"link": "/join-us/as-supporter"
+				}
+			]
+		}
+	]
 }

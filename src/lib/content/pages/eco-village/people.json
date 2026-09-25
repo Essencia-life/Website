@@ -1,0 +1,34 @@
+{
+	"meta": {
+		"title": "People of Essência",
+		"description": "The residents and long-term volunteers who keep this place alive",
+		"cover": ""
+	},
+	"sections": [
+		{
+			"type": "default-section",
+			"id": "",
+			"widget": [
+				{
+					"type": "content",
+					"supline": "Who's Here",
+					"headline": "People of Essência",
+					"content": "_The residents and long-term volunteers who keep this place alive._",
+					"settings": {
+						"textCenter": true,
+						"listIcons": ""
+					},
+					"buttons": []
+				}
+			],
+			"settings": {
+				"variant": "",
+				"layout": "",
+				"spacing": "top"
+			}
+		},
+		{
+			"type": "people"
+		}
+	]
+}

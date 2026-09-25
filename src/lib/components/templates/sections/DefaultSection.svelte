@@ -20,7 +20,9 @@
 			{
 				name: 'type',
 				widget: 'hidden',
-				default: 'default-section'
+				get default() {
+					return defaultSectionField.name;
+				}
 			},
 			{
 				name: 'id',

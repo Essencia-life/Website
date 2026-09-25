@@ -5,12 +5,10 @@
 		{ name: 'label', label: 'Label' },
 		{
 			name: 'link',
-			label: 'Link'
-			// widget: 'relation',
-			// collection: 'pages',
-			// search_fields: ['title'],
-			// value_field: '/{{slug}}',
-			// display_fields: ['title']
+			label: 'Link',
+			widget: 'relation',
+			collection: 'pages',
+			value_field: '/{{slug}}',
 		}
 	];
 
@@ -19,6 +17,7 @@
 		label: 'Page Header',
 		icon: 'page_header',
 		file: 'src/lib/content/header.json',
+		editor: { preview: false },
 		fields: [
 			{
 				name: 'navigation',

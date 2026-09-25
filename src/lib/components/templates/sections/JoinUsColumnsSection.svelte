@@ -9,7 +9,9 @@
 			{
 				name: 'type',
 				widget: 'hidden',
-				default: 'join-us-columns'
+				get default() {
+					return joinUsColumnsSectionField.name;
+				}
 			},
 			{
 				name: 'columns',
