@@ -5,6 +5,7 @@
 	import { peopleSectionField } from './sections/PeopleSection.svelte';
 	import { residencyCostsSectionField } from './sections/ResidencyCostsSection.svelte';
 	import { joinUsColumnsSectionField } from './sections/JoinUsColumnsSection.svelte';
+	import { healingOffersSectionField } from './sections/HealingOffersSection.svelte';
 
 	export const pageCollection = {
 		name: 'pages',
@@ -58,7 +59,8 @@
 					defaultSectionField,
 					peopleSectionField,
 					residencyCostsSectionField,
-					joinUsColumnsSectionField
+					joinUsColumnsSectionField,
+					healingOffersSectionField,
 				] as const
 			}
 		] as const
@@ -74,6 +76,7 @@
 	import PeopleSection from './sections/PeopleSection.svelte';
 	import ResidencyCostsSection from './sections/ResidencyCostsSection.svelte';
 	import JoinUsColumnsSection from './sections/JoinUsColumnsSection.svelte';
+	import HealingOffersSection from '$lib/components/templates/sections/HealingOffersSection.svelte';
 
 	interface Props {
 		page: InferCollectionType<typeof pageCollection>;
@@ -94,15 +97,17 @@
 />
 
 {#each page.sections as section, index (index)}
-	{#if section.type === 'hero'}
+	{#if section.type === heroSectionField.name}
 		<HeroSection {section} />
-	{:else if section.type === 'default-section'}
+	{:else if section.type === defaultSectionField.name}
 		<DefaultSection {index} {section} />
-	{:else if section.type === 'people'}
+	{:else if section.type === peopleSectionField.name}
 		<PeopleSection {section} />
-	{:else if section.type === 'residency-costs'}
+	{:else if section.type === residencyCostsSectionField.name}
 		<ResidencyCostsSection {section} />
-	{:else if section.type === 'join-us-columns'}
+	{:else if section.type === joinUsColumnsSectionField.name}
 		<JoinUsColumnsSection {section} />
+	{:else if section.type === healingOffersSectionField.name}
+		<HealingOffersSection {section} />
 	{/if}
 {/each}

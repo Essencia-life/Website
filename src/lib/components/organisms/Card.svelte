@@ -5,16 +5,20 @@
 	interface Props {
 		image?: string;
 		children: Snippet;
+		overlays?: Snippet;
 	}
 
-	const { image, children }: Props = $props();
+	const { image, children, overlays }: Props = $props();
 </script>
 
 <article
 	class="flex flex-col overflow-hidden rounded-lg border border-stone-100 bg-stone-50"
 >
 	{#if image}
-		<enhanced:img src={Media.getFile(image)} />
+		<div class="relative">
+			<enhanced:img src={Media.getFile(image!)} loading="lazy" />
+			{@render overlays?.()}
+		</div>
 	{/if}
 	<div class="flex-1 p-4">
 		{@render children()}

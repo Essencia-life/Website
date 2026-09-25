@@ -9,7 +9,9 @@
 			{
 				name: 'type',
 				widget: 'hidden',
-				default: 'hero'
+				get default() {
+					return heroSectionField.name;
+				}
 			},
 			{
 				name: 'headline',

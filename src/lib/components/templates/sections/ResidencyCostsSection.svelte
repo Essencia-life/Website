@@ -9,7 +9,9 @@
 			{
 				name: 'type',
 				widget: 'hidden',
-				default: 'residency-costs'
+				get default() {
+					return residencyCostsSectionField.name;
+				}
 			},
 			{
 				name: 'costs',

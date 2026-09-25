@@ -19,6 +19,7 @@
 		label: 'Page Footer',
 		icon: 'page_footer',
 		file: 'src/lib/content/footer.json',
+		editor: { preview: false },
 		fields: [
 			{
 				name: 'cta',

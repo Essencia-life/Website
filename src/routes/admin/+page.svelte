@@ -3,6 +3,7 @@
 	import type { PageProps } from './$types';
 	import { headerCmsConfig } from '$lib/components/templates/Header.svelte';
 	import { footerCmsConfig } from '$lib/components/templates/Footer.svelte';
+	import { peopleCmsConfig } from '$lib/components/templates/People.svelte';
 	import PageTemplate, { pageCollection } from '$lib/components/templates/Page.svelte';
 	import EventTemplate, { eventCollection } from '$lib/components/templates/Event.svelte';
 	import { svelteToReactWrapper } from './sveltePreviewMapper.svelte';
@@ -36,8 +37,44 @@
 						deleteMedia: 'feat({{collection}}): deleted “{{path}}”'
 					}
 				},
-				singletons: [headerCmsConfig, footerCmsConfig],
-				collections: [pageCollection, eventCollection]
+				singletons: [
+					headerCmsConfig,
+					footerCmsConfig,
+					peopleCmsConfig,
+					{
+						name: 'healing-categories',
+						label: 'Healing Categories',
+						icon: 'category',
+						file: 'src/lib/content/healing-categories.json',
+						editor: { preview: false },
+						fields: [
+							{
+								name: 'categories',
+								label: 'Categories',
+								label_singular: 'Category',
+								widget: 'list',
+								collapsed: 'auto',
+								summary: '{{label}}',
+								fields: [
+									{
+										name: 'id',
+										widget: 'compute',
+										value: '{{uuid_short}}'
+									},
+									{
+										name: 'label',
+										label: 'Label',
+									}
+								]
+							},
+						]
+					}
+				],
+				collections: [
+					pageCollection,
+					{ divider: true },
+					eventCollection,
+				]
 			}
 		});
 
