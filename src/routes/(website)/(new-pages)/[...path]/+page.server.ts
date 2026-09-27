@@ -1,4 +1,4 @@
-import type { EntryGenerator, PageServerLoad } from '../../../../../.svelte-kit/types/src/routes';
+import type { EntryGenerator, PageServerLoad } from './$types';
 import { PageCollectionNotFound, Pages } from '$lib/server/Pages';
 import { error } from '@sveltejs/kit';
 import { constants } from 'node:http2';

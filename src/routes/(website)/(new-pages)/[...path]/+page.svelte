@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Page from '$lib/components/templates/Page.svelte';
-	import type { PageProps } from '../../../../../.svelte-kit/types/src/routes';
+	import type { PageProps } from './$types';
 
 	const { data }: PageProps = $props();
 </script>

@@ -1,5 +1,5 @@
 import { RESEND_API_KEY } from '$env/static/private';
-import type { Actions, PageServerLoad } from '../../../../../.svelte-kit/types/src/routes';
+import type { Actions, PageServerLoad } from './$types';
 import { Resend } from 'resend';
 import { fail } from '@sveltejs/kit';
 import { topicMap } from './contact-topics';

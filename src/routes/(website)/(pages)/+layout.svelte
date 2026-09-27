@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { LayoutProps } from '../../../../.svelte-kit/types/src/routes';
+	import type { LayoutProps } from './$types';
 	import Header from '$lib/components/templates/Header.svelte';
 	import Footer from '$lib/components/templates/Footer.svelte';
 	import { page } from '$app/state';
