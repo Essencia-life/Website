@@ -3,7 +3,7 @@
   "events": [
     {
       "weekly": "every Thursday",
-      "start": "2100-01-01T18:00:00.000+00:00",
+      "start": "2100-01-01T19:00:00.000Z",
       "slug": "sparkling-night",
       "cover_image": "media/events/sparkling-night.jpg",
       "title": "SPArkling Night",
