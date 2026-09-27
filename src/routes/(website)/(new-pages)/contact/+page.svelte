@@ -3,7 +3,7 @@
 	import { enhance } from '$app/forms';
 	import SiWhatsapp from '@icons-pack/svelte-simple-icons/icons/SiWhatsapp';
 	import FormField from '$lib/components/molecules/FormField.svelte';
-	import type { PageProps } from '../../../../../.svelte-kit/types/src/routes';
+	import type { PageProps } from './$types';
 	import { Media } from '$lib/services/Media';
 	import Map from '$lib/components/atoms/Map.svelte';
 
