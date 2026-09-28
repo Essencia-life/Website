@@ -1,8 +1,6 @@
 <script lang="ts">
 	import Markdown from '$lib/components/molecules/Markdown.svelte';
 	import { fromMarkdown } from 'mdast-util-from-markdown';
-	import { frontmatter } from 'micromark-extension-frontmatter';
-	import { frontmatterFromMarkdown } from 'mdast-util-frontmatter';
 
 	// https://github.com/syntax-tree/mdast#nodes
 	import type { Blockquote, Emphasis, Heading, Image, Link, List, ListItem, Paragraph, Parent, Strong } from 'mdast';
@@ -70,8 +68,8 @@
 		typeof content !== 'string'
 			? content
 			: fromMarkdown(content, {
-					extensions: [frontmatter(['yaml']), placeholderSyntax()],
-					mdastExtensions: [frontmatterFromMarkdown(['yaml']), placeholderFromMarkdown()]
+					extensions: [placeholderSyntax()],
+					mdastExtensions: [placeholderFromMarkdown()]
 				})
 	);
 
@@ -126,48 +124,46 @@
 {/snippet}
 
 {#each contentModel.children as node (node)}
-	{#if node.type !== 'yaml'}
-		{#if node.type === 'text'}
-			{node.value}
-		{:else if node.type === 'break'}
-			<br />
-		{:else if node.type === 'heading'}
-			{@render headlineNode(node, sharedProps)}
-		{:else if node.type === 'paragraph'}
-			{#if hasOnlyPlaceholderChild(node)}
-				{@render childMarkdown(node)}
-			{:else}
-				{@render paragraphNode(node, sharedProps)}
-			{/if}
-		{:else if node.type === 'thematicBreak'}
-			<hr />
-		{:else if node.type === 'strong'}
-			{@render strongNode(node, sharedProps)}
-		{:else if node.type === 'emphasis'}
-			{@render emphasisNode(node, sharedProps)}
-		{:else if node.type === 'blockquote'}
-			{@render blockquoteNode(node, sharedProps)}
-		{:else if node.type === 'link'}
-			{@render linkNode(node, sharedProps)}
-		{:else if node.type === 'list'}
-			{@render listNode(node, sharedProps)}
-		{:else if node.type === 'listItem'}
-			{@render listItemNode(node, sharedProps)}
-		{:else if node.type === 'inlineCode'}
-			<code>{node.value}</code>
-		{:else if node.type === 'code'}
-			<pre>{node.value}</pre>
-		{:else if node.type === 'image'}
-			{@render imageNode(node, sharedProps)}
-		{:else if node.type === 'placeholder'}
-			{#if placeholder}
-				{@render placeholder(node.value)}
-			{:else}
-				<code>{`{{${node.value}}}`}</code>
-			{/if}
+	{#if node.type === 'text'}
+		{node.value}
+	{:else if node.type === 'break'}
+		<br />
+	{:else if node.type === 'heading'}
+		{@render headlineNode(node, sharedProps)}
+	{:else if node.type === 'paragraph'}
+		{#if hasOnlyPlaceholderChild(node)}
+			{@render childMarkdown(node)}
 		{:else}
-			<pre>{JSON.stringify(node, null, 2)}</pre>
+			{@render paragraphNode(node, sharedProps)}
 		{/if}
+	{:else if node.type === 'thematicBreak'}
+		<hr />
+	{:else if node.type === 'strong'}
+		{@render strongNode(node, sharedProps)}
+	{:else if node.type === 'emphasis'}
+		{@render emphasisNode(node, sharedProps)}
+	{:else if node.type === 'blockquote'}
+		{@render blockquoteNode(node, sharedProps)}
+	{:else if node.type === 'link'}
+		{@render linkNode(node, sharedProps)}
+	{:else if node.type === 'list'}
+		{@render listNode(node, sharedProps)}
+	{:else if node.type === 'listItem'}
+		{@render listItemNode(node, sharedProps)}
+	{:else if node.type === 'inlineCode'}
+		<code>{node.value}</code>
+	{:else if node.type === 'code'}
+		<pre>{node.value}</pre>
+	{:else if node.type === 'image'}
+		{@render imageNode(node, sharedProps)}
+	{:else if node.type === 'placeholder'}
+		{#if placeholder}
+			{@render placeholder(node.value)}
+		{:else}
+			<code>{`{{${node.value}}}`}</code>
+		{/if}
+	{:else}
+		<pre>{JSON.stringify(node, null, 2)}</pre>
 	{/if}
 {/each}
 

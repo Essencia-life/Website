@@ -1,11 +1,9 @@
 import { error } from '@sveltejs/kit';
 import type { EntryGenerator, PageServerLoad } from './$types';
-import { EventNotFound, Events } from '$lib/services/Events';
-
-export const prerender = true;
+import { EventNotFound, Events } from '$lib/server/Events';
 
 export const entries: EntryGenerator = () => {
-	return Events.getAllRetreatSlugs();
+	return Events.getAllEventSlugs();
 };
 
 export const load: PageServerLoad = async ({ params }) => {

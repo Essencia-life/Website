@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { type Event, Events } from '$lib/services/Events';
+	import { type Event, Events } from '$lib/server/Events';
 	import { Media } from '$lib/services/Media';
 	import { resolve } from '$app/paths';
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';

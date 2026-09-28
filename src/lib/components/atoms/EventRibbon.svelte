@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Event } from '$lib/services/Events';
+	import type { Event } from '$lib/server/Events';
 	import type { Snippet } from 'svelte';
 
 	interface Props {

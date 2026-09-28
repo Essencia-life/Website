@@ -8,10 +8,6 @@ export const entries: EntryGenerator = () => {
 };
 
 export const load: PageServerLoad = async ({ params }) => {
-	if (params.path === '__root') {
-		return error(constants.HTTP_STATUS_NOT_FOUND);
-	}
-
 	try {
 		return {
 			page: Pages.getPage(params.path)

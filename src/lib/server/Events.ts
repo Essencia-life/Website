@@ -1,8 +1,6 @@
 import type { InferCollectionType } from '$lib/types/cms-types';
 import { eventCollection } from '$lib/components/templates/Event.svelte';
 
-// TODO move into $lib/server
-
 type EventRaw = InferCollectionType<typeof eventCollection>;
 
 export interface Event extends Omit<EventRaw, 'type' | 'start' | 'end'> {

@@ -97,14 +97,14 @@
 	let filterPersonId = $derived(page.url.searchParams.get('practitioner'));
 	let filteredOffers = $derived(section.offers.filter(offer => !filterCategoryId || offer.categoryId === filterCategoryId));
 
-	function resetFilter(event: Event) {
-		event.preventDefault();
+	$effect(() => {
+		if (filterCategoryId === '') {
+			page.url.searchParams.delete('category');
 
-		page.url.searchParams.delete('category');
-
-		// eslint-disable-next-line svelte/no-navigation-without-resolve
-		goto(page.url.toString(), { keepFocus: true, noScroll: true });
-	}
+			// eslint-disable-next-line svelte/no-navigation-without-resolve
+			goto(page.url.toString(), { keepFocus: true, noScroll: true, replaceState: true });
+		}
+	});
 </script>
 
 {#snippet offerCard(offer)}
@@ -138,7 +138,7 @@
 {/snippet}
 
 <section class="py-12">
-	<form data-sveltekit-replacestate method="get" class="page-content flex flex-wrap gap-2 py-2 mb-12">
+	<form data-sveltekit-replacestate data-sveltekit-noscroll method="get" class="page-content flex flex-wrap gap-2 py-2 mb-12">
 		{#if filterPersonId}
 			<input type="hidden" name="practitioner" value={filterPersonId}>
 		{/if}
@@ -151,7 +151,6 @@
 			class:text-stone-50={!filterCategoryId}
 			class:border-transparent={!filterCategoryId}
 			aria-pressed={!filterCategoryId}
-			onclick={resetFilter}
 		>
 			All Offerings
 		</button>
