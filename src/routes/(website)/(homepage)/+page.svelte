@@ -16,6 +16,9 @@
 	import Testimonials from './Testimonials.svelte';
 	import type { Snapshot } from '@sveltejs/kit';
 	import type { Attachment } from 'svelte/attachments';
+	import type { PageData } from './$types';
+
+	const { data }: PageData = $props();
 
 	let heroIsVisible = $state(true);
 	let lastScrollPositions = $state({
@@ -117,7 +120,7 @@
 			<div class="flex flex-col p-4 lg:container lg:mx-auto">
 				<h2 class="text-center">{section.headline}</h2>
 
-				<Events {lastEventsScrollPosition} />
+				<Events events={data.upcomingEvents} {lastEventsScrollPosition} />
 
 				{#if section.button}
 					<a href={section.button.link} class="button button-primary mx-auto my-6">

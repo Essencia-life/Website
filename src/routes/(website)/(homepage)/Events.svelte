@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ms from 'ms';
-	import { Events } from '$lib/services/Events';
+	import type { Event } from '$lib/server/Events';
 	import { Media } from '$lib/services/Media';
 	import { resolve } from '$app/paths';
 	import type { Attachment } from 'svelte/attachments';
@@ -12,12 +12,11 @@
 	import EventRibbon from '$lib/components/atoms/EventRibbon.svelte';
 
 	interface Props {
+		events: Event[];
 		lastEventsScrollPosition: Attachment<HTMLElement>;
 	}
 
-	let { lastEventsScrollPosition }: Props = $props();
-
-	const events = Events.getAllUpcoming();
+	let { events, lastEventsScrollPosition }: Props = $props();
 </script>
 
 <ScrollContainerArrows>

@@ -1,7 +1,5 @@
-import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
-import remarkAddComponentImports from './remark-add-component-imports.js';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,13 +9,13 @@ const config = {
 		vitePreprocess({
 			postcss: true
 		}),
-		mdsvex({
-			extensions: ['.md'],
-			remarkPlugins: [remarkAddComponentImports]
-		})
 	],
-	kit: { adapter: adapter() },
-	extensions: ['.svelte', '.md']
+	kit: {
+		adapter: adapter(),
+		prerender: {
+			handleEntryGeneratorMismatch: 'warn'
+		}
+	},
 };
 
 export default config;
