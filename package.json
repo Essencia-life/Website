@@ -28,7 +28,6 @@
 		"@tailwindcss/vite": "^4.3.3",
 		"@types/node": "^20",
 		"@types/react": "^19.3.0",
-		"@vitest/browser": "^5.0.1",
 		"altcha": "^3.2.2",
 		"altcha-lib": "^2.5.0",
 		"autoprefixer": "^10.6.1",
@@ -53,8 +52,7 @@
 		"typescript": "^6.0.3",
 		"typescript-eslint": "^8.70.0",
 		"vite": "^8.3.0",
-		"vite-plugin-devtools-json": "^1.1.0",
-		"yaml": "^2.8.1"
+		"vite-plugin-devtools-json": "^1.1.0"
 	},
 	"dependencies": {
 		"@flags-sdk/vercel": "^1.4.8",
