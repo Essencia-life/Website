@@ -1,3 +1,67 @@
+<script lang="ts" module>
+	import type { CollectionFile, Field } from '@sveltia/cms';
+
+	const labelAndLinkFields: Field[] = [
+		{ name: 'label', label: 'Label' },
+		{
+			name: 'link',
+			label: 'Link'
+			// widget: 'relation',
+			// collection: 'pages',
+			// search_fields: ['title'],
+			// value_field: '/{{slug}}',
+			// display_fields: ['title']
+		}
+	];
+
+	export const footerCmsConfig: CollectionFile = {
+		name: 'footer',
+		label: 'Page Footer',
+		icon: 'page_footer',
+		file: 'src/lib/content/footer.json',
+		editor: { preview: false },
+		fields: [
+			{
+				name: 'cta',
+				label: 'CTA Button',
+				widget: 'object',
+				fields: [...labelAndLinkFields]
+			},
+			{
+				name: 'social_media',
+				label: 'Social Media Platforms',
+				label_singular: 'Platform',
+				widget: 'list',
+				field: {
+					name: 'platform',
+					label: 'Platform'
+					// widget: 'relation',
+					// collection: 'social_media',
+					// search_fields: ['label'],
+					// value_field: 'name',
+					// display_fields: ['label']
+				}
+			},
+			{
+				name: 'links',
+				label: 'Footer Links',
+				label_singular: 'Group',
+				widget: 'list',
+				min: 3,
+				max: 3,
+				fields: [
+					{
+						name: 'group',
+						label: 'Group',
+						widget: 'list',
+						fields: [...labelAndLinkFields]
+					}
+				]
+			}
+		]
+	};
+</script>
+
 <script lang="ts">
 	import footerData from '$lib/content/footer.json';
 	import socialMediaData from '$lib/content/social-media.json';
@@ -7,6 +71,8 @@
 	import SiYoutube from '@icons-pack/svelte-simple-icons/icons/SiYoutube';
 	import SiFacebook from '@icons-pack/svelte-simple-icons/icons/SiFacebook';
 	import { titleSuffix } from '$lib/config';
+	import Image from '$lib/components/atoms/Image.svelte';
+	import footerImage from '$lib/assets/media/footer.png?as=run:0';
 
 	const platforms = $derived(
 		footerData.platforms.map((name) => socialMediaData.platforms.find((it) => it.name === name)!)
@@ -20,9 +86,9 @@
 	]);
 </script>
 
-<footer>
+<footer class="mt-12">
 	<div class="background">
-		<enhanced:img src="$lib/assets/media/footer.png" alt="Essência forest skyline" loading="lazy" />
+		<Image src={footerImage} alt="Essência forest skyline" loading="lazy" class="w-full h-auto" />
 	</div>
 	<div class="footer-content">
 		<div class="page-content grid">
@@ -34,11 +100,7 @@
 				<div class="social-media">
 					{#each platforms as platform (platform.name)}
 						{@const Icon = iconMap.get(platform.name)}
-						<a
-							href={platform.link}
-							target="_blank"
-							aria-label={platform.label}
-							class="no-link">
+						<a href={platform.link} target="_blank" aria-label={platform.label} class="no-link">
 							<Icon title="" />
 						</a>
 					{/each}
@@ -77,11 +139,6 @@
 		position: relative;
 	}
 
-	.background enhanced\:img {
-		width: 100%;
-		height: auto;
-	}
-
 	.background::after {
 		content: '';
 		position: absolute;
@@ -89,17 +146,17 @@
 		display: block;
 		background: linear-gradient(
 			to top,
-			var(--brand-dark-section-color) 5%,
-			rgba(var(--brand-dark-section-rgb) / 0) 60%
+			var(--color-olive-800) 5%,
+			color-mix(in oklab, var(--color-olive-800) 0%, transparent) 60%
 		);
 	}
 
 	.footer-content {
-		background: var(--brand-dark-section-color);
+		background: var(--color-olive-800);
 	}
 
 	.page-content {
-		color: var(--brand-parchment-color);
+		color: var(--color-stone-100);
 	}
 
 	.grid {
@@ -145,10 +202,10 @@
 
 	.copyright {
 		display: block;
-		border-top: 1px solid var(--brand-parchment-color);
+		border-top: 1px solid var(--color-stone-100);
 		text-align: center;
 		margin-top: 1rem;
 		padding-block: 0.5rem;
-		color: var(--brand-parchment-color);
+		color: var(--color-stone-100);
 	}
 </style>

@@ -5,10 +5,8 @@
 	},
 	"platforms": ["instagram", "telegram", "facebook"],
 	"links": [
-		[
-		],
-		[
-		],
+		[],
+		[],
 		[
 			{
 				"label": "Legal notice",

@@ -1,5 +1,141 @@
+<script module lang="ts">
+	import type { Collection } from '@sveltia/cms';
+
+	export const eventCollection = {
+		name: 'events',
+		label: 'Events & Retreats',
+		label_singular: 'Event',
+		format: 'json',
+		icon: 'event',
+		identifier_field: 'title',
+		slug: "{{fields.start | date('YYYY-MM-DD')}}-{{fields.title}}",
+		summary: "{{start | date('DD.MM.')}} — {{title}}",
+		thumbnail: 'cover_image',
+		media_folder: '{{media_folder}}/events',
+		public_folder: '/media/events',
+		sortable_fields: {
+			fields: ['title', 'start'],
+			default: {
+				field: 'start',
+				direction: 'descending'
+			}
+		},
+		view_groups: {
+			groups: [
+				{
+					name: 'type',
+					label: 'Type',
+					field: 'type'
+				},
+				{
+					name: 'year',
+					label: 'Year',
+					field: 'start',
+					pattern: '\\d{4}'
+				}
+			],
+			default: 'year'
+		},
+		view_filters: [
+			{
+				label: 'Events',
+				field: 'type',
+				pattern: 'event'
+			},
+			{
+				label: 'Retreats',
+				field: 'type',
+				pattern: 'retreat'
+			}
+		],
+		create: true,
+		folder: 'src/lib/content/events',
+		fields: [
+			{
+				name: 'type',
+				label: 'Type',
+				widget: 'select',
+				options: ['event', 'retreat']
+			},
+			{
+				name: 'start',
+				label: 'Start',
+				widget: 'datetime',
+				input_timezone: 'Europe/Lisbon'
+			},
+			{
+				name: 'end',
+				label: 'End',
+				widget: 'datetime',
+				input_timezone: 'Europe/Lisbon'
+			},
+			{
+				name: 'title',
+				label: 'Title'
+			},
+			{
+				name: 'cover_image',
+				label: 'Cover Image',
+				widget: 'image',
+				choose_url: false
+			},
+			{
+				name: 'short_description',
+				label: 'Short Description',
+				widget: 'text',
+				maxlength: 300
+			},
+			{
+				name: 'description',
+				label: 'Description',
+				widget: 'richtext'
+			},
+			{
+				name: 'booking_link',
+				label: 'Booking / Ticket Link',
+				required: false
+			},
+			{
+				name: 'car_sharing_link',
+				label: 'Car-Sharing Group Link',
+				required: false
+			},
+			{
+				name: 'info_link',
+				label: 'More Information Link',
+				required: false
+			},
+			{
+				name: 'organizers',
+				label: 'Organizers',
+				label_singular: 'Organizer',
+				widget: 'list',
+				required: false,
+				fields: [
+					{
+						name: 'name',
+						label: 'Name'
+					},
+					{
+						name: 'description',
+						label: 'Description',
+						maxlength: 100
+					},
+					{
+						name: 'photo',
+						label: 'Photo',
+						widget: 'image',
+						choose_url: false,
+						media_folder: '{{media_folder}}/events/organizer',
+						public_folder: '/media/events/organizer'
+					}
+				]
+			}
+		] as const
+	} satisfies Collection;
+</script>
+
 <script lang="ts">
-	import type { Event } from '$lib/services/Events';
 	import { Media } from '$lib/services/Media';
 	import Markdown from '$lib/components/molecules/Markdown.svelte';
 	import Calendar from '@lucide/svelte/icons/calendar';
@@ -9,9 +145,14 @@
 	import Car from '@lucide/svelte/icons/car';
 	import CalendarCheck from '@lucide/svelte/icons/calendar-check';
 	import SquareArrowOutUpRight from '@lucide/svelte/icons/square-arrow-out-up-right';
+	import type { InferCollectionType } from '$lib/types/cms-types';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	interface Props {
-		event: Event;
+		event: Omit<InferCollectionType<typeof eventCollection>, 'start' | 'End'> & {
+			start: Date;
+			end: Date;
+		};
 	}
 
 	const { event }: Props = $props();
@@ -42,8 +183,8 @@
 <div
 	class="lg:grid-areas overflow-hidden wrap-break-word lg:mx-auto lg:grid lg:max-w-[1200px] lg:grid-cols-[30%_auto] lg:grid-rows-[auto_auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:py-16"
 >
-	<div style="grid-area: cover" class="[&_picture]:contents">
-		<enhanced:img
+	<div style="grid-area: cover">
+		<Image
 			src={Media.getFile(event.cover_image)}
 			alt=""
 			class="h-auto shadow-lg/50 max-md:max-w-screen lg:max-w-full lg:rounded-md"
@@ -148,10 +289,10 @@
 
 				<h3 class="mt-0! text-xs! font-bold tracking-widest uppercase opacity-70">Hosted by:</h3>
 
-				{#each event.organizers as organizer}
+				{#each event.organizers as organizer (organizer.name)}
 					<div class="mt-4 grid gap-x-4 gap-y-1" class:grid-cols-[auto_1fr]={organizer.photo}>
 						<div class="row-span-2 aspect-square w-14 overflow-hidden rounded-full">
-							<enhanced:img
+							<Image
 								src={Media.getFile(organizer.photo)}
 								alt="Photo of {organizer.name}"
 								class="max-h-full object-cover"

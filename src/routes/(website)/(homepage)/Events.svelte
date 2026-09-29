@@ -1,0 +1,146 @@
+<script lang="ts">
+	import ms from 'ms';
+	import type { Event } from '$lib/server/Events';
+	import { Media } from '$lib/services/Media';
+	import { resolve } from '$app/paths';
+	import type { Attachment } from 'svelte/attachments';
+	import {
+		eventCoverTransitionName,
+		storeLinkUrlInPageState
+	} from '$lib/utils/eventCoverTransition.svelte.js';
+	import ScrollContainerArrows from '$lib/components/molecules/ScrollContainerArrows.svelte';
+	import EventRibbon from '$lib/components/atoms/EventRibbon.svelte';
+	import Image from '$lib/components/atoms/Image.svelte';
+
+	interface Props {
+		events: Event[];
+		lastEventsScrollPosition: Attachment<HTMLElement>;
+	}
+
+	let { events, lastEventsScrollPosition }: Props = $props();
+</script>
+
+<ScrollContainerArrows>
+	{#snippet children(scrollContainerArrows)}
+		<div class="events" {@attach lastEventsScrollPosition} {@attach scrollContainerArrows}>
+			{#each events as event (event.slug)}
+				{@const isMoreThanOneDay = event.end.getTime() - event.start.getTime() > ms('1d')}
+				{@const linkUrl = resolve(`/(pages)/${event.type}s/[slug]`, { slug: event.slug })}
+				<a href={linkUrl} class="event no-link" onclick={storeLinkUrlInPageState}>
+					<EventRibbon {event}>
+						<Image
+							src={Media.getFile(event.cover_image)}
+							alt=""
+							loading="lazy"
+							style="view-transition-name: {eventCoverTransitionName(linkUrl)}"
+							class="aspect-4/5 object-cover max-sm:h-auto max-sm:w-full sm:h-[38vh] sm:w-auto"
+						/>
+					</EventRibbon>
+					<div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
+						<div style="display: flex; justify-content: space-between">
+							<small class="type-{event.type}">{event.type}</small>
+							{#if event.weekly}
+								<time style="font-weight: 500">{event.weekly}</time>
+							{:else}
+								<time datetime={event.start.toISOString()} style="font-weight: 500">
+									{#if isMoreThanOneDay}
+										{@const startDate = event.start.toLocaleDateString('en', {
+											day: 'numeric',
+											month: 'short'
+										})}
+										{@const endDate = event.end.toLocaleDateString('en', {
+											day: 'numeric',
+											month: 'short'
+										})}
+										{startDate} &mdash; {endDate}
+									{:else}
+										{event.start.toLocaleDateString('en', {
+											day: 'numeric',
+											month: 'short'
+										})}
+									{/if}
+								</time>
+							{/if}
+						</div>
+						<h3>{event.title}</h3>
+					</div>
+				</a>
+			{/each}
+		</div>
+	{/snippet}
+</ScrollContainerArrows>
+
+<style>
+	h3 {
+		margin: 0;
+	}
+
+	.events {
+		display: grid;
+		grid-auto-flow: column;
+		overflow-x: auto;
+		overflow-y: hidden;
+		max-width: 100vw;
+	}
+
+	.events::-webkit-scrollbar {
+		display: none;
+	}
+
+	.event {
+		display: flex;
+		gap: 1rem;
+		text-decoration: none;
+		color: inherit;
+		background: color-mix(in oklab, var(--color-stone-100) 40%, transparent);
+		padding: 1rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 1px 4px color-mix(in oklab, var(--color-stone-900) 30%, transparent);
+		scroll-snap-align: center;
+		flex-direction: column;
+		scroll-snap-stop: always;
+		transition: transform 150ms ease-in-out;
+		min-width: 250px;
+	}
+
+	@media screen and (width < 600px) {
+		.events {
+			grid-auto-columns: 70vw;
+			grid-gap: 2rem;
+			padding: 2rem 15vw;
+			margin: -1rem;
+			width: 100vw;
+			scroll-snap-type: x mandatory;
+		}
+	}
+
+	@media screen and (width >= 600px) {
+		.events {
+			grid-gap: 3rem;
+			padding: 2.5rem 4rem;
+		}
+	}
+
+	.event small {
+		text-transform: uppercase;
+		background-color: var(--color-olive-700);
+		color: var(--color-stone-50);
+		font-weight: 700;
+		padding: 0.25rem 0.5rem;
+		border-radius: 0.25rem;
+		font-size: 0.625rem;
+		letter-spacing: 1px;
+		text-shadow: 1px 1px var(--color-olive-700);
+		line-height: 1.5;
+	}
+
+	.event small.type-retreat {
+		background-color: var(--color-cyan-600);
+	}
+
+	@media (hover: hover) {
+		.event:hover {
+			transform: scale(1.05);
+		}
+	}
+</style>
