@@ -21,7 +21,7 @@ const config = {
 		}),
 		prerender: {
 			handleEntryGeneratorMismatch: 'warn',
-			handleInvalidUrl: 'warn',
+			handleHttpError: 'warn'
 		}
 	},
 };
