@@ -71,6 +71,8 @@
 	import SiYoutube from '@icons-pack/svelte-simple-icons/icons/SiYoutube';
 	import SiFacebook from '@icons-pack/svelte-simple-icons/icons/SiFacebook';
 	import { titleSuffix } from '$lib/config';
+	import Image from '$lib/components/atoms/Image.svelte';
+	import footerImage from '$lib/assets/media/footer.png?as=run:0';
 
 	const platforms = $derived(
 		footerData.platforms.map((name) => socialMediaData.platforms.find((it) => it.name === name)!)
@@ -86,7 +88,7 @@
 
 <footer class="mt-12">
 	<div class="background">
-		<enhanced:img src="$lib/assets/media/footer.png" alt="Essência forest skyline" loading="lazy" />
+		<Image src={footerImage} alt="Essência forest skyline" loading="lazy" class="w-full h-auto" />
 	</div>
 	<div class="footer-content">
 		<div class="page-content grid">
@@ -135,11 +137,6 @@
 
 	.background {
 		position: relative;
-	}
-
-	.background enhanced\:img {
-		width: 100%;
-		height: auto;
 	}
 
 	.background::after {

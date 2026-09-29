@@ -12,7 +12,7 @@ export async function load({ url, request }) {
 	return {
 		VERCEL_PROJECT_PRODUCTION_URL,
 		VERCEL_ENV,
-		metadata: LegacyPages.getPageMetadata(url.pathname),
+		metadata: LegacyPages.getPageMetadata(url.pathname), // TODO replace with new pages meta
 		saveData: saveDataHeader === 'on'
 	};
 }

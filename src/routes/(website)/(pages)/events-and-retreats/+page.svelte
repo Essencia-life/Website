@@ -8,6 +8,7 @@
 	import ArrowRight from '@lucide/svelte/icons/arrow-right';
 	import type { PageProps } from './$types';
 	import { goto } from '$app/navigation';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	let filter = $derived(page.url.searchParams.get('filter'));
 
@@ -90,12 +91,12 @@
 				<article class="grid gap-8 md:grid-cols-[220px_2fr] md:gap-12 items-center">
 					<a href={linkUrl} onclick={storeLinkUrlInPageState} class="relative no-link">
 						<EventRibbon {event}>
-							<enhanced:img
+							<Image
 								src={Media.getFile(event.cover_image)}
 								loading="lazy"
 								alt=""
 								class="rounded-2xl aspect-4/5 shadow-xl/30"
-								style:view-transition-name={eventCoverTransitionName(linkUrl)}
+								style="view-transition-name: {eventCoverTransitionName(linkUrl)}"
 							/>
 						</EventRibbon>
 						<div class="absolute bottom-0 -translate-x-2 translate-y-2 rounded-lg text-center text-white w-11 pb-1.5 font-serif  shadow-lg/30"
@@ -135,7 +136,7 @@
 
 <section class="page-content py-8">
 	<div class="relative flex py-8">
-		<enhanced:img
+		<Image
 			src={Media.getFile('media/essência nature retreat 39.JPG')}
 			loading="lazy"
 			alt=""
@@ -160,12 +161,12 @@
 		{#each data.pastEvents as event (event.slug)}
 			{@const linkUrl = resolve(`/${event.type}s/[slug]`, { slug: event.slug })}
 			<a href={linkUrl} onclick={storeLinkUrlInPageState} class="grid grid-cols-[96px_1fr] gap-4 no-link">
-				<enhanced:img
+				<Image
 					src={Media.getFile(event.cover_image)}
 					loading="lazy"
 					alt=""
 					class="rounded-xl aspect-4/5 shadow-lg/30 object-cover"
-					style:view-transition-name={eventCoverTransitionName(linkUrl)}
+					style="view-transition-name: {eventCoverTransitionName(linkUrl)}"
 				/>
 
 				<div class="space-y-2">

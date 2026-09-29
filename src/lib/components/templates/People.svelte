@@ -84,6 +84,7 @@
 	import type { InferFieldsObject } from '$lib/types/cms-types';
 	import { Media } from '$lib/services/Media';
 	import { browser } from '$app/environment';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	const { people } = (data satisfies InferFieldsObject<typeof peopleCmsConfig>);
 
@@ -98,7 +99,7 @@
 		class:even:[&_.polaroid]:rotate-2={flipped !== person.id}>
 			<div class="polaroid aspect-4/5 bg-white rounded p-4 mx-4 shadow-lg/30 text-center flex flex-col justify-between transition-transform duration-300 ease-in-out">
 				<div class="relative">
-					<enhanced:img
+					<Image
 						src={Media.getFile(person.photo)}
 						alt=""
 						class="aspect-square object-cover"

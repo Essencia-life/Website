@@ -38,6 +38,7 @@
 <script lang="ts">
 	import type { InferFieldsObject } from '$lib/types/cms-types';
 	import { Media } from '$lib/services/Media';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	interface Props {
 		widget: InferFieldsObject<typeof galleryGridWidgetField.fields>;
@@ -47,22 +48,15 @@
 </script>
 
 <div class="gallery my-12 grid gap-6 md:grid-cols-3 md:gap-4">
-	{#each widget.pictures as picture}
+	{#each widget.pictures as picture, index (index)}
 		<figure>
-			<enhanced:img src={Media.getFile(picture.image)} />
+			<Image src={Media.getFile(picture.image)} class="max-w-full h-full object-cover {index === 0 ? 'w-full' : 'aspect-3/2'}" />
 			<figcaption>{picture.caption}</figcaption>
 		</figure>
 	{/each}
 </div>
 
 <style>
-	enhanced\:img {
-		max-width: 100%;
-		height: 100%;
-		aspect-ratio: 3 / 2;
-		object-fit: cover;
-	}
-
 	.gallery figure {
 		position: relative;
 		margin: 0;
@@ -83,11 +77,5 @@
 
 	.gallery figure:first-of-type {
 		grid-row: span 2;
-	}
-
-	.gallery figure:first-of-type enhanced\:img {
-		aspect-ratio: auto;
-		height: 100%;
-		width: 100%;
 	}
 </style>

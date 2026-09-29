@@ -3,11 +3,12 @@
 	import { fromMarkdown } from 'mdast-util-from-markdown';
 
 	// https://github.com/syntax-tree/mdast#nodes
-	import type { Blockquote, Emphasis, Heading, Image, Link, List, ListItem, Paragraph, Parent, Strong } from 'mdast';
+	import type { Blockquote, Emphasis, Heading, Image as ImageType, Link, List, ListItem, Paragraph, Parent, Strong } from 'mdast';
 	import { placeholderSyntax } from '$lib/utils/placeholder-syntax';
 	import { placeholderFromMarkdown } from '$lib/utils/placeholder-from-markdown';
 	import type { Snippet } from 'svelte';
 	import { Media } from '$lib/services/Media';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 
 	interface SharedProps {
@@ -16,7 +17,7 @@
 		listNode?: Snippet<[List, SharedProps]>;
 		listItemNode?: Snippet<[ListItem, SharedProps]>;
 		paragraphNode?: Snippet<[Paragraph, SharedProps]>;
-		imageNode?: Snippet<[Image, SharedProps]>;
+		imageNode?: Snippet<[ImageType, SharedProps]>;
 		linkNode?: Snippet<[Link, SharedProps]>;
 		blockquoteNode?: Snippet<[Blockquote, SharedProps]>;
 		strongNode?: Snippet<[Strong, SharedProps]>;
@@ -30,7 +31,7 @@
 		listNode?: Snippet<[List, SharedProps]>;
 		listItemNode?: Snippet<[ListItem, SharedProps]>;
 		paragraphNode?: Snippet<[Paragraph, SharedProps]>;
-		imageNode?: Snippet<[Image, SharedProps]>;
+		imageNode?: Snippet<[ImageType, SharedProps]>;
 		linkNode?: Snippet<[Link, SharedProps]>;
 		blockquoteNode?: Snippet<[Blockquote, SharedProps]>;
 		strongNode?: Snippet<[Strong, SharedProps]>;
@@ -98,9 +99,9 @@
 	<p>{@render childMarkdown(node)}</p>
 {/snippet}
 
-{#snippet defaultImageNode(node: Image)}
+{#snippet defaultImageNode(node: ImageType)}
 	<figure>
-		<enhanced:img src={Media.getFile(node.url)} alt={node.alt} loading="lazy" />
+		<Image src={Media.getFile(node.url)} alt={node.alt} loading="lazy" />
 		{#if node.title}
 			<figcaption>{node.title}</figcaption>
 		{/if}

@@ -6,6 +6,7 @@
 	import type { PageProps } from './$types';
 	import { Media } from '$lib/services/Media';
 	import Map from '$lib/components/atoms/Map.svelte';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	const { form, data }: PageProps = $props();
 	let topic = $derived(form?.topic ?? data.topic);
@@ -50,7 +51,7 @@
 			class="mb-8 gap-x-12 gap-y-4 lg:flex lg:flex-row-reverse"
 		>
 			<div class="flex flex-col items-center gap-8 p-4 text-center">
-				<enhanced:img
+				<Image
 					src={Media.getFile('media/photo_2026-04-09_14-21-55.jpg')}
 					class="aspect-square w-86 justify-self-end object-cover drop-shadow-2xl/35"
 					style="border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%"
