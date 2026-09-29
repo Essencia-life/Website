@@ -10,6 +10,7 @@
 	} from '$lib/utils/eventCoverTransition.svelte.js';
 	import ScrollContainerArrows from '$lib/components/molecules/ScrollContainerArrows.svelte';
 	import EventRibbon from '$lib/components/atoms/EventRibbon.svelte';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	interface Props {
 		events: Event[];
@@ -27,11 +28,12 @@
 				{@const linkUrl = resolve(`/(pages)/${event.type}s/[slug]`, { slug: event.slug })}
 				<a href={linkUrl} class="event no-link" onclick={storeLinkUrlInPageState}>
 					<EventRibbon {event}>
-						<enhanced:img
+						<Image
 							src={Media.getFile(event.cover_image)}
 							alt=""
 							loading="lazy"
-							style:view-transition-name={eventCoverTransitionName(linkUrl)}
+							style="view-transition-name: {eventCoverTransitionName(linkUrl)}"
+							class="aspect-4/5 object-cover max-sm:h-auto max-sm:w-full sm:h-[38vh] sm:w-auto"
 						/>
 					</EventRibbon>
 					<div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
@@ -110,22 +112,12 @@
 			width: 100vw;
 			scroll-snap-type: x mandatory;
 		}
-
-		.event enhanced\:img {
-			height: auto;
-			width: 100%;
-		}
 	}
 
 	@media screen and (width >= 600px) {
 		.events {
 			grid-gap: 3rem;
 			padding: 2.5rem 4rem;
-		}
-
-		.event enhanced\:img {
-			height: 38vh;
-			width: auto;
 		}
 	}
 
@@ -144,11 +136,6 @@
 
 	.event small.type-retreat {
 		background-color: var(--color-cyan-600);
-	}
-
-	.event enhanced\:img {
-		object-fit: cover;
-		aspect-ratio: 4 / 5;
 	}
 
 	@media (hover: hover) {

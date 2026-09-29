@@ -80,6 +80,7 @@
 	import { page } from '$app/state';
 	import { Media } from '$lib/services/Media';
 	import { goto } from '$app/navigation';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	interface Props {
 		section: InferFieldsObject<typeof healingOffersSectionField.fields>;
@@ -117,7 +118,7 @@
 			{/snippet}
 			<div class="flex flex-col gap-2 h-full">
 				<div class="flex items-center gap-2 text-stone-600 text-sm">
-					<enhanced:img src={Media.getFile(person.photo)} class="size-6 rounded-full"
+					<Image src={Media.getFile(person.photo)} class="size-6 rounded-full"
 												loading="lazy" />
 					with {person.name}
 				</div>

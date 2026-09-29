@@ -17,6 +17,7 @@
 	import type { Snapshot } from '@sveltejs/kit';
 	import type { Attachment } from 'svelte/attachments';
 	import type { PageData } from './$types';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	const { data }: PageData = $props();
 
@@ -86,7 +87,7 @@
 			{#if section.photo}
 				<!-- TODO: define sizes -->
 				<!-- TODO: provide alt from CMS? -->
-				<enhanced:img
+				<Image
 					src={Media.getFile(section.photo)}
 					alt=""
 					loading="lazy"
@@ -110,7 +111,7 @@
 				{/if}
 			</div>
 		{:else if section.type === 'picture' && section.photo}
-			<enhanced:img
+			<Image
 				src={Media.getFile(section.photo)}
 				alt=""
 				loading="lazy"
@@ -136,8 +137,8 @@
 				<div
 					class="inset-0 overflow-hidden max-md:contents lg:absolute lg:grid lg:grid-cols-2 max-md:[&_img]:last-of-type:order-3 lg:[&_img]:h-full lg:[&_img]:w-full lg:[&_img]:object-cover"
 				>
-					<enhanced:img src={Media.getFile(section.photos![0])} alt="" loading="lazy" />
-					<enhanced:img src={Media.getFile(section.photos![1])} alt="" loading="lazy" />
+					<Image src={Media.getFile(section.photos![0])} alt="" loading="lazy" />
+					<Image src={Media.getFile(section.photos![1])} alt="" loading="lazy" />
 				</div>
 				<div
 					class="heart-shape text-center max-md:p-4 lg:z-10 lg:flex lg:aspect-square lg:h-[70%] lg:bg-white lg:px-16 lg:pt-16"

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { Media } from '$lib/services/Media';
 	import type { Snippet } from 'svelte';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	interface Props {
 		image?: string;
@@ -16,7 +17,7 @@
 >
 	{#if image}
 		<div class="relative">
-			<enhanced:img src={Media.getFile(image!)} loading="lazy" />
+			<Image src={Media.getFile(image!)} loading="lazy" class="max-w-full h-full aspect-3/2 object-cover" />
 			{@render overlays?.()}
 		</div>
 	{/if}
@@ -24,12 +25,3 @@
 		{@render children()}
 	</div>
 </article>
-
-<style>
-	enhanced\:img {
-		max-width: 100%;
-		height: 100%;
-		aspect-ratio: 3 / 2;
-		object-fit: cover;
-	}
-</style>
