@@ -6,6 +6,7 @@
 		type Accommodation
 	} from '$lib/components/organisms/AccommodationDialog.svelte';
 	import { Media } from '$lib/services/Media';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	const overlays = getContext<Overlays<any>>('overlays');
 
@@ -22,13 +23,14 @@
 
 <div class="accommodations">
 	<!-- TODO: fine tune view -->
-	{#each accommodationsData as accommodation}
+	{#each accommodationsData as accommodation (accommodation)}
 		<div>
-			<enhanced:img
+			<Image
 				src={Media.getFile(accommodation.photo)}
 				alt=""
 				loading="lazy"
 				onclick={() => showAccommodation(accommodation)}
+				class="w-full h-auto aspect-square object-cover rounded-full"
 			/>
 			<h3>{accommodation.headline}</h3>
 			<p>
@@ -74,14 +76,6 @@
 		gap: 0.75rem;
 		scroll-snap-align: center;
 		scroll-snap-stop: always;
-	}
-
-	.accommodations enhanced\:img {
-		width: 100%;
-		height: auto;
-		aspect-ratio: 1;
-		object-fit: cover;
-		border-radius: 100%;
 	}
 
 	.accommodations p {

@@ -146,6 +146,7 @@
 	import CalendarCheck from '@lucide/svelte/icons/calendar-check';
 	import SquareArrowOutUpRight from '@lucide/svelte/icons/square-arrow-out-up-right';
 	import type { InferCollectionType } from '$lib/types/cms-types';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	interface Props {
 		event: Omit<InferCollectionType<typeof eventCollection>, 'start' | 'End'> & {
@@ -182,8 +183,8 @@
 <div
 	class="lg:grid-areas overflow-hidden wrap-break-word lg:mx-auto lg:grid lg:max-w-[1200px] lg:grid-cols-[30%_auto] lg:grid-rows-[auto_auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:py-16"
 >
-	<div style="grid-area: cover" class="[&_picture]:contents">
-		<enhanced:img
+	<div style="grid-area: cover">
+		<Image
 			src={Media.getFile(event.cover_image)}
 			alt=""
 			class="h-auto shadow-lg/50 max-md:max-w-screen lg:max-w-full lg:rounded-md"
@@ -291,7 +292,7 @@
 				{#each event.organizers as organizer (organizer.name)}
 					<div class="mt-4 grid gap-x-4 gap-y-1" class:grid-cols-[auto_1fr]={organizer.photo}>
 						<div class="row-span-2 aspect-square w-14 overflow-hidden rounded-full">
-							<enhanced:img
+							<Image
 								src={Media.getFile(organizer.photo)}
 								alt="Photo of {organizer.name}"
 								class="max-h-full object-cover"

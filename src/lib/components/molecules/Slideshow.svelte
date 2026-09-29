@@ -4,6 +4,7 @@
 	import ChevronRight from '@lucide/svelte/icons/chevron-right';
 	import { SvelteMap } from 'svelte/reactivity';
 	import type { Attachment } from 'svelte/attachments';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	export interface Photo {
 		photo: string;
@@ -83,7 +84,7 @@
 				{@attach observe}
 				class="relative m-0 min-w-full snap-center snap-always overflow-hidden {classes.figure}"
 			>
-				<enhanced:img
+				<Image
 					src={Media.getFile(photo.photo)}
 					alt={photo.caption ?? ''}
 					class="h-full max-w-full object-cover {classes.image}"

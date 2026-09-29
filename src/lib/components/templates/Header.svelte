@@ -47,8 +47,9 @@
 	import Navigation from '../molecules/Navigation.svelte';
 	import type { Overlays } from '$lib/overlays.svelte';
 	import { resolve } from '$app/paths';
-	import logoTree from '$lib/assets/logo_tree.png?enhanced&h=56;112&w=';
-	import logoTitle from '$lib/assets/logo_title.png?enhanced&h=24;48&w=';
+	import logoTree from '$lib/assets/logo_tree.png?as=run:0';
+	import logoTitle from '$lib/assets/logo_title.png?as=run:0';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	const overlays = getContext<Overlays<any>>('overlays');
 
@@ -63,14 +64,14 @@
 	}
 </script>
 
-<header class="sticky top-0 z-11 bg-stone-100 border-b border-stone-50/50 shadow-md/25 [&_picture]:contents">
+<header class="sticky top-0 z-11 bg-stone-100 border-b border-stone-50/50 shadow-md/25">
 	<div class="page-content">
 		<a href={resolve('/')} class="home" aria-hidden="true">
-			<enhanced:img class="logo" src={logoTree} alt="" />
+			<Image class="max-h-full w-auto" src={logoTree} alt="" />
 		</a>
 
 		<a href={resolve('/')} class="home">
-			<enhanced:img class="title" src={logoTitle} alt="" />
+			<Image class="h-6 w-auto" src={logoTitle} alt="" />
 			<h1>Essência</h1>
 		</a>
 
@@ -103,16 +104,6 @@
 		width: 0;
 	}
 
-	.logo {
-		max-height: 100%;
-		width: auto;
-	}
-
-	.title {
-		height: 24px;
-		width: auto;
-	}
-
 	#menu-button {
 		display: flex;
 		align-items: center;
@@ -125,12 +116,6 @@
 	@media screen and (width < 800px) {
 		header .page-content {
 			justify-content: space-between;
-		}
-	}
-
-	@media screen and (width > 800px) and (width < 890px) {
-		.title {
-			display: none;
 		}
 	}
 
