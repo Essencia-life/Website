@@ -67,7 +67,7 @@
 <header class="sticky top-0 z-11 bg-stone-100 border-b border-stone-50/50 shadow-md/25">
 	<div class="page-content">
 		<a href={resolve('/')} class="home" aria-hidden="true">
-			<Image class="max-h-full w-auto" src={logoTree} alt="" />
+			<Image class="max-h-full w-auto min-w-12" src={logoTree} alt="" />
 		</a>
 
 		<a href={resolve('/')} class="home">
