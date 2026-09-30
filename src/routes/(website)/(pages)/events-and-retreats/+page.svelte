@@ -67,7 +67,7 @@
 
 	<div class="space-y-12">
 		{#each eventsByYear as [year, events] (year)}
-			{#if year !== today.getFullYear() && year !== 2100}
+			{#if year !== today.getFullYear()}
 				<h3 class="year">{year}</h3>
 			{/if}
 

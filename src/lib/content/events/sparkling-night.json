@@ -1,10 +1,31 @@
 {
-	"weekly": "every Thursday",
-	"start": "2100-01-01T19:00:00.000Z",
-	"cover_image": "/media/events/sparkling-night.jpg",
-	"title": "SPArkling Night",
-	"short_description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire",
-	"type": "event",
-	"end": "2100-01-01T22:00:00.000+00:00",
-	"description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire.  \nSubstance free, plantbased and kids friendly.\n\nBring: 2 towels, instruments and good vibes.\n\n**Contribution 20€**"
+  "type": "event",
+  "start": "2026-01-01T19:00:00+00:00",
+  "end": "2026-01-01T22:00:00+00:00",
+  "recurrence": {
+    "freq": 2,
+    "interval": 1,
+    "count": null,
+    "until": "",
+    "bysetpos": [],
+    "bymonth": [],
+    "bymonthday": [],
+    "byyearday": [],
+    "byweekno": [],
+    "byweekday": [
+      3
+    ],
+    "byhour": [],
+    "byminute": [],
+    "bysecond": [],
+    "byeaster": null
+  },
+  "title": "SPArkling Night",
+  "cover_image": "/media/events/sparkling-night.jpg",
+  "short_description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire",
+  "description": "Every Thursday with sauna, hot tub, soup and singing circle around the fire.  \nSubstance free, plantbased and kids friendly.\n\nBring: 2 towels, instruments and good vibes.\n\n**Contribution 20€**",
+  "booking_link": "",
+  "car_sharing_link": "",
+  "info_link": "",
+  "organizers": []
 }

@@ -39,28 +39,24 @@
 					<div style="display: flex; flex-direction: column; gap: 0.5rem; flex: 1;">
 						<div style="display: flex; justify-content: space-between">
 							<small class="type-{event.type}">{event.type}</small>
-							{#if event.weekly}
-								<time style="font-weight: 500">{event.weekly}</time>
-							{:else}
-								<time datetime={event.start.toISOString()} style="font-weight: 500">
-									{#if isMoreThanOneDay}
-										{@const startDate = event.start.toLocaleDateString('en', {
-											day: 'numeric',
-											month: 'short'
-										})}
-										{@const endDate = event.end.toLocaleDateString('en', {
-											day: 'numeric',
-											month: 'short'
-										})}
-										{startDate} &mdash; {endDate}
-									{:else}
-										{event.start.toLocaleDateString('en', {
-											day: 'numeric',
-											month: 'short'
-										})}
-									{/if}
-								</time>
-							{/if}
+							<time datetime={event.start.toISOString()} style="font-weight: 500">
+								{#if isMoreThanOneDay}
+									{@const startDate = event.start.toLocaleDateString('en', {
+										day: 'numeric',
+										month: 'short'
+									})}
+									{@const endDate = event.end.toLocaleDateString('en', {
+										day: 'numeric',
+										month: 'short'
+									})}
+									{startDate} &mdash; {endDate}
+								{:else}
+									{event.start.toLocaleDateString('en', {
+										day: 'numeric',
+										month: 'short'
+									})}
+								{/if}
+							</time>
 						</div>
 						<h3>{event.title}</h3>
 					</div>

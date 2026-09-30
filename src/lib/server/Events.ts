@@ -1,16 +1,48 @@
 import type { InferCollectionType } from '$lib/types/cms-types';
 import { eventCollection } from '$lib/components/templates/Event.svelte';
+import rrulePkg from 'rrule';
+
+const { RRule } = rrulePkg;
 
 type EventRaw = InferCollectionType<typeof eventCollection>;
 
-export interface Event extends Omit<EventRaw, 'type' | 'start' | 'end'> {
+export interface Event extends Omit<EventRaw, 'type' | 'start' | 'end' | 'recurrence'> {
 	slug: string;
 	type: 'event' | 'retreat';
 	start: Date;
 	end: Date;
+	frequency: string;
 }
 
 const eventRegExp = new RegExp('/src/lib/content/events/(?<slug>[a-zA-Z0-9-]+)\\.json');
+const eventTimeZone = 'Europe/Lisbon';
+
+const partsFormat = new Intl.DateTimeFormat('en-US', {
+	timeZone: eventTimeZone,
+	hourCycle: 'h23',
+	year: 'numeric',
+	month: 'numeric',
+	day: 'numeric',
+	hour: 'numeric',
+	minute: 'numeric',
+	second: 'numeric'
+});
+
+function tzOffset(date: Date): number {
+	const p = Object.fromEntries(
+		partsFormat.formatToParts(date).map((x) => [x.type, Number(x.value)])
+	);
+	const asUTC = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second);
+	return asUTC - (date.getTime() - (date.getTime() % 1000));
+}
+
+const toFloating = (d: Date) => new Date(d.getTime() + tzOffset(d));
+
+function fromFloating(f: Date): Date {
+	const guess = new Date(f.getTime() - tzOffset(f));
+	return new Date(f.getTime() - tzOffset(guess)); // zweiter Durchlauf korrigiert DST-Grenzen
+}
+
 const eventsRaw = new Map(
 	Object.entries(
 		import.meta.glob<{ default: EventRaw }>('$lib/content/events/*.json', { eager: true })
@@ -20,18 +52,45 @@ const eventsRaw = new Map(
 );
 
 function transformEvent([slug, event]: [string, EventRaw]): Event {
+	let start = new Date(event.start);
+	let end = new Date(event.end);
+	let frequency;
+
+	if (event.recurrence) {
+		const recurrenceOptions = Object.fromEntries(
+			Object.entries(event.recurrence).filter(
+				([, value]) =>
+					value !== null && value !== '' && (!Array.isArray(value) || value.length > 0)
+			)
+		);
+
+		const duration = end.getTime() - start.getTime();
+
+		const rrule = new RRule({
+			dtstart: toFloating(end),
+			...recurrenceOptions
+		});
+
+		const next = rrule.after(toFloating(new Date(Date.now() - duration)), true);
+
+		if (next) {
+			end = fromFloating(next);
+			start = new Date(end.getTime() - duration);
+		}
+		frequency = rrule.toText();
+	}
+
 	return {
 		...event,
 		slug,
 		type: event.type === 'event' || event.type === 'retreat' ? event.type : 'event',
-		start: new Date(event.start),
-		end: new Date(event.end)
+		start,
+		end,
+		frequency,
 	};
 }
 
 const events: Event[] = Array.from(eventsRaw.entries(), transformEvent);
-
-// console.log(events);
 
 const byDateIncrementing = (a: Event, b: Event) => a.start.getTime() - b.start.getTime();
 const byDateDescending = (a: Event, b: Event) => b.start.getTime() - a.start.getTime();
