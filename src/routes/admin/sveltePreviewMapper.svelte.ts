@@ -10,7 +10,7 @@ import {
 } from 'svelte';
 import type { CustomPreviewTemplateProps } from '@sveltia/cms';
 
-function extractEntryData(
+export function extractEntryData(
 	entry: CustomPreviewTemplateProps['entry']
 ): SvelteComponentProps<SvelteComponent> {
 	if (!entry) return entry;
@@ -32,14 +32,15 @@ function extractEntryData(
 
 export function svelteToReactWrapper<C extends SvelteComponent>(
 	SvelteComponent: C,
-	propName: string
+	propName: string,
+	transform: (input: CustomPreviewTemplateProps['entry']) => SvelteComponentProps<SvelteComponent> = extractEntryData
 ): ReactComponentType<CustomPreviewTemplateProps> {
 	return class SveltePreviewReactWrapper extends ReactComponent<CustomPreviewTemplateProps> {
 		svelteInstance: Record<string, unknown> = {};
 		svelteProps: { [propName: string]: unknown } = $state({ [propName]: undefined });
 
 		updateState() {
-			this.svelteProps[propName] = extractEntryData(this.props.entry);
+			this.svelteProps[propName] = transform(this.props.entry);
 		}
 
 		componentDidMount() {
@@ -47,7 +48,9 @@ export function svelteToReactWrapper<C extends SvelteComponent>(
 
 			this.svelteInstance = mount(SvelteComponent, {
 				target: this.props.document.body,
-				props: this.svelteProps
+				props: this.svelteProps,
+				// eslint-disable-next-line svelte/prefer-svelte-reactivity
+				context: new Map([['CmsPreview', true]]),
 			});
 		}
 
