@@ -208,7 +208,7 @@
 	}
 
 	.button.button-outline {
-		@apply border-stone-50 bg-black/30 text-stone-50;
+		@apply border-stone-100 bg-olive-950/50 text-stone-100;
 	}
 
 	.button.button-oceanteal {
@@ -225,13 +225,22 @@
 	}
 
 	::selection {
-		background: var(--color-olive-800);
-		color: var(--color-stone-50);
+		color-scheme: light dark;
+		background: light-dark(var(--color-olive-800), var(--color-stone-100));
+		color: light-dark(var(--color-stone-50), var(--color-olive-900));
+	}
+
+	a:focus {
+		outline: 0 none;
 	}
 
 	a:not(.no-link, .button) {
 		color: var(--color-olive-700);
 		font-weight: 500;
+	}
+
+	a:not(.no-link, .button):focus {
+		opacity: 0.6;
 	}
 
 	a[target='_blank']:not(.no-link, .button, .icon)::after {
