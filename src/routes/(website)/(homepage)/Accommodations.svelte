@@ -1,22 +1,7 @@
 <script lang="ts">
 	import { accommodations as accommodationsData } from '$lib/content/accommodations.json';
-	import { getContext } from 'svelte';
-	import type { Overlays } from '$lib/overlays.svelte.js';
-	import AccommodationDialog, {
-		type Accommodation
-	} from '$lib/components/organisms/AccommodationDialog.svelte';
 	import { Media } from '$lib/services/Media';
 	import Image from '$lib/components/atoms/Image.svelte';
-
-	const overlays = getContext<Overlays<any>>('overlays');
-
-	function showAccommodation(accommodation: Accommodation) {
-		overlays.add({
-			component: AccommodationDialog,
-			props: { accommodation },
-			backdrop: true
-		});
-	}
 
 	// TODO: store scroll position in snapshot
 </script>
@@ -25,21 +10,22 @@
 	<!-- TODO: fine tune view -->
 	{#each accommodationsData as accommodation (accommodation)}
 		<div>
-			<Image
-				src={Media.getFile(accommodation.photo)}
-				alt=""
-				loading="lazy"
-				onclick={() => showAccommodation(accommodation)}
-				class="w-full h-auto aspect-square object-cover rounded-full"
-				sizes="(max-width: 335px) 80vw, 268px"
-			/>
+			<a href="/stay#{accommodation.name}" class="no-link">
+				<Image
+					src={Media.getFile(accommodation.photo)}
+					alt=""
+					loading="lazy"
+					class="w-full h-auto aspect-square object-cover rounded-full"
+					sizes="(max-width: 335px) 80vw, 268px"
+				/>
+			</a>
 			<h3>{accommodation.headline}</h3>
 			<p>
 				{accommodation.short_description}
 			</p>
-			<button onclick={() => showAccommodation(accommodation)} class="button button-primary"
-				>{accommodation.button}</button
-			>
+			<a href="/stay#{accommodation.name}" class="button button-primary">
+				{accommodation.button}
+			</a>
 		</div>
 	{/each}
 </div>
