@@ -26,8 +26,7 @@
 			.slice()
 			.sort((a, b) => a - b)
 			.map((width) => {
-				const srcUrl = new URL(src);
-				let vercelUrl = `/_vercel/image?url=${encodeURIComponent(srcUrl.pathname)}&w=${width}&q=${quality}`;
+				let vercelUrl = `/_vercel/image?url=${encodeURIComponent(src.startsWith('/') ? src : new URL(src).pathname)}&w=${width}&q=${quality}`;
 				if (dev) vercelUrl = `${src}#${vercelUrl}`;
 				return `${vercelUrl} ${width}w`;
 			})
@@ -36,12 +35,12 @@
 
 	const {
 		src,
-		widths = [480, 1024, 1920, 2560, 3840],
+		widths = [480, 768, 1024, 1920, 2560, 3840],
 		width,
 		height,
 		preload,
 		quality = 85,
-		sizes,
+		sizes = '(width >= 40rem) 50vw, 100vw',
 		...restProps
 	}: Props = $props();
 
@@ -63,5 +62,6 @@
 	style:background={background}
 	{...restProps}
 	{srcset}
+	{sizes}
 	src={img?.src ?? src}
 />
