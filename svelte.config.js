@@ -13,7 +13,7 @@ const config = {
 	kit: {
 		adapter: adapter({
 			images: {
-				sizes:  [480, 1024, 1920, 2560, 3840],
+				sizes:  [480, 768, 1024, 1920, 2560, 3840],
 				formats: ['image/avif', 'image/webp'],
 				minimumCacheTTL: 7 * 24 * 60 * 60,
 				domains: [process.env.VERCEL_PROJECT_PRODUCTION_URL],

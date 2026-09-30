@@ -31,6 +31,7 @@
 				loading="lazy"
 				onclick={() => showAccommodation(accommodation)}
 				class="w-full h-auto aspect-square object-cover rounded-full"
+				sizes="(max-width: 335px) 80vw, 268px"
 			/>
 			<h3>{accommodation.headline}</h3>
 			<p>
