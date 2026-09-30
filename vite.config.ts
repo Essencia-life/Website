@@ -7,5 +7,8 @@ import { imagetools } from './vite/plugins/imagetools.js';
 import { previewCss } from './cms-preview-css-plugin.ts';
 
 export default defineConfig({
+	ssr: {
+		noExternal: ['rrule']
+	},
 	plugins: [tailwindcss(), imagetools(), sveltekit(), devtoolsJson(), previewCss()]
 });

@@ -6,7 +6,9 @@
 	import { peopleCmsConfig } from '$lib/components/templates/People.svelte';
 	import PageTemplate, { pageCollection } from '$lib/components/templates/Page.svelte';
 	import EventTemplate, { eventCollection } from '$lib/components/templates/Event.svelte';
-	import { svelteToReactWrapper } from './sveltePreviewMapper.svelte';
+	import { extractEntryData, svelteToReactWrapper } from './sveltePreviewMapper.svelte';
+	import { transformEvent } from '$lib/utils/eventTransform';
+	import type { CustomPreviewTemplateProps } from '@sveltia/cms';
 
 	const { data }: PageProps = $props();
 
@@ -85,7 +87,7 @@
 		);
 		registerPreviewTemplate(
 			eventCollection?.name ?? 'events',
-			svelteToReactWrapper(EventTemplate, 'event')
+			svelteToReactWrapper(EventTemplate, 'event', (entry: CustomPreviewTemplateProps['entry']) => transformEvent([entry.slug, extractEntryData(entry)]))
 		);
 	});
 </script>
