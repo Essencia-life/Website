@@ -14,18 +14,26 @@
 				}
 			},
 			{
-				name: 'headline',
-				label: 'Headline'
-			},
-			{
 				name: 'supline',
 				label: 'Superline',
-				hint: 'Is display above the headline'
+				hint: 'Is part of the headline but displayed above',
+			},
+			{
+				name: 'headline',
+				label: 'Headline'
 			},
 			{
 				name: 'content',
 				label: 'Content',
 				widget: 'richtext'
+			},
+			{
+				name: 'backgroundImage',
+				label: 'Background image',
+				hint: 'Choose horizontal image. It will be stretched to cover to whole section and display behind an overlay',
+				widget: 'image',
+				choose_url: false,
+				required: false,
 			},
 			{
 				name: 'button',
@@ -50,6 +58,8 @@
 <script lang="ts">
 	import type { InferFieldsObject } from '$lib/types/cms-types';
 	import Markdown from '../../molecules/Markdown.svelte';
+	import Image from '$lib/components/atoms/Image.svelte';
+	import { Media } from '$lib/services/Media.ts';
 
 	interface Props {
 		section: InferFieldsObject<typeof heroSectionField.fields>;
@@ -71,32 +81,24 @@
 	}
 </script>
 
-<section class="dark flex flex-col items-center gap-4 px-4 py-16 text-center">
-	<sup>{section.supline}</sup>
-	<h2 class="mb-4">{section.headline}</h2>
-
-	<Markdown content={section.content} />
-
-	{#if section.button}
-		<a class="button mt-10" href={section.button.link} onclick={scrollToAnchor}
-			>{section.button.label}</a
-		>
+<section class="relative flex flex-col justify-center items-center gap-4 px-4 py-16 text-center text-stone-50 bg-olive-800 scheme-dark min-h-96">
+	{#if section.backgroundImage}
+		<Image preload src={Media.getFile(section.backgroundImage)} class="absolute w-full h-full object-cover inset-0" fetchpolicy="high" sizes="100vw" />
+		<div class="absolute inset-0 bg-linear-to-b from-50% from-olive-950/50 to-olive-950/95"></div>
 	{/if}
+
+	<div class="relative max-w-2xl">
+		<h2 class="mb-4 text-stone-50">
+			<sup class="top-0 mb-2 block">{section.supline}</sup>
+			{section.headline}
+		</h2>
+
+		<Markdown content={section.content} />
+
+		{#if section.button}
+			<a class="button mt-10 button-outline" href={section.button.link} onclick={scrollToAnchor}>
+				{section.button.label}
+			</a>
+		{/if}
+	</div>
 </section>
-
-<style>
-	.dark {
-		color-scheme: dark;
-		background: var(--color-olive-800);
-		color: var(--color-stone-50);
-	}
-
-	.dark h2 {
-		color: var(--color-stone-50);
-	}
-
-	.dark .button {
-		border-color: var(--color-stone-50);
-		color: var(--color-stone-50);
-	}
-</style>

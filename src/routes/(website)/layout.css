@@ -208,7 +208,7 @@
 	}
 
 	.button.button-outline {
-		@apply border-white bg-black/30 text-white;
+		@apply border-stone-50 bg-black/30 text-stone-50;
 	}
 
 	.button.button-oceanteal {
