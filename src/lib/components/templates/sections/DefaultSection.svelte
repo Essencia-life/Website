@@ -5,9 +5,10 @@
 	import { galleryGridWidgetField } from '../widgets/GalleryGridWidget.svelte';
 	import { youtubeVideoWidgetField } from '../widgets/YouTubeVideoWidget.svelte';
 	import { stepsWidgetField } from '../widgets/StepsWidget.svelte';
+	import { gofundmeWidgetField } from '../widgets/GofundmeWidget.svelte';
 	import { tallyFormWidgetField } from '../widgets/TallyFormWidget.svelte';
 	import { columnsWidgetField } from '../widgets/ColumnsWidget.svelte';
-	import { instagramProfileLinkWidgetField } from '../widgets/InstagramProfileWidget.svelte';
+	import { instagramProfileWidgetField } from '../widgets/InstagramProfileWidget.svelte';
 	import { slideshowWidgetField } from '../widgets/SlideshowWidget.svelte';
 	import { priceTableWidgetField } from '../widgets/PriceTableWidget.svelte'
 
@@ -46,8 +47,9 @@
 					stepsWidgetField,
 					tallyFormWidgetField,
 					columnsWidgetField,
-					instagramProfileLinkWidgetField,
+					instagramProfileWidgetField,
 					slideshowWidgetField,
+					gofundmeWidgetField,
 					priceTableWidgetField
 				]
 			},
@@ -108,6 +110,7 @@
 	import InstagramProfileWidget from '../widgets/InstagramProfileWidget.svelte';
 	import SlideshowWidget from '$lib/components/templates/widgets/SlideshowWidget.svelte';
 	import PriceTableWidget from '$lib/components/templates/widgets/PriceTableWidget.svelte';
+	import GofundmeWidget from '$lib/components/templates/widgets/GofundmeWidget.svelte';
 
 	interface Props {
 		index: number;
@@ -132,26 +135,28 @@
 	>
 		{#each section.widget as widget, widgetIndex (widgetIndex)}
 			<div class:text-center={widget.settings?.textCenter}>
-				{#if widget.type === 'content'}
+				{#if widget.type === contentWidgetField.name}
 					<ContentWidget {widget} {index} />
-				{:else if widget.type === 'card-grid'}
+				{:else if widget.type === cardGridWidgetField.name}
 					<CardGridWidget {widget} />
-				{:else if widget.type === 'gallery-grid'}
+				{:else if widget.type === galleryGridWidgetField.name}
 					<GalleryGridWidget {widget} />
-				{:else if widget.type === 'columns'}
+				{:else if widget.type === columnsWidgetField.name}
 					<ColumnsWidget {widget} />
-				{:else if widget.type === 'steps'}
+				{:else if widget.type === stepsWidgetField.name}
 					<StepsWidget {widget} />
-				{:else if widget.type === 'youtube-video'}
+				{:else if widget.type === youtubeVideoWidgetField.name}
 					<YouTubeVideoWidget {widget} />
-				{:else if widget.type === 'instagram-profile'}
+				{:else if widget.type === instagramProfileWidgetField.name}
 					<InstagramProfileWidget {widget} />
-				{:else if widget.type === 'tally-form'}
+				{:else if widget.type === tallyFormWidgetField.name}
 					<TallyFormWidget {widget} />
-				{:else if widget.type === 'slideshow'}
+				{:else if widget.type === slideshowWidgetField.name}
 					<SlideshowWidget {widget} />
-				{:else if widget.type === 'price-table'}
+				{:else if widget.type === priceTableWidgetField.name}
 					<PriceTableWidget {widget} />
+				{:else if widget.type === gofundmeWidgetField.name}
+					<GofundmeWidget {widget} />
 				{/if}
 			</div>
 		{/each}
