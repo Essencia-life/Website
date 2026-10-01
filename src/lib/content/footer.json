@@ -1,25 +1,30 @@
 {
-	"cta": {
-		"label": "Join Essência",
-		"page": "/join-us"
-	},
-	"platforms": ["instagram", "telegram", "facebook"],
-	"links": [
-		[],
-		[],
-		[
-			{
-				"label": "Legal notice",
-				"page": "/legal-notice"
-			},
-			{
-				"label": "Privacy",
-				"page": "/privacy"
-			},
-			{
-				"label": "Contact",
-				"page": "/contact"
-			}
-		]
-	]
+  "cta": {
+    "label": "Join Essência",
+    "link": "/join-us",
+    "page": "/join-us"
+  },
+  "platforms": [
+    "facebook",
+    "instagram",
+    "telegram"
+  ],
+  "links": [
+    [],
+    [],
+    [
+      {
+        "label": "Legal notice",
+        "link": "/legal-notice"
+      },
+      {
+        "label": "Privacy",
+        "link": "/privacy"
+      },
+      {
+        "label": "Contact",
+        "link": "/contact"
+      }
+    ]
+  ]
 }
