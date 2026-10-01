@@ -30,6 +30,11 @@
 						name: 'content',
 						label: 'Content',
 						widget: 'richtext'
+					},
+					{
+						name: 'link',
+						label: 'Link',
+						required: false
 					}
 				]
 			}
@@ -51,7 +56,7 @@
 
 <div class="grid gap-4 {widget.cards.length > 4 ? 'md:grid-cols-3' : 'md:grid-cols-2'}">
 	{#each widget.cards as card}
-		<Card image={card.image}>
+		<Card image={card.image} link={card.link}>
 			<Markdown content={card.content}>
 				{#snippet paragraphNode(node)}
 					<p class="mt-2">

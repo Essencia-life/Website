@@ -5,13 +5,15 @@
 
 	interface Props {
 		image?: string;
+		link?: string;
 		children: Snippet;
 		overlays?: Snippet;
 	}
 
-	const { image, children, overlays }: Props = $props();
+	const { image, link, children, overlays }: Props = $props();
 </script>
 
+{#snippet card()}
 <article
 	class="flex flex-col overflow-hidden rounded-lg border border-stone-100 bg-stone-50"
 >
@@ -25,3 +27,12 @@
 		{@render children()}
 	</div>
 </article>
+{/snippet}
+
+{#if link}
+	<a href={link} class="no-link hover:scale-105 hover:-translate-y-2 hover:shadow-lg/30 rounded-lg transition">
+		{@render card()}
+	</a>
+{:else}
+	{@render card()}
+{/if}

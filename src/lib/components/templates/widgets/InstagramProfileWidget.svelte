@@ -1,7 +1,7 @@
 <script module lang="ts">
 	import type { ObjectField } from '@sveltia/cms';
 
-	export const instagramProfileLinkWidgetField = {
+	export const instagramProfileWidgetField = {
 		name: 'instagram-profile',
 		label: 'Embedded Instagram Profile',
 		widget: 'object',
@@ -9,7 +9,9 @@
 			{
 				name: 'type',
 				widget: 'hidden',
-				default: 'instagram-profile'
+				get default() {
+					return instagramProfileWidgetField.name;
+				}
 			},
 			{
 				name: 'link',
@@ -27,7 +29,7 @@
 	import type { InferFieldsObject } from '$lib/types/cms-types';
 
 	interface Props {
-		widget: InferFieldsObject<typeof instagramProfileLinkWidgetField.fields>;
+		widget: InferFieldsObject<typeof instagramProfileWidgetField.fields>;
 	}
 
 	const { widget }: Props = $props();
