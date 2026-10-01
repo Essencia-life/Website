@@ -70,6 +70,29 @@
 								]
 							},
 						]
+					},
+					{
+						name: 'social_media',
+						label: 'Social Media Platforms',
+						label_singular: 'Platform',
+						icon: 'share',
+						file: 'src/lib/content/social-media.json',
+						editor: { preview: false },
+						collapsed: 'auto',
+						fields: [
+							{
+								name: 'platforms',
+								label: 'Platforms',
+								label_singular: 'Platform',
+								widget: 'list',
+								fields: [
+									{ name: 'name', label: 'Name', widget: 'hidden' },
+									{ name: 'label', label: 'Label' },
+									{ name: 'description', label: 'Description' },
+									{ name: 'link', label: 'Link' }
+								]
+							}
+						]
 					}
 				],
 				collections: [

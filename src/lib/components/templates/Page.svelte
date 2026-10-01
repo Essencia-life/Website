@@ -45,6 +45,14 @@
 						hint: 'Relevant for social media sharing',
 						required: false,
 						choose_url: false
+					},
+					{
+						name: 'noindex',
+						label: 'No index',
+						widget: 'boolean',
+						hint: 'This page should not be indexed by search engine crawlers/robots',
+						required: false,
+						default: false,
 					}
 				] as const
 			},
@@ -54,6 +62,7 @@
 				label_singular: 'Section',
 				widget: 'list',
 				collapsed: true,
+				required: false,
 				types: [
 					heroSectionField,
 					defaultSectionField,

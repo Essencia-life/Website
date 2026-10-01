@@ -5,12 +5,10 @@
 		{ name: 'label', label: 'Label' },
 		{
 			name: 'link',
-			label: 'Link'
-			// widget: 'relation',
-			// collection: 'pages',
-			// search_fields: ['title'],
-			// value_field: '/{{slug}}',
-			// display_fields: ['title']
+			label: 'Link',
+			widget: 'relation',
+			collection: 'pages',
+			value_field: '/{{slug}}',
 		}
 	];
 
@@ -28,19 +26,15 @@
 				fields: [...labelAndLinkFields]
 			},
 			{
-				name: 'social_media',
+				name: 'platforms',
 				label: 'Social Media Platforms',
 				label_singular: 'Platform',
-				widget: 'list',
-				field: {
-					name: 'platform',
-					label: 'Platform'
-					// widget: 'relation',
-					// collection: 'social_media',
-					// search_fields: ['label'],
-					// value_field: 'name',
-					// display_fields: ['label']
-				}
+				widget: 'relation',
+				collection: '_singletons',
+				file: 'social_media',
+				value_field: '{{platforms.*.name}}',
+				display_fields: ['platforms.*.label'],
+				multiple: true
 			},
 			{
 				name: 'links',
@@ -49,14 +43,14 @@
 				widget: 'list',
 				min: 3,
 				max: 3,
-				fields: [
-					{
-						name: 'group',
-						label: 'Group',
-						widget: 'list',
-						fields: [...labelAndLinkFields]
-					}
-				]
+				field: {
+					name: 'group',
+					label: 'Link',
+					widget: 'list',
+					required: false,
+					root: true,
+					fields: [...labelAndLinkFields]
+				}
 			}
 		]
 	};
@@ -94,7 +88,7 @@
 		<div class="page-content grid">
 			<div class="first-column">
 				<div>
-					<a href={footerData.cta.page} class="button button-primary">{footerData.cta.label}</a>
+					<a href={footerData.cta.link} class="button button-primary">{footerData.cta.label}</a>
 				</div>
 
 				<div class="social-media">
@@ -110,10 +104,10 @@
 					<!--					>-->
 				</div>
 			</div>
-			{#each footerData.links as group (group)}
+			{#each footerData.links as group, index (index)}
 				<div class="link-group">
-					{#each group as link (link.page)}
-						<a href={link.page}>{link.label}</a>
+					{#each group as { link, label } (link)}
+						<a href={link}>{label}</a>
 					{/each}
 				</div>
 			{/each}
