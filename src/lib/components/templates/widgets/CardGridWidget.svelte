@@ -16,8 +16,8 @@
 				label: 'Cards',
 				label_singular: 'Card',
 				widget: 'list',
-				min: 4,
-				max: 6,
+				collapsed: 'auto',
+				min: 1,
 				fields: [
 					{
 						name: 'image',
@@ -34,6 +34,21 @@
 					{
 						name: 'link',
 						label: 'Link',
+						required: false
+					}
+				]
+			},
+			{
+				name: 'settings',
+				label: 'Card Grid Settings',
+				widget: 'object',
+				required: false,
+				fields: [
+					{
+						name: 'columns',
+						label: 'Number of columns',
+						widget: 'number',
+						value_type: 'int',
 						required: false
 					}
 				]
@@ -54,7 +69,8 @@
 	const { widget }: Props = $props();
 </script>
 
-<div class="grid gap-4 {widget.cards.length > 4 ? 'md:grid-cols-3' : 'md:grid-cols-2'}">
+<div class="grid gap-4  md:grid-cols-[repeat(var(--columns),1fr)]"
+		 style:--columns={widget.settings?.columns ?? widget.cards.length}>
 	{#each widget.cards as card}
 		<Card image={card.image} link={card.link}>
 			<Markdown content={card.content}>

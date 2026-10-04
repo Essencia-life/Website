@@ -1,157 +1,168 @@
 {
-	"meta": {
-		"title": "Healing Center",
-		"description": "Healing Center",
-		"cover": ""
-	},
-	"sections": [
-		{
-			"type": "hero",
-			"headline": "Come to heal. Leave transformed.",
-			"supline": "The Healing Center",
-			"content": "_Guided sessions with the practitioners of our community — bodywork, breathwork, ceremony, movement and more._\n\nEvery healer below lives and works on this land. Book a single session, or choose one of our curated multi-week journeys further down the page.",
-			"button": null
-		},
-		{
-			"type": "healing-offers",
-			"offers": [
-				{
-					"title": "Sound & Touch Healing",
-					"photo": "/media/b0008656.jpg",
-					"description": "With your consent i will work intuitively with healing touch, massages and instruments on and around your bodies. In the Session I use tuning forks, singing bowls, koshis and zimbels to create a sound bath for your whole system.\nI invite you to dive in a space of tenderness where you are welcome with everything what is alive in you.",
-					"categoryId": "29d82b98172f",
-					"price": 77,
-					"duration": "1h",
-					"personId": "e81ad2abe3ee"
-				},
-				{
-					"title": "Nutrition Coaching",
-					"photo": "/media/b0008438.jpg",
-					"description": "All the keys and techniques you need for a juicy life, full of energy, great sleep, improved focus, end chronic pains and allergies. A new you is birthing with each bite.",
-					"categoryId": "dc6c2271780c",
-					"price": 88,
-					"duration": "2h",
-					"personId": "c582fb884412"
-				},
-				{
-					"title": "Intimacy & Relationship Coaching",
-					"photo": "/media/c97792_82012477755343bb9b9dbf509ceac5a5~mv2.jpg",
-					"description": "Your sexual energy is your life force! Gift yourself a vital upgrade of your love and sex life!",
-					"categoryId": "1e7d91287a65",
-					"price": 111,
-					"duration": "2h",
-					"personId": "ba7d9d6d8d5e"
-				}
-			]
-		},
-		{
-			"type": "default-section",
-			"id": "",
-			"widget": [
-				{
-					"type": "content",
-					"supline": "A Deeper Path",
-					"headline": "Curated Journeys",
-					"content": "Multi-day programs blending several practitioners and \\\nmodalities into one guided path — designed by our founding team.",
-					"settings": {
-						"textCenter": true,
-						"listIcons": ""
-					},
-					"buttons": []
-				},
-				{
-					"type": "card-grid",
-					"cards": [
-						{
-							"image": "",
-							"content": "#### Rest, Detox & Regenerate\n\nA body cleanse and nutrition reset — coaching, polarity therapy and bodywork over one focused week.\n\n**€444 / week**"
-						},
-						{
-							"image": "",
-							"content": "#### Pranic Lifestyle Initiation\n\nDaily breathwork and pranic practice — a four-week initiation into living on light.\n\n**€1,777 / 4 weeks**"
-						},
-						{
-							"image": "",
-							"content": "#### Tantric Couple Journey\n\nTwo weeks of bodywork, tantra and communication tools for couples ready to reconnect. LGBT friendly.\n\n**€1,444 / couple, 2 weeks**"
-						},
-						{
-							"image": "",
-							"content": "#### Free From Addictions\n\nEighteen sessions of coaching, breathwork, energy healing and daily bodywork, in a supportive community setting.\n\n**€1,888 / 4 weeks**"
-						},
-						{
-							"image": "",
-							"content": "#### Women's Healing Temple\n\nBodywork, tantra and self-love practice to help you step into your full, authentic power.\n\n**€888 / 2 weeks**"
-						},
-						{
-							"image": "",
-							"content": "#### Conscious Entrepreneur\n\nA focused week of morning practice and project coaching to move your idea, book or business forward.\n\n**€555 / week**"
-						}
-					]
-				}
-			],
-			"settings": {
-				"variant": "secondary",
-				"layout": null,
-				"spacing": "top"
-			}
-		},
-		{
-			"type": "default-section",
-			"id": "",
-			"widget": [
-				{
-					"type": "content",
-					"supline": "",
-					"headline": "",
-					"content": "",
-					"settings": {
-						"textCenter": true,
-						"listIcons": ""
-					},
-					"buttons": [
-						{
-							"label": "Ask about a curated journey",
-							"link": "/contact?topic=healing",
-							"variant": "primary"
-						}
-					]
-				}
-			],
-			"settings": {
-				"variant": "secondary",
-				"layout": null,
-				"spacing": "bottom"
-			}
-		},
-		{
-			"type": "default-section",
-			"id": "",
-			"widget": [
-				{
-					"type": "content",
-					"supline": "Woven Into Every Stay",
-					"headline": "Beyond the sessions themselves.",
-					"content": "",
-					"settings": {
-						"textCenter": true,
-						"listIcons": ""
-					},
-					"buttons": []
-				},
-				{
-					"type": "columns",
-					"settings": null,
-					"columns": [
-						{
-							"content": "* Morning meditation, breathwork, qigong & yoga\n* Regular chanting and dancing\n* Wild beaches nearby, kayaks and boards to borrow"
-						},
-						{
-							"content": "* Sauna at sunset, most days\n* Natural pond and a warm hot tub under the stars\n* Optional garden & eco-building contribution"
-						}
-					]
-				}
-			],
-			"settings": null
-		}
-	]
+  "meta": {
+    "title": "Healing Center",
+    "description": "Healing Center",
+    "cover": "",
+    "noindex": false
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "supline": "The Healing Center",
+      "headline": "Come to heal. Leave transformed.",
+      "content": "_Guided sessions with the practitioners of our community — bodywork, breathwork, ceremony, movement and more._\n\nEvery healer below lives and works on this land. Book a single session, or choose one of our curated multi-week journeys further down the page.",
+      "backgroundImage": "",
+      "button": null
+    },
+    {
+      "type": "healing-offers",
+      "offers": [
+        {
+          "title": "Sound & Touch Healing",
+          "photo": "/media/b0008656.jpg",
+          "description": "With your consent i will work intuitively with healing touch, massages and instruments on and around your bodies. In the Session I use tuning forks, singing bowls, koshis and zimbels to create a sound bath for your whole system.\nI invite you to dive in a space of tenderness where you are welcome with everything what is alive in you.",
+          "categoryId": "29d82b98172f",
+          "price": 77,
+          "duration": "1h",
+          "personId": "e81ad2abe3ee"
+        },
+        {
+          "title": "Nutrition Coaching",
+          "photo": "/media/b0008438.jpg",
+          "description": "All the keys and techniques you need for a juicy life, full of energy, great sleep, improved focus, end chronic pains and allergies. A new you is birthing with each bite.",
+          "categoryId": "dc6c2271780c",
+          "price": 88,
+          "duration": "2h",
+          "personId": "c582fb884412"
+        },
+        {
+          "title": "Intimacy & Relationship Coaching",
+          "photo": "/media/c97792_82012477755343bb9b9dbf509ceac5a5~mv2.jpg",
+          "description": "Your sexual energy is your life force! Gift yourself a vital upgrade of your love and sex life!",
+          "categoryId": "1e7d91287a65",
+          "price": 111,
+          "duration": "2h",
+          "personId": "ba7d9d6d8d5e"
+        }
+      ]
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "A Deeper Path",
+          "headline": "Curated Journeys",
+          "content": "Multi-day programs blending several practitioners and \\\nmodalities into one guided path — designed by our founding team.",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
+        },
+        {
+          "type": "card-grid",
+          "cards": [
+            {
+              "image": "",
+              "content": "#### Rest, Detox & Regenerate\n\nA body cleanse and nutrition reset — coaching, polarity therapy and bodywork over one focused week.\n\n**€444 / week**",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Pranic Lifestyle Initiation\n\nDaily breathwork and pranic practice — a four-week initiation into living on light.\n\n**€1,777 / 4 weeks**",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Tantric Couple Journey\n\nTwo weeks of bodywork, tantra and communication tools for couples ready to reconnect. LGBT friendly.\n\n**€1,444 / couple, 2 weeks**",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Free From Addictions\n\nEighteen sessions of coaching, breathwork, energy healing and daily bodywork, in a supportive community setting.\n\n**€1,888 / 4 weeks**",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Women's Healing Temple\n\nBodywork, tantra and self-love practice to help you step into your full, authentic power.\n\n**€888 / 2 weeks**",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Conscious Entrepreneur\n\nA focused week of morning practice and project coaching to move your idea, book or business forward.\n\n**€555 / week**",
+              "link": ""
+            }
+          ],
+          "settings": {
+            "columns": 3
+          }
+        }
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": null,
+        "spacing": "top"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "",
+          "headline": "",
+          "content": "",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": [
+            {
+              "label": "Ask about a curated journey",
+              "link": "/contact?topic=healing",
+              "variant": "primary"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": null,
+        "spacing": "bottom"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "Woven Into Every Stay",
+          "headline": "Beyond the sessions themselves.",
+          "content": "",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
+        },
+        {
+          "type": "columns",
+          "settings": null,
+          "columns": [
+            {
+              "content": "* Morning meditation, breathwork, qigong & yoga\n* Regular chanting and dancing\n* Wild beaches nearby, kayaks and boards to borrow"
+            },
+            {
+              "content": "* Sauna at sunset, most days\n* Natural pond and a warm hot tub under the stars\n* Optional garden & eco-building contribution"
+            }
+          ]
+        }
+      ],
+      "settings": null
+    }
+  ]
 }

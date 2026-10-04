@@ -10,8 +10,22 @@
     "telegram"
   ],
   "links": [
-    [],
-    [],
+    [
+      {
+        "label": "People of Essência",
+        "link": "/eco-village/people"
+      }
+    ],
+    [
+      {
+        "label": "Volunteer at Essência",
+        "link": "/join-us/as-volunteer"
+      },
+      {
+        "label": "Support us",
+        "link": "/join-us/as-supporter"
+      }
+    ],
     [
       {
         "label": "Legal notice",

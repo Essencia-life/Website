@@ -11,7 +11,7 @@
       "supline": "Become a Friend",
       "headline": "Support what's growing here.",
       "content": "_You don't have to live on the land to belong to it. There are many ways to help Essência grow — choose what feels right._",
-      "backgroundImage": "",
+      "backgroundImage": "/media/photo_2026-10-04_20-34-17.jpg",
       "button": null
     },
     {
@@ -74,7 +74,10 @@
               "content": "#### 🏛️\n\n#### Partnership & Legacy\n\nFor businesses, foundations, and long-term giving.",
               "link": "#more"
             }
-          ]
+          ],
+          "settings": {
+            "columns": 3
+          }
         }
       ],
       "settings": null
@@ -96,6 +99,7 @@
         },
         {
           "type": "card-grid",
+          "settings": null,
           "cards": [
             {
               "image": "",
@@ -199,6 +203,7 @@
         },
         {
           "type": "card-grid",
+          "settings": null,
           "cards": [
             {
               "image": "",
@@ -218,7 +223,39 @@
           ]
         }
       ],
-      "settings": null
+      "settings": {
+        "variant": null,
+        "layout": null,
+        "spacing": "top"
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "",
+          "headline": "",
+          "content": "",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": [
+            {
+              "label": "Contact us",
+              "link": "/contact?topic=invest#form",
+              "variant": "primary"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "variant": null,
+        "layout": null,
+        "spacing": "bottom"
+      }
     },
     {
       "type": "default-section",

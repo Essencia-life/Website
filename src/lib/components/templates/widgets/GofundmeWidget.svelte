@@ -19,7 +19,7 @@
 				widget: 'list',
 				field: {
 					name: 'link',
-					label: 'Gofundme link',
+					label: 'Gofundme Link',
 				}
 			},
 		] as const
@@ -37,9 +37,7 @@
 	const { widget }: Props = $props();
 
 	function onload() {
-		console.log(window['gfmWidgetLoaded']);
 		delete window['gfmWidgetLoaded'];
-		console.log(window['gfmWidgetLoaded']);
 	}
 </script>
 

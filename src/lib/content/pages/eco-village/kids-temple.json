@@ -2,7 +2,8 @@
   "meta": {
     "title": "Kids Temple",
     "description": "A forest-school inspired space for ages 2–10, on the sacred land of Essência.",
-    "cover": ""
+    "cover": "",
+    "noindex": false
   },
   "sections": [
     {
@@ -30,6 +31,10 @@
         },
         {
           "type": "columns",
+          "settings": {
+            "columns": null,
+            "variant": "top-border"
+          },
           "columns": [
             {
               "content": "#### Purpose\n\nAn inspiring space to awaken children to their full potential — and a way for more guests and lightworkers to come, knowing their kids are cared for."
@@ -40,11 +45,7 @@
             {
               "content": "#### Mission\n\nAn accessible, safe, inspiring space for children's and parents' growth in nature — building self-awareness, self-regulation, social skills and empathy."
             }
-          ],
-          "settings": {
-            "variant": "top-border",
-            "columns": null
-          }
+          ]
         }
       ],
       "settings": null
@@ -96,29 +97,38 @@
           "cards": [
             {
               "image": "",
-              "content": "#### Nature\n\nSeeding, planting, growing, animal observation, eco constructions, land art."
+              "content": "#### Nature\n\nSeeding, planting, growing, animal observation, eco constructions, land art.",
+              "link": ""
             },
             {
               "image": "",
-              "content": "#### Play\n\nGames, ropes, swings, balls, circus."
+              "content": "#### Play\n\nGames, ropes, swings, balls, circus.",
+              "link": ""
             },
             {
               "image": "",
-              "content": "#### Communicate\n\nSocial skills, compassion, empathy, sharing, expressing needs and boundaries, storytelling."
+              "content": "#### Communicate\n\nSocial skills, compassion, empathy, sharing, expressing needs and boundaries, storytelling.",
+              "link": ""
             },
             {
               "image": "",
-              "content": "#### Blossom\n\nMeditation, confidence, concentration, senses, belonging, arts and crafts."
+              "content": "#### Blossom\n\nMeditation, confidence, concentration, senses, belonging, arts and crafts.",
+              "link": ""
             },
             {
               "image": "",
-              "content": "#### Moving\n\nDancing, singing, kids & acro yoga, qigong, nature hikes, beach play & swimming."
+              "content": "#### Moving\n\nDancing, singing, kids & acro yoga, qigong, nature hikes, beach play & swimming.",
+              "link": ""
             },
             {
               "image": "",
-              "content": "#### Be Alive\n\nFreedom, exploration, celebration, wonder, presence, gratitude."
+              "content": "#### Be Alive\n\nFreedom, exploration, celebration, wonder, presence, gratitude.",
+              "link": ""
             }
-          ]
+          ],
+          "settings": {
+            "columns": 3
+          }
         }
       ],
       "settings": null

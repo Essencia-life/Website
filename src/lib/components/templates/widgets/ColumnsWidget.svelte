@@ -16,6 +16,7 @@
 				label: 'Columns',
 				label_singular: 'Column',
 				widget: 'list',
+				collapsed: 'auto',
 				min: 2,
 				fields: [
 					{
@@ -27,7 +28,7 @@
 			},
 			{
 				name: 'settings',
-				label: 'Settings',
+				label: 'Columns Settings',
 				widget: 'object',
 				required: false,
 				fields: [
