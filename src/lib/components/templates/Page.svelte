@@ -3,7 +3,7 @@
 	import { heroSectionField } from './sections/HeroSection.svelte';
 	import { defaultSectionField } from './sections/DefaultSection.svelte';
 	import { peopleSectionField } from './sections/PeopleSection.svelte';
-	import { residencyCostsSectionField } from './sections/ResidencyCostsSection.svelte';
+	import { factsSectionField } from './sections/FactsSection.svelte';
 	import { joinUsColumnsSectionField } from './sections/JoinUsColumnsSection.svelte';
 	import { healingOffersSectionField } from './sections/HealingOffersSection.svelte';
 
@@ -67,7 +67,7 @@
 					heroSectionField,
 					defaultSectionField,
 					peopleSectionField,
-					residencyCostsSectionField,
+					factsSectionField,
 					joinUsColumnsSectionField,
 					healingOffersSectionField,
 				] as const
@@ -83,7 +83,7 @@
 	import { Media } from '$lib/services/Media';
 	import DefaultSection from './sections/DefaultSection.svelte';
 	import PeopleSection from './sections/PeopleSection.svelte';
-	import ResidencyCostsSection from './sections/ResidencyCostsSection.svelte';
+	import FactsSection from './sections/FactsSection.svelte';
 	import JoinUsColumnsSection from './sections/JoinUsColumnsSection.svelte';
 	import HealingOffersSection from '$lib/components/templates/sections/HealingOffersSection.svelte';
 
@@ -112,8 +112,8 @@
 		<DefaultSection {index} {section} />
 	{:else if section.type === peopleSectionField.name}
 		<PeopleSection {section} />
-	{:else if section.type === residencyCostsSectionField.name}
-		<ResidencyCostsSection {section} />
+	{:else if section.type === factsSectionField.name}
+		<FactsSection {section} />
 	{:else if section.type === joinUsColumnsSectionField.name}
 		<JoinUsColumnsSection {section} />
 	{:else if section.type === healingOffersSectionField.name}

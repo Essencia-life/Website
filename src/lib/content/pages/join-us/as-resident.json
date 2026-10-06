@@ -146,23 +146,23 @@
       }
     },
     {
-      "type": "residency-costs",
+      "type": "facts-section",
       "content": "Reimbursed within 1 year of your request, after a minimum 3-year hold. The full budget is reviewed and adopted together each year at General Assembly.\n\n---\n\nYou choose the structure you build — yurt, tiny house, tent, dome, or clay house — in coordination with the cooperative's guidelines, and may rent it out when you're away. Full financial details and legal documents are shared once we've had a first conversation and confirmed mutual interest.",
-      "costs": [
+      "facts": [
         {
-          "number": 75000,
+          "title": "€75,000",
           "suffix": "",
-          "label": "loan to the coop · single"
+          "subtitle": "loan to the coop · single"
         },
         {
-          "number": 111000,
+          "title": "€111,000",
           "suffix": "",
-          "label": "for couples & families"
+          "subtitle": "for couples & families"
         },
         {
-          "number": 222,
+          "title": "€222",
           "suffix": "/mo",
-          "label": "contribution, per adult"
+          "subtitle": "contribution, per adult"
         }
       ]
     },

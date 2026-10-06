@@ -169,23 +169,23 @@
       "settings": null
     },
     {
-      "type": "residency-costs",
+      "type": "facts-section",
       "content": "Every community loan is documented with a clear written agreement. Reach out and we'll walk you through the current terms, repayment options, and how your investment would be used.",
-      "costs": [
+      "facts": [
         {
-          "number": 5000,
-          "suffix": "+",
-          "label": "typical starting investment"
+          "title": "€5000+",
+          "suffix": "",
+          "subtitle": "typical starting investment"
         },
         {
-          "number": 0,
-          "suffix": "Flexible",
-          "label": "terms, agreed together"
+          "title": "Flexible",
+          "suffix": "",
+          "subtitle": "terms, agreed together"
         },
         {
-          "number": 0,
-          "suffix": "Direct",
-          "label": "into land & infrastructure"
+          "title": "Direct",
+          "suffix": "",
+          "subtitle": "into land & infrastructure"
         }
       ]
     },
