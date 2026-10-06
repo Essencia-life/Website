@@ -271,6 +271,10 @@
             "listIcons": ""
           },
           "buttons": []
+        },
+        {
+          "type": "donorbox",
+          "campaign": "support-essencia"
         }
       ],
       "settings": {

@@ -5,6 +5,7 @@
 	import { galleryGridWidgetField } from '../widgets/GalleryGridWidget.svelte';
 	import { youtubeVideoWidgetField } from '../widgets/YouTubeVideoWidget.svelte';
 	import { stepsWidgetField } from '../widgets/StepsWidget.svelte';
+	import { donorboxWidgetField } from '../widgets/DonorboxWidget.svelte';
 	import { gofundmeWidgetField } from '../widgets/GofundmeWidget.svelte';
 	import { tallyFormWidgetField } from '../widgets/TallyFormWidget.svelte';
 	import { columnsWidgetField } from '../widgets/ColumnsWidget.svelte';
@@ -50,7 +51,8 @@
 					instagramProfileWidgetField,
 					slideshowWidgetField,
 					gofundmeWidgetField,
-					priceTableWidgetField
+					priceTableWidgetField,
+					donorboxWidgetField,
 				]
 			},
 			{
@@ -111,6 +113,7 @@
 	import SlideshowWidget from '$lib/components/templates/widgets/SlideshowWidget.svelte';
 	import PriceTableWidget from '$lib/components/templates/widgets/PriceTableWidget.svelte';
 	import GofundmeWidget from '$lib/components/templates/widgets/GofundmeWidget.svelte';
+	import DonorboxWidget from '$lib/components/templates/widgets/DonorboxWidget.svelte';
 
 	interface Props {
 		index: number;
@@ -157,6 +160,8 @@
 					<PriceTableWidget {widget} />
 				{:else if widget.type === gofundmeWidgetField.name}
 					<GofundmeWidget {widget} />
+				{:else if widget.type === donorboxWidgetField.name}
+					<DonorboxWidget {widget} />
 				{/if}
 			</div>
 		{/each}
