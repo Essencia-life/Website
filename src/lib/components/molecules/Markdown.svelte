@@ -169,7 +169,7 @@
 {/each}
 
 <style>
-	*:not(li) > p {
+	:global(*:not(li)) > p {
 		margin-block: 1rem;
 	}
 </style>
