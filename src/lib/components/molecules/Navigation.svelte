@@ -166,7 +166,7 @@
 		}
 
 		.toggle {
-			border-left: 1px solid var(--color-amber-500);
+			border-left: 1px solid var(--color-stone-300);
 			padding-left: 0.5rem;
 		}
 
