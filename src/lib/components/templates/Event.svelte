@@ -74,6 +74,7 @@
 				label: 'Recurrence',
 				widget: 'object',
 				required: false,
+				collapsed: true,
 				fields: [
 					{
 						name: 'freq',
