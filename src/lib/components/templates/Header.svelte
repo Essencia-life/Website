@@ -1,12 +1,55 @@
+<script lang="ts" module>
+	import type { CollectionFile, Field } from '@sveltia/cms';
+
+	const labelAndLinkFields: Field[] = [
+		{ name: 'label', label: 'Label' },
+		{
+			name: 'link',
+			label: 'Link',
+			widget: 'relation',
+			collection: 'pages',
+			value_field: '/{{slug}}',
+		}
+	];
+
+	export const headerCmsConfig: CollectionFile = {
+		name: 'header',
+		label: 'Page Header',
+		icon: 'page_header',
+		file: 'src/lib/content/header.json',
+		editor: { preview: false },
+		fields: [
+			{
+				name: 'navigation',
+				label: 'Navigation Items',
+				label_singular: 'Item',
+				widget: 'list',
+				fields: [
+					...labelAndLinkFields,
+					{
+						name: 'children',
+						label: 'Submenu Items',
+						label_singular: 'Item',
+						widget: 'list',
+						required: false,
+						fields: [...labelAndLinkFields]
+					}
+				]
+			}
+		]
+	};
+</script>
+
 <script lang="ts">
-	import { Menu } from '@lucide/svelte';
+	import Menu from '@lucide/svelte/icons/menu';
 	import { getContext } from 'svelte';
 	import Sidebar from '../organisms/Sidebar.svelte';
 	import Navigation from '../molecules/Navigation.svelte';
 	import type { Overlays } from '$lib/overlays.svelte';
 	import { resolve } from '$app/paths';
-	import logoTree from '$lib/assets/logo_tree.png?enhanced&h=56;112&w=';
-	import logoTitle from '$lib/assets/logo_title.png?enhanced&h=24;48&w=';
+	import logoTree from '$lib/assets/logo_tree.png?as=run:0';
+	import logoTitle from '$lib/assets/logo_title.png?as=run:0';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	const overlays = getContext<Overlays<any>>('overlays');
 
@@ -21,14 +64,14 @@
 	}
 </script>
 
-<header>
+<header class="sticky top-0 z-11 bg-stone-100 border-b border-stone-50/50 shadow-md/25">
 	<div class="page-content">
 		<a href={resolve('/')} class="home" aria-hidden="true">
-			<enhanced:img class="logo" src={logoTree} alt="" />
+			<Image class="max-h-full w-auto min-w-12" src={logoTree} alt="" />
 		</a>
 
 		<a href={resolve('/')} class="home">
-			<enhanced:img class="title" src={logoTitle} alt="" />
+			<Image class="h-6 w-auto" src={logoTitle} alt="" />
 			<h1>Essência</h1>
 		</a>
 
@@ -41,19 +84,6 @@
 </header>
 
 <style>
-	header {
-		position: sticky;
-		top: 0;
-		z-index: 11;
-		background: var(--brand-parchment-color);
-		border-bottom: 1px solid rgba(var(--brand-stonewhite-rgb) / 50%);
-		box-shadow: 0 3px 8px rgba(var(--brand-earthbrown-rgb) / 50%);
-	}
-
-	header :global(picture) {
-		display: contents;
-	}
-
 	header .page-content {
 		display: flex;
 		height: 4.5rem;
@@ -74,34 +104,18 @@
 		width: 0;
 	}
 
-	.logo {
-		max-height: 100%;
-		width: auto;
-	}
-
-	.title {
-		height: 24px;
-		width: auto;
-	}
-
 	#menu-button {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		height: 3rem;
 		aspect-ratio: 1;
-		color: var(--brand-mossgreen-color);
+		color: var(--color-olive-700);
 	}
 
 	@media screen and (width < 800px) {
 		header .page-content {
 			justify-content: space-between;
-		}
-	}
-
-	@media screen and (width > 800px) and (width < 890px) {
-		.title {
-			display: none;
 		}
 	}
 

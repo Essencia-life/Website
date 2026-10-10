@@ -34,9 +34,9 @@
 		min-width: 320px;
 		max-width: calc(100vw - 2rem);
 		gap: 0.5rem;
-		background-color: var(--brand-stonewhite-color);
+		background-color: var(--color-stone-50);
 		border-radius: 2rem;
-		box-shadow: 0 0 4rem var(--brand-earthbrown-color);
+		box-shadow: 0 0 4rem var(--color-stone-900);
 	}
 
 	@media screen and (width < 800px) {

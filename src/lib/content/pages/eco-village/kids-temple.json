@@ -1,0 +1,203 @@
+{
+  "meta": {
+    "title": "Kids Temple",
+    "description": "A forest-school inspired space for ages 2–10, on the sacred land of Essência.",
+    "cover": "",
+    "noindex": false
+  },
+  "sections": [
+    {
+      "type": "hero",
+      "supline": "Closed for Summer Holidays",
+      "headline": "Kids Temple",
+      "content": "_A forest-school inspired space for ages 2–10, on the sacred land of Essência._",
+      "backgroundImage": "/media/photo_2025-10-30_22-59-44.jpg",
+      "button": null
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "What the Kids Temple Is",
+          "headline": "A forest, not a classroom",
+          "content": "> **Our Kids Temple is closed for Summer Holidays until mid September.**\\\nThe covered space and outdoor playground remain available for families and children to use.\n\nThe Kids Temple embraces a Forest School ethos: nature as the classroom, and play as the way in. Every day is shaped around games and activities that awaken a child's social, physical, intellectual, emotional and spiritual sides — with plenty of room to simply follow their own curiosity. It exists for the children of residents, neighbors and guests alike, and for the parents who come with them.",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
+        },
+        {
+          "type": "columns",
+          "settings": {
+            "columns": null,
+            "variant": "top-border"
+          },
+          "columns": [
+            {
+              "content": "#### Purpose\n\nAn inspiring space to awaken children to their full potential — and a way for more guests and lightworkers to come, knowing their kids are cared for."
+            },
+            {
+              "content": "#### Vision\n\nChildren welcomed into nature for a holistic, playful education — blossoming freely, while parents relax and share some time and skills in return."
+            },
+            {
+              "content": "#### Mission\n\nAn accessible, safe, inspiring space for children's and parents' growth in nature — building self-awareness, self-regulation, social skills and empathy."
+            }
+          ]
+        }
+      ],
+      "settings": null
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "Follow Along",
+          "headline": "@kidstemple_essencia",
+          "content": "",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
+        },
+        {
+          "type": "instagram-profile",
+          "title": "@kidstemple_essencia",
+          "link": "https://www.instagram.com/kidstemple_essencia"
+        }
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "",
+        "spacing": null
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "Our Ethics",
+          "headline": "Six ways children grow here",
+          "content": "_Beyond safety rules, children are never obliged to follow an activity at a given time — they're free to follow their bliss and curiosity until they're ready to join in._",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
+        },
+        {
+          "type": "card-grid",
+          "cards": [
+            {
+              "image": "",
+              "content": "#### Nature\n\nSeeding, planting, growing, animal observation, eco constructions, land art.",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Play\n\nGames, ropes, swings, balls, circus.",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Communicate\n\nSocial skills, compassion, empathy, sharing, expressing needs and boundaries, storytelling.",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Blossom\n\nMeditation, confidence, concentration, senses, belonging, arts and crafts.",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Moving\n\nDancing, singing, kids & acro yoga, qigong, nature hikes, beach play & swimming.",
+              "link": ""
+            },
+            {
+              "image": "",
+              "content": "#### Be Alive\n\nFreedom, exploration, celebration, wonder, presence, gratitude.",
+              "link": ""
+            }
+          ],
+          "settings": {
+            "columns": 3
+          }
+        }
+      ],
+      "settings": null
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "columns",
+          "settings": null,
+          "columns": [
+            {
+              "content": "### What's already there\n\nEven over the summer break, families are welcome to enjoy:\n\n- 1 dome (indoor space)\n- 1 temple tent (shaded, outdoor)\n- 1 natural pond\n- 1 juice bar & 1 kitchen\n- 1 playground with trampoline and swings\n- Shower and toilets on site\n- A forest tea room chill space for parents"
+            },
+            {
+              "content": "### The previous rhythm\n\n- Monday – Friday, 10:30am – 3pm\n- Ages 2 – 10\n- Music & movement, nature exploration & building, crafting & drawing\n- Thursday gardening & Portuguese class woven in\n- Organic snack & vegan lunch included; parents welcome to join Community Lunch for €8\n- Thursdays close with the Forest SPA — €20/person, free for kids in the program\n- English, German & Dutch spoken\n- One day a month set aside for parents to connect on holistic education and their child's individual growth"
+            }
+          ]
+        }
+      ],
+      "settings": {
+        "variant": "secondary",
+        "layout": "",
+        "spacing": null
+      }
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "columns",
+          "settings": null,
+          "columns": [
+            {
+              "content": "### Parents are welcome to join\n\nParents are encouraged to spend a day a month — or more — in service of the temple and the children: assisting the facilitator, observing, sharing knowledge, offering a workshop, or helping build something for the space.\n\n_These contributions help keep the program affordable, and make it richer for everyone._"
+            },
+            {
+              "content": "### What to bring\n\nOutdoor shoes & clothes, a hat, organic sun screen, swimming costume & gear, a rain coat, a warm jacket, a water bottle, and fruits or snacks."
+            }
+          ]
+        }
+      ],
+      "settings": null
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "Stay Connected",
+          "headline": "Let's keep in touch.",
+          "content": "Questions, or want to be notified when the Kids Temple reopens?\\\nWe read every message.\n\n_And if you'd love to get involved in shaping what's next here — we'd love to hear that too._",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": [
+            {
+              "label": "Get in touch",
+              "link": "/contact?topic=kids#form",
+              "variant": "primary"
+            }
+          ]
+        }
+      ],
+      "settings": null
+    }
+  ]
+}

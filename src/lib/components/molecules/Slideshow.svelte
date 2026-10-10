@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { Media } from '$lib/services/Media';
-	import { ChevronLeft, ChevronRight } from '@lucide/svelte';
+	import ChevronLeft from '@lucide/svelte/icons/chevron-left';
+	import ChevronRight from '@lucide/svelte/icons/chevron-right';
 	import { SvelteMap } from 'svelte/reactivity';
 	import type { Attachment } from 'svelte/attachments';
+	import Image from '$lib/components/atoms/Image.svelte';
 
 	export interface Photo {
 		photo: string;
@@ -82,7 +84,7 @@
 				{@attach observe}
 				class="relative m-0 min-w-full snap-center snap-always overflow-hidden {classes.figure}"
 			>
-				<enhanced:img
+				<Image
 					src={Media.getFile(photo.photo)}
 					alt={photo.caption ?? ''}
 					class="h-full max-w-full object-cover {classes.image}"
@@ -141,7 +143,7 @@
 		width: 0.5rem;
 		height: 0.5rem;
 		border-radius: 100%;
-		background: light-dark(var(--brand-parchment-color), rgba(0 0 0 / 50%));
+		background: light-dark(var(--color-stone-300), rgba(0 0 0 / 50%));
 	}
 
 	.indicators > button::after {
@@ -150,12 +152,12 @@
 		width: 0.5rem;
 		height: 0.5rem;
 		border-radius: 100%;
-		background: light-dark(rgba(0 0 0 / 50%), var(--brand-parchment-color));
+		background: light-dark(rgba(0 0 0 / 50%), var(--color-stone-300));
 		opacity: var(--ratio);
 	}
 
 	figcaption {
-		color: var(--brand-stonewhite-color);
+		color: var(--color-stone-50);
 	}
 
 	.navigate {
@@ -169,7 +171,7 @@
 		margin: 0;
 		color: #fff;
 		cursor: pointer;
-		filter: drop-shadow(var(--brand-earthbrown-color) 0 0 0.25rem);
+		filter: drop-shadow(var(--color-stone-900) 0 0 0.25rem);
 	}
 
 	.navigate:disabled {

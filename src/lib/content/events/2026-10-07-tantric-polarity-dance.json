@@ -1,0 +1,37 @@
+{
+  "type": "event",
+  "start": "2026-10-07T19:00:00+01:00",
+  "end": "2026-10-07T21:30:00+01:00",
+  "recurrence": {
+    "freq": 2,
+    "interval": 2,
+    "count": 4,
+    "until": "",
+    "exdate": [],
+    "wkst": null,
+    "bysetpos": [],
+    "bymonth": [],
+    "bymonthday": [],
+    "byyearday": [],
+    "byweekno": [],
+    "byweekday": [],
+    "byhour": [],
+    "byminute": [],
+    "bysecond": [],
+    "byeaster": null
+  },
+  "title": "Tantric Polarity dance",
+  "cover_image": "/media/events/tantric-dance-workshop-flyer-instagram-story-.png",
+  "short_description": "A partner dance. One leads, while the other surrenders to the dance blindfolded. Let your breath, your body and the music guide you.",
+  "description": "The workshop starts with a warm-up to arrive in your body, release tension and connect with yourself.\n\nFrom there, we slowly move into the Tantric Polarity Dance and connect with each other through movement.\nIn the dance, one person takes the role of the leader and gives direction to the dance. The other person is blindfolded and takes the role of the follower, receiving the movement.\nThese roles will change throughout the workshop, so you can experience both sides.\n\nAs a leader, you are invited to explore clear direction, presence and responsibility. As a follower, you explore trust, receiving and surrender. The dance can become a mirror for how you relate to these qualities, both in the dance and in your daily life.\n\nThroughout the workshop, the teacher guides the changing of partners and offers support and tips for both leading and following. A warm and safe space is created where you are invited to explore, connect and move at your own pace.\n\nTo sign up: Dm insta @lifebypieter or whatsapp +31613535441\n\nPayments at the door.",
+  "booking_link": "",
+  "car_sharing_link": "",
+  "info_link": "",
+  "organizers": [
+    {
+      "name": "Pieter Vrij",
+      "description": "Tantra, Yoga, breathwork, meditation teacher. Who love dance and connection",
+      "photo": "/media/events/organizer/ademvrij-09563.jpg"
+    }
+  ]
+}
