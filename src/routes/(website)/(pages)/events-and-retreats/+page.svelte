@@ -95,7 +95,7 @@
 								src={Media.getFile(event.cover_image)}
 								loading="lazy"
 								alt=""
-								class="rounded-2xl aspect-4/5 shadow-xl/30 object-cover"
+								class="rounded-2xl aspect-4/5 shadow-xl/30 object-cover object-top"
 								style="view-transition-name: {eventCoverTransitionName(linkUrl)}"
 							/>
 						</EventRibbon>
@@ -165,7 +165,7 @@
 					src={Media.getFile(event.cover_image)}
 					loading="lazy"
 					alt=""
-					class="rounded-xl aspect-4/5 shadow-lg/30 object-cover"
+					class="rounded-xl aspect-4/5 shadow-lg/30 object-cover object-top"
 					style="view-transition-name: {eventCoverTransitionName(linkUrl)}"
 				/>
 
