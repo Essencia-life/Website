@@ -95,7 +95,7 @@
 								src={Media.getFile(event.cover_image)}
 								loading="lazy"
 								alt=""
-								class="rounded-2xl aspect-4/5 shadow-xl/30"
+								class="rounded-2xl aspect-4/5 shadow-xl/30 object-cover"
 								style="view-transition-name: {eventCoverTransitionName(linkUrl)}"
 							/>
 						</EventRibbon>
