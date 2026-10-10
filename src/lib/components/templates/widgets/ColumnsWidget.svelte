@@ -67,7 +67,7 @@
 </script>
 
 <div
-	class="mt-12 grid md:grid-cols-[repeat(var(--columns),1fr)] md:gap-8"
+	class="mt-12 grid md:grid-cols-[repeat(var(--columns),1fr)] gap-8"
 	class:top-border-colored={widget.settings?.variant === 'top-border'}
 	style:--columns={widget.settings?.columns ?? widget.columns.length}
 >
