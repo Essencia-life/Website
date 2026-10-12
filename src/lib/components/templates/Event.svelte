@@ -429,7 +429,7 @@
 </script>
 
 <div
-	class="lg:grid-areas overflow-hidden wrap-break-word lg:mx-auto lg:grid lg:max-w-300 lg:grid-cols-[30%_auto] lg:grid-rows-[auto_auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:py-16"
+	class="lg:[grid-template-areas:'cover_content''cover_description''buttons_description''organizers_description'] overflow-hidden wrap-break-word lg:mx-auto lg:grid lg:max-w-300 lg:grid-cols-[30%_auto] lg:grid-rows-[auto_auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:py-16"
 >
 	<div style="grid-area: cover">
 		<Image
@@ -554,15 +554,3 @@
 		{/if}
 	</div>
 </div>
-
-<style>
-	@media (width >= 64rem) {
-		.lg\:grid-areas {
-			grid-template-areas:
-				'cover content'
-				'cover description'
-				'buttons description'
-				'organizers description';
-		}
-	}
-</style>
