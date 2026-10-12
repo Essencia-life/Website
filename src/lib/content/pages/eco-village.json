@@ -46,7 +46,7 @@
               "content": "#### Our Vision\n\nA world of unity and belonging — a home where people share, sing, dance, and grow into their fullest health and potential."
             },
             {
-              "content": "#### Our Mission\n\nTo hold safe, heart-centred spaces where people can purify, regenerate and grow joyfully — together, on this land."
+              "content": "#### Our Mission\n\nTo hold safe, heart-centred spaces where we and our children can purify, regenerate and grow joyfully — together, on this land."
             }
           ]
         }
@@ -166,7 +166,7 @@
           "type": "content",
           "supline": "Living Off-Grid",
           "headline": "What \"Off-Grid\" Actually Means",
-          "content": "There's no mains connection out here — every drop of water and every watt of power is something we generate, manage and take responsibility for ourselves.",
+          "content": "There's no electric grid connection out here — every drop of water and every watt of power is something we generate, manage and take responsibility for ourselves.",
           "settings": {
             "textCenter": true,
             "listIcons": ""
@@ -335,7 +335,7 @@
           "type": "content",
           "supline": "Focus & Fast Wifi",
           "headline": "The Hive",
-          "content": "A quiet co-working space with a fast Starlink connection — for the days you need to focus, take a call, or simply get things done. The Hive is where community life and real work overlap, without you having to choose between them.",
+          "content": "A quiet co-working space with a fast Starlink connection — for the days you need to focus, take a call, or simply get things done. The Hive is where we as community also meet to co-create, evolve and plan our moon calendar & events.",
           "settings": null,
           "buttons": []
         }
