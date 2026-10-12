@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import headerData from '$lib/content/header.json';
-	import { ChevronDown, ChevronUp } from '@lucide/svelte';
+	import ChevronDown from '@lucide/svelte/icons/chevron-down';
+	import ChevronUp from '@lucide/svelte/icons/chevron-up';
 
 	interface Props {
 		header?: true;
@@ -32,7 +33,7 @@
 				<div class="root">
 					<a href={item.link}>{item.label}</a>
 
-					{#if item.children}
+					{#if item.children?.length}
 						<div class="toggle">
 							<button class="icon-button" onclick={() => (item.open = !item.open)}>
 								{#if !item.open}
@@ -45,7 +46,7 @@
 					{/if}
 				</div>
 
-				{#if item.children && (item.open || header)}
+				{#if item.children?.length && (item.open || header)}
 					<div class="children" transition:slide onintroend={scrollIntoView}>
 						<ul>
 							{#each item.children as child (child)}
@@ -82,7 +83,7 @@
 	}
 
 	nav a {
-		color: var(--brand-mossgreen-color);
+		color: var(--color-olive-700);
 		font-weight: 500;
 		font-size: 1.125rem;
 		text-decoration: none;
@@ -106,7 +107,7 @@
 		display: flex;
 		justify-content: stretch;
 		margin-left: -1.5rem;
-		box-shadow: 0 3px 8px rgba(var(--brand-earthbrown-rgb) / 50%);
+		box-shadow: 0 3px 8px color-mix(in oklab, var(--color-stone-900) 50%, transparent);
 		border-radius: 0.25rem;
 	}
 
@@ -119,11 +120,11 @@
 	}
 
 	.sidebar .children {
-		background: rgba(var(--brand-earthbrown-rgb) / 4%);
+		background: color-mix(in oklab, var(--color-stone-900) 4%, transparent);
 	}
 
 	.header .children {
-		background: var(--brand-parchment-color);
+		background: var(--color-stone-100);
 	}
 
 	.children ul {
@@ -165,12 +166,12 @@
 		}
 
 		.toggle {
-			border-left: 1px solid var(--brand-highlight-color);
+			border-left: 1px solid var(--color-stone-300);
 			padding-left: 0.5rem;
 		}
 
 		.toggle .icon-button {
-			color: var(--brand-mossgreen-color);
+			color: var(--color-olive-700);
 		}
 
 		.children {
@@ -179,7 +180,7 @@
 
 		.children ul {
 			margin-left: 1rem;
-			background: var(--brand-parchment-color);
+			background: var(--color-stone-100);
 		}
 	}
 </style>

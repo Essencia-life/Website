@@ -65,7 +65,7 @@
 		justify-content: center;
 		border-radius: 100%;
 		transform: translateY(-50%);
-		color: var(--brand-primary-color);
+		color: var(--color-olive-700);
 		transition:
 			transform 150ms ease-in-out,
 			background 150ms ease-in-out;
@@ -89,7 +89,7 @@
 		.scroll-container-wrapper > button:hover:not(:disabled) {
 			background: rgba(255 255 255 / 80%);
 			transform: scale(1.5) translateY(-25%);
-			box-shadow: 0 0 8px var(--brand-primary-color);
+			box-shadow: 0 0 8px var(--color-olive-700);
 		}
 	}
 
