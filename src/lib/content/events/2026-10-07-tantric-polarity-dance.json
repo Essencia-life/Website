@@ -5,7 +5,7 @@
   "recurrence": {
     "freq": 2,
     "interval": 2,
-    "count": 4,
+    "count": null,
     "until": "",
     "exdate": [],
     "wkst": null,
