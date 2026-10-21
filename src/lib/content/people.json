@@ -1,0 +1,48 @@
+{
+	"people": [
+		{
+			"id": "c582fb884412",
+			"name": "Simona",
+			"role": "Community Branch Driver",
+			"status": "Resident",
+			"photo": "/media/photo_2026-07-24_16-46-55.jpg",
+			"description": "Essência co-founder Simona is a healing magician deeply loving humanity and Mother Nature. She has trained in various healing modality with numerous masters the last 20 years.",
+			"talents": ["High on Life", "Ukulele", "Builder"],
+			"video": null,
+			"showHealingOffers": true
+		},
+		{
+			"id": "ba7d9d6d8d5e",
+			"name": "Antoine",
+			"role": "Supervision",
+			"status": "Resident",
+			"photo": "/media/photo_2026-07-24_16-46-44.jpg",
+			"description": "Co-Founder of Essência, conscious entrepreneur consultant and coach Antoine loves seeing beautiful beings blossom and share their precious gifts with the world.\n\"We create our own reality! Let's make it fun!\"",
+			"talents": ["Visionary", "Leader", "Arrow-Energy"],
+			"video": null,
+			"showHealingOffers": true
+		},
+		{
+			"id": "e81ad2abe3ee",
+			"name": "Fox",
+			"role": "Events Management",
+			"status": "Long-term volunteer",
+			"photo": "/media/photo_2026-07-24_16-46-54.jpg",
+			"description": "Fox is a White Wind body worker, energy channel, listener and father.\nHe is here to create safe & sacred containers of presence, softness and releasing.\nHe supports you to deepen the connection to your self healing power and ground yourself on all levels.",
+			"talents": ["Sense of Basic Trust", "Face Massages"],
+			"video": null,
+			"showHealingOffers": true
+		},
+		{
+			"id": "80ee3873fd68",
+			"name": "Ben",
+			"role": "Tech & Communications",
+			"status": "Resident",
+			"photo": "/media/photo_2026-06-13_09-34-21.jpg",
+			"description": "About Ben",
+			"talents": ["Solution Orientated", "Co-Regulator"],
+			"video": null,
+			"showHealingOffers": false
+		}
+	]
+}
