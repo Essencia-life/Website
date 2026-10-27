@@ -1,4 +1,5 @@
 import type { Picture } from 'vite-imagetools';
+import { getContext } from 'svelte';
 
 const pageRegExp = new RegExp('/src/lib/assets/(?<file>media/.+)');
 const mediaFiles = new Map(
@@ -15,9 +16,20 @@ const mediaFiles = new Map(
 export class Media {
 	public static getFile(file: string) {
 		const mediaFile = mediaFiles.get(file) ?? mediaFiles.get(file.substring(1));
+		const isCmsPreview = getContext<boolean>('CmsPreview');
 
 		if (mediaFile) {
 			return mediaFile;
+		} else if (isCmsPreview) {
+			const img = new Image();
+			img.src = file;
+			return {
+				img: {
+					src: img.src,
+					get w() { return img.naturalWidth },
+					get h() { return img.naturalHeight }
+				}
+			};
 		} else {
 			// console.log(mediaFiles.keys());
 			throw new MediaFileNotFound(file);

@@ -2,6 +2,7 @@
 	import type { HTMLImgAttributes } from 'svelte/elements';
 	import type { Picture } from 'vite-imagetools';
 	import { dev } from '$app/environment';
+	import { getContext } from 'svelte';
 
 	interface Props extends Omit<HTMLImgAttributes, 'src'> {
 		src: Picture;
@@ -15,6 +16,8 @@
 	}
 
 	function srcsetVercel(src: string, widths: string | number[] = [], quality = 100) {
+		const isCmsPreview = getContext<boolean>('CmsPreview');
+
 		if (typeof widths === 'string') {
 			widths = widths
 				.replaceAll(' ')
@@ -27,7 +30,7 @@
 			.sort((a, b) => a - b)
 			.map((width) => {
 				let vercelUrl = `/_vercel/image?url=${encodeURIComponent(src.startsWith('/') ? src : new URL(src).pathname)}&w=${width}&q=${quality}`;
-				if (dev) vercelUrl = `${src}#${vercelUrl}`;
+				if (dev || isCmsPreview) vercelUrl = `${src}#${vercelUrl}`;
 				return `${vercelUrl} ${width}w`;
 			})
 			.join(', ')
