@@ -9,6 +9,7 @@
 	import type { PageProps } from './$types';
 	import { goto } from '$app/navigation';
 	import Image from '$lib/components/atoms/Image.svelte';
+	import Card from '$lib/components/organisms/Card.svelte';
 
 	let filter = $derived(page.url.searchParams.get('filter'));
 
@@ -135,21 +136,84 @@
 </section>
 
 <section class="page-content py-8">
-	<div class="relative flex py-8">
-		<Image
-			src={Media.getFile('media/essência nature retreat 39.JPG')}
-			loading="lazy"
-			alt=""
-			class="rounded-xl absolute inset-0 object-cover w-full h-full shadow-xl/30"
-		/>
-		<div class="absolute inset-0 md:bg-linear-120 bg-linear-to-b from-black/75 from-30% max-sm:from-60% to-black/0 rounded-xl"></div>
-		<div class="z-10 max-w-120 text-white md:p-8 p-4 space-y-8">
-			<sup class="top-0 mb-2 block text-amber-300">An Open Invitation</sup>
-			<h3 class="text-white text-4xl font-bold">Host Your Event or Retreat</h3>
-			<p>We open our space — the Shala, the farmhouse and the land — to events and retreats that resonate with what we do. Easy, low-risk terms; ask us for details.</p>
-			<div class="flex gap-4 flex-wrap">
-				<a href="/contact" class="button button-ambergold">Contact us to host</a>
-				<button class="button button-outline">Learn more</button>
+	<div class="relative">
+		<div class="relative z-1 flex py-8">
+			<Image
+				src={Media.getFile('media/essência nature retreat 39.JPG')}
+				loading="lazy"
+				alt=""
+				class="rounded-xl absolute inset-0 object-cover w-full h-full shadow-xl/30"
+			/>
+			<div class="absolute inset-0 md:bg-linear-120 bg-linear-to-b from-black/75 from-30% max-sm:from-60% to-black/0 rounded-xl"></div>
+			<div class="z-10 max-w-120 text-white md:p-8 p-4 space-y-8">
+				<sup class="top-0 mb-2 block text-amber-300">An Open Invitation</sup>
+				<h3 class="text-white text-4xl font-bold">Host Your Event or Retreat</h3>
+				<p>We open our space — the Shala, the farmhouse and the land — to events and retreats that resonate with what we do. Easy, low-risk terms; ask us for details.</p>
+				<div class="flex gap-4 flex-wrap">
+					<a href="/contact" class="button button-ambergold">Contact us to host</a>
+					<a href="#hosting" class="button button-outline">
+						Learn more
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<div id="hosting" class="relative z-0 bg-stone-100 rounded-b-xl p-4 md:p-8 pt-12! -mt-4 transition-transform transition-height not-target:-translate-y-full not-target:max-h-0 overflow-hidden">
+			<div class="grid md:grid-cols-2 max-sm:grid-rows-[auto_auto] gap-12 md:gap-6">
+				<div class="flex flex-col gap-4">
+					<h4>Hosting an event</h4>
+					<Card>
+						<div class="font-serif font-medium text-xl text-taupe-700">50€</div>
+						<p class="text-stone-500">deposit, paid in advance to reserve your date</p>
+					</Card>
+					<Card>
+						<div class="font-serif font-medium text-xl text-taupe-700">30%</div>
+						<p class="text-stone-500">of your event income goes to Essência</p>
+					</Card>
+					<Card>
+						<div class="font-serif font-medium text-xl text-taupe-700">50% off</div>
+						<p class="text-stone-500">a room for the organisers, the night before and after</p>
+					</Card>
+					<blockquote class="text-sm">
+						<h5 class="mb-2">How the money works</h5>
+						<p>Your deposit counts towards the 30%, so you never pay it twice.</p>
+						<p>Example: your events earns <span class="font-medium">500€</span>. Essência's 30% is <span class="font-medium">150€</span>. You already paid <span class="font-medium">50€</span> as deposit, so you pay <span class="font-medium">100€</span> after the event.</p>
+						<p>If you cancel, the deposit is not refunded. You can move your date once.</p>
+					</blockquote>
+				</div>
+				<div class="flex flex-col gap-4">
+					<h4>Hosting a retreat</h4>
+					<Card>
+						<div class="flex flex-col gap-2">
+							<div class="font-serif font-medium text-xl text-taupe-700">108m2</div>
+							<div>
+								<div class="font-serif font-medium text-taupe-700">The Shala</div>
+								<p class="text-stone-500">Wooden floor, forest view</p>
+							</div>
+							<a href="/eco-village#the-eco-village">See the Shala &rarr;</a>
+						</div>
+					</Card>
+					<Card>
+						<div class="flex flex-col gap-2">
+							<div class="font-serif font-medium text-xl text-taupe-700">14 beds</div>
+							<div>
+								<div class="font-serif font-medium text-taupe-700">Farmhouse</div>
+								<p class="text-stone-500">6 rooms, private bathrooms</p>
+							</div>
+							<a href="/stay#farmhouse">See the rooms &rarr;</a>
+						</div>
+					</Card>
+					<Card>
+						<div class="flex flex-col gap-2">
+							<div class="font-serif font-medium text-xl text-taupe-700">Spa</div>
+							<div>
+								<div class="font-serif font-medium text-taupe-700">in the forest</div>
+								<p class="text-stone-500">Sauna, hot tub, fireplace, natural pond</p>
+							</div>
+							<a href="/eco-village#the-eco-village">See the Forest SPA &rarr;</a>
+						</div>
+					</Card>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -184,3 +248,9 @@
 		{/each}
 	</div>
 </section>
+
+<style>
+	:global(body:has(#hosting:target) a[href="#hosting"]) {
+			display: none;
+	}
+</style>
