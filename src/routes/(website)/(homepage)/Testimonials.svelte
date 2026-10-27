@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Markdown from '$lib/components/molecules/Markdown.svelte';
 	import SiAirbnb from '@icons-pack/svelte-simple-icons/icons/SiAirbnb';
+	import SiGooglemaps from '@icons-pack/svelte-simple-icons/icons/SiGooglemaps';
 
 	interface Testimonial {
 		quote: string;
@@ -15,20 +16,24 @@
 
 	const { testimonials }: Props = $props();
 
-	const iconPlatformMap = new Map([['Airbnb', SiAirbnb]]);
+	const iconPlatformMap = new Map([
+		['Airbnb', SiAirbnb],
+		['Google Maps', SiGooglemaps],
+	]);
 </script>
 
 <div class="testimonials">
-	{#each testimonials as testimonial}
+	{#each testimonials as testimonial (testimonial)}
 		{@const Icon = iconPlatformMap.get(testimonial.platform)}
 		<div>
 			<div class="bubble">
-				<blockquote>
+				<blockquote class="unstyled">
 					<Markdown content={testimonial.quote} />
 				</blockquote>
 				<cite>
 					{testimonial.cite}
 					{#if Icon}
+						<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
 						<a href={testimonial.link} target="_blank" class="icon">
 							<Icon size={16} title="Show review on {testimonial.platform}" />
 						</a>

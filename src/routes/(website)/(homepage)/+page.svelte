@@ -91,14 +91,14 @@
 					src={Media.getFile(section.photo)}
 					alt=""
 					loading="lazy"
-					class="lg:h-full lg:object-cover"
+					class="lg:object-cover lg:object-center"
 				/>
 			{/if}
 			<div
-				class="flex flex-col p-4 lg:w-[50%] lg:max-w-[60%] lg:min-w-[32rem] lg:justify-center lg:gap-16 lg:px-16"
+				class="flex flex-col px-4 py-16 lg:w-[50%] lg:max-w-[60%] lg:min-w-lg lg:justify-center lg:gap-16 lg:px-16"
 			>
 				<div>
-					<h2 class="text-center">{section.headline}</h2>
+					<h2 class="text-center mb-8">{section.headline}</h2>
 					{#if section.content}
 						<Markdown content={section.content} />
 					{/if}
@@ -115,11 +115,11 @@
 				src={Media.getFile(section.photo)}
 				alt=""
 				loading="lazy"
-				class="lg:h-full lg:object-cover"
+				class="lg:max-h-full lg:object-cover lg:object-center"
 			/>
 		{:else if section.type === 'events'}
-			<div class="flex flex-col p-4 lg:container lg:mx-auto">
-				<h2 class="text-center">{section.headline}</h2>
+			<div class="flex flex-col px-4 py-16 lg:mx-auto">
+				<h2 class="text-center mb-4">{section.headline}</h2>
 
 				<Events events={data.upcomingEvents} {lastEventsScrollPosition} />
 
@@ -132,7 +132,7 @@
 		{:else if section.type === 'community-day'}
 			<!-- TODO: rethink design to fit better between sections -->
 			<div
-				class="relative flex flex-col max-sm:gap-3 lg:h-[1000px] lg:w-full lg:items-center lg:justify-center"
+				class="relative flex flex-col max-sm:gap-3 lg:h-250 lg:w-full lg:items-center lg:justify-center"
 			>
 				<div
 					class="inset-0 overflow-hidden max-md:contents lg:absolute lg:grid lg:grid-cols-2 max-md:[&_img]:last-of-type:order-3 lg:[&_img]:h-full lg:[&_img]:w-full lg:[&_img]:object-cover"
@@ -141,10 +141,10 @@
 					<Image src={Media.getFile(section.photos![1])} alt="" loading="lazy" />
 				</div>
 				<div
-					class="heart-shape text-center max-md:p-4 lg:z-10 lg:flex lg:aspect-square lg:h-[70%] lg:bg-white lg:px-16 lg:pt-16"
+					class="heart-shape text-center max-md:px-4 max-md:py-16 lg:z-10 lg:flex lg:aspect-square lg:h-[70%] lg:bg-white lg:px-16 lg:pt-16"
 				>
 					<div>
-						<h2>{section.headline}</h2>
+						<h2 class="my-8">{section.headline}</h2>
 						{#if section.content}
 							<Markdown content={section.content} />
 						{/if}
@@ -158,9 +158,9 @@
 				</div>
 			</div>
 		{:else if section.type === 'accommodations'}
-			<div class="flex flex-col lg:container lg:mx-auto">
+			<div class="flex flex-col lg:container lg:mx-auto py-16">
 				<div class="flex-col items-center pt-8 text-center lg:flex">
-					<h2>{section.headline}</h2>
+					<h2 class="mb-4">{section.headline}</h2>
 					{#if section.content}
 						<Markdown content={section.content} />
 					{/if}
@@ -173,7 +173,7 @@
 				<Map />
 			</div>
 		{:else if section.type === 'social-media'}
-			<div class="mx-auto flex flex-col p-4">
+			<div class="m-auto flex flex-col px-4 py-16 text-center">
 				<h3>{section.headline}</h3>
 				{#if section.content}
 					<Markdown content={section.content} />
@@ -182,13 +182,9 @@
 				{#if section.platforms}
 					<SocialMedia platforms={section.platforms} />
 				{/if}
-
-				<!--					<h3 id="newsletter">Newsletter</h3>-->
-
-				<!--					<NewsletterForm />-->
 			</div>
 		{:else if section.type === 'testimonials'}
-			<div class="mx-auto flex flex-col p-4">
+			<div class="mx-auto flex flex-col px-4 py-16">
 				<h2 class="mb-16! text-center">{section.headline}</h2>
 				<Testimonials testimonials={section.items!} />
 			</div>

@@ -182,7 +182,7 @@
 		@apply w-10;
 	}
 
-	blockquote {
+	blockquote:not(.unstyled) {
 		@apply bg-amber-100 border-l-4 border-amber-600 p-4 rounded-md text-left;
 	}
 

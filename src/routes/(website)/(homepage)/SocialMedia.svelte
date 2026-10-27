@@ -101,6 +101,10 @@
 			color: var(--social-media-brand-color);
 			background: #fff;
 		}
+
+		.social-media-button:hover h4 {
+			color: inherit;
+		}
 	}
 
 	@media screen and (width < 800px) {
