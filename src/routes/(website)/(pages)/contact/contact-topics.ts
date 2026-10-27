@@ -35,12 +35,12 @@ export const topicMap: Record<string, { label: string; recipient: string; subjec
 		subject: 'Contact regarding community day and SPArkling night'
 	},
 	healing: {
-		label: 'Healing journey',
+		label: 'Healing offer / journey',
 		recipient: 'ola',
-		subject: 'Contact regarding healing journey'
+		subject: 'Contact regarding healing offers or journeys'
 	},
 	invest: {
-		label: 'Invest or donate',
+		label: 'Invest, donate & support us',
 		recipient: 'ola',
 		subject: 'Contact regarding investment or donation'
 	},
