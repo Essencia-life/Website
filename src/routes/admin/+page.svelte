@@ -20,6 +20,7 @@
 				load_config_file: false,
 				media_folder: '/src/lib/assets/media',
 				public_folder: '/media',
+				publish_mode: 'editorial_workflow',
 				media_libraries: {
 					all: {
 						slugify_filename: true
@@ -28,7 +29,7 @@
 				backend: {
 					name: 'github',
 					repo: 'Essencia-life/Website',
-					branch: 'sveltia',
+					branch: 'main',
 					base_url: `https://${data.baseUrl}`,
 					auth_endpoint: '/admin/auth',
 					commit_messages: {
