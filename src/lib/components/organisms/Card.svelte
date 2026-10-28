@@ -30,7 +30,7 @@
 {/snippet}
 
 {#if link}
-	<a href={link} class="no-link hover:scale-105 hover:-translate-y-2 hover:shadow-lg/30 rounded-lg transition">
+	<a href={link} class="no-link hover:scale-105 hover:-translate-y-2 hover:shadow-lg/30 rounded-lg transition flex [article]:flex-1">
 		{@render card()}
 	</a>
 {:else}

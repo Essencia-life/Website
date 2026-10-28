@@ -98,24 +98,47 @@
           "buttons": []
         },
         {
-          "type": "card-grid",
-          "settings": null,
-          "cards": [
+          "type": "membership-subscriptions",
+          "subscriptions": [
             {
-              "image": "",
-              "content": "#### Seedling\n\n**€10**/mo\n\n- Our seasonal newsletter, from the land\n- An open invitation to visit\n- Know your gift covers real, daily costs",
-              "link": ""
+              "title": "Seedling",
+							"price": 10,
+							"benefits": [
+								"Our seasonal newsletter, from the land",
+								"An open invitation to visit",
+								"Know your gift covers real, daily costs"
+							],
+							"button": {
+								"label": "Become a Seedling",
+								"link": ""
+							}
             },
             {
-              "image": "",
-              "content": "#### Sapling\n\n**€35**/mo\n\n- Everything in Seedling\n- A tree planted in your name on the land\n- 10% off events and retreats",
-              "link": ""
-            },
+							"title": "Sapling",
+							"price": 35,
+							"benefits": [
+								"Everything in Seedling",
+								"A tree planted in your name on the land",
+								"10% off events and retreats"
+							],
+							"button": {
+								"label": "Become a Sapling",
+								"link": ""
+							}
+						},
             {
-              "image": "",
-              "content": "#### Grove\n\n**€100**/mo\n\n- Everything in Sapling\n- One complimentary glamping weekend per year\n- A standing invite to community celebrations",
-              "link": ""
-            }
+							"title": "Grove",
+							"price": 100,
+							"benefits": [
+								"Everything in Sapling",
+								"One complimentary glamping weekend per year",
+								"A standing invite to community celebrations"
+							],
+							"button": {
+								"label": "Become a Grove",
+								"link": ""
+							}
+						}
           ]
         }
       ],

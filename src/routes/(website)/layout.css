@@ -195,8 +195,7 @@
 	}
 
 	.button {
-		@apply inline-flex items-center decoration-0 cursor-pointer gap-2 px-3 py-2 border-2 font-semibold text-base text-stone-900 bg-stone-50/15 text-center;
-		border-radius: 24px 8px 24px 8px;
+		@apply inline-flex items-center decoration-0 cursor-pointer gap-2 px-3 py-2 border-2 font-semibold text-base text-stone-900 bg-stone-50/15 text-center rounded-[24px_8px_24px_8px];
 	}
 
 	.button.button-primary {

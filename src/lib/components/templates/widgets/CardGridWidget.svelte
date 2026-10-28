@@ -9,7 +9,9 @@
 			{
 				name: 'type',
 				widget: 'hidden',
-				default: 'card-grid'
+				get default() {
+					return cardGridWidgetField.name;
+				}
 			},
 			{
 				name: 'cards',
@@ -119,7 +121,7 @@
 	</Card>
 {/snippet}
 
-<div class="grid gap-4  md:grid-cols-[repeat(var(--columns),1fr)]"
+<div class="grid gap-4 md:grid-cols-[repeat(var(--columns),1fr)]"
 		 style:--columns={widget.settings?.columns ?? widget.cards.length}>
 	{#each widget.cards as card (card)}
 		{#if card.icon}

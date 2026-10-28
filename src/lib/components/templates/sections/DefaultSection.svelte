@@ -12,6 +12,7 @@
 	import { instagramProfileWidgetField } from '../widgets/InstagramProfileWidget.svelte';
 	import { slideshowWidgetField } from '../widgets/SlideshowWidget.svelte';
 	import { priceTableWidgetField } from '../widgets/PriceTableWidget.svelte'
+	import { membershipSubscriptionsWidgetField } from '../widgets/MembershipSubscriptions.svelte'
 
 	export const defaultSectionField = {
 		name: 'default-section',
@@ -53,6 +54,7 @@
 					gofundmeWidgetField,
 					priceTableWidgetField,
 					donorboxWidgetField,
+					membershipSubscriptionsWidgetField,
 				]
 			},
 			{
@@ -114,6 +116,7 @@
 	import PriceTableWidget from '$lib/components/templates/widgets/PriceTableWidget.svelte';
 	import GofundmeWidget from '$lib/components/templates/widgets/GofundmeWidget.svelte';
 	import DonorboxWidget from '$lib/components/templates/widgets/DonorboxWidget.svelte';
+	import MembershipSubscriptions from '$lib/components/templates/widgets/MembershipSubscriptions.svelte';
 
 	interface Props {
 		index: number;
@@ -162,6 +165,8 @@
 					<GofundmeWidget {widget} />
 				{:else if widget.type === donorboxWidgetField.name}
 					<DonorboxWidget {widget} />
+				{:else if widget.type === membershipSubscriptionsWidgetField.name}
+					<MembershipSubscriptions {widget} />
 				{/if}
 			</div>
 		{/each}
