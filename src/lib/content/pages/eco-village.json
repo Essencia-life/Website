@@ -246,7 +246,7 @@
     },
     {
       "type": "default-section",
-      "id": "",
+      "id": "shala",
       "widget": [
         {
           "type": "slideshow",
@@ -370,7 +370,7 @@
     },
     {
       "type": "default-section",
-      "id": "",
+      "id": "spa",
       "widget": [
         {
           "type": "content",
