@@ -45,10 +45,17 @@
 						display_fields: ['categories.*.label']
 					},
 					{
-						name: 'price',
-						label: 'Price',
+						name: 'priceMin',
+						label: 'Price (min)',
+						widget: 'number',
+						value_type: 'int'
+					},
+					{
+						name: 'priceMax',
+						label: 'Price (max)',
 						widget: 'number',
 						value_type: 'int',
+						required: false
 					},
 					{
 						name: 'duration',
@@ -130,7 +137,7 @@
 		{@const persons = offer.personIds.map(personId => peopleMap.get(personId))}
 		<Card image={offer.photo}>
 			{#snippet overlays()}
-				<div class="absolute top-2 left-2 uppercase py-1 px-3 bg-olive-900/60 rounded-full text-white/80 text-xs font-medium">{categoryMap.get(offer.categoryId)}</div>
+				<div class="absolute bottom-2 left-2 uppercase py-1 px-3 bg-olive-900/60 rounded-full text-white/80 text-xs font-medium">{categoryMap.get(offer.categoryId)}</div>
 			{/snippet}
 			<div class="flex flex-col gap-2 h-full">
 				<div class="flex items-center gap-2 text-stone-600 text-sm">
@@ -144,11 +151,21 @@
 				<h4>{offer.title}</h4>
 				<p>{offer.description}</p>
 				<div class="flex justify-between items-center mt-auto py-2">
-					<div class="font-serif font-semibold text-lg">{offer.price.toLocaleString('en', {
-						style: 'currency',
-						currency: 'EUR',
-						maximumFractionDigits: 0
-					})}</div>
+					<div class="font-serif font-semibold text-lg">
+						{offer.priceMin.toLocaleString('en', {
+							style: 'currency',
+							currency: 'EUR',
+							maximumFractionDigits: 0
+						})}
+						{#if offer.priceMax}
+							–
+							{offer.priceMax.toLocaleString('en', {
+								style: 'currency',
+								currency: 'EUR',
+								maximumFractionDigits: 0
+							})}
+						{/if}
+					</div>
 					<div class="text-stone-600 text-sm">{offer.duration}</div>
 				</div>
 				<a href="/contact?topic=healing" class="button button-primary w-full justify-center">Book this session</a>

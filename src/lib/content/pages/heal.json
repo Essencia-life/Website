@@ -22,7 +22,8 @@
           "photo": "/media/1000036694.png",
           "description": "I invite you to experience the power of sound in combination with intuitive healing touch. With Koshis, Singing Balls, Handpan, Kalimba, Flute, my Mother Drum and Tuning Forks i create a field of nourishing vibration. Touch and soft massages deepen your relaxation state during this journey into your being.",
           "categoryId": "29d82b98172f",
-          "price": 77,
+          "priceMin": 44,
+          "priceMax": 77,
           "duration": "45min",
           "personIds": [
             "e81ad2abe3ee"
@@ -33,7 +34,7 @@
           "photo": "/media/b0008438.jpg",
           "description": "All the keys and techniques you need for a juicy life, full of energy, great sleep, improved focus, end chronic pains and allergies. A new you is birthing with each bite.",
           "categoryId": "dc6c2271780c",
-          "price": 88,
+          "priceMin": 88,
           "duration": "2h",
           "personIds": [
             "c582fb884412"
@@ -44,7 +45,7 @@
           "photo": "/media/c97792_82012477755343bb9b9dbf509ceac5a5~mv2.jpg",
           "description": "Your sexual energy is your life force! Gift yourself a vital upgrade of your love and sex life!",
           "categoryId": "1e7d91287a65",
-          "price": 111,
+          "priceMin": 111,
           "duration": "2h",
           "personIds": [
             "ba7d9d6d8d5e"
