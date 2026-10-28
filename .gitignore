@@ -2,3 +2,5 @@ node_modules/
 .svelte-kit/
 .vercel/
 .idea/
+.env.*
+!.env.example
