@@ -219,7 +219,7 @@
 	</div>
 </section>
 
-<section class="page-content py-16">
+<section class="page-content pt-16 mb-50">
 	<h3>Past</h3>
 	<div class="grid md:grid-cols-2 gap-8 py-8">
 		{#each data.pastEvents as event (event.slug)}

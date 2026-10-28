@@ -106,17 +106,19 @@
 />
 
 {#each page.sections as section, index (index)}
+	{@const props = { section, first: index === 0, last: index === page.sections.length - 1 }}
+
 	{#if section.type === heroSectionField.name}
-		<HeroSection {section} />
+		<HeroSection {...props} />
 	{:else if section.type === defaultSectionField.name}
-		<DefaultSection {index} {section} />
+		<DefaultSection {...props} />
 	{:else if section.type === peopleSectionField.name}
-		<PeopleSection {section} />
+		<PeopleSection {...props} />
 	{:else if section.type === factsSectionField.name}
-		<FactsSection {section} />
+		<FactsSection {...props} />
 	{:else if section.type === joinUsColumnsSectionField.name}
-		<JoinUsColumnsSection {section} />
+		<JoinUsColumnsSection {...props} />
 	{:else if section.type === healingOffersSectionField.name}
-		<HealingOffersSection {section} />
+		<HealingOffersSection {...props} />
 	{/if}
 {/each}

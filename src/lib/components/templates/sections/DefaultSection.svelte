@@ -119,30 +119,53 @@
 	import MembershipSubscriptions from '$lib/components/templates/widgets/MembershipSubscriptions.svelte';
 
 	interface Props {
-		index: number;
 		section: InferFieldsObject<typeof defaultSectionField.fields>;
+		first: boolean;
+		last: boolean;
 	}
 
-	const { index, section }: Props = $props();
+	const { section, first, last }: Props = $props();
+
+	const cssClass = $derived.by(() => {
+		const classes: string[] = [];
+
+		if (section.settings?.textCenter) {
+			classes.push('text-center');
+		}
+
+		if (section.settings?.variant === 'secondary') {
+			classes.push('bg-stone-100');
+		} else if (section.settings?.variant === 'dark') {
+			classes.push('dark');
+		}
+
+		if (section.settings?.spacing) {
+			if (section.settings.spacing === 'top') {
+				classes.push('pt-16');
+			} else if (section.settings?.spacing === 'bottom') {
+				classes.push(last ? 'pb-50' : 'pb-16');
+			}
+		} else {
+			classes.push('py-16');
+
+			if (last) {
+				classes.push('pb-50');
+			}
+		}
+
+		return classes.join(' ');
+	});
 </script>
 
-<section
-	id={section.id}
-	class:text-center={section.settings?.textCenter}
-	class:bg-stone-100={section.settings?.variant === 'secondary'}
-	class:dark={section.settings?.variant === 'dark'}
-	class:pt-16={section.settings?.spacing === 'top'}
-	class:pb-16={section.settings?.spacing === 'bottom'}
-	class:py-16={!section.settings?.spacing}
->
+<section id={section.id} class={cssClass}>
 	<div
 		class="page-content grid items-center gap-12"
 		class:md:grid-cols-2={section.settings?.layout?.startsWith('column')}
 	>
-		{#each section.widget as widget, widgetIndex (widgetIndex)}
+		{#each section.widget as widget, index (index)}
 			<div class:text-center={widget.settings?.textCenter}>
 				{#if widget.type === contentWidgetField.name}
-					<ContentWidget {widget} {index} />
+					<ContentWidget {widget} {first} />
 				{:else if widget.type === cardGridWidgetField.name}
 					<CardGridWidget {widget} />
 				{:else if widget.type === galleryGridWidgetField.name}

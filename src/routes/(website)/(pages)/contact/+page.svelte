@@ -21,10 +21,10 @@
 
 <section class="page-content">
 	<div class="my-12 flex flex-col text-center">
-		<h2 class="my-4!">Contact</h2>
-		<h3 class="-order-1 m-0! text-xs! font-bold tracking-widest uppercase opacity-70">
-			Get in Touch
-		</h3>
+		<h2 class="my-4">
+			<sup class="top-0 mb-2 block">Get in Touch</sup>
+			Contact
+		</h2>
 		<p class="text-terra/80 mx-auto mb-5 max-w-md text-[1.1rem] leading-relaxed italic">
 			We'd love to hear from you.
 		</p>
@@ -148,11 +148,13 @@
 	<hr />
 
 	<div class="flex flex-col text-center">
-		<h2 class="my-4!">On the land, near Aljezur.</h2>
-		<h3 class="-order-1 m-0! text-xs! font-bold tracking-widest uppercase opacity-70">Find Us</h3>
+		<h2 class="mt-4 mb-12">
+			<sup class="top-0 mb-2 block">Find Us</sup>
+			On the land, near Aljezur.
+		</h2>
 	</div>
 
-	<div class="relative mb-12 min-h-128 overflow-hidden rounded-md">
+	<div class="relative mb-50 min-h-128 overflow-hidden rounded-md">
 		<Map />
 	</div>
 </section>

@@ -69,12 +69,13 @@
 
 	interface Props {
 		section: InferFieldsObject<typeof joinUsColumnsSectionField.fields>;
+		last: boolean;
 	}
 
-	const { section }: Props = $props();
+	const { section, last }: Props = $props();
 </script>
 
-<section class="pb-16">
+<section class="pb-16" class:pb-50={last}>
 	<div class="page-content gap-8 max-sm:space-y-12 md:grid md:grid-cols-2 lg:grid-cols-3">
 		{#each section.columns as column, index (index)}
 			<Card image={column.image}>

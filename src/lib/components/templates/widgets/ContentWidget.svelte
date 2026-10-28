@@ -97,10 +97,10 @@
 
 	interface Props {
 		widget: InferFieldsObject<typeof contentWidgetField.fields>;
-		index: number;
+		first: boolean;
 	}
 
-	const { widget, index }: Props = $props();
+	const { widget, first }: Props = $props();
 
 	const iconMap: Record<string, LucideIcon> = {
 		room: DoorClosed,
@@ -117,8 +117,10 @@
 	};
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve -->
+
 {#if widget.headline}
-	<svelte:element this={index === 0 ? 'h2' : 'h3'} class="mb-6">
+	<svelte:element this={first ? 'h2' : 'h3'} class="mb-6">
 		{#if widget.supline}
 			<sup class="top-0 mb-2 block">{widget.supline}</sup>
 		{/if}
@@ -150,7 +152,6 @@
 {#if widget.buttons?.length}
 	<div class="mt-8 inline-flex flex-wrap gap-4">
 		{#each widget.buttons ?? [] as button (button)}
-			<!-- eslint-disable svelte/no-navigation-without-resolve -->
 			<a
 				href={button.link}
 				class="button"

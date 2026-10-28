@@ -80,126 +80,40 @@
 	]);
 </script>
 
-<footer class="mt-12">
-	<div class="background">
+<!-- eslint-disable svelte/no-navigation-without-resolve -->
+
+<footer class="-mt-34">
+	<div class="relative">
 		<Image src={footerImage} alt="Essência forest skyline" loading="lazy" class="w-full h-auto" />
+		<div class="absolute inset-0 bg-linear-to-t from-olive-800 from-5% to-olive-800/0 to-60%"></div>
 	</div>
-	<div class="footer-content">
-		<div class="page-content grid">
-			<div class="first-column">
+	<div class="bg-olive-800">
+		<div class="page-content grid gap-4 text-stone-100 md:grid-cols-4 md:min-h-32">
+			<div class="flex flex-row-reverse justify-between md:flex-col">
 				<div>
 					<a href={footerData.cta.link} class="button button-primary">{footerData.cta.label}</a>
 				</div>
 
-				<div class="social-media">
+				<div class="flex gap-3 items-center opacity-75">
 					{#each platforms as platform (platform.name)}
 						{@const Icon = iconMap.get(platform.name)}
 						<a href={platform.link} target="_blank" aria-label={platform.label} class="no-link">
 							<Icon title="" />
 						</a>
 					{/each}
-					<!-- TODO: Add Newsletter to social media platforms ? -->
-					<!--					<a href="/#newsletter" aria-label="Newsletter" class="no-link"-->
-					<!--						><Mail /></a-->
-					<!--					>-->
 				</div>
 			</div>
 			{#each footerData.links as group, index (index)}
-				<div class="link-group">
+				<div class="flex flex-col gap-3">
 					{#each group as { link, label } (link)}
-						<a href={link}>{label}</a>
+						<a href={link} class="text-inherit">{label}</a>
 					{/each}
 				</div>
 			{/each}
 		</div>
 
-		<div class="page-content">
-			<small class="copyright">&copy; {new Date().getFullYear()} {titleSuffix}</small>
+		<div class="page-content text-stone-100 text-center text-xs mt-8 border-t border-t-stone-100/30 py-4">
+			&copy; {new Date().getFullYear()} {titleSuffix}
 		</div>
 	</div>
 </footer>
-
-<style>
-	footer {
-		font-size: 1rem;
-	}
-
-	footer a {
-		color: inherit;
-		text-decoration: none;
-	}
-
-	.background {
-		position: relative;
-	}
-
-	.background::after {
-		content: '';
-		position: absolute;
-		inset: 0;
-		display: block;
-		background: linear-gradient(
-			to top,
-			var(--color-olive-800) 5%,
-			color-mix(in oklab, var(--color-olive-800) 0%, transparent) 60%
-		);
-	}
-
-	.footer-content {
-		background: var(--color-olive-800);
-	}
-
-	.page-content {
-		color: var(--color-stone-100);
-	}
-
-	.grid {
-		display: grid;
-		gap: 1rem;
-	}
-
-	.first-column {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: space-between;
-	}
-
-	@media screen and (width >= 800px) {
-		.grid {
-			min-height: 8rem;
-			grid-template-columns: repeat(4, 1fr);
-		}
-
-		.first-column {
-			flex-direction: column;
-		}
-	}
-
-	@media screen and (width < 800px) {
-		.grid {
-			grid-template-rows: repeat(4, auto);
-		}
-	}
-
-	.social-media {
-		display: flex;
-		gap: 0.75rem;
-		align-items: center;
-		opacity: 0.75;
-	}
-
-	.link-group {
-		display: flex;
-		flex-direction: column;
-		gap: 0.75rem;
-	}
-
-	.copyright {
-		display: block;
-		border-top: 1px solid var(--color-stone-100);
-		text-align: center;
-		margin-top: 1rem;
-		padding-block: 0.5rem;
-		color: var(--color-stone-100);
-	}
-</style>

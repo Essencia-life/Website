@@ -72,7 +72,9 @@
 
 <Header menuAbove={heroIsVisible} />
 
-{#each homeData.sections as section (section.id)}
+{#each homeData.sections as section, index (section.id)}
+	{@const last = index === homeData.sections.length - 1}
+
 	<section
 		id={section.id}
 		class="relative flex overflow-x-hidden not-last-of-type:shadow-lg {section.id === 'about'
@@ -81,7 +83,7 @@
 				? 'flex-col lg:flex-row-reverse'
 				: 'flex-col lg:flex-row'} {section.type === 'picture'
 			? 'lg:max-h-96 lg:overflow-hidden'
-			: 'min-h-[90vh]'}"
+			: 'min-h-[90vh]'} {last ? 'pb-30' : ''}"
 	>
 		{#if section.type === 'text'}
 			{#if section.photo}

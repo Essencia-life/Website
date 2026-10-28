@@ -16,17 +16,16 @@
 </script>
 
 <script lang="ts">
-	import type { InferFieldsObject } from '$lib/types/cms-types';
 	import People from '$lib/components/templates/People.svelte';
 
 	interface Props {
-		section: InferFieldsObject<typeof peopleSectionField.fields>;
+		last: boolean;
 	}
 
-	const { section }: Props = $props();
+	const { last }: Props = $props();
 </script>
 
-<section class="py-16">
+<section class="py-16" class:pb-50={last}>
 	<div class="page-content">
 		<People />
 	</div>
