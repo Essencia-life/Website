@@ -43,6 +43,10 @@
 			goto(page.url.toString(), { keepFocus: true, noScroll: true, replaceState: true });
 		}
 	});
+
+	function scrollIntoView(event: TransitionEvent & { currentTarget: HTMLDivElement }) {
+		event.currentTarget?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+	}
 </script>
 
 <section class="page-content py-16">
@@ -158,7 +162,7 @@
 			</div>
 		</div>
 
-		<div id="hosting" class="relative z-0 bg-stone-100 rounded-b-xl p-4 md:p-8 pt-12! -mt-4 transition-transform transition-height not-target:-translate-y-full not-target:max-h-0 overflow-hidden">
+		<div id="hosting" class="relative z-0 bg-stone-100 rounded-b-xl p-4 md:p-8 pt-12! -mt-4 transition-transform transition-height not-target:-translate-y-full not-target:max-h-0 overflow-hidden" ontransitionend={scrollIntoView}>
 			<div class="grid md:grid-cols-2 max-sm:grid-rows-[auto_auto] gap-12 md:gap-6">
 				<div class="flex flex-col gap-4">
 					<h4>Hosting an event</h4>
