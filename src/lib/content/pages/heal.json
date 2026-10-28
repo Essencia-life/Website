@@ -19,12 +19,14 @@
       "offers": [
         {
           "title": "Sound & Touch Healing",
-          "photo": "/media/b0008656.jpg",
-          "description": "With your consent i will work intuitively with healing touch, massages and instruments on and around your bodies. In the Session I use tuning forks, singing bowls, koshis and zimbels to create a sound bath for your whole system.\nI invite you to dive in a space of tenderness where you are welcome with everything what is alive in you.",
+          "photo": "/media/1000036694.png",
+          "description": "I invite you to experience the power of sound in combination with intuitive healing touch. With Koshis, Singing Balls, Handpan, Kalimba, Flute, my Mother Drum and Tuning Forks i create a field of nourishing vibration. Touch and soft massages deepen your relaxation state during this journey into your being.",
           "categoryId": "29d82b98172f",
           "price": 77,
-          "duration": "1h",
-          "personIds": ["e81ad2abe3ee"]
+          "duration": "45min",
+          "personIds": [
+            "e81ad2abe3ee"
+          ]
         },
         {
           "title": "Nutrition Coaching",
@@ -33,7 +35,9 @@
           "categoryId": "dc6c2271780c",
           "price": 88,
           "duration": "2h",
-          "personIds": ["c582fb884412"]
+          "personIds": [
+            "c582fb884412"
+          ]
         },
         {
           "title": "Intimacy & Relationship Coaching",
@@ -42,7 +46,9 @@
           "categoryId": "1e7d91287a65",
           "price": 111,
           "duration": "2h",
-          "personIds": ["ba7d9d6d8d5e"]
+          "personIds": [
+            "ba7d9d6d8d5e"
+          ]
         }
       ]
     },
@@ -67,32 +73,38 @@
             {
               "image": "",
               "content": "#### Rest, Detox & Regenerate\n\nA body cleanse and nutrition reset — coaching, polarity therapy and bodywork over one focused week.\n\n**€444 / week**",
-              "link": ""
+              "link": "",
+              "icon": null
             },
             {
               "image": "",
               "content": "#### Pranic Lifestyle Initiation\n\nDaily breathwork and pranic practice — a four-week initiation into living on light.\n\n**€1,777 / 4 weeks**",
-              "link": ""
+              "link": "",
+              "icon": null
             },
             {
               "image": "",
               "content": "#### Tantric Couple Journey\n\nTwo weeks of bodywork, tantra and communication tools for couples ready to reconnect. LGBT friendly.\n\n**€1,444 / couple, 2 weeks**",
-              "link": ""
+              "link": "",
+              "icon": null
             },
             {
               "image": "",
               "content": "#### Free From Addictions\n\nEighteen sessions of coaching, breathwork, energy healing and daily bodywork, in a supportive community setting.\n\n**€1,888 / 4 weeks**",
-              "link": ""
+              "link": "",
+              "icon": null
             },
             {
               "image": "",
               "content": "#### Women's Healing Temple\n\nBodywork, tantra and self-love practice to help you step into your full, authentic power.\n\n**€888 / 2 weeks**",
-              "link": ""
+              "link": "",
+              "icon": null
             },
             {
               "image": "",
               "content": "#### Conscious Entrepreneur\n\nA focused week of morning practice and project coaching to move your idea, book or business forward.\n\n**€555 / week**",
-              "link": ""
+              "link": "",
+              "icon": null
             }
           ],
           "settings": {
