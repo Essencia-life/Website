@@ -32,17 +32,6 @@
 			"talents": ["Sense of Basic Trust", "Face Massages"],
 			"video": null,
 			"showHealingOffers": true
-		},
-		{
-			"id": "80ee3873fd68",
-			"name": "Ben",
-			"role": "Tech & Communications",
-			"status": "Resident",
-			"photo": "/media/photo_2026-06-13_09-34-21.jpg",
-			"description": "About Ben",
-			"talents": ["Solution Orientated", "Co-Regulator"],
-			"video": null,
-			"showHealingOffers": false
 		}
 	]
 }

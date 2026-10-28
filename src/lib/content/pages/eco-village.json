@@ -122,18 +122,7 @@
           "headline": "The Cooperativa",
           "content": "Essência is more than a place to stay — it's a cooperative. The land, the buildings and the life we're building here belong to the community that lives and cares for it, not to any single owner.\n\nResidents share in the responsibility — and the decisions — that shape our common home, from the projects we take on in the garden to the direction the village grows in next. It's a slower, more collective way of building something, and we think that's the point.",
           "settings": null,
-          "buttons": [
-            {
-              "label": "Meet the people of Essência",
-              "link": "/eco-village/people",
-              "variant": "primary"
-            },
-            {
-              "label": "Become a resident",
-              "link": "/join-us/as-resident",
-              "variant": ""
-            }
-          ]
+          "buttons": []
         },
         {
           "type": "card-grid",

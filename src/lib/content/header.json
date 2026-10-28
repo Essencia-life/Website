@@ -7,10 +7,6 @@
 				{
 					"label": "Kids Temple",
 					"link": "/eco-village/kids-temple"
-				},
-				{
-					"label": "People of Essência",
-					"link": "/eco-village/people"
 				}
 			]
 		},
@@ -41,14 +37,6 @@
 				{
 					"label": "Volunteer with us",
 					"link": "/join-us/as-volunteer"
-				},
-				{
-					"label": "Explore residency",
-					"link": "/join-us/as-resident"
-				},
-				{
-					"label": "Become a friend",
-					"link": "/join-us/as-supporter"
 				}
 			]
 		}

@@ -35,7 +35,7 @@
 					"tags": "Heal & grow — Morning practices — Community — Build your home — Life in nature",
 					"button": {
 						"label": "Explore residency",
-						"link": "/join-us/as-resident"
+						"link": "/contact?topic=residency#form"
 					}
 				},
 				{
@@ -57,7 +57,7 @@
 					"tags": "Heal & grow — Morning practices — Community — Gifts from the land — Retreat access — Glamping stays",
 					"button": {
 						"label": "Support the dream",
-						"link": "/join-us/as-supporter"
+						"link": "/contact?topic=invest#from"
 					}
 				}
 			]
