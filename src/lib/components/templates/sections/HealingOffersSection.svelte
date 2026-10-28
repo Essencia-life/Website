@@ -56,16 +56,25 @@
 						maxlength: 20
 					},
 					{
-						name: 'personId',
+						name: 'personIds',
 						label: 'Person',
-						widget: 'relation',
-						collection: '_singletons',
-						file: 'people',
-						value_field: '{{people.*.id}}',
-						display_fields: ['{{people.*.name}}'],
-						search_fields: ['{{people.*.name}}'],
-						dropdown_threshold: 0,
-					}
+						label_singular: 'Person',
+						widget: 'list',
+						root: true,
+						min: 1,
+						field: {
+							name: 'personId',
+							label: 'Person',
+							widget: 'relation',
+							collection: '_singletons',
+							file: 'people',
+							value_field: '{{people.*.id}}',
+							display_fields: ['{{people.*.name}}'],
+							search_fields: ['{{people.*.name}}'],
+							dropdown_threshold: 0,
+						}
+					},
+
 				]
 			}
 		] as const
@@ -88,7 +97,7 @@
 
 	const { section }: Props = $props();
 
-	const peopleMap = new Map(people.map(({id, ...person}) => ([id, person])));
+	const peopleMap = new Map(people.map((person) => ([person.id, person])));
 
 	const usedCategoryIds = $derived(Array.from(new Set(section.offers.map(offer => offer.categoryId))));
 	const categoryMap = new Map(categories.map(({id, label}) => ([id, label])));
@@ -97,6 +106,11 @@
 	let filterCategoryId = $derived(page.url.searchParams.get('category'));
 	let filterPersonId = $derived(page.url.searchParams.get('practitioner'));
 	let filteredOffers = $derived(section.offers.filter(offer => !filterCategoryId || offer.categoryId === filterCategoryId));
+
+	const listFormatter = new Intl.ListFormat('en', {
+		style: 'short',
+		type: 'conjunction',
+	});
 
 	$effect(() => {
 		if (filterCategoryId === '') {
@@ -108,19 +122,24 @@
 	});
 </script>
 
+<!-- eslint-disable svelte/no-navigation-without-resolve -->
+
 {#snippet offerCard(offer)}
-	{@const person = peopleMap.get(offer.personId)}
 	{@const categoryLabel = categoryMap.get(offer.categoryId)}
-	{#if person && categoryLabel}
+	{#if offer.personIds.every(personId => peopleMap.has(personId)) && categoryLabel}
+		{@const persons = offer.personIds.map(personId => peopleMap.get(personId))}
 		<Card image={offer.photo}>
 			{#snippet overlays()}
 				<div class="absolute top-2 left-2 uppercase py-1 px-3 bg-olive-900/60 rounded-full text-white/80 text-xs font-medium">{categoryMap.get(offer.categoryId)}</div>
 			{/snippet}
 			<div class="flex flex-col gap-2 h-full">
 				<div class="flex items-center gap-2 text-stone-600 text-sm">
-					<Image src={Media.getFile(person.photo)} class="size-6 rounded-full"
-												loading="lazy" />
-					with {person.name}
+					{#each persons as person, index (person.id)}
+						<a href="/eco-village/people#{person.id}" class:-ml-3={index > 0} title={person.name}>
+							<Image src={Media.getFile(person.photo)} class="size-6 rounded-full" loading="lazy" alt="Photo of {person.name}" />
+						</a>
+					{/each}
+					with {listFormatter.format(persons.map(person => person.name))}
 				</div>
 				<h4>{offer.title}</h4>
 				<p>{offer.description}</p>
@@ -177,8 +196,8 @@
 	<div class="page-content">
 		{#if filterPersonId}
 			{@const person = peopleMap.get(filterPersonId)}
-			{@const personOffers = filteredOffers.filter(offer => offer.personId === filterPersonId)}
-			{@const otherOffers = filteredOffers.filter(offer => offer.personId !== filterPersonId)}
+			{@const personOffers = filteredOffers.filter(offer => offer.personIds.includes(filterPersonId))}
+			{@const otherOffers = filteredOffers.filter(offer => !offer.personIds.includes(filterPersonId))}
 			<h3 class="mb-4">Offerings by {person.name}</h3>
 			{#if personOffers.length}
 				<div class="grid md:grid-cols-3 gap-6">

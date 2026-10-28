@@ -24,7 +24,7 @@
           "categoryId": "29d82b98172f",
           "price": 77,
           "duration": "1h",
-          "personId": "e81ad2abe3ee"
+          "personIds": ["e81ad2abe3ee"]
         },
         {
           "title": "Nutrition Coaching",
@@ -33,7 +33,7 @@
           "categoryId": "dc6c2271780c",
           "price": 88,
           "duration": "2h",
-          "personId": "c582fb884412"
+          "personIds": ["c582fb884412"]
         },
         {
           "title": "Intimacy & Relationship Coaching",
@@ -42,7 +42,7 @@
           "categoryId": "1e7d91287a65",
           "price": 111,
           "duration": "2h",
-          "personId": "ba7d9d6d8d5e"
+          "personIds": ["ba7d9d6d8d5e"]
         }
       ]
     },

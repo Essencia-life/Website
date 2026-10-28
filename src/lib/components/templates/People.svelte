@@ -94,7 +94,7 @@
 
 <div class="space-y-18 pb-8">
 	{#each people as person (person.id)}
-		<article class="grid md:grid-cols-[1fr_2fr] gap-16 items-center"
+		<article id={person.id} class="grid md:grid-cols-[1fr_2fr] gap-16 items-center"
 		class:odd:[&_.polaroid]:-rotate-2={flipped !== person.id}
 		class:even:[&_.polaroid]:rotate-2={flipped !== person.id}>
 			<div class="polaroid aspect-4/5 bg-white rounded p-4 mx-4 shadow-lg/30 text-center flex flex-col justify-between transition-transform duration-300 ease-in-out">
