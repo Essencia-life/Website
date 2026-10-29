@@ -16,9 +16,7 @@ const pages = new Map(
 
 export class Pages {
 	static getAllPaths() {
-		return Array.from(pages.entries())
-			.filter(([ , page]) => page.sections)
-			.map(([path]) => ({ path }));
+		return Array.from(pages.keys(), ([path]) => ({ path }));
 	}
 
 	public static getPage(path: string) {
