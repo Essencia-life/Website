@@ -1,5 +1,6 @@
 import { env } from '$env/dynamic/private';
 import type { components } from '@octokit/openapi-types';
+import { createAppJwt, readPrivateKey } from './githubAppJwt';
 import type { EventDraft, RepoState } from './tallyEvent';
 
 // Response types of the GitHub REST API (type-only package, nothing ends up in the bundle).
@@ -10,8 +11,12 @@ type Schemas = components['schemas'];
  * branch `cms/<collection>/<slug>`, one commit with the entry file and its assets,
  * pull request titled like the commit and labelled with the entry status.
  *
- * Needs `TALLY_GITHUB_TOKEN`: a fine-grained personal access token for this repository
- * with "Contents" and "Pull requests" set to read and write.
+ * Authentication, in this order:
+ *  1. GitHub App (pull requests are authored by `<app>[bot]`): `GITHUB_APP_ID` and
+ *     `GITHUB_APP_PRIVATE_KEY` (PEM, or the PEM base64 encoded). The app must be installed on
+ *     this repository with "Contents" and "Pull requests" set to read and write.
+ *  2. Fallback: `TALLY_GITHUB_TOKEN`, a fine-grained personal access token for this
+ *     repository with the same two permissions (pull requests are then authored by its owner).
  */
 
 const REPO = 'Essencia-life/Website';
@@ -24,10 +29,7 @@ const AS_DRAFT = false;
 
 export type LoadedRepoState = RepoState & { baseSha: string; treeSha: string };
 
-const request = async <T>(method: string, path: string, body?: unknown): Promise<T> => {
-	const token = env.TALLY_GITHUB_TOKEN;
-	if (!token) throw new Error('TALLY_GITHUB_TOKEN is not configured.');
-
+const send = async <T>(method: string, path: string, token: string, body?: unknown): Promise<T> => {
 	const response = await fetch(`https://api.github.com${path}`, {
 		method,
 		headers: {
@@ -48,6 +50,41 @@ const request = async <T>(method: string, path: string, body?: unknown): Promise
 
 	return (response.status === 204 ? undefined : await response.json()) as T;
 };
+
+let cachedInstallationToken: { token: string; expiresAt: number } | undefined;
+
+/** Installation token of the GitHub App, or the personal access token as fallback. */
+const getToken = async (): Promise<string> => {
+	const appId = env.GITHUB_APP_ID;
+	const privateKey = env.GITHUB_APP_PRIVATE_KEY;
+
+	if (appId && privateKey) {
+		// installation tokens last an hour; a warm serverless instance can reuse one
+		if (cachedInstallationToken && cachedInstallationToken.expiresAt - Date.now() > 5 * 60_000) {
+			return cachedInstallationToken.token;
+		}
+		const jwt = createAppJwt(appId, readPrivateKey(privateKey));
+		const installation = await send<{ id: number }>('GET', `/repos/${REPO}/installation`, jwt);
+		const created = await send<{ token: string; expires_at: string }>(
+			'POST',
+			`/app/installations/${installation.id}/access_tokens`,
+			jwt
+		);
+		cachedInstallationToken = { token: created.token, expiresAt: Date.parse(created.expires_at) };
+		return created.token;
+	}
+
+	const token = env.TALLY_GITHUB_TOKEN;
+	if (!token) {
+		throw new Error(
+			'Neither GITHUB_APP_ID with GITHUB_APP_PRIVATE_KEY nor TALLY_GITHUB_TOKEN is configured.'
+		);
+	}
+	return token;
+};
+
+const request = async <T>(method: string, path: string, body?: unknown): Promise<T> =>
+	send<T>(method, path, await getToken(), body);
 
 /** Reads the base branch plus the file paths and CMS branches that already exist. */
 export const loadRepoState = async (): Promise<LoadedRepoState> => {
@@ -116,17 +153,13 @@ export const createEventPullRequest = async (
 
 	let pullNumber: number | undefined;
 	try {
-		const pull = await request<Schemas['pull-request']>(
-			'POST',
-			`/repos/${REPO}/pulls`,
-			{
-				title: draft.message,
-				head: draft.branch,
-				base: BASE_BRANCH,
-				body: PULL_REQUEST_BODY,
-				draft: AS_DRAFT
-			}
-		);
+		const pull = await request<Schemas['pull-request']>('POST', `/repos/${REPO}/pulls`, {
+			title: draft.message,
+			head: draft.branch,
+			base: BASE_BRANCH,
+			body: PULL_REQUEST_BODY,
+			draft: AS_DRAFT
+		});
 		pullNumber = pull.number;
 
 		// Without its status label Sveltia CMS would not show the pull request on its board.
