@@ -19,6 +19,7 @@
 		"@googlemaps/js-api-loader": "^2.1.1",
 		"@icons-pack/svelte-simple-icons": "^7.2.0",
 		"@lucide/svelte": "^1.47.0",
+		"@octokit/openapi-types": "^29.0.1",
 		"@sveltejs/adapter-vercel": "^6.3.4",
 		"@sveltejs/kit": "^2.70.3",
 		"@sveltejs/vite-plugin-svelte": "^7.3.0",
