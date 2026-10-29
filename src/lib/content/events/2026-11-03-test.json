@@ -1,0 +1,25 @@
+{
+  "type": "event",
+  "start": "2026-11-03T16:30:00+00:00",
+  "end": "2026-11-03T18:30:00+00:00",
+  "recurrence": null,
+  "title": "Test",
+  "cover_image": "/media/events/1000033989.jpg",
+  "short_description": "Ben's Birthday Party",
+  "description": "This is a test submission.",
+  "booking_link": "https://essencia.life",
+  "car_sharing_link": "",
+  "info_link": "https://essencia.life",
+  "organizers": [
+    {
+      "name": "Essência",
+      "description": "Off-grid ecovillage and community",
+      "photo": "/media/events/organizer/img_20261016_150135_232.jpg"
+    },
+    {
+      "name": "Essência",
+      "description": "Family",
+      "photo": "/media/events/organizer/img_20261016_145842_331.jpg"
+    }
+  ]
+}
