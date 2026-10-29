@@ -1,25 +1,33 @@
 import type { RequestHandler } from './$types';
 import { json } from '@sveltejs/kit';
 import { env } from '$env/dynamic/private';
-import { createHmac, randomUUID, timingSafeEqual } from 'node:crypto';
-import { redis } from '$lib/server/redis';
+import { createHmac, timingSafeEqual } from 'node:crypto';
+import {
+	EVENT_FORM_ID,
+	ValidationError,
+	buildEventDraft,
+	downloadImage,
+	isTallyPayload
+} from '$lib/server/tallyEvent';
+import { createEventPullRequest, loadRepoState } from '$lib/server/githubPullRequest';
 
 /**
- * PROBE endpoint for Tally webhooks.
+ * Webhook for the Tally form "Add event/retreat to Website".
  *
- * Purpose: find out what the payload of the "add event" Tally form looks like.
- * It verifies the signature, stores the raw payload in Redis for 24 hours
- * (inspect it in the Upstash data browser) and answers 200. It does NOT create
- * branches or pull requests yet.
+ * Every submission becomes a pull request in the same shape Sveltia CMS creates in the
+ * editorial workflow, so it shows up on the board of /admin as "In Review".
  *
- * Setup:
- *  - Set `TALLY_SIGNING_SECRET` in the Vercel environment (any random string).
- *  - Use the same string as "Signing secret" when creating the webhook in Tally.
- *  - Webhook URL: https://<host>/admin/webhook/tally
+ * Environment:
+ *  - TALLY_SIGNING_SECRET: the "Signing secret" of the webhook in Tally (any random string)
+ *  - TALLY_GITHUB_TOKEN:   fine-grained GitHub token, see githubPullRequest.ts
+ *
+ * Webhook URL: https://<host>/admin/webhook/tally
  */
 
+// Downloading images and talking to GitHub takes a few seconds.
+export const config = { maxDuration: 60 };
+
 const MAX_BODY_BYTES = 256 * 1024;
-const TTL_SECONDS = 24 * 60 * 60;
 
 const signaturesMatch = (expected: string, received: string): boolean => {
 	const a = Buffer.from(expected);
@@ -37,8 +45,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		return json({ error: 'TALLY_SIGNING_SECRET is not configured.' }, { status: 500 });
 	}
 
-	const declaredLength = Number(request.headers.get('content-length') ?? 0);
-	if (declaredLength > MAX_BODY_BYTES) {
+	if (Number(request.headers.get('content-length') ?? 0) > MAX_BODY_BYTES) {
 		return json({ error: 'Payload too large.' }, { status: 413 });
 	}
 
@@ -46,8 +53,6 @@ export const POST: RequestHandler = async ({ request }) => {
 	if (Buffer.byteLength(rawBody) > MAX_BODY_BYTES) {
 		return json({ error: 'Payload too large.' }, { status: 413 });
 	}
-
-	const received = request.headers.get('tally-signature') ?? '';
 
 	let parsed: unknown;
 	try {
@@ -58,6 +63,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	// Tally signs the JSON payload; check the raw body first and fall back to the
 	// re-serialised payload in case whitespace differs.
+	const received = request.headers.get('tally-signature') ?? '';
 	const valid =
 		received !== '' &&
 		(signaturesMatch(sign(secret, rawBody), received) ||
@@ -67,23 +73,34 @@ export const POST: RequestHandler = async ({ request }) => {
 		return json({ error: 'Invalid signature.' }, { status: 401 });
 	}
 
-	const key = `tally:webhook:${Date.now()}-${randomUUID().slice(0, 8)}`;
+	if (!isTallyPayload(parsed)) {
+		return json({ error: 'Unexpected payload.' }, { status: 400 });
+	}
 
-	await redis.set(
-		key,
-		{
-			receivedAt: new Date().toISOString(),
-			headers: Object.fromEntries(
-				[...request.headers].filter(([name]) =>
-					['content-type', 'user-agent'].includes(name) || name.startsWith('tally-')
-				)
-			),
-			payload: parsed
-		},
-		{ ex: TTL_SECONDS }
-	);
+	// Acknowledge (and ignore) everything that is not a response to the event form.
+	if (parsed.eventType !== 'FORM_RESPONSE' || parsed.data.formId !== EVENT_FORM_ID) {
+		return json({ ok: true, ignored: true });
+	}
 
-	console.log(`[tally-webhook] stored ${key}`);
+	try {
+		const state = await loadRepoState();
+		const draft = buildEventDraft(parsed, state);
 
-	return json({ ok: true });
+		const downloads = new Map<string, Uint8Array>();
+		for (const file of draft.files) {
+			if ('download' in file) downloads.set(file.path, await downloadImage(file.download));
+		}
+
+		const pullRequest = await createEventPullRequest(state, draft, downloads);
+		console.log(`[tally-webhook] ${draft.submissionId} -> ${draft.branch} ${pullRequest}`);
+		return json({ ok: true, pullRequest });
+	} catch (error) {
+		if (error instanceof ValidationError) {
+			// The submission stays in Tally; the form owner can fix and resend it there.
+			console.warn(`[tally-webhook] ${parsed.data.submissionId} rejected: ${error.message}`);
+			return json({ error: error.message }, { status: 422 });
+		}
+		console.error(`[tally-webhook] ${parsed.data.submissionId} failed`, error);
+		return json({ error: 'Could not create the pull request.' }, { status: 500 });
+	}
 };
