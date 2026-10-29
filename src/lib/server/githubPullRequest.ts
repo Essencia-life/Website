@@ -1,5 +1,9 @@
 import { env } from '$env/dynamic/private';
+import type { components } from '@octokit/openapi-types';
 import type { EventDraft, RepoState } from './tallyEvent';
+
+// Response types of the GitHub REST API (type-only package, nothing ends up in the bundle).
+type Schemas = components['schemas'];
 
 /**
  * Creates a pull request the way Sveltia CMS does in the editorial workflow:
@@ -47,30 +51,27 @@ const request = async <T>(method: string, path: string, body?: unknown): Promise
 
 /** Reads the base branch plus the file paths and CMS branches that already exist. */
 export const loadRepoState = async (): Promise<LoadedRepoState> => {
-	const ref = await request<{ object: { sha: string } }>(
+	const ref = await request<Schemas['git-ref']>(
 		'GET',
 		`/repos/${REPO}/git/ref/heads/${BASE_BRANCH}`
 	);
 	const baseSha = ref.object.sha;
-	const commit = await request<{ tree: { sha: string } }>(
+	const commit = await request<Schemas['git-commit']>(
 		'GET',
 		`/repos/${REPO}/git/commits/${baseSha}`
 	);
 	const treeSha = commit.tree.sha;
 
 	const [tree, refs] = await Promise.all([
-		request<{ tree: { path: string }[]; truncated: boolean }>(
-			'GET',
-			`/repos/${REPO}/git/trees/${treeSha}?recursive=1`
-		),
-		request<{ ref: string }[]>('GET', `/repos/${REPO}/git/matching-refs/heads/cms/events`)
+		request<Schemas['git-tree']>('GET', `/repos/${REPO}/git/trees/${treeSha}?recursive=1`),
+		request<Schemas['git-ref'][]>('GET', `/repos/${REPO}/git/matching-refs/heads/cms/events`)
 	]);
 	if (tree.truncated) throw new Error('The repository tree is too large to list.');
 
 	return {
 		baseSha,
 		treeSha,
-		paths: new Set(tree.tree.map((entry) => entry.path)),
+		paths: new Set(tree.tree.flatMap((entry) => (entry.path ? [entry.path] : []))),
 		branches: new Set(refs.map((entry) => entry.ref.replace(/^refs\/heads\//, '')))
 	};
 };
@@ -85,11 +86,11 @@ export const createEventPullRequest = async (
 		draft.files.map(async (file) => {
 			const blob =
 				'content' in file
-					? await request<{ sha: string }>('POST', `/repos/${REPO}/git/blobs`, {
+					? await request<Schemas['short-blob']>('POST', `/repos/${REPO}/git/blobs`, {
 							content: file.content,
 							encoding: 'utf-8'
 						})
-					: await request<{ sha: string }>('POST', `/repos/${REPO}/git/blobs`, {
+					: await request<Schemas['short-blob']>('POST', `/repos/${REPO}/git/blobs`, {
 							content: Buffer.from(downloads.get(file.path) ?? new Uint8Array()).toString('base64'),
 							encoding: 'base64'
 						});
@@ -97,11 +98,11 @@ export const createEventPullRequest = async (
 		})
 	);
 
-	const newTree = await request<{ sha: string }>('POST', `/repos/${REPO}/git/trees`, {
+	const newTree = await request<Schemas['git-tree']>('POST', `/repos/${REPO}/git/trees`, {
 		base_tree: state.treeSha,
 		tree
 	});
-	const commit = await request<{ sha: string }>('POST', `/repos/${REPO}/git/commits`, {
+	const commit = await request<Schemas['git-commit']>('POST', `/repos/${REPO}/git/commits`, {
 		message: draft.message,
 		tree: newTree.sha,
 		parents: [state.baseSha]
@@ -115,7 +116,7 @@ export const createEventPullRequest = async (
 
 	let pullNumber: number | undefined;
 	try {
-		const pull = await request<{ number: number; html_url: string }>(
+		const pull = await request<Schemas['pull-request']>(
 			'POST',
 			`/repos/${REPO}/pulls`,
 			{
