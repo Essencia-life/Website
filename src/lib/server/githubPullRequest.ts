@@ -12,9 +12,10 @@ type Schemas = components['schemas'];
  * pull request titled like the commit and labelled with the entry status.
  *
  * Authentication, in this order:
- *  1. GitHub App (pull requests are authored by `<app>[bot]`): `GITHUB_APP_ID` and
- *     `GITHUB_APP_PRIVATE_KEY` (PEM, or the PEM base64 encoded). The app must be installed on
- *     this repository with "Contents" and "Pull requests" set to read and write.
+ *  1. GitHub App (pull requests are authored by `<app>[bot]`): `GITHUB_APP_CLIENT_ID` (the
+ *     "Client ID" of the app, starts with `Iv`) and `GITHUB_APP_PRIVATE_KEY` (PEM, or the PEM
+ *     base64 encoded). The app must be installed on this repository with "Contents" and
+ *     "Pull requests" set to read and write.
  *  2. Fallback: `TALLY_GITHUB_TOKEN`, a fine-grained personal access token for this
  *     repository with the same two permissions (pull requests are then authored by its owner).
  */
@@ -55,15 +56,15 @@ let cachedInstallationToken: { token: string; expiresAt: number } | undefined;
 
 /** Installation token of the GitHub App, or the personal access token as fallback. */
 const getToken = async (): Promise<string> => {
-	const appId = env.GITHUB_APP_ID;
+	const clientId = env.GITHUB_APP_CLIENT_ID;
 	const privateKey = env.GITHUB_APP_PRIVATE_KEY;
 
-	if (appId && privateKey) {
+	if (clientId && privateKey) {
 		// installation tokens last an hour; a warm serverless instance can reuse one
 		if (cachedInstallationToken && cachedInstallationToken.expiresAt - Date.now() > 5 * 60_000) {
 			return cachedInstallationToken.token;
 		}
-		const jwt = createAppJwt(appId, readPrivateKey(privateKey));
+		const jwt = createAppJwt(clientId, readPrivateKey(privateKey));
 		const installation = await send<{ id: number }>('GET', `/repos/${REPO}/installation`, jwt);
 		const created = await send<{ token: string; expires_at: string }>(
 			'POST',
@@ -77,7 +78,7 @@ const getToken = async (): Promise<string> => {
 	const token = env.TALLY_GITHUB_TOKEN;
 	if (!token) {
 		throw new Error(
-			'Neither GITHUB_APP_ID with GITHUB_APP_PRIVATE_KEY nor TALLY_GITHUB_TOKEN is configured.'
+			'Neither GITHUB_APP_CLIENT_ID with GITHUB_APP_PRIVATE_KEY nor TALLY_GITHUB_TOKEN is configured.'
 		);
 	}
 	return token;

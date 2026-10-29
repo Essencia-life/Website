@@ -19,7 +19,7 @@ import { createEventPullRequest, loadRepoState } from '$lib/server/githubPullReq
  *
  * Environment:
  *  - TALLY_SIGNING_SECRET: the "Signing secret" of the webhook in Tally (any random string)
- *  - GITHUB_APP_ID and GITHUB_APP_PRIVATE_KEY (or, as fallback, TALLY_GITHUB_TOKEN):
+ *  - GITHUB_APP_CLIENT_ID and GITHUB_APP_PRIVATE_KEY (or, as fallback, TALLY_GITHUB_TOKEN):
  *    how the pull requests are created on GitHub, see githubPullRequest.ts
  *
  * Webhook URL: https://<host>/admin/webhook/tally

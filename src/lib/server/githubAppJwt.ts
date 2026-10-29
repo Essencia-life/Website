@@ -19,12 +19,12 @@ export const readPrivateKey = (value: string): string => {
 		: Buffer.from(trimmed, 'base64').toString('utf-8');
 };
 
-export const createAppJwt = (appId: string, privateKey: string, nowMs = Date.now()): string => {
+export const createAppJwt = (clientId: string, privateKey: string, nowMs = Date.now()): string => {
 	const now = Math.floor(nowMs / 1000);
 	const unsigned = [
 		base64url(JSON.stringify({ alg: 'RS256', typ: 'JWT' })),
 		// issued a minute in the past to allow for clock drift
-		base64url(JSON.stringify({ iat: now - 60, exp: now + 9 * 60, iss: appId }))
+		base64url(JSON.stringify({ iat: now - 60, exp: now + 9 * 60, iss: clientId }))
 	].join('.');
 
 	return `${unsigned}.${createSign('RSA-SHA256').update(unsigned).sign(privateKey, 'base64url')}`;
