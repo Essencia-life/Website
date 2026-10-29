@@ -5,5 +5,60 @@
     "cover": "",
     "noindex": true
   },
-  "sections": []
+  "sections": [
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "Get in Touch",
+          "headline": "Contact",
+          "content": "_We'd love to hear from you._\n\nWhether you're curious about residency, planning a visit, or just want to \\\nsay hello — write to us and someone from the community will get back to you soon.",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": [
+            {
+              "label": "Chat with us on WhatsApp",
+              "link": "https://wa.me/351911514554",
+              "variant": "whatsapp"
+            }
+          ]
+        },
+        {
+          "type": "contactForm",
+          "image": "/media/photo_2026-04-09_14-21-55.jpg",
+          "caption": "Real connection starts with a simple hello.",
+          "successMessage": "**Thank you for your message!**\n\nWe will get back to you soon",
+          "errorMessage": "There was an error submitting your message. Please try again later."
+        }
+      ],
+      "settings": null
+    },
+    {
+      "type": "default-section",
+      "id": "",
+      "widget": [
+        {
+          "type": "content",
+          "supline": "Find Us",
+          "headline": "On the land, near Aljezur.",
+          "content": "",
+          "settings": {
+            "textCenter": true,
+            "listIcons": ""
+          },
+          "buttons": []
+        },
+        {
+          "type": "map",
+          "marker": "{\"type\":\"Point\",\"coordinates\":[-8.7858697,37.2440827]}",
+          "placeId": "ChIJiSJsYkY_Gw0R7xII6XgQPU0"
+        }
+      ],
+      "settings": null
+    }
+  ]
 }

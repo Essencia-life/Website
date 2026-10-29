@@ -5,7 +5,7 @@
 	if (browser) {
 		setOptions({
 			key: 'AIzaSyDGHnHScGXo1BsjYXxfvpHOvTij4VKROHY',
-			v: 'weekly',
+			v: 'quarterly',
 			language: 'en'
 		});
 	}
