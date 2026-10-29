@@ -537,7 +537,7 @@
 
 				<h3 class="mt-0! text-xs! font-bold tracking-widest uppercase opacity-70">Hosted by:</h3>
 
-				{#each event.organizers as organizer (organizer.name)}
+				{#each event.organizers as organizer (organizer)}
 					<div class="mt-4 grid gap-x-4 gap-y-1" class:grid-cols-[auto_1fr]={organizer.photo}>
 						<div class="row-span-2 aspect-square w-14 overflow-hidden rounded-full">
 							<Image
