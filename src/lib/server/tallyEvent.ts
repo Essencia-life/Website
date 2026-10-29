@@ -279,7 +279,9 @@ export const buildEventDraft = (payload: TallyPayload, taken: RepoState): EventD
 
 	const type = fields.find((f) => f.type === 'HIDDEN_FIELDS' && f.label === 'type')?.value;
 	if (type !== 'event' && type !== 'retreat') {
-		throw new ValidationError(`Hidden field "type" must be "event" or "retreat", got ${JSON.stringify(type)}.`);
+		throw new ValidationError(
+			`Hidden field "type" must be "event" or "retreat", got ${JSON.stringify(type)}.`
+		);
 	}
 
 	const required = (value: string, label: string): string => {
@@ -313,15 +315,19 @@ export const buildEventDraft = (payload: TallyPayload, taken: RepoState): EventD
 	) {
 		slug = `${baseSlug}-${n}`;
 	}
-	if (slug !== baseSlug) warnings.push(`The name ${baseSlug} was already taken, so ${slug} is used.`);
+	if (slug !== baseSlug)
+		warnings.push(`The name ${baseSlug} was already taken, so ${slug} is used.`);
 
 	/** Reserves a collision-free repo path for an uploaded image and queues its download. */
 	const addImage = (folder: string, file: TallyFile): string => {
 		const extensions = IMAGE_TYPES[file.mimeType];
 		if (!extensions) {
-			throw new ValidationError(`Unsupported image type ${file.mimeType}. Please use JPEG, PNG or WebP.`);
+			throw new ValidationError(
+				`Unsupported image type ${file.mimeType}. Please use JPEG, PNG or WebP.`
+			);
 		}
-		if (file.size > MAX_IMAGE_BYTES) throw new ValidationError('An uploaded image is larger than 5 MB.');
+		if (file.size > MAX_IMAGE_BYTES)
+			throw new ValidationError('An uploaded image is larger than 5 MB.');
 
 		const dot = file.name.lastIndexOf('.');
 		const originalExtension = dot > 0 ? file.name.slice(dot + 1).toLowerCase() : '';
@@ -331,7 +337,8 @@ export const buildEventDraft = (payload: TallyPayload, taken: RepoState): EventD
 		let name = `${base}.${extension}`;
 		for (
 			let n = 2;
-			taken.paths.has(`${MEDIA_DIR}/${folder}/${name}`) || claimed.has(`${MEDIA_DIR}/${folder}/${name}`);
+			taken.paths.has(`${MEDIA_DIR}/${folder}/${name}`) ||
+			claimed.has(`${MEDIA_DIR}/${folder}/${name}`);
 			n++
 		) {
 			name = `${base}-${n}.${extension}`;
@@ -388,7 +395,10 @@ export const buildEventDraft = (payload: TallyPayload, taken: RepoState): EventD
 		organizers
 	};
 
-	files.unshift({ path: `${CONTENT_DIR}/${slug}.json`, content: `${JSON.stringify(entry, null, 2)}\n` });
+	files.unshift({
+		path: `${CONTENT_DIR}/${slug}.json`,
+		content: `${JSON.stringify(entry, null, 2)}\n`
+	});
 
 	const assetCount = files.length - 1;
 	return {
