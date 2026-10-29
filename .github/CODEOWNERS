@@ -1,0 +1,7 @@
+# Default owners for the repository
+* @bbuhler
+
+# Content data files
+/src/lib/content/pages @Essencia-life/PageMaintainer
+/src/lib/content/events @Essencia-life/EventManager
+
