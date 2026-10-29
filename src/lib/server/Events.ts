@@ -37,7 +37,8 @@ export class Events {
 	}
 
 	public static getAllUpcoming() {
-		return events.sort(byDateIncrementing).filter((event) => event.start.getTime() > Date.now());
+		return events.sort(byDateIncrementing).filter((event) =>
+			(event.type === 'event' ? event.end : event.start).getTime() > Date.now());
 	}
 
 	public static getPastEvents() {
@@ -49,7 +50,8 @@ export class Events {
 	}
 
 	public static getAllPast() {
-		return events.sort(byDateDescending).filter((event) => event.start.getTime() < Date.now());
+		return events.sort(byDateDescending).filter((event) =>
+			(event.type === 'event' ? event.end : event.start).getTime() <= Date.now());
 	}
 
 	public static getEvent(slug: string) {
