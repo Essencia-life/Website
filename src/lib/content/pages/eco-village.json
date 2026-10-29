@@ -231,7 +231,11 @@
           "buttons": []
         }
       ],
-      "settings": null
+      "settings": {
+        "variant": null,
+        "layout": null,
+        "spacing": "top"
+      }
     },
     {
       "type": "default-section",
