@@ -10,7 +10,9 @@
 			{
 				name: 'type',
 				widget: 'hidden',
-				default: 'content'
+				get default() {
+					return contentWidgetField.name;
+				}
 			},
 			{
 				name: 'supline',
@@ -70,7 +72,8 @@
 						required: false,
 						options: [
 							{ label: 'Default', value: null },
-							{ label: 'Primary', value: 'primary' }
+							{ label: 'Primary', value: 'primary' },
+							{ label: 'Whatsapp', value: 'whatsapp' }
 						]
 					}
 				]
@@ -94,6 +97,7 @@
 	import Bed from '@lucide/svelte/icons/bed';
 	import Van from '@lucide/svelte/icons/van';
 	import SunSnow from '@lucide/svelte/icons/sun-snow';
+	import SiWhatsapp from '@icons-pack/svelte-simple-icons/icons/SiWhatsapp';
 
 	interface Props {
 		widget: InferFieldsObject<typeof contentWidgetField.fields>;
@@ -156,7 +160,12 @@
 				href={button.link}
 				class="button"
 				class:button-primary={button.variant === 'primary'}
+				class:border-green-600={button.variant === 'whatsapp'}
+				class:text-green-600={button.variant === 'whatsapp'}
 			>
+				{#if button.variant === 'whatsapp'}
+					<SiWhatsapp size={20} />
+				{/if}
 				{button.label}
 			</a>
 		{/each}

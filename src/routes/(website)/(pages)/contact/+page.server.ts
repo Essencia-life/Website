@@ -1,28 +1,39 @@
 import { RESEND_API_KEY } from '$env/static/private';
 import type { Actions, PageServerLoad } from './$types';
 import { Resend } from 'resend';
-import { fail } from '@sveltejs/kit';
+import { error, fail } from '@sveltejs/kit';
 import { topicMap } from './contact-topics';
 import { constants } from 'http2';
 import { isValidEmail, isValidName, isValidPhoneOrEmpty } from './validation.utils';
 import { altcha } from '$lib/server/altcha';
 import { enableAltcha, enableAltchaFallback } from '$lib/server/flags';
+import { PageCollectionNotFound, Pages } from '$lib/server/Pages';
 
 export const prerender = false;
 
 export const load: PageServerLoad = async ({ url }) => {
-	const useAltcha = await enableAltcha();
-	const useAltchaFallback = await enableAltchaFallback();
+	try {
 
-	return {
-		useAltcha,
-		useAltchaFallback,
-		topic: url.searchParams.get('topic'),
-		topics: Object.entries(topicMap).map(([key, { label }]) => ({
-			key,
-			label
-		}))
-	};
+		const useAltcha = await enableAltcha();
+		const useAltchaFallback = await enableAltchaFallback();
+
+		return {
+			page: Pages.getPage('contact'),
+			useAltcha,
+			useAltchaFallback,
+			topic: url.searchParams.get('topic'),
+			topics: Object.entries(topicMap).map(([key, { label }]) => ({
+				key,
+				label
+			}))
+		};
+	} catch (err) {
+		if (err instanceof PageCollectionNotFound) {
+			return error(constants.HTTP_STATUS_NOT_FOUND);
+		}
+
+		throw err;
+	}
 };
 
 export const actions: Actions = {

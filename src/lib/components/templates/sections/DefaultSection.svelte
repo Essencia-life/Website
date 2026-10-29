@@ -13,6 +13,8 @@
 	import { slideshowWidgetField } from '../widgets/SlideshowWidget.svelte';
 	import { priceTableWidgetField } from '../widgets/PriceTableWidget.svelte'
 	import { membershipSubscriptionsWidgetField } from '../widgets/MembershipSubscriptions.svelte'
+	import { contactFormWidgetField } from '../widgets/ContactFormWidget.svelte'
+	import { mapWidgetField } from '../widgets/MapWidget.svelte'
 
 	export const defaultSectionField = {
 		name: 'default-section',
@@ -55,6 +57,8 @@
 					priceTableWidgetField,
 					donorboxWidgetField,
 					membershipSubscriptionsWidgetField,
+					contactFormWidgetField,
+					mapWidgetField,
 				]
 			},
 			{
@@ -117,6 +121,8 @@
 	import GofundmeWidget from '$lib/components/templates/widgets/GofundmeWidget.svelte';
 	import DonorboxWidget from '$lib/components/templates/widgets/DonorboxWidget.svelte';
 	import MembershipSubscriptions from '$lib/components/templates/widgets/MembershipSubscriptions.svelte';
+	import ContactFormWidget from '$lib/components/templates/widgets/ContactFormWidget.svelte';
+	import MapWidget from '$lib/components/templates/widgets/MapWidget.svelte';
 
 	interface Props {
 		section: InferFieldsObject<typeof defaultSectionField.fields>;
@@ -190,6 +196,10 @@
 					<DonorboxWidget {widget} />
 				{:else if widget.type === membershipSubscriptionsWidgetField.name}
 					<MembershipSubscriptions {widget} />
+				{:else if widget.type === contactFormWidgetField.name}
+					<ContactFormWidget {widget} />
+				{:else if widget.type === mapWidgetField.name}
+					<MapWidget {widget} />
 				{/if}
 			</div>
 		{/each}
