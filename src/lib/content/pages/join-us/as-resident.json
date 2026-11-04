@@ -25,7 +25,7 @@
           "type": "content",
           "supline": "What Residency Means",
           "headline": "More than a place to live",
-          "content": "Becoming a resident at Essência means becoming a member of the cooperative — an important co-steward of the land. You're not renting; you're joining a living project, with real ownership, shared governance, and legal agreements that protect you and the community alike.\n\nThis is a commitment to self-reflection, self-discovery, healing and growing proactively. Residents can be full-time or part-time depending on their life situation — you can build your own home here, raise your children, grow a business, or keep work outside, as long as you show up for the community and your commitments. Every resident contributes a few hours a week to shared life; families and our ecovillage's maintenance needs are supported with flexibility.\n\nThis is a long-term commitment — and it can also end. If the time comes to move on, the cooperative structure ensures a fair, legally supported exit process.",
+          "content": "Becoming a resident at Essência means becoming a member of the cooperative — an important co-steward of the land. You're not renting; you're joining a living project with shared governance and legal agreements that protect you and the community alike. The cooperative was founded with the aim of taking over the land, and as a member you help carry that path. In the meantime, members receive a right of use for their place on the land.\n\nThis is a commitment to self-reflection, self-discovery, healing and growing proactively. Residents can be full-time or part-time depending on their life situation — you can build your own home here, raise your children, grow a business, or keep work outside, as long as you show up for the community and your commitments. Every resident contributes a few hours a week to shared life; families and our ecovillage's maintenance needs are supported with flexibility.\n\nThis is a long-term commitment — and it can also end. If the time comes to move on, the cooperative structure ensures a fair, legally supported exit process.",
           "settings": null,
           "buttons": []
         },
@@ -55,22 +55,26 @@
             {
               "image": "",
               "content": "#### Live the values\n\nHonest communication, non-harm, radical ownership, the heart path — not as rules, but as a daily practice.",
-              "link": ""
+              "link": "",
+              "icon": null
             },
             {
               "image": "",
               "content": "#### Show up for community\n\nA few hours of shared work each week — tending the land, cooking, building, holding space. Families are supported with flexibility.",
-              "link": ""
+              "link": "",
+              "icon": null
             },
             {
               "image": "",
               "content": "#### Full-time or part-time\n\nResidency adapts to your life. Keep a job, build a business, travel — as long as you remain connected and committed.",
-              "link": ""
+              "link": "",
+              "icon": null
             },
             {
               "image": "",
               "content": "#### Long-term intention\n\nWe're building something for generations. We look for people ready to invest in a place, not just pass through it.",
-              "link": ""
+              "link": "",
+              "icon": null
             }
           ],
           "settings": {
