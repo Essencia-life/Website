@@ -20,6 +20,8 @@ export class Media {
 		const getCmsAsset = getContext<((path: string) => ApiAsset | undefined) | undefined>('CmsAssetApi');
 		const cmsAsset = getCmsAsset?.(file);
 
+		console.log({ file, cmsAsset, mediaFile });
+
 		if (mediaFile) {
 			return mediaFile;
 		} else if (cmsAsset || file.startsWith('blob:')) {
