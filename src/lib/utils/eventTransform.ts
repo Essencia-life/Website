@@ -48,6 +48,10 @@ export function transformEvent([slug, event]: [string, EventRaw]): Event {
 
 		const duration = end.getTime() - start.getTime();
 
+		if (recurrenceOptions.until) {
+			recurrenceOptions.until = new Date(recurrenceOptions.until as string);
+		}
+
 		const rrule = new RRule({
 			dtstart: toFloating(end),
 			...recurrenceOptions
