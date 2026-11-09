@@ -18,9 +18,10 @@ export class Media {
 	public static getFile(file: string) {
 		const mediaFile = mediaFiles.get(file) ?? mediaFiles.get(file.substring(1));
 		const getCmsAsset = getContext<((path: string) => ApiAsset | undefined) | undefined>('CmsAssetApi');
-		const cmsAssetUrl = getCmsAsset?.(file)?.url;
+		const cmsAsset = getCmsAsset?.(file);
+		const cmsAssetUrl = cmsAsset?.url;
 
-		console.log({ file, cmsAssetUrl, mediaFile });
+		console.log({ file, cmsAsset, cmsAssetUrl, mediaFile });
 
 		function buildImg(src: string) {
 			const img = new Image();
