@@ -22,11 +22,9 @@ export class Media {
 
 		console.log({ file, cmsAsset, mediaFile });
 
-		if (mediaFile) {
-			return mediaFile;
-		} else if (cmsAsset || file.startsWith('blob:')) {
+		function buildImg(src: string) {
 			const img = new Image();
-			img.src = cmsAsset ? cmsAsset.url : file;
+			img.src = src;
 			return {
 				img: {
 					src: img.src,
@@ -34,6 +32,14 @@ export class Media {
 					get h() { return img.naturalHeight }
 				}
 			};
+		}
+
+		if (cmsAsset) {
+			return buildImg(cmsAsset.url);
+		} else if (mediaFile) {
+			return mediaFile;
+		} else if (location.hostname === 'localhost' && file.startsWith('blob:')) {
+			return buildImg(file);
 		} else {
 			// console.log(mediaFiles.keys());
 			throw new MediaFileNotFound(file);
