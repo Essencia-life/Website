@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import type { PageProps } from './$types';
 	import { headerCmsConfig } from '$lib/components/templates/Header.svelte';
 	import { footerCmsConfig } from '$lib/components/templates/Footer.svelte';
 	import { peopleCmsConfig } from '$lib/components/templates/People.svelte';
@@ -9,8 +8,7 @@
 	import { extractEntryData, svelteToReactWrapper } from './sveltePreviewMapper.svelte';
 	import { transformEvent } from '$lib/utils/eventTransform';
 	import type { CustomPreviewTemplateProps } from '@sveltia/cms';
-
-	const { data }: PageProps = $props();
+	import { page } from '$app/state';
 
 	onMount(async () => {
 		const { init, registerPreviewTemplate, registerPreviewStyle } = await import('@sveltia/cms');
@@ -30,7 +28,7 @@
 					name: 'github',
 					repo: 'Essencia-life/Website',
 					branch: 'main',
-					base_url: `https://${data.baseUrl}`,
+					base_url: `https://${page.url.origin}`,
 					auth_endpoint: '/admin/auth',
 					commit_messages: {
 						create: 'feat({{collection}}): created “{{slug}}”',
