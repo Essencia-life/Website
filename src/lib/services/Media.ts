@@ -18,9 +18,9 @@ export class Media {
 	public static getFile(file: string) {
 		const mediaFile = mediaFiles.get(file) ?? mediaFiles.get(file.substring(1));
 		const getCmsAsset = getContext<((path: string) => ApiAsset | undefined) | undefined>('CmsAssetApi');
-		const cmsAsset = getCmsAsset?.(file);
+		const cmsAssetUrl = getCmsAsset?.(file)?.url;
 
-		console.log({ file, cmsAsset, mediaFile });
+		console.log({ file, cmsAssetUrl, mediaFile });
 
 		function buildImg(src: string) {
 			const img = new Image();
@@ -34,8 +34,8 @@ export class Media {
 			};
 		}
 
-		if (cmsAsset) {
-			return buildImg(cmsAsset.url);
+		if (cmsAssetUrl) {
+			return buildImg(cmsAssetUrl);
 		} else if (mediaFile) {
 			return mediaFile;
 		} else if (location.hostname === 'localhost' && file.startsWith('blob:')) {
