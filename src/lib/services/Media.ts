@@ -1,5 +1,6 @@
 import type { Picture } from 'vite-imagetools';
 import { getContext } from 'svelte';
+import type { ApiAsset } from '@sveltia/cms';
 
 const pageRegExp = new RegExp('/src/lib/assets/(?<file>media/.+)');
 const mediaFiles = new Map(
@@ -16,13 +17,14 @@ const mediaFiles = new Map(
 export class Media {
 	public static getFile(file: string) {
 		const mediaFile = mediaFiles.get(file) ?? mediaFiles.get(file.substring(1));
-		const isCmsPreview = getContext<boolean>('CmsPreview');
+		const getCmsAsset = getContext<((path: string) => ApiAsset | undefined) | undefined>('CmsAssetApi');
+		const cmsAsset = getCmsAsset?.(file);
 
 		if (mediaFile) {
 			return mediaFile;
-		} else if (isCmsPreview) {
+		} else if (cmsAsset || file.startsWith('blob:')) {
 			const img = new Image();
-			img.src = file;
+			img.src = cmsAsset ? cmsAsset.url : file;
 			return {
 				img: {
 					src: img.src,

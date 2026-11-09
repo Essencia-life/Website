@@ -50,7 +50,10 @@ export function svelteToReactWrapper<C extends SvelteComponent>(
 				target: this.props.document.body,
 				props: this.svelteProps,
 				// eslint-disable-next-line svelte/prefer-svelte-reactivity
-				context: new Map([['CmsPreview', true]]),
+				context: new Map([
+					['CmsPreview', true],
+					['CmsAssetApi', this.props.getAsset.bind(this.props)],
+				]),
 			});
 		}
 
