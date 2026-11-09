@@ -28,7 +28,7 @@
 					name: 'github',
 					repo: 'Essencia-life/Website',
 					branch: 'main',
-					base_url: `https://${page.url.origin}`,
+					base_url: page.url.origin,
 					auth_endpoint: '/admin/auth',
 					commit_messages: {
 						create: 'feat({{collection}}): created “{{slug}}”',
