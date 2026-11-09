@@ -292,8 +292,9 @@ export const buildEventDraft = (payload: TallyPayload, taken: RepoState): EventD
 	const title = required(text(fields, KEYS.title), 'Title');
 	const startDate = text(fields, KEYS.startDate);
 	const endDate = text(fields, KEYS.endDate) || startDate; // empty end date: same day
-	const start = toLisbonIso(startDate, text(fields, KEYS.startTime), 'Start');
-	const end = toLisbonIso(endDate, text(fields, KEYS.endTime), 'End');
+	// multi-day retreats have no times in the form; existing retreats use 00:00 for both
+	const start = toLisbonIso(startDate, text(fields, KEYS.startTime) || '00:00', 'Start');
+	const end = toLisbonIso(endDate, text(fields, KEYS.endTime) || '00:00', 'End');
 	if (end.utcMs <= start.utcMs) {
 		throw new ValidationError('End must be after start (for overnight events set an end date).');
 	}
