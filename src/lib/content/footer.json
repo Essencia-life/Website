@@ -11,11 +11,27 @@
   ],
   "links": [
     [
+      {
+        "label": "People of Essência",
+        "link": "/eco-village/people"
+      },
+      {
+        "label": "Kids Temple",
+        "link": "/eco-village/kids-temple"
+      }
     ],
     [
       {
         "label": "Volunteer at Essência",
         "link": "/join-us/as-volunteer"
+      },
+      {
+        "label": "Become a resident",
+        "link": "/join-us/as-resident"
+      },
+      {
+        "label": "Support us",
+        "link": "/join-us/as-supporter"
       }
     ],
     [
