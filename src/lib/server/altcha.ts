@@ -37,7 +37,7 @@ export const altcha = create({
 			return redis.get(`website:altcha:${key}`);
 		},
 		set(key: string) {
-			return redis.set(`website:altcha:${key}`, 1, { ex: expiresIn });
+			return redis.set(`website:altcha:${key}`, 1, { ex: Math.floor(expiresIn / 1000) });
 		}
 	}
 });
