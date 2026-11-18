@@ -34,10 +34,10 @@ export const altcha = create({
 	// In distributed environments, use Redis or another shared store
 	store: {
 		get(key: string) {
-			return redis.get(`altcha-${key}`);
+			return redis.get(`website:altcha:${key}`);
 		},
 		set(key: string) {
-			return redis.set(`altcha-${key}`, 1, { ex: expiresIn });
+			return redis.set(`website:altcha:${key}`, 1, { ex: expiresIn });
 		}
 	}
 });
