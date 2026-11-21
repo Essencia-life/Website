@@ -84,10 +84,16 @@
 
 <footer class="-mt-34">
 	<div class="relative">
-		<Image src={footerImage} alt="Essência forest skyline" loading="lazy" class="w-full h-auto" />
-		<div class="absolute inset-0 bg-linear-to-t from-olive-800 from-5% to-olive-800/0 to-60%"></div>
+		<!-- at night: darker, cooler and less saturated -->
+		<Image
+			src={footerImage}
+			alt="Essência forest skyline"
+			loading="lazy"
+			class="h-auto w-full dark:brightness-[0.45] dark:contrast-110 dark:saturate-[0.7] dark:hue-rotate-[35deg]"
+		/>
+		<div class="absolute inset-0 bg-linear-to-t from-forest from-5% to-forest/0 to-60%"></div>
 	</div>
-	<div class="bg-olive-800">
+	<div class="bg-forest">
 		<div class="page-content grid gap-4 text-parchment md:grid-cols-4 md:min-h-32">
 			<div class="flex flex-row-reverse justify-between md:flex-col">
 				<div>

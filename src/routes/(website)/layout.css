@@ -48,6 +48,9 @@
 	--color-stonewhite: oklch(0.985 0.008 91.481);
 	--color-parchment: oklch(0.918 0.023 93.341);
 
+	/* dark green surfaces (dark sections, hero, footer); darker at night, see below */
+	--color-forest: var(--color-olive-800);
+
 	/* === amber = ambergold === */
 	--color-amber-50: oklch(0.981 0.021 85.942);
 	--color-amber-100: oklch(0.956 0.055 91.414);
@@ -289,6 +292,7 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-shadow: oklch(0 0 0);
+		--color-forest: oklch(0.2 0.022 150);
 
 		/* night: surfaces */
 		--color-stone-50: oklch(0.19 0.02 270);

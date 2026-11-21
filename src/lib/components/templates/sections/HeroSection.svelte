@@ -81,7 +81,7 @@
 	}
 </script>
 
-<section class="relative flex flex-col justify-center items-center gap-4 px-4 py-16 text-center text-stonewhite bg-olive-800 scheme-dark min-h-96">
+<section class="relative flex flex-col justify-center items-center gap-4 px-4 py-16 text-center text-stonewhite bg-forest scheme-dark min-h-96">
 	{#if section.backgroundImage}
 		<Image preload src={Media.getFile(section.backgroundImage)} class="absolute w-full h-full object-cover inset-0" fetchpolicy="high" sizes="100vw" />
 		<div class="absolute inset-0 bg-linear-to-b from-50% from-olive-950/50 to-olive-950/95"></div>
