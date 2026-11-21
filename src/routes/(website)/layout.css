@@ -295,7 +295,7 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-shadow: oklch(0 0 0);
-		--color-forest: oklch(0.32 0.05 150);
+		--color-forest: oklch(0.3 0.028 135);
 		--color-chrome: oklch(0.14 0.02 270);
 
 		/* night: surfaces */

@@ -18,7 +18,7 @@
 	<button class="icon-button" onclick={() => overlayRef.close()}>
 		<X />
 	</button>
-	<img src={logo} alt="" width="192" height="192" class="self-center max-w-48 aspect-square" />
+	<img src={logo} alt="" width="320" height="320" class="w-full max-w-80 self-center aspect-square" />
 	<Navigation sidebar />
 	<!-- TODO show also footer links -->
 </aside>
