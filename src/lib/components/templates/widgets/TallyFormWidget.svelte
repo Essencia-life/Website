@@ -43,4 +43,11 @@
 		/* light panel in both themes, the embedded Tally form is light only */
 		background: var(--color-parchment);
 	}
+
+	/* tone the light panel down at night: it blends into the dark page */
+	@media (prefers-color-scheme: dark) {
+		.secondary {
+			opacity: 0.8;
+		}
+	}
 </style>
