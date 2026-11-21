@@ -313,6 +313,12 @@
 		--color-stone-950: oklch(0.96 0.015 85);
 	}
 
+	/* dim photos a bit (not SVG logos; opt out with .no-dim). :where() keeps the specificity
+	   at 0, so explicit filter utilities (e.g. the night footer image) still win. */
+	:where(img:not([src$='.svg'], .no-dim), video:not(.no-dim)) {
+		filter: brightness(0.85);
+	}
+
 	/* inputs: the forms plugin hard-codes a white background */
 	input:not([type='checkbox'], [type='radio'], [type='submit'], [type='button']),
 	select,
