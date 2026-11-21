@@ -40,6 +40,7 @@
 
 <style>
 	.secondary {
-		background: var(--color-stone-100);
+		/* light panel in both themes, the embedded Tally form is light only */
+		background: var(--color-parchment);
 	}
 </style>
