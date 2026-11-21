@@ -83,7 +83,7 @@
 <div class="grid gap-x-4 gap-y-12 md:grid-cols-3 items-center justify-center">
 	{#each widget.subscriptions as subscription, index (subscription)}
 		<article
-			class="relative flex flex-col p-6 md:min-h-96 gap-4 rounded-lg border {index === 1 ? 'border-amber-500 bg-amber-50 dark:bg-amber-950 md:min-h-106 md:py-11' : 'border-stone-100 bg-stone-50'}"
+			class="relative flex flex-col p-6 md:min-h-96 gap-4 rounded-lg border {index === 1 ? 'border-amber-500 bg-amber-50 dark:bg-amber-950 md:min-h-106 md:py-11' : 'border-stone-100 bg-stone-50 dark:border-stone-300 dark:bg-stone-100'}"
 		>
 			<h4>{subscription.title}</h4>
 			<div class="flex items-baseline">
