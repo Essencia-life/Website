@@ -36,7 +36,7 @@
 		gap: 0.5rem;
 		background-color: var(--color-stone-50);
 		border-radius: 2rem;
-		box-shadow: 0 0 4rem var(--color-stone-900);
+		box-shadow: 0 0 4rem var(--color-shadow);
 	}
 
 	@media screen and (width < 800px) {

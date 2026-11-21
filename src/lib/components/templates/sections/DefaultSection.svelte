@@ -210,7 +210,7 @@
 	.dark {
 		color-scheme: dark;
 		background: var(--color-olive-800);
-		color: var(--color-stone-50);
+		color: var(--color-stonewhite);
 	}
 
 	.dark :global(h2),

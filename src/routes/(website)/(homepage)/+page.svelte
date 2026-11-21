@@ -143,7 +143,7 @@
 					<Image src={Media.getFile(section.photos![1])} alt="" loading="lazy" />
 				</div>
 				<div
-					class="heart-shape text-center max-md:px-4 max-md:py-16 lg:z-10 lg:flex lg:aspect-square lg:h-[70%] lg:bg-white lg:px-16 lg:pt-16"
+					class="heart-shape text-center max-md:px-4 max-md:py-16 lg:z-10 lg:flex lg:aspect-square lg:h-[70%] lg:bg-white dark:lg:bg-stone-100 lg:px-16 lg:pt-16"
 				>
 					<div>
 						<h2 class="my-8">{section.headline}</h2>

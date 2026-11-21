@@ -1,6 +1,7 @@
 <script lang="ts">
 	import './layout.css';
 	import logo from '$lib/assets/logo_tree.png';
+	import logoSvg from '$lib/assets/logo_tree.svg';
 	import font from '$lib/assets/fonts/Alegreya.woff2';
 	import Overlays from '$lib/components/atoms/Overlays.svelte';
 	import { page } from '$app/state';
@@ -37,7 +38,10 @@
 <svelte:head>
 	<link rel="preload" href={font} as="font" type="font/woff2" crossorigin />
 	<link rel="icon" href={logo} />
-	<meta name="theme-color" content="#e9e4d3" />
+	<link rel="icon" href={logoSvg} type="image/svg+xml" sizes="any" />
+	<meta name="color-scheme" content="light dark" />
+	<meta name="theme-color" content="#e9e4d3" media="(prefers-color-scheme: light)" />
+	<meta name="theme-color" content="#1b1e29" media="(prefers-color-scheme: dark)" />
 
 	{#if data.VERCEL_ENV !== 'production'}
 		<meta name="robots" content="noindex,follow" />

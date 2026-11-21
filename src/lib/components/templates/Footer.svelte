@@ -88,7 +88,7 @@
 		<div class="absolute inset-0 bg-linear-to-t from-olive-800 from-5% to-olive-800/0 to-60%"></div>
 	</div>
 	<div class="bg-olive-800">
-		<div class="page-content grid gap-4 text-stone-100 md:grid-cols-4 md:min-h-32">
+		<div class="page-content grid gap-4 text-parchment md:grid-cols-4 md:min-h-32">
 			<div class="flex flex-row-reverse justify-between md:flex-col">
 				<div>
 					<a href={footerData.cta.link} class="button button-primary">{footerData.cta.label}</a>
@@ -112,7 +112,7 @@
 			{/each}
 		</div>
 
-		<div class="page-content text-stone-100 text-center text-xs mt-8 border-t border-t-stone-100/30 py-4">
+		<div class="page-content text-parchment text-center text-xs mt-8 border-t border-t-parchment/30 py-4">
 			&copy; {new Date().getFullYear()} {titleSuffix}
 		</div>
 	</div>

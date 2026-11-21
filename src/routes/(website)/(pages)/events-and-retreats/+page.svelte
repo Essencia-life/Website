@@ -56,10 +56,10 @@
 			Events & Retreats
 		</h2>
 
-		<form data-sveltekit-replacestate data-sveltekit-noscroll method="get" class="rounded-full bg-gray-200 p-1 flex gap-1 text-sm mt-8">
+		<form data-sveltekit-replacestate data-sveltekit-noscroll method="get" class="rounded-full bg-gray-200 dark:bg-stone-200 p-1 flex gap-1 text-sm mt-8">
 			{#each options as option (option)}
 				<button value={option.value} name="filter"
-								class="px-3 py-1 rounded-full text-gray-800 cursor-pointer"
+								class="px-3 py-1 rounded-full text-gray-800 dark:text-stone-800 cursor-pointer"
 								class:bg-olive-700={filter === option.value}
 								class:text-white={filter === option.value}>
 					{option.label}
@@ -167,15 +167,15 @@
 				<div class="flex flex-col gap-4">
 					<h4>Hosting an event</h4>
 					<Card>
-						<div class="font-serif font-medium text-xl text-taupe-700">50€</div>
+						<div class="font-serif font-medium text-xl text-taupe-700 dark:text-taupe-200">50€</div>
 						<p class="text-stone-500">deposit, paid in advance to reserve your date</p>
 					</Card>
 					<Card>
-						<div class="font-serif font-medium text-xl text-taupe-700">30%</div>
+						<div class="font-serif font-medium text-xl text-taupe-700 dark:text-taupe-200">30%</div>
 						<p class="text-stone-500">of your event income goes to Essência</p>
 					</Card>
 					<Card>
-						<div class="font-serif font-medium text-xl text-taupe-700">50% off</div>
+						<div class="font-serif font-medium text-xl text-taupe-700 dark:text-taupe-200">50% off</div>
 						<p class="text-stone-500">a room for the organisers, the night before and after</p>
 					</Card>
 					<blockquote class="text-sm">
@@ -189,9 +189,9 @@
 					<h4>Hosting a retreat</h4>
 					<Card>
 						<div class="flex flex-col gap-2">
-							<div class="font-serif font-medium text-xl text-taupe-700">108m2</div>
+							<div class="font-serif font-medium text-xl text-taupe-700 dark:text-taupe-200">108m2</div>
 							<div>
-								<div class="font-serif font-medium text-taupe-700">The Shala</div>
+								<div class="font-serif font-medium text-taupe-700 dark:text-taupe-200">The Shala</div>
 								<p class="text-stone-500">Wooden floor, forest view</p>
 							</div>
 							<a href="/eco-village#the-eco-village">See the Shala &rarr;</a>
@@ -199,9 +199,9 @@
 					</Card>
 					<Card>
 						<div class="flex flex-col gap-2">
-							<div class="font-serif font-medium text-xl text-taupe-700">14 beds</div>
+							<div class="font-serif font-medium text-xl text-taupe-700 dark:text-taupe-200">14 beds</div>
 							<div>
-								<div class="font-serif font-medium text-taupe-700">Farmhouse</div>
+								<div class="font-serif font-medium text-taupe-700 dark:text-taupe-200">Farmhouse</div>
 								<p class="text-stone-500">6 rooms, private bathrooms</p>
 							</div>
 							<a href="/stay#farmhouse">See the rooms &rarr;</a>
@@ -209,9 +209,9 @@
 					</Card>
 					<Card>
 						<div class="flex flex-col gap-2">
-							<div class="font-serif font-medium text-xl text-taupe-700">Spa</div>
+							<div class="font-serif font-medium text-xl text-taupe-700 dark:text-taupe-200">Spa</div>
 							<div>
-								<div class="font-serif font-medium text-taupe-700">in the forest</div>
+								<div class="font-serif font-medium text-taupe-700 dark:text-taupe-200">in the forest</div>
 								<p class="text-stone-500">Sauna, hot tub, fireplace, natural pond</p>
 							</div>
 							<a href="/eco-village#the-eco-village">See the Forest SPA &rarr;</a>
