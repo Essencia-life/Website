@@ -51,6 +51,9 @@
 	/* dark green surfaces (dark sections, hero, footer); darker at night, see below */
 	--color-forest: var(--color-olive-800);
 
+	/* header, sidebar and menus: parchment in light, darker than the page in dark */
+	--color-chrome: var(--color-stone-100);
+
 	/* === amber = ambergold === */
 	--color-amber-50: oklch(0.981 0.021 85.942);
 	--color-amber-100: oklch(0.956 0.055 91.414);
@@ -292,14 +295,15 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-shadow: oklch(0 0 0);
-		--color-forest: oklch(0.3 0.045 150);
+		--color-forest: oklch(0.32 0.05 150);
+		--color-chrome: oklch(0.14 0.02 270);
 
 		/* night: surfaces */
-		--color-stone-50: oklch(0.19 0.02 270);
-		--color-stone-100: oklch(0.27 0.02 270);
-		--color-stone-200: oklch(0.34 0.022 270);
-		--color-stone-300: oklch(0.42 0.022 270);
-		--color-stone-400: oklch(0.54 0.02 270);
+		--color-stone-50: oklch(0.25 0.02 270);
+		--color-stone-100: oklch(0.3 0.02 270);
+		--color-stone-200: oklch(0.36 0.022 270);
+		--color-stone-300: oklch(0.44 0.022 270);
+		--color-stone-400: oklch(0.56 0.02 270);
 		/* warm light: text */
 		--color-stone-500: oklch(0.62 0.02 85);
 		--color-stone-600: oklch(0.72 0.02 85);

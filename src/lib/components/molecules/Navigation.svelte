@@ -124,7 +124,7 @@
 	}
 
 	.header .children {
-		background: var(--color-stone-100);
+		background: var(--color-chrome);
 	}
 
 	.children ul {
@@ -180,7 +180,7 @@
 
 		.children ul {
 			margin-left: 1rem;
-			background: var(--color-stone-100);
+			background: var(--color-chrome);
 		}
 	}
 </style>

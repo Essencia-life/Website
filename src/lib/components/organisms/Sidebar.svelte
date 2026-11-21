@@ -36,7 +36,7 @@
 		width: 80vw;
 		max-width: 400px;
 		min-width: 320px;
-		background: var(--color-stone-100);
+		background: var(--color-chrome);
 		box-shadow: -3px 0 9px color-mix(in oklab, var(--color-shadow) 60%, transparent);
 		overflow-y: auto;
 	}
@@ -45,6 +45,6 @@
 		position: fixed;
 		top: 0.75rem;
 		right: 0.75rem;
-		background: var(--color-stone-100);
+		background: var(--color-chrome);
 	}
 </style>

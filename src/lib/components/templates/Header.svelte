@@ -68,7 +68,7 @@
 	}
 </script>
 
-<header class="sticky top-0 z-11 bg-stone-100 dark:bg-stone-50 border-b border-stone-50/50 dark:border-stone-200 shadow-md/25">
+<header class="sticky top-0 z-11 bg-chrome border-b border-stone-50/50 dark:border-stone-200 shadow-md/25">
 	<div class="page-content">
 		<a href={resolve('/')} class="home logo-tree" aria-hidden="true" tabindex="-1">
 			{@html logoTree}
