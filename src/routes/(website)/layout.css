@@ -292,14 +292,14 @@
 @media (prefers-color-scheme: dark) {
 	:root {
 		--color-shadow: oklch(0 0 0);
-		--color-forest: oklch(0.2 0.022 150);
+		--color-forest: oklch(0.3 0.045 150);
 
 		/* night: surfaces */
 		--color-stone-50: oklch(0.19 0.02 270);
-		--color-stone-100: oklch(0.235 0.02 270);
-		--color-stone-200: oklch(0.29 0.02 270);
-		--color-stone-300: oklch(0.37 0.02 270);
-		--color-stone-400: oklch(0.5 0.02 270);
+		--color-stone-100: oklch(0.27 0.02 270);
+		--color-stone-200: oklch(0.34 0.022 270);
+		--color-stone-300: oklch(0.42 0.022 270);
+		--color-stone-400: oklch(0.54 0.02 270);
 		/* warm light: text */
 		--color-stone-500: oklch(0.62 0.02 85);
 		--color-stone-600: oklch(0.72 0.02 85);

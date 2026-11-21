@@ -41,7 +41,7 @@
 	<link rel="icon" href={logoSvg} type="image/svg+xml" sizes="any" />
 	<meta name="color-scheme" content="light dark" />
 	<meta name="theme-color" content="#e9e4d3" media="(prefers-color-scheme: light)" />
-	<meta name="theme-color" content="#1b1e29" media="(prefers-color-scheme: dark)" />
+	<meta name="theme-color" content="#232630" media="(prefers-color-scheme: dark)" />
 
 	{#if data.VERCEL_ENV !== 'production'}
 		<meta name="robots" content="noindex,follow" />
