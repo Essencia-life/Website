@@ -68,7 +68,7 @@
 	}
 </script>
 
-<header class="sticky top-0 z-11 bg-stone-100 border-b border-stone-50/50 shadow-md/25">
+<header class="sticky top-0 z-11 bg-stone-100 dark:bg-stone-50 border-b border-stone-50/50 dark:border-stone-200 shadow-md/25">
 	<div class="page-content">
 		<a href={resolve('/')} class="home logo-tree" aria-hidden="true" tabindex="-1">
 			{@html logoTree}
@@ -112,13 +112,6 @@
 		display: block;
 		height: 2rem;
 		width: auto;
-	}
-
-	/* at night the dark tree would get lost on the dark header: lift it and add a warm glow */
-	@media (prefers-color-scheme: dark) {
-		.logo-tree :global(svg) {
-			filter: brightness(1.3) drop-shadow(0 0 0.4rem oklch(0.85 0.12 90 / 0.55));
-		}
 	}
 
 	h1 {
