@@ -186,7 +186,7 @@
 	}
 
 	.fab {
-		@apply grid aspect-square w-14 cursor-pointer items-center justify-center rounded-full bg-white! shadow-md/30;
+		@apply grid aspect-square w-14 cursor-pointer items-center justify-center rounded-full bg-white! text-stone-900 shadow-md/30 dark:bg-stone-200! dark:ring-1 dark:ring-stone-400/60;
 	}
 
 	.fab.small {

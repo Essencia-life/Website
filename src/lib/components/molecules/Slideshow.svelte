@@ -143,7 +143,7 @@
 		width: 0.5rem;
 		height: 0.5rem;
 		border-radius: 100%;
-		background: light-dark(var(--color-stone-300), rgba(0 0 0 / 50%));
+		background: color-mix(in oklab, var(--color-stone-900) 25%, transparent);
 	}
 
 	.indicators > button::after {
@@ -152,7 +152,7 @@
 		width: 0.5rem;
 		height: 0.5rem;
 		border-radius: 100%;
-		background: light-dark(rgba(0 0 0 / 50%), var(--color-stone-300));
+		background: color-mix(in oklab, var(--color-stone-900) 70%, transparent);
 		opacity: var(--ratio);
 	}
 

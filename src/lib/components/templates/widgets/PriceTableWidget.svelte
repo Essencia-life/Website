@@ -86,7 +86,7 @@
 			<table class="w-full">
 				{#each group.prices as price (price)}
 					<tr>
-						<th class="font-normal text-gray-600 text-left py-1">{price.label}</th>
+						<th class="font-normal text-gray-600 dark:text-stone-600 text-left py-1">{price.label}</th>
 						<td class="text-right font-semibold py-1">{price.price}</td>
 					</tr>
 				{/each}
@@ -94,5 +94,5 @@
 		</Card>
 	{/each}
 </div>
-<div class="italic text-xs mt-2 mb-6 text-gray-500">{widget.subtext}</div>
+<div class="italic text-xs mt-2 mb-6 text-gray-500 dark:text-stone-500">{widget.subtext}</div>
 <a href={widget.button.link} class="button button-primary">{widget.button.label}</a>
