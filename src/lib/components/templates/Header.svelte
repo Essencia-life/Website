@@ -110,8 +110,15 @@
 
 	.logo-title :global(svg) {
 		display: block;
-		height: 1.5rem;
+		height: 2rem;
 		width: auto;
+	}
+
+	/* at night the dark tree would get lost on the dark header: lift it and add a warm glow */
+	@media (prefers-color-scheme: dark) {
+		.logo-tree :global(svg) {
+			filter: brightness(1.3) drop-shadow(0 0 0.4rem oklch(0.85 0.12 90 / 0.55));
+		}
 	}
 
 	h1 {
