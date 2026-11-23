@@ -127,15 +127,19 @@
 		{#if card.icon}
 			{@const Icon = iconMap[card.icon.name]}
 			<div class="flex gap-4">
-				<div class="size-12 mt-2 flex items-center justify-center shrink-0 rounded-full"
-				class:bg-amber-100={card.icon.color === 'amber'}
-				class:text-amber-500={card.icon.color === 'amber'}
-				class:bg-cyan-100={card.icon.color === 'cyan'}
-				class:text-cyan-600={card.icon.color === 'cyan'}
-				class:bg-taupe-100={card.icon.color === 'taupe'}
-				class:text-taupe-700={card.icon.color === 'taupe'}
-				class:bg-olive-100={card.icon.color === 'olive'}
-				class:text-olive-800={card.icon.color === 'olive'}>
+				<div
+					class={[
+						'mt-2 flex size-12 shrink-0 items-center justify-center rounded-full',
+						card.icon.color === 'amber' &&
+							'bg-amber-100 text-amber-500 dark:bg-amber-500/15 dark:text-amber-300',
+						card.icon.color === 'cyan' &&
+							'bg-cyan-100 text-cyan-600 dark:bg-cyan-500/15 dark:text-cyan-300',
+						card.icon.color === 'taupe' &&
+							'bg-taupe-100 text-taupe-700 dark:bg-taupe-400/15 dark:text-taupe-300',
+						card.icon.color === 'olive' &&
+							'bg-olive-100 text-olive-800 dark:bg-olive-400/15 dark:text-olive-300'
+					]}
+				>
 					<Icon />
 				</div>
 				{@render cardElement(card)}
