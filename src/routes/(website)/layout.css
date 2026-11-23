@@ -44,6 +44,16 @@
 	--color-stone-900: oklch(0.279 0.036 83.577);  /* earthbrown */
 	--color-stone-950: oklch(0.22 0.025 83.577);
 
+	/* constant light tones (do not flip in dark mode), for text on coloured surfaces */
+	--color-stonewhite: oklch(0.985 0.008 91.481);
+	--color-parchment: oklch(0.918 0.023 93.341);
+
+	/* dark green surfaces (dark sections, hero, footer); darker at night, see below */
+	--color-forest: var(--color-olive-800);
+
+	/* header, sidebar and menus: parchment in light, darker than the page in dark */
+	--color-chrome: var(--color-stone-100);
+
 	/* === amber = ambergold === */
 	--color-amber-50: oklch(0.981 0.021 85.942);
 	--color-amber-100: oklch(0.956 0.055 91.414);
@@ -101,7 +111,7 @@
 
 	html,
 	body {
-		@apply m-0 p-0 bg-stone-50 h-full scroll-p-22 scheme-light;
+		@apply m-0 p-0 bg-stone-50 h-full scroll-p-22 scheme-light-dark;
 		box-sizing: border-box;
 	}
 
@@ -138,7 +148,8 @@
 	h4,
 	h5,
 	h6 {
-		@apply font-serif font-medium text-taupe-700;
+		@apply font-serif font-medium;
+		color: light-dark(var(--color-taupe-700), var(--color-taupe-200));
 	}
 
 	h1 {
@@ -175,7 +186,7 @@
 	}
 
 	.fab {
-		@apply grid aspect-square w-14 cursor-pointer items-center justify-center rounded-full bg-white! shadow-md/30;
+		@apply grid aspect-square w-14 cursor-pointer items-center justify-center rounded-full bg-white! text-stone-900 shadow-md/30 dark:bg-stone-200! dark:ring-1 dark:ring-stone-400/60;
 	}
 
 	.fab.small {
@@ -183,7 +194,7 @@
 	}
 
 	blockquote:not(.unstyled) {
-		@apply bg-amber-100 border-l-4 border-amber-600 p-4 rounded-md text-left;
+		@apply bg-amber-100 dark:bg-amber-900/40 border-l-4 border-amber-600 p-4 rounded-md text-left;
 	}
 
 	strong {
@@ -199,19 +210,19 @@
 	}
 
 	.button.button-primary {
-		@apply border-transparent bg-olive-700 text-stone-50;
+		@apply border-transparent bg-olive-700 text-stonewhite;
 	}
 
 	.button.button-ambergold {
-		@apply border-transparent bg-amber-500 text-stone-50;
+		@apply border-transparent bg-amber-500 text-stonewhite;
 	}
 
 	.button.button-outline {
-		@apply border-stone-100 bg-olive-950/50 text-stone-100;
+		@apply border-parchment bg-olive-950/50 text-parchment;
 	}
 
 	.button.button-oceanteal {
-		@apply border-transparent bg-cyan-600 text-stone-50;
+		@apply border-transparent bg-cyan-600 text-stonewhite;
 	}
 
 	.icon-button {
@@ -234,7 +245,7 @@
 	}
 
 	a:not(.no-link, .button) {
-		color: var(--color-olive-700);
+		color: light-dark(var(--color-olive-700), var(--color-olive-300));
 		font-weight: 500;
 	}
 
@@ -268,6 +279,72 @@
 
 		a:not(.no-link, .button):hover {
 			opacity: 0.8;
+		}
+	}
+}
+
+/* ==========================================================================
+   Dark theme (follows the system setting via prefers-color-scheme)
+   Flips the stone scale (surfaces + text); the other palettes keep their
+   values, because they are mostly used as backgrounds with light text.
+   ========================================================================== */
+:root {
+	--color-shadow: oklch(0.279 0.036 83.577);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-shadow: oklch(0 0 0);
+		--color-forest: oklch(0.3 0.028 135);
+		--color-chrome: oklch(0.14 0.02 270);
+
+		/* night: surfaces */
+		--color-stone-50: oklch(0.25 0.02 270);
+		--color-stone-100: oklch(0.3 0.02 270);
+		--color-stone-200: oklch(0.36 0.022 270);
+		--color-stone-300: oklch(0.44 0.022 270);
+		--color-stone-400: oklch(0.56 0.02 270);
+		/* warm light: text */
+		--color-stone-500: oklch(0.62 0.02 85);
+		--color-stone-600: oklch(0.72 0.02 85);
+		--color-stone-700: oklch(0.8 0.02 85);
+		--color-stone-800: oklch(0.87 0.02 85);
+		--color-stone-900: oklch(0.92 0.02 85);
+		--color-stone-950: oklch(0.96 0.015 85);
+	}
+
+	/* inputs: the forms plugin hard-codes a white background */
+	input:not([type='checkbox'], [type='radio'], [type='submit'], [type='button']),
+	select,
+	textarea {
+		background-color: var(--color-stone-100);
+		color: var(--color-stone-900);
+		border-color: var(--color-stone-400);
+	}
+
+	input::placeholder,
+	textarea::placeholder {
+		color: var(--color-stone-500);
+	}
+
+	/* external link / mail icons (olive-700 stroke is too dark on night surfaces) */
+	a[target='_blank']:not(.no-link, .button, .icon)::after {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23b7cdb0' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='M15 3h6v6M10 14 21 3M18 13v6l-2 2H5l-2-2V8l2-2h6'/%3E%3C/svg%3E");
+	}
+
+	a[href^='mailto:']:not(.no-link, .button, .icon)::before {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' stroke='%23b7cdb0' stroke-width='2' viewBox='0 0 24 24'%3E%3Cpath d='m22 7-9 6h-2L2 7'/%3E%3Crect width='20' height='16' x='2' y='4' rx='2'/%3E%3C/svg%3E");
+	}
+}
+
+/* dim photos a bit in dark mode (not SVG logos; opt out with .no-dim).
+   Lives in the base layer on purpose: unlayered rules would beat the filter
+   utilities (e.g. the night look of the footer image), layered ones lose. */
+@layer base {
+	@media (prefers-color-scheme: dark) {
+		img:not([src$='.svg'], .no-dim),
+		video:not(.no-dim) {
+			filter: brightness(0.85);
 		}
 	}
 }

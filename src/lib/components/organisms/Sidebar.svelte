@@ -4,8 +4,7 @@
 	import Navigation from '../molecules/Navigation.svelte';
 	import X from '@lucide/svelte/icons/x';
 	import type { OverlayRef } from '$lib/overlays.svelte';
-	import Image from '$lib/components/atoms/Image.svelte';
-	import logo from '$lib/assets/logo.avif?as=run:0';
+	import logo from '$lib/assets/logo.svg';
 
 	interface Props {
 		overlayRef: OverlayRef<any>;
@@ -19,7 +18,7 @@
 	<button class="icon-button" onclick={() => overlayRef.close()}>
 		<X />
 	</button>
-	<Image src={logo} alt="" class="self-center max-w-48 aspect-square" />
+	<img src={logo} alt="" width="320" height="320" class="w-full max-w-80 self-center aspect-square" />
 	<Navigation sidebar />
 	<!-- TODO show also footer links -->
 </aside>
@@ -37,8 +36,8 @@
 		width: 80vw;
 		max-width: 400px;
 		min-width: 320px;
-		background: var(--color-stone-100);
-		box-shadow: -3px 0 9px color-mix(in oklab, var(--color-stone-900) 60%, transparent);
+		background: var(--color-chrome);
+		box-shadow: -3px 0 9px color-mix(in oklab, var(--color-shadow) 60%, transparent);
 		overflow-y: auto;
 	}
 
@@ -46,6 +45,6 @@
 		position: fixed;
 		top: 0.75rem;
 		right: 0.75rem;
-		background: var(--color-stone-100);
+		background: var(--color-chrome);
 	}
 </style>

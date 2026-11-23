@@ -83,7 +83,7 @@
 	}
 
 	nav a {
-		color: var(--color-olive-700);
+		color: light-dark(var(--color-olive-700), var(--color-olive-300));
 		font-weight: 500;
 		font-size: 1.125rem;
 		text-decoration: none;
@@ -107,7 +107,7 @@
 		display: flex;
 		justify-content: stretch;
 		margin-left: -1.5rem;
-		box-shadow: 0 3px 8px color-mix(in oklab, var(--color-stone-900) 50%, transparent);
+		box-shadow: 0 3px 8px color-mix(in oklab, var(--color-shadow) 50%, transparent);
 		border-radius: 0.25rem;
 	}
 
@@ -124,7 +124,7 @@
 	}
 
 	.header .children {
-		background: var(--color-stone-100);
+		background: var(--color-chrome);
 	}
 
 	.children ul {
@@ -171,7 +171,7 @@
 		}
 
 		.toggle .icon-button {
-			color: var(--color-olive-700);
+			color: light-dark(var(--color-olive-700), var(--color-olive-300));
 		}
 
 		.children {
@@ -180,7 +180,7 @@
 
 		.children ul {
 			margin-left: 1rem;
-			background: var(--color-stone-100);
+			background: var(--color-chrome);
 		}
 	}
 </style>

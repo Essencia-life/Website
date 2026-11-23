@@ -15,7 +15,7 @@
 
 {#snippet card()}
 <article
-	class="flex flex-col overflow-hidden rounded-lg border border-stone-100 bg-stone-50"
+	class="flex flex-col overflow-hidden rounded-lg border border-stone-100 bg-stone-50 dark:border-stone-300 dark:bg-stone-100"
 >
 	{#if image}
 		<div class="relative">

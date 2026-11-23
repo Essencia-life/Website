@@ -143,7 +143,7 @@
 		width: 0.5rem;
 		height: 0.5rem;
 		border-radius: 100%;
-		background: light-dark(var(--color-stone-300), rgba(0 0 0 / 50%));
+		background: color-mix(in oklab, var(--color-stone-900) 25%, transparent);
 	}
 
 	.indicators > button::after {
@@ -152,12 +152,12 @@
 		width: 0.5rem;
 		height: 0.5rem;
 		border-radius: 100%;
-		background: light-dark(rgba(0 0 0 / 50%), var(--color-stone-300));
+		background: color-mix(in oklab, var(--color-stone-900) 70%, transparent);
 		opacity: var(--ratio);
 	}
 
 	figcaption {
-		color: var(--color-stone-50);
+		color: var(--color-stonewhite);
 	}
 
 	.navigate {
@@ -171,7 +171,7 @@
 		margin: 0;
 		color: #fff;
 		cursor: pointer;
-		filter: drop-shadow(var(--color-stone-900) 0 0 0.25rem);
+		filter: drop-shadow(var(--color-shadow) 0 0 0.25rem);
 	}
 
 	.navigate:disabled {

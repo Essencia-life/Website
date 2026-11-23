@@ -185,7 +185,7 @@
 			value={null}
 			class={categoryItemClass}
 			class:bg-olive-600={!filterCategoryId}
-			class:text-stone-50={!filterCategoryId}
+			class:text-stonewhite={!filterCategoryId}
 			class:border-transparent={!filterCategoryId}
 			aria-pressed={!filterCategoryId}
 		>
@@ -200,7 +200,7 @@
 					value={categoryId}
 					class={categoryItemClass}
 					class:bg-olive-600={filterCategoryId === categoryId}
-					class:text-stone-50={filterCategoryId === categoryId}
+					class:text-stonewhite={filterCategoryId === categoryId}
 					class:border-transparent={filterCategoryId === categoryId}
 					aria-pressed={filterCategoryId === categoryId}
 				>

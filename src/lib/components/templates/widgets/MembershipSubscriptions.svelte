@@ -83,15 +83,15 @@
 <div class="grid gap-x-4 gap-y-12 md:grid-cols-3 items-center justify-center">
 	{#each widget.subscriptions as subscription, index (subscription)}
 		<article
-			class="relative flex flex-col p-6 md:min-h-96 gap-4 rounded-lg border {index === 1 ? 'border-amber-500 bg-amber-50 md:min-h-106 md:py-11' : 'border-stone-100 bg-stone-50'}"
+			class="relative flex flex-col p-6 md:min-h-96 gap-4 rounded-lg border {index === 1 ? 'border-amber-500 bg-amber-50 dark:bg-amber-950 md:min-h-106 md:py-11' : 'border-stone-100 bg-stone-50 dark:border-stone-300 dark:bg-stone-100'}"
 		>
 			<h4>{subscription.title}</h4>
 			<div class="flex items-baseline">
-				<span class="font-serif font-bold text-4xl text-amber-900">{(subscription.price as number).toLocaleString('en', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0 })}</span>
+				<span class="font-serif font-bold text-4xl text-amber-900 dark:text-amber-200">{(subscription.price as number).toLocaleString('en', { style: 'currency', currency: 'EUR', minimumFractionDigits: 0 })}</span>
 				<span class="text-sm text-stone-500">/month</span>
 			</div>
 			{#if index === 1}
-				<div class="absolute top-0 left-[50%] py-1 px-3 translate-[-50%] bg-amber-500 text-stone-50 text-xs font-serif font-medium uppercase rounded-[24px_8px_24px_8px]">Most popular</div>
+				<div class="absolute top-0 left-[50%] py-1 px-3 translate-[-50%] bg-amber-500 text-stonewhite text-xs font-serif font-medium uppercase rounded-[24px_8px_24px_8px]">Most popular</div>
 			{/if}
 			<ul class="list-[sparkle] pl-[1.2em] text-sm space-y-3 marker:text-amber-500">
 				{#each subscription.benefits as benefit (benefit)}

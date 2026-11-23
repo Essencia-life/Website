@@ -20,7 +20,7 @@
 		{#if overlay}
 			{#if overlay.config.backdrop}
 				<div
-					class="fixed inset-0 bg-taupe-700/70 blur-xs overflow-hidden"
+					class="fixed inset-0 bg-taupe-700/70 dark:bg-black/70 blur-xs overflow-hidden"
 					onclick={() => overlay.close()}
 					transition:fade|global
 					style:background-color={overlay.config.backdrop === true

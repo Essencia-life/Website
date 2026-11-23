@@ -25,10 +25,10 @@
 {#if !page.url.pathname.startsWith('/contact')}
 	<aside class="fixed right-4 bottom-4">
 		<div popover="hint" id="contact-options" class="flex flex-col gap-2 p-2">
-			<a href="/contact#form" class="fab small no-link text-teal-700">
+			<a href="/contact#form" class="fab small no-link text-teal-700 dark:text-teal-300">
 				<Mail size={20} />
 			</a>
-			<a href="https://wa.me/351911514554" target="_blank" class="fab small no-link text-lime-600">
+			<a href="https://wa.me/351911514554" target="_blank" class="fab small no-link text-lime-600 dark:text-lime-400">
 				<SiWhatsapp size={20} />
 			</a>
 		</div>

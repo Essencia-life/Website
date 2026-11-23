@@ -40,6 +40,9 @@
 
 <style>
 	iframe {
+		/* the Tally form is designed light: keep it light (text and inputs) even in dark mode */
+		color-scheme: light;
+		border-radius: 1rem;
 		border: 0;
 		width: 100%;
 		height: 1000px;

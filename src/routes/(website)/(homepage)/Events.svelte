@@ -91,7 +91,7 @@
 		background: color-mix(in oklab, var(--color-stone-100) 40%, transparent);
 		padding: 1rem;
 		border-radius: 0.5rem;
-		box-shadow: 0 1px 4px color-mix(in oklab, var(--color-stone-900) 30%, transparent);
+		box-shadow: 0 1px 4px color-mix(in oklab, var(--color-shadow) 30%, transparent);
 		scroll-snap-align: center;
 		flex-direction: column;
 		scroll-snap-stop: always;
@@ -120,7 +120,7 @@
 	.event small {
 		text-transform: uppercase;
 		background-color: var(--color-olive-700);
-		color: var(--color-stone-50);
+		color: var(--color-stonewhite);
 		font-weight: 700;
 		padding: 0.25rem 0.5rem;
 		border-radius: 0.25rem;

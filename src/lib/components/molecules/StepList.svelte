@@ -67,7 +67,7 @@
 		background: var(--color-stone-50);
 		font-family: Alegreya, serif;
 		font-weight: 600;
-		color: var(--color-olive-700);
+		color: light-dark(var(--color-olive-700), var(--color-olive-300));
 		z-index: 1;
 	}
 

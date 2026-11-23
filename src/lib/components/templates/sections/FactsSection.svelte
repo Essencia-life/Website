@@ -79,7 +79,7 @@
 <style>
 	.dark {
 		color-scheme: dark;
-		background: var(--color-olive-800);
-		color: var(--color-stone-50);
+		background: var(--color-forest);
+		color: var(--color-stonewhite);
 	}
 </style>

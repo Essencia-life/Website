@@ -47,9 +47,13 @@
 	import Navigation from '../molecules/Navigation.svelte';
 	import type { Overlays } from '$lib/overlays.svelte';
 	import { resolve } from '$app/paths';
-	import logoTree from '$lib/assets/logo_tree.png?as=run:0';
-	import logoTitle from '$lib/assets/logo_title.png?as=run:0';
-	import Image from '$lib/components/atoms/Image.svelte';
+	// inlined, so the SVGs follow the colour scheme (prefers-color-scheme) of the page
+	import logoTreeSvg from '$lib/assets/logo_tree.svg?raw';
+	import logoTitleSvg from '$lib/assets/logo_title.svg?raw';
+
+	const stripTitle = (svg: string) => svg.replace(/<title>.*?<\/title>/, '');
+	const logoTree = stripTitle(logoTreeSvg);
+	const logoTitle = stripTitle(logoTitleSvg);
 
 	const overlays = getContext<Overlays<any>>('overlays');
 
@@ -64,14 +68,14 @@
 	}
 </script>
 
-<header class="sticky top-0 z-11 bg-stone-100 border-b border-stone-50/50 shadow-md/25">
+<header class="sticky top-0 z-11 bg-chrome border-b border-stone-50/50 dark:border-stone-200 shadow-md/25">
 	<div class="page-content">
-		<a href={resolve('/')} class="home" aria-hidden="true">
-			<Image class="max-h-full w-auto min-w-12" src={logoTree} alt="" />
+		<a href={resolve('/')} class="home logo-tree" aria-hidden="true" tabindex="-1">
+			{@html logoTree}
 		</a>
 
-		<a href={resolve('/')} class="home">
-			<Image class="h-6 w-auto" src={logoTitle} alt="" />
+		<a href={resolve('/')} class="home logo-title">
+			{@html logoTitle}
 			<h1>Essência</h1>
 		</a>
 
@@ -97,6 +101,19 @@
 		align-items: center;
 	}
 
+	.logo-tree :global(svg) {
+		display: block;
+		height: 100%;
+		width: auto;
+		min-width: 3rem;
+	}
+
+	.logo-title :global(svg) {
+		display: block;
+		height: 2rem;
+		width: auto;
+	}
+
 	h1 {
 		position: absolute;
 		overflow: hidden;
@@ -110,7 +127,7 @@
 		justify-content: center;
 		height: 3rem;
 		aspect-ratio: 1;
-		color: var(--color-olive-700);
+		color: light-dark(var(--color-olive-700), var(--color-olive-300));
 	}
 
 	@media screen and (width < 800px) {
