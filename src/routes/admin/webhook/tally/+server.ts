@@ -85,9 +85,11 @@ export const POST: RequestHandler = async ({ request }) => {
 	}
 
 	// Tally waits only 10 s for an answer, then resends the submission (after 5 min, 30 min, ...)
-	// although the pull request got created. The lock turns every resend into a no-op.
+	// although the pull request got created. The lock turns every resend into a no-op. It is short
+	// at first (longer than maxDuration, shorter than the first resend), so a run that is killed
+	// before it can release the lock does not block the resend; success extends it.
 	const lock = `website:tally:${parsed.data.submissionId}`;
-	if (!(await redis.set(lock, 1, { nx: true, ex: 7 * 24 * 60 * 60 }))) {
+	if (!(await redis.set(lock, 1, { nx: true, ex: 120 }))) {
 		return json({ ok: true, duplicate: true });
 	}
 
@@ -101,6 +103,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		const pullRequest = await createEventPullRequest(state, draft, downloads);
+		await redis.set(lock, 1, { ex: 7 * 24 * 60 * 60 }).catch(() => {}); // cover all resends
 		console.log(`[tally-webhook] ${draft.submissionId} -> ${draft.branch} ${pullRequest}`);
 		return json({ ok: true, pullRequest });
 	} catch (error) {
