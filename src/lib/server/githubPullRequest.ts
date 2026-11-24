@@ -188,3 +188,18 @@ export const createEventPullRequest = async (
 		throw error;
 	}
 };
+
+/**
+ * Is there already a pull request of any state (open, merged, closed) for this Tally submission?
+ * Looks for the id in the comment written by createEventPullRequest ("Submitted via the Tally form
+ * (submission `<id>`)"). GitHub's search index is eventually consistent, so this is only a second
+ * safeguard behind the lock in the webhook.
+ */
+export const hasPullRequestFor = async (submissionId: string): Promise<boolean> => {
+	const query = `repo:${REPO} is:pr "${submissionId}" in:comments`;
+	const result = await request<{ total_count: number }>(
+		'GET',
+		`/search/issues?q=${encodeURIComponent(query)}&per_page=1`
+	);
+	return result.total_count > 0;
+};

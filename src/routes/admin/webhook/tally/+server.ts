@@ -9,7 +9,12 @@ import {
 	downloadImage,
 	isTallyPayload
 } from '$lib/server/tallyEvent';
-import { createEventPullRequest, loadRepoState } from '$lib/server/githubPullRequest';
+import {
+	createEventPullRequest,
+	hasPullRequestFor,
+	loadRepoState
+} from '$lib/server/githubPullRequest';
+import { redis } from '$lib/server/redis';
 
 /**
  * Webhook for the Tally form "Add event/retreat to Website".
@@ -29,6 +34,7 @@ import { createEventPullRequest, loadRepoState } from '$lib/server/githubPullReq
 export const config = { maxDuration: 60 };
 
 const MAX_BODY_BYTES = 256 * 1024;
+const LOCK_KEPT_SECONDS = 7 * 24 * 60 * 60;
 
 const signaturesMatch = (expected: string, received: string): boolean => {
 	const a = Buffer.from(expected);
@@ -83,7 +89,26 @@ export const POST: RequestHandler = async ({ request }) => {
 		return json({ ok: true, ignored: true });
 	}
 
+	// Tally waits only 10 s for an answer, then resends the submission (after 5 min, 30 min, ...)
+	// although the pull request got created. The lock turns every resend into a no-op. It is short
+	// while working (longer than maxDuration, shorter than the first resend), so a run that is
+	// killed before it can release the lock does not block the resend; success makes it last.
+	const lock = `website:tally:${parsed.data.submissionId}`;
+	if (!(await redis.set(lock, 'working', { nx: true, ex: 120 }))) {
+		// Only a finished run may be answered with 2xx, Tally does not resend after that. A resend
+		// that overlaps a run that is still working gets an error and is tried again later.
+		return (await redis.get(lock)) === 'done'
+			? json({ ok: true, duplicate: true })
+			: json({ error: 'Still being processed.' }, { status: 409 });
+	}
+
 	try {
+		// Second safeguard, e.g. if the lock got lost: the pull request has the id in its comment.
+		if (await hasPullRequestFor(parsed.data.submissionId)) {
+			await redis.set(lock, 'done', { ex: LOCK_KEPT_SECONDS }).catch(() => {});
+			return json({ ok: true, duplicate: true });
+		}
+
 		const state = await loadRepoState();
 		const draft = buildEventDraft(parsed, state);
 
@@ -93,9 +118,11 @@ export const POST: RequestHandler = async ({ request }) => {
 		}
 
 		const pullRequest = await createEventPullRequest(state, draft, downloads);
+		await redis.set(lock, 'done', { ex: LOCK_KEPT_SECONDS }).catch(() => {}); // covers all resends
 		console.log(`[tally-webhook] ${draft.submissionId} -> ${draft.branch} ${pullRequest}`);
 		return json({ ok: true, pullRequest });
 	} catch (error) {
+		await redis.del(lock).catch(() => {}); // nothing was created, so the next attempt may try again
 		if (error instanceof ValidationError) {
 			// The submission stays in Tally; the form owner can fix and resend it there.
 			console.warn(`[tally-webhook] ${parsed.data.submissionId} rejected: ${error.message}`);
